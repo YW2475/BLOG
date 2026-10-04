@@ -1,5 +1,6 @@
 #import "../index.typ": template, tufted
 #import "@preview/lilaq:0.6.0" as lq
+#import "@preview/theorion:0.4.1": *
 // 如需生成 RSS feed，必须填写 title、description 和 date 元数据
 #show: template.with(
   title: "Beyond Genetic Diversity",
@@ -11,7 +12,7 @@
 
 = Beyond Genetic Diversity: Preserving Future Options in Breeding
 
-#quote - box[
+#quote-box[
   If we use, to achieve our purposes, a mechanical agency with whose operation we cannot efficiently interfere once we have started it, because the action is so fast and irrevocable that we have not the data to intervene before the action is complete, then we had better be quite sure that the purpose put into the machine is the purpose which we really desire and not merely a colorful imitation of it. \
 
   ——#link("Norbert Wiener")
