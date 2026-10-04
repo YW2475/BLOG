@@ -11,7 +11,11 @@
 
 = Beyond Genetic Diversity: Preserving Future Options in Breeding
 
-#zh(id: "S001")[ #text(_"If we use, to achieve our purposes, a mechanical agency with whose operation we cannot efficiently interfere once we have started it, because the action is so fast and irrevocable that we have not the data to intervene before the action is complete, then we had better be quite sure that the purpose put into the machine is the purpose which we really desire and not merely a colorful imitation of it."   ― Norbert Wiener_)]
+#quote-box[
+  _"If we use, to achieve our purposes, a mechanical agency with whose operation we cannot efficiently interfere once we have started it, because the action is so fast and irrevocable that we have not the data to intervene before the action is complete, then we had better be quite sure that the purpose put into the machine is the purpose which we really desire and not merely a colorful imitation of it."_
+
+  _―Norbert Wiener_
+]
 
 在了解育种模型后，我产生了一定的思考，现在的模型都在越来越追求精准，甚至盲目地上神经网络类似“军备竞赛”，这样真的会对育种产生帮助吗？所以我产生了一个疑问：
 
