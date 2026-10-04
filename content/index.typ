@@ -4,7 +4,6 @@
 // tufted.margin-note 可以让你在边栏中放置内容
 // 宽大的边栏是 tufte 样式的特点，将注释放于其中并与正文并排，便于对照
 #tufted.margin-note({
-  image("imgs/tufted-duck-female-with-duckling.webp")
   image("imgs/tufted-duck-male.webp")
 })
 
@@ -17,11 +16,11 @@
 
 = Tufted 博客模板
 
-这是一个基于 #link("https://typst.app/")[Typst] 和 #link("https://github.com/vsheg/tufted")[Tufted] 的静态网站构建模板，手把手教你搭建简洁、美观的个人博客、作品集和简历设计。
+欢迎来到YinWang的博客。
 
 #figure(caption: "网站示例")[#image("imgs/devices.webp")]
 
-如果你通过访问本地地址（运行 `preview` 或其他本地服务）中看到了本页面，说明你已经成功安装了依赖、成功构建了网页、成功运行了预览。恭喜你！
+大家好（运行 `preview` 或其他本地服务）中看到了本页面，说明你已经成功安装了依赖、成功构建了网页、成功运行了预览。恭喜你！
 
 想要使用这个模板编写你自己的网站，你需要学会使用 Typst。放心，非常好上手。
 
