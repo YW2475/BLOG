@@ -1,0 +1,609 @@
+#import "../index.typ": template, tufted
+#import "../../_essay/bilingual.typ": zh, zh-caption
+#show: template.with(
+  title: "Computing Machinery and Intelligence",
+  author: "Alan M. Turing",
+  description: "图灵 1950 年经典论文《计算机器与智能》逐段中英对照，包含模仿游戏、九种反对意见与学习机器。",
+  date: datetime(year: 1950, month: 10, day: 1),
+  extra-info: "Mind 59(236): 433–460 · 中英逐段对照",
+  lang: "en",
+  css: ("/assets/custom.css", "/assets/essay.css"),
+)
+
+= Computing Machinery and Intelligence / 计算机器与智能
+
+#html.div(class: "essay-paper-info")[
+*A. M. Turing* · _Mind_, Volume LIX, Issue 236, October 1950, pp. 433–460. \
+#link("https://doi.org/10.1093/mind/LIX.236.433")[DOI / 出版方原文] · #link("https://turingarchive.kings.cam.ac.uk/publications-lectures-and-talks-amtb/amt-b-9")[The Turing Digital Archive / 图灵档案]
+]
+
+== 1. The Imitation Game / 模仿游戏
+
+#html.p(id: "en-S001")[ #text("I propose to consider the question, ‘Can machines think?’ This should begin with definitions of the meaning of the terms ‘machine’ and ‘think’. The definitions might be framed so as to reflect so far as possible the normal use of the words, but this attitude is dangerous. If the meaning of the words ‘machine’ and ‘think’ are to be found by examining how they are commonly used it is difficult to escape the conclusion that the meaning and the answer to the question, ‘Can machines think?’ is to be sought in a statistical survey such as a Gallup poll. But this is absurd. Instead of attempting such a definition I shall replace the question by another, which is closely related to it and is expressed in relatively unambiguous words.") ]
+
+#zh(id: "S001")[ #text("我打算讨论这样一个问题：“机器能思考吗？”首先似乎应当定义“机器”和“思考”这两个词的含义。我们可以尽量让定义符合这些词的通常用法，但这种做法很危险。如果通过考察人们日常怎样使用这些词来确定其含义，就很难避免得出这样的结论：词的意义以及“机器能思考吗？”的答案，应当通过盖洛普民意调查一类统计调查来寻找。但这显然荒谬。因此，我不尝试给出这样的定义，而将这个问题替换为另一个与它密切相关、措辞相对明确的问题。") ]
+
+#html.p(id: "en-S002")[ #text("The new form of the problem can be described in terms of a game which we call the ‘imitation game’. It is played with three people, a man (A), a woman (B), and an interrogator (C) who may be of either sex. The interrogator stays in a room apart from the other two. The object of the game for the interrogator is to determine which of the other two is the man and which is the woman. He knows them by labels X and Y, and at the end of the game he says either ‘X is A and Y is B’ or ‘X is B and Y is A’. The interrogator is allowed to put questions to A and B thus:") ]
+
+#zh(id: "S002")[ #text("这个问题的新形式可以用一种称为“模仿游戏”的游戏来描述。游戏由三人参与：一名男子 A、一名女子 B，以及一位可以是男性也可以是女性的提问者 C。提问者与另外两人分处不同房间。提问者的目标是判断另外两人中谁是男子、谁是女子。他只知道两人分别被标记为 X 和 Y，并在游戏结束时回答“X 是 A，Y 是 B”或“X 是 B，Y 是 A”。提问者可以像这样向 A、B 发问：") ]
+
+#html.p(id: "en-S003")[ #text("C: Will X please tell me the length of his or her hair?") ]
+
+#zh(id: "S003")[ #text("C：请 X 告诉我，你的头发有多长？") ]
+
+#html.p(id: "en-S004")[ #text("Now suppose X is actually A, then A must answer. It is A's object in the game to try and cause C to make the wrong identification. His answer might therefore be") ]
+
+#zh(id: "S004")[ #text("假设 X 实际上是 A，那么 A 必须回答。A 在游戏中的目标是使 C 作出错误判断。因此，他可能这样回答：") ]
+
+#html.p(id: "en-S005")[ #text("‘My hair is shingled, and the longest strands are about nine inches long.’") ]
+
+#zh(id: "S005")[ #text("“我的头发剪成了短发，最长的发丝大约有九英寸。”") ]
+
+#html.p(id: "en-S006")[ #text("In order that tones of voice may not help the interrogator the answers should be written, or better still, typewritten. The ideal arrangement is to have a teleprinter communicating between the two rooms. Alternatively the question and answers can be repeated by an intermediary. The object of the game for the third player (B) is to help the interrogator. The best strategy for her is probably to give truthful answers. She can add such things as ‘I am the woman, don’t listen to him!’ to her answers, but it will avail nothing as the man can make similar remarks.") ]
+
+#zh(id: "S006")[ #text("为了防止声音的音调帮助提问者作判断，回答应当写下来，最好用打字机打出来。理想的安排是通过电传打字机连接两个房间。也可以由中间人转述问题和回答。第三位参与者 B 的目标是帮助提问者，对她而言，最好的策略可能是如实回答。她可以补充“我是女子，别听他的！”之类的话，但这不会有用，因为男子也可以说类似的话。") ]
+
+#html.p(id: "en-S007")[ #text("We now ask the question, ‘What will happen when a machine takes the part of A in this game?’ Will the interrogator decide wrongly as often when the game is played like this as he does when the game is played between a man and a woman? These questions replace our original, ‘Can machines think?’") ]
+
+#zh(id: "S007")[ #text("现在我们问：“如果在游戏中由机器扮演 A，会发生什么？”提问者在这种情况下作出错误判断的频率，会不会与游戏由一男一女参与时一样高？这些问题取代了我们最初提出的“机器能思考吗？”") ]
+
+== 2. Critique of the New Problem / 对新问题的考察
+
+#html.p(id: "en-S008")[ #text("As well as asking, ‘What is the answer to this new form of the question’, one may ask, ‘Is this new question a worthy one to investigate?’ This latter question we investigate without further ado, thereby cutting short an infinite regress.") ]
+
+#zh(id: "S008")[ #text("除了问“这个新问题的答案是什么”，我们也可以问“这个新问题值得研究吗？”下面我们直接考察后一个问题，从而避免陷入无限倒退。") ]
+
+#html.p(id: "en-S009")[ #text("The new problem has the advantage of drawing a fairly sharp line between the physical and the intellectual capacities of a man. No engineer or chemist claims to be able to produce a material which is indistinguishable from the human skin. It is possible that at some time this might be done, but even supposing this invention available we should feel there was little point in trying to make a ‘thinking machine’ more human by dressing it up in such artificial flesh. The form in which we have set the problem reflects this fact in the condition which prevents the interrogator from seeing or touching the other competitors, or hearing their voices. Some other advantages of the proposed criterion may be shown up by specimen questions and answers. Thus:") ]
+
+#zh(id: "S009")[ #text("这个新问题的优点，是在人类的身体能力与智力能力之间划出较明确的界限。没有工程师或化学家声称能够制造出与人类皮肤无法区分的材料。也许未来可以做到，但即便这种发明已经出现，我们仍会认为，用这种人造皮肉包装“思考机器”来让它更像人，没有多少意义。我们的设问方式通过禁止提问者看见、触碰另外两名参与者或听见其声音，体现了这一点。所提出标准的其他优点，可以通过以下问题和回答示例说明：") ]
+
+#html.p(id: "en-S010")[ #text("Q: Please write me a sonnet on the subject of the Forth Bridge.") ]
+
+#zh(id: "S010")[ #text("问：请以福斯桥为题写一首十四行诗。") ]
+
+#html.p(id: "en-S011")[ #text("A: Count me out on this one. I never could write poetry.") ]
+
+#zh(id: "S011")[ #text("答：这件事就别指望我了，我从来不会写诗。") ]
+
+#html.p(id: "en-S012")[ #text("Q: Add 34957 to 70764") ]
+
+#zh(id: "S012")[ #text("问：34957 加 70764 等于多少？") ]
+
+#html.p(id: "en-S013")[ #text("A: (Pause about 30 seconds and then give as answer) 105621.") ]
+
+#zh(id: "S013")[ #text("答：（停顿约 30 秒后回答）105621。") ]
+
+#html.p(id: "en-S014")[ #text("Q: Do you play chess?") ]
+
+#zh(id: "S014")[ #text("问：你会下国际象棋吗？") ]
+
+#html.p(id: "en-S015")[ #text("A: Yes.") ]
+
+#zh(id: "S015")[ #text("答：会。") ]
+
+#html.p(id: "en-S016")[ #text("Q: I have K at my K1, and no other pieces. You have only K at K6 and R at R1. It is your move. What do you play?") ]
+
+#zh(id: "S016")[ #text("问：我的王在 K1，没有其他棋子。你只有一枚位于 K6 的王和一枚位于 R1 的车。现在轮到你，你走哪一步？") ]
+
+#html.p(id: "en-S017")[ #text("A: (After a pause of 15 seconds) R-R8 mate.") ]
+
+#zh(id: "S017")[ #text("答：（停顿 15 秒后）R-R8，将死。") ]
+
+#html.p(id: "en-S018")[ #text("The question and answer method seems to be suitable for introducing almost any one of the fields of human endeavour that we wish to include. We do not wish to penalise the machine for its inability to shine in beauty competitions, nor to penalise a man for losing in a race against an aeroplane. The conditions of our game make these disabilities irrelevant. The ‘witnesses’ can brag, if they consider it advisable, as much as they please about their charms, strength or heroism, but the interrogator cannot demand practical demonstrations.") ]
+
+#zh(id: "S018")[ #text("这种问答方法似乎适合引入我们希望涵盖的几乎任何人类活动领域。我们不想因为机器不能在选美比赛中出彩就惩罚它，也不想因为人在与飞机赛跑时落败就惩罚人。游戏条件使这些不足与判断无关。“证人”若觉得合适，可以尽情夸耀自己的魅力、力量或英勇，但提问者不能要求实际演示。") ]
+
+#html.p(id: "en-S019")[ #text("The game may perhaps be criticised on the ground that the odds are weighted too heavily against the machine. If the man were to try and pretend to be the machine he would clearly make a very poor showing. He would be given away at once by slowness and inaccuracy in arithmetic. May not machines carry out something which ought to be described as thinking but which is very different from what a man does? This objection is a very strong one, but at least we can say that if, nevertheless, a machine can be constructed to play the imitation game satisfactorily, we need not be troubled by this objection.") ]
+
+#zh(id: "S019")[ #text("有人可能批评，这个游戏对机器过于不利。如果让人冒充机器，他显然会表现得很差，算术运算的缓慢和不准确会立即暴露身份。机器会不会以某种与人类截然不同、但仍应称为思考的方式做事？这是一个很有力的反对意见。但至少可以说，即便如此，如果能够造出一台令人满意地参与模仿游戏的机器，我们就不必为这个反对意见困扰。") ]
+
+#html.p(id: "en-S020")[ #text("It might be urged that when playing the ‘imitation game’ the best strategy for the machine may possibly be something other than imitation of the behaviour of a man. This may be, but I think it is unlikely that there is any great effect of this kind. In any case there is no intention to investigate here the theory of the game, and it will be assumed that the best strategy is to try to provide answers that would naturally be given by a man.") ]
+
+#zh(id: "S020")[ #text("也有人可能提出，机器参与模仿游戏时的最佳策略，未必是模仿人的行为。这或许有可能，但我认为这类差异不大可能产生很大影响。无论如何，本文无意研究这个游戏的理论，而是假定最佳策略是尽量给出人类通常会给出的回答。") ]
+
+== 3. The Machines concerned in the Game / 参与游戏的机器
+
+#html.p(id: "en-S021")[ #text("The question which we put in § 1 will not be quite definite until we have specified what we mean by the word ‘machine’. It is natural that we should wish to permit every kind of engineering technique to be used in our machines. We also wish to allow the possibility than an engineer or team of engineers may construct a machine which works, but whose manner of operation cannot be satisfactorily described by its constructors because they have applied a method which is largely experimental. Finally, we wish to exclude from the machines men born in the usual manner. It is difficult to frame the definitions so as to satisfy these three conditions. One might for instance insist that the team of engineers should be all of one sex, but this would not really be satisfactory, for it is probably possible to rear a complete individual from a single cell of the skin (say) of a man. To do so would be a feat of biological technique deserving of the very highest praise, but we would not be inclined to regard it as a case of ‘constructing a thinking machine’. This prompts us to abandon the requirement that every kind of technique should be permitted. We are the more ready to do so in view of the fact that the present interest in ‘thinking machines’ has been aroused by a particular kind of machine, usually called an ‘electronic computer’ or ‘digital computer’. Following this suggestion we only permit digital computers to take part in our game.") ]
+
+#zh(id: "S021")[ #text("在明确“机器”这个词的含义之前，第 1 节提出的问题还不够确定。自然，我们希望允许在机器中使用各种工程技术。我们也希望容许这样的可能性：工程师或工程师团队造出一台能运行的机器，但由于主要采用实验方法，制造者也无法令人满意地描述其运行方式。最后，我们希望把通常方式出生的人排除在机器之外。要作出同时满足这三个条件的定义并不容易。例如，可以要求工程师团队全由同一性别的人组成，但这仍不令人满意，因为也许能够从一个人的单个皮肤细胞培育出完整个体。那将是一项值得高度赞扬的生物技术成就，但我们不会把它看作“制造思考机器”。因此，我们放弃允许一切技术的要求。我们更愿意这样做，因为目前对“思考机器”的兴趣，是由一种通常称为“电子计算机”或“数字计算机”的机器引起的。依照这一线索，我们只允许数字计算机参加游戏。") ]
+
+#html.p(id: "en-S022")[ #text("This restriction appears at first sight to be a very drastic one. I shall attempt to show that it is not so in reality. To do this necessitates a short account of the nature and properties of these computers.") ]
+
+#zh(id: "S022")[ #text("这个限制乍看十分严格。我将试着说明，实际上并非如此。为此，需要简要介绍这些计算机的性质和特点。") ]
+
+#html.p(id: "en-S023")[ #text("It may also be said that this identification of machines with digital computers, like our criterion for ‘thinking’, will only be unsatisfactory if (contrary to my belief), it turns out that digital computers are unable to give a good showing in the game.") ]
+
+#zh(id: "S023")[ #text("也可以说，把机器限定为数字计算机，与我们对“思考”的判定标准一样，只有在数字计算机无法在游戏中表现良好时才会不令人满意；而我不相信会出现这种情况。") ]
+
+#html.p(id: "en-S024")[ #text("There are already a number of digital computers in working order, and it may be asked, ‘Why not try the experiment straight away? It would be easy to satisfy the conditions of the game. A number of interrogators could be used, and statistics compiled to show how often the right identification was given.’ The short answer is that we are not asking whether all digital computers would do well in the game nor whether the computers at present available would do well, but whether there are imaginable computers which would do well. But this is only the short answer. We shall see this question in a different light later.") ]
+
+#zh(id: "S024")[ #text("目前已经有多台数字计算机投入运行，所以有人可能问：“为什么不马上做这个实验？满足游戏条件并不难，可以使用多位提问者，并统计正确识别身份的频率。”简短的回答是：我们问的不是所有数字计算机能否表现良好，也不是现有计算机能否表现良好，而是是否存在可以设想、且能表现良好的计算机。不过，这只是简短回答，稍后我们将从另一个角度看待这个问题。") ]
+
+== 4. Digital Computers / 数字计算机
+
+#html.p(id: "en-S025")[ #text("The idea behind digital computers may be explained by saying that these machines are intended to carry out any operations which could be done by a human computer. The human computer is supposed to be following fixed rules; he has no authority to deviate from them in any detail. We may suppose that these rules are supplied in a book, which is altered whenever he is put on to a new job. He has also an unlimited supply of paper on which he does his calculations. He may also do his multiplications and additions on a ‘desk machine’, but this is not important.") ]
+
+#zh(id: "S025")[ #text("数字计算机背后的思想可以这样解释：这些机器的用途，是执行人类计算员能够完成的任何操作。这里假定人类计算员遵循固定规则，无权偏离任何细节。我们可以设想，规则写在一本书中，每当换一项任务，就更换这本书。他还有无限量的纸张供计算使用。他也可能在“桌上计算器”上做乘法和加法，但这一点并不重要。") ]
+
+#html.p(id: "en-S026")[ #text("If we use the above explanation as a definition we shall be in danger of circularity of argument. We avoid this by giving an outline of the means by which the desired effect is achieved. A digital computer can usually be regarded as consisting of three parts:") ]
+
+#zh(id: "S026")[ #text("如果把上述解释当作定义，就可能陷入循环论证。为避免这一点，我们概述实现这种效果的方式。数字计算机通常可以看作由三部分组成：") ]
+
+#html.p(id: "en-S027")[ #text("Store.") ]
+
+#zh(id: "S027")[ #text("存储器。") ]
+
+#html.p(id: "en-S028")[ #text("Executive unit.") ]
+
+#zh(id: "S028")[ #text("执行单元。") ]
+
+#html.p(id: "en-S029")[ #text("Control.") ]
+
+#zh(id: "S029")[ #text("控制器。") ]
+
+#html.p(id: "en-S030")[ #text("The store is a store of information, and corresponds to the human computer's paper, whether this is the paper on which he does his calculations or that on which his book of rules is printed. In so far as the human computer does calculations in his head a part of the store will correspond to his memory.") ]
+
+#zh(id: "S030")[ #text("存储器用于保存信息，对应于人类计算员的纸张，包括用于计算的纸，以及印有规则的书。对于计算员在脑中完成的计算，存储器的一部分对应于他的记忆。") ]
+
+#html.p(id: "en-S031")[ #text("The executive unit is the part which carries out the various individual operations involved in a calculation. What these individual operations are will vary from machine to machine. Usually fairly lengthy operations can be done such as ‘Multiply 3540675445 by 7076345687’ but in some machines only very simple ones such as ‘Write down 0’ are possible.") ]
+
+#zh(id: "S031")[ #text("执行单元负责完成计算中的各种单项操作。具体能够执行哪些操作，各机器有所不同。通常可以执行相当复杂的操作，例如“将 3540675445 乘以 7076345687”；但某些机器只能完成非常简单的操作，例如“写下 0”。") ]
+
+#html.p(id: "en-S032")[ #text("We have mentioned that the ‘book of rules’ supplied to the computer is replaced in the machine by a part of the store. It is then called the ‘table of instructions’. It is the duty of the control to see that these instructions are obeyed correctly and in the right order. The control is so constructed that this necessarily happens.") ]
+
+#zh(id: "S032")[ #text("我们已经提到，供计算员使用的“规则书”在机器中由存储器的一部分替代，称为“指令表”。控制器负责确保这些指令得到正确执行，并按正确次序执行。控制器的构造保证这些要求一定得到满足。") ]
+
+#html.p(id: "en-S033")[ #text("The information in the store is usually broken up into packets of moderately small size. In one machine, for instance, a packet might consist of ten decimal digits. Numbers are assigned to the parts of the store in which the various packets of information are stored, in some systematic manner. A typical instruction might say—") ]
+
+#zh(id: "S033")[ #text("存储器中的信息通常被分成大小适中的信息包。例如，在某台机器中，一个信息包可能包含十个十进制数字。存储器中保存各信息包的位置按某种系统方式编号。一条典型指令可能是：") ]
+
+#html.p(id: "en-S034")[ #text("‘Add the number stored in position 6809 to that in 4302 and put the result back into the latter storage position’.") ]
+
+#zh(id: "S034")[ #text("“把位置 6809 中存储的数加到位置 4302 中的数上，并把结果放回后一个存储位置。”") ]
+
+#html.p(id: "en-S035")[ #text("Needless to say it would not occur in the machine expressed in English. It would more likely be coded in a form such as 6809430217. Here 17 says which of various possible operations is to be performed on the two numbers. In this case the operation is that described above, viz. ‘Add the number….’ It will be noticed that the instruction takes up 10 digits and so forms one packet of information, very conveniently. The control will normally take the instructions to be obeyed in the order of the positions in which they are stored, but occasionally an instruction such as") ]
+
+#zh(id: "S035")[ #text("当然，这条指令在机器中不会用英语表示，而更可能编码成 6809430217 这样的形式。这里的 17 指明要对这两个数执行哪一种操作，在此例中，就是上述“把这个数加到……”的操作。可以注意到，这条指令占十个数字，正好方便地构成一个信息包。控制器通常按照指令在存储器中的位置顺序执行，但有时也会遇到这样的指令：") ]
+
+#html.p(id: "en-S036")[ #text("‘Now obey the instruction stored in position 5606, and continue from there’") ]
+
+#zh(id: "S036")[ #text("“现在执行位置 5606 中存储的指令，并从那里继续。”") ]
+
+#html.p(id: "en-S037")[ #text("may be encountered, or again") ]
+
+#zh(id: "S037")[ #text("或者另一种指令：") ]
+
+#html.p(id: "en-S038")[ #text("‘If position 4505 contains 0 obey next the instruction stored in 6707, otherwise continue straight on.’") ]
+
+#zh(id: "S038")[ #text("“如果位置 4505 中的数为 0，接下来执行位置 6707 中的指令；否则直接继续。”") ]
+
+#html.p(id: "en-S039")[ #text("Instructions of these latter types are very important because they make it possible for a sequence of operations to be repeated over and over again until some condition is fulfilled, but in doing so to obey, not fresh instructions on each repetition, but the same ones over and over again. To take a domestic analogy. Suppose Mother wants Tommy to call at the cobbler's every morning on his way to school to see if her shoes are done, she can ask him afresh every morning. Alternatively she can stick up a notice once and for all in the hall which he will see when he leaves for school and which tells him to call for the shoes, and also to destroy the notice when he comes back if he has the shoes with him.") ]
+
+#zh(id: "S039")[ #text("这些后一类指令非常重要，因为它们使一系列操作能够反复执行，直到某个条件满足，而且每次重复执行的是同一批指令，而不是新指令。用家庭生活作比方：假如妈妈希望汤米每天早晨上学时顺路去鞋匠那里看看她的鞋是否修好，她可以每天重新叮嘱，也可以一次性在门厅贴一张纸条，让汤米出门时看到，提醒他去取鞋，并要求他把鞋带回来时撕掉纸条。") ]
+
+#html.p(id: "en-S040")[ #text("The reader must accept it as a fact that digital computers can be constructed, and indeed have been constructed, according to the principles we have described, and that they can in fact mimic the actions of a human computer very closely.") ]
+
+#zh(id: "S040")[ #text("读者必须接受这样一个事实：数字计算机可以按照我们描述的原理构造出来，而且事实上已经被构造出来，并能够非常接近地模仿人类计算员的操作。") ]
+
+#html.p(id: "en-S041")[ #text("The book of rules which we have described our human computer as using is of course a convenient fiction. Actual human computers really remember what they have got to do. If one wants to make a machine mimic the behaviour of the human computer in some complex operation one has to ask him how it is done, and then translate the answer into the form of an instruction table. Constructing instruction tables is usually described as ‘programming’. To ‘programme a machine to carry out the operation A’ means to put the appropriate instruction table into the machine so that it will do A.") ]
+
+#zh(id: "S041")[ #text("我们所描述的人类计算员使用“规则书”，当然只是方便的虚构。真正的计算员其实记得自己要做什么。如果希望机器在复杂操作中模仿计算员的行为，就必须询问他如何操作，再把回答转换成指令表。构造指令表通常称为“编程”。“给机器编程以执行操作 A”，就是将适当的指令表放入机器，使它能够完成 A。") ]
+
+#html.p(id: "en-S042")[ #text("An interesting variant on the idea of a digital computer is a ‘digital computer with a random element’. These have instructions involving the throwing of a die or some equivalent electronic process; one such instruction might for instance be, ‘Throw the die and put the resulting number into store 1000’. Sometimes such a machine is described as having free will (though I would not use this phrase myself). It is not normally possible to determine from observing a machine whether it has a random element, for a similar effect can be produced by such devices as making the choices depend on the digits of the decimal for π.") ]
+
+#zh(id: "S042")[ #text("数字计算机的一种有趣变体是“带随机因素的数字计算机”。它有涉及掷骰子或等效电子过程的指令，例如“掷骰子，并把所得数存入位置 1000”。有时人们说这种机器具有自由意志，虽然我自己不会这样说。通常无法仅凭观察判断机器是否包含随机因素，因为让选择取决于 π 的小数位等方法，也能产生类似效果。") ]
+
+#html.p(id: "en-S043")[ #text("Most actual digital computers have only a finite store. There is no theoretical difficulty in the idea of a computer with an unlimited store. Of course only a finite part can have been used at any one time. Likewise only a finite amount can have been constructed, but we can imagine more and more being added as required. Such computers have special theoretical interest and will be called infinitive capacity computers.") ]
+
+#zh(id: "S043")[ #text("大多数实际数字计算机只有有限存储器，但具有无限存储器的计算机在理论上并无困难。当然，任何时刻只能使用其中有限的一部分，也只能建造有限的一部分，但我们可以设想根据需要不断扩充。这类计算机具有特殊的理论意义，我们称之为无限容量计算机。") ]
+
+#html.p(id: "en-S044")[ #text("The idea of a digital computer is an old one. Charles Babbage, Lucasian Professor of Mathematics at Cambridge from 1828 to 1839, planned such a machine, called the Analytical Engine, but it was never completed. Although Babbage had all the essential ideas, his machine was not at that time such a very attractive prospect. The speed which would have been available would be definitely faster than a human computer but something like 100 times slower than the Manchester machine, itself one of the slower of the modern machines. The storage was to be purely mechanical, using wheels and cards.") ]
+
+#zh(id: "S044")[ #text("数字计算机的思想由来已久。1828 年至 1839 年担任剑桥大学卢卡斯数学教授的查尔斯·巴贝奇，曾规划一台称为“分析机”的机器，但始终未完成。虽然巴贝奇已掌握全部基本思想，这台机器在当时却没有特别诱人的前景。它的速度肯定比人类计算员快，但大约比曼彻斯特计算机慢 100 倍，而后者本身已属于较慢的现代机器。其存储器完全依靠机械装置，以轮子和卡片实现。") ]
+
+#html.p(id: "en-S045")[ #text("The fact that Babbage's Analytical Engine was to be entirely mechanical will help us to rid ourselves of a superstition. Importance is often attached to the fact that modern digital computers are electrical, and that the nervous system also is electrical. Since Babbage's machine was not electrical, and since all digital computers are in a sense equivalent, we see that this use of electricity cannot be of theoretical importance. Of course electricity usually comes in where fast signalling is concerned, so that it is not surprising that we find it in both these connections. In the nervous system chemical phenomena are at least as important as electrical. In certain computers the storage system is mainly acoustic. The feature of using electricity is thus seen to be only a very superficial similarity. If we wish to find such similarities we should look rather for mathematical analogies of function.") ]
+
+#zh(id: "S045")[ #text("巴贝奇的分析机完全采用机械结构，这有助于我们摆脱一种迷信。人们常常强调现代数字计算机使用电，而神经系统也使用电。但巴贝奇的机器不使用电，而且所有数字计算机在某种意义上都等价，所以使用电在理论上不可能具有关键意义。当然，需要快速传递信号时通常会用电，因此这两种系统都用电并不奇怪。在神经系统中，化学现象至少与电现象同样重要；某些计算机的存储系统则主要依靠声学原理。可见，使用电只是十分表面的相似之处。如果要寻找相似性，我们更应考察功能上的数学类比。") ]
+
+== 5. Universality of Digital Computers / 数字计算机的通用性
+
+#html.p(id: "en-S046")[ #text("The digital computers considered in the last section may be classified amongst the ‘discrete state machines’. These are the machines which move by sudden jumps or clicks from one quite definite state to another. These states are sufficiently different for the possibility of confusion between them to be ignored. Strictly speaking there are no such machines. Everything really moves continuously. But there are many kinds of machine which can profitably be thought of as being discrete state machines. For instance in considering the switches for a lighting system it is a convenient fiction that each switch must be definitely on or definitely off. There must be intermediate positions, but for most purposes we can forget about them. As an example of a discrete state machine we might consider a wheel which clicks round through 120° once a second, but may be stopped by a lever which can be operated from outside; in addition a lamp is to light in one of the positions of the wheel. This machine could be described abstractly as follows. The internal state of the machine (which is described by the position of the wheel) may be ") $q_1$ #text(", ") $q_2$ #text(" or ") $q_3$ #text(". There is an input signal ") $i_0$ #text(" or ") $i_1$ #text(" (position of lever). The internal state at any moment is determined by the last state and input signal according to the table") ]
+
+#zh(id: "S046")[ #text("上一节讨论的数字计算机属于“离散状态机”：它们通过突然跳变，从一个确定状态转到另一个状态。这些状态差异足够大，可以忽略混淆的可能性。严格说，并不存在这样的机器，因为实际事物总是连续变化的。但许多机器都可以有效地视为离散状态机。例如，讨论照明系统的开关时，假定每个开关必定处于开或关状态，是一种方便的理想化；中间位置当然存在，但多数情况下可以忽略。作为例子，可以设想一个每秒跳转 120° 的轮子，由外部可操作的杠杆将它停住；另有一盏灯，在轮子处于某个位置时点亮。这台机器可以作如下抽象描述：其内部状态由轮子的位置决定，可以是 ") $q_1$ #text("、") $q_2$ #text(" 或 ") $q_3$ #text("；输入信号 ") $i_0$ #text(" 或 ") $i_1$ #text(" 对应杠杆的位置。任意时刻的内部状态由上一状态和输入信号决定，关系如下表所示：") ]
+
+#table(
+  columns: 4, inset: 6pt, stroke: 0.4pt,
+  table.header([Input / 输入], [Last state $q_1$], [Last state $q_2$], [Last state $q_3$]),
+  [$i_0$], [$q_2$], [$q_3$], [$q_1$],
+  [$i_1$], [$q_1$], [$q_2$], [$q_3$],
+)
+#zh-caption[表：根据输入信号与上一状态确定新的内部状态。]
+
+#html.p(id: "en-S047")[ #text("The output signals, the only externally visible indication of the internal state (the light) are described by the table") ]
+
+#zh(id: "S047")[ #text("输出信号，也就是内部状态唯一可以从外部看见的指示——灯的状态——如下表所示：") ]
+
+#table(
+  columns: 4, inset: 6pt, stroke: 0.4pt,
+  table.header([State / 状态], [$q_1$], [$q_2$], [$q_3$]),
+  [Output / 输出], [$o_0$], [$o_0$], [$o_1$],
+)
+
+#html.p(id: "en-S048")[ #text("This example is typical of discrete state machines. They can be described by such tables provided they have only a finite number of possible states.") ]
+
+#zh(id: "S048")[ #text("这个例子是典型的离散状态机。只要可能的状态数有限，它们就可以用这样的表格描述。") ]
+
+#html.p(id: "en-S049")[ #text("It will seem that given the initial state of the machine and the input signals it is always possible to predict all future states. This is reminiscent of Laplace's view that from the complete state of the universe at one moment of time, as described by the positions and velocities of all particles, it should be possible to predict all future states. The prediction which we are considering is, however, rather nearer to practicability than that considered by Laplace. The system of the ‘universe as a whole’ is such that quite small errors in the initial conditions can have an overwhelming effect at a later time. The displacement of a single electron by a billionth of a centimetre at one moment might make the difference between a man being killed by an avalanche a year later, or escaping. It is an essential property of the mechanical systems which we have called ‘discrete state machines’ that this phenomenon does not occur. Even when we consider the actual physical machines instead of the idealised machines, reasonably accurate knowledge of the state at one moment yields reasonably accurate knowledge any number of steps later.") ]
+
+#zh(id: "S049")[ #text("看起来，只要知道机器的初始状态和输入信号，就总能预测所有未来状态。这让人联想到拉普拉斯的观点：如果知道宇宙在某一时刻的完整状态，即所有粒子的位置和速度，就应能预测所有未来状态。但这里的预测，比拉普拉斯设想的预测更接近实际可行。“整个宇宙”这个系统中，初始条件的微小误差可能在之后产生巨大影响。一个电子在某时刻偏移十亿分之一厘米，可能决定一个人一年后被雪崩夺去生命，还是逃过一劫。我们称为“离散状态机”的机械系统，有一个本质特点：不会发生这种现象。即便考虑实际物理机器而非理想化机器，只要相当准确地知道某时刻的状态，就能相当准确地知道任意步数之后的状态。") ]
+
+#html.p(id: "en-S050")[ #text("As we have mentioned, digital computers fall within the class of discrete state machines. But the number of states of which such a machine is capable is usually enormously large. For instance, the number for the machine now working at Manchester it about ") $2^(165000)$ #text(", i.e. about ") $10^(50000)$ #text(". Compare this with our example of the clicking wheel described above, which had three states. It is not difficult to see why the number of states should be so immense. The computer includes a store corresponding to the paper used by a human computer. It must be possible to write into the store any one of the combinations of symbols which might have been written on the paper. For simplicity suppose that only digits from 0 to 9 are used as symbols. Variations in handwriting are ignored. Suppose the computer is allowed 100 sheets of paper each containing 50 lines each with room for 30 digits. Then the number of states is ") $10^(100 times 50 times 30)$ #text(", i.e. ") $10^(150000)$ #text(". This is about the number of states of three Manchester machines put together. The logarithm to the base two of the number of states is usually called the ‘storage capacity’ of the machine. Thus the Manchester machine has a storage capacity of about 165,000 and the wheel machine of our example about 1.6. If two machines are put together their capacities must be added to obtain the capacity of the resultant machine. This leads to the possibility of statements such as ‘The Manchester machine contains 64 magnetic tracks each with a capacity of 2560, eight electronic tubes with a capacity of 1280. Miscellaneous storage amounts to about 300 making a total of 174,380.’") ]
+
+#zh(id: "S050")[ #text("如前所述，数字计算机属于离散状态机，但其可能的状态数通常极其庞大。例如，目前在曼彻斯特运行的机器约有 ") $2^(165000)$ #text(" 个状态，也就是约 ") $10^(50000)$ #text(" 个；而上面的轮子只有三个状态。状态数为何如此巨大，不难理解。计算机的存储器对应人类计算员使用的纸张，纸上可能写下的任何符号组合都必须能存入其中。为简化起见，假定只使用 0 至 9 的数字作为符号，忽略笔迹差异。假如允许计算员使用 100 张纸，每张 50 行，每行 30 个数字，那么状态数为 ") $10^(100 times 50 times 30)$ #text("，即 ") $10^(150000)$ #text("，约等于三台曼彻斯特机器合在一起的状态数。状态数的以二为底的对数通常称为机器的“存储容量”。因此，曼彻斯特机器的容量约为 165000，而例子中的轮子约为 1.6。两台机器合在一起时，容量应相加。这样便可以说：“曼彻斯特机器有 64 条磁道，每条容量为 2560；8 个电子管，每个容量为 1280；其他存储约为 300，总计 174380。”") ]
+
+#html.p(id: "en-S051")[ #text("Given the table corresponding to a discrete state machine it is possible to predict what it will do. There is no reason why this calculation should not be carried out by means of a digital computer. Provided it could be carried out sufficiently quickly the digital computer could mimic the behaviour of any discrete state machine. The imitation game could then be played with the machine in question (as B) and the mimicking digital computer (as A) and the interrogator would be unable to distinguish them. Of course the digital computer must have an adequate storage capacity as well as working sufficiently fast. Moreover, it must be programmed afresh for each new machine which it is desired to mimic.") ]
+
+#zh(id: "S051")[ #text("给定离散状态机对应的表格，就可以预测其行为。没有理由不能用数字计算机完成这种计算。只要算得足够快，数字计算机便能够模仿任何离散状态机。此时，可以让被模仿的机器作为 B、模仿它的数字计算机作为 A 进行模仿游戏，提问者就无法区分它们。当然，数字计算机必须具有足够的存储容量和运行速度，而且每次模仿一种新机器，都必须重新编程。") ]
+
+#html.p(id: "en-S052")[ #text("This special property of digital computers, that they can mimic any discrete state machine, is described by saying that they are universal machines. The existence of machines with this property has the important consequence that, considerations of speed apart, it is unnecessary to design various new machines to do various computing processes. They can all be done with one digital computer, suitably programmed for each case. It will be seen that as a consequence of this all digital computers are in a sense equivalent.") ]
+
+#zh(id: "S052")[ #text("数字计算机能够模仿任何离散状态机的这种特殊性质，可以表述为：它们是通用机器。具有这一性质的机器的存在，带来一个重要结论：撇开速度因素，为不同计算过程设计不同的新机器并无必要。所有过程都可以由一台数字计算机完成，只需针对各情况适当地编程。因此，所有数字计算机在某种意义上都是等价的。") ]
+
+#html.p(id: "en-S053")[ #text("We may now consider again the point raised at the end of §3. It was suggested tentatively that the question, ‘Can machines think?’ should be replaced by ‘Are there imaginable digital computers which would do well in the imitation game?’ If we wish we can make this superficially more general and ask ‘Are there discrete state machines which would do well?’ But in view of the universality property we see that either of these questions is equivalent to this, ‘Let us fix our attention on one particular digital computer C. Is it true that by modifying this computer to have an adequate storage, suitably increasing its speed of action, and providing it with an appropriate programme, C can be made to play satisfactorily the part of A in the imitation game, the part of B being taken by a man?’") ]
+
+#zh(id: "S053")[ #text("现在可以重新考虑第 3 节末尾提出的问题。我们曾试探性地建议，将“机器能思考吗？”替换为“是否存在可以设想、且能在模仿游戏中表现良好的数字计算机？”也可以把问题表面上推广为“是否存在能表现良好的离散状态机？”但根据通用性，这两个问题都等价于：“把注意力集中在一台特定数字计算机 C 上。通过为它配备足够的存储器、适当提高运行速度，并提供合适的程序，能否使 C 令人满意地在模仿游戏中扮演 A，而由人扮演 B？”") ]
+
+== 6. Contrary Views on the Main Question / 关于主要问题的相反观点
+
+#html.p(id: "en-S054")[ #text("We may now consider the ground to have been cleared and we are ready to proceed to the debate on our question, ‘Can machines think?’ and the variant of it quoted at the end of the last section. We cannot altogether abandon the original form of the problem, for opinions will differ as to the appropriateness of the substitution and we must at least listen to what has to be said in this connexion.") ]
+
+#zh(id: "S054")[ #text("现在可以认为准备工作已完成，我们可以讨论“机器能思考吗？”以及上一节末尾提出的变体。我们不能完全抛弃问题的最初形式，因为人们对于替换是否恰当会有不同意见，至少必须听取与此有关的说法。") ]
+
+#html.p(id: "en-S055")[ #text("It will simplify matters for the reader if I explain first my own beliefs in the matter. Consider first the more accurate form of the question. I believe that in about fifty years’ time it will be possible to programme computers, with a storage capacity of about ") $10^9$ #text(", to make them play the imitation game so well that an average interrogator will not have more than 70 per cent. chance of making the right identification after five minutes of questioning. The original question, ‘Can machines think?’ I believe to be too meaningless to deserve discussion. Nevertheless I believe that at the end of the century the use of words and general educated opinion will have altered so much that one will be able to speak of machines thinking without expecting to be contradicted. I believe further that no useful purpose is served by concealing these beliefs. The popular view that scientists proceed inexorably from well-established fact to well-established, never being influenced by any unproved conjecture, is quite mistaken. Provided it is made clear which are proved facts and which are conjectures, no harm can result. Conjectures are of great importance since they suggest useful lines of research.") ]
+
+#zh(id: "S055")[ #text("先说明我自己的看法，可以使读者更容易理解。首先考虑较准确的设问。我相信，大约五十年之后，人们将能够给存储容量约为 ") $10^9$ #text(" 的计算机编程，使其在模仿游戏中表现得很好，以至于普通提问者经过五分钟提问后，正确识别身份的概率不会超过 70%。我认为最初的“机器能思考吗？”过于缺乏明确意义，不值得讨论。不过，我相信到本世纪末，词语用法和受过一般教育者的普遍看法会发生很大变化，人们谈论机器思考时，将不必预期会遭到反驳。我还认为，隐瞒这些信念没有任何益处。那种认为科学家只从已确证事实坚定地走向另一个已确证事实、从不受未经证明的猜想影响的流行观点，完全错误。只要明确区分已证明的事实与猜想，就不会造成损害。猜想非常重要，因为它们指出有价值的研究方向。") ]
+
+#html.p(id: "en-S056")[ #text("I now proceed to consider opinions opposed to my own.") ]
+
+#zh(id: "S056")[ #text("下面我将讨论反对我这些看法的意见。") ]
+
+=== (1) The Theological Objection / 神学反对意见
+
+#html.p(id: "en-S057")[ #text("Thinking is a function of man's immortal soul. God has given an immortal soul to every man and woman, but not to any other animal or to machines. Hence no animal or machine can think.") ]
+
+#zh(id: "S057")[ #text("思考是不朽的人类灵魂的一种功能。上帝赋予每个男人和女人不朽的灵魂，却未赋予其他动物或机器。因此，动物和机器都不能思考。") ]
+
+#html.p(id: "en-S058")[ #text("I am unable to accept any part of this, but will attempt to reply in theological terms. I should find the argument more convincing if animals were classed with men, for there is a greater difference, to my mind, between the typical animate and the inanimate than there is between man and the other animals. The arbitrary character of the orthodox view becomes clearer if we consider how it might appear to a member of some other religious community. How do Christians regard the Moslem view that women have no souls? But let us leave this point aside and return to the main argument. It appears to me that the argument quoted above implies a serious restriction of the omnipotence of the Almighty. It is admitted that there are certain things that He cannot do such as making one equal to two, but should we not believe that He has freedom to confer a soul on an elephant if He sees fit? We might expect that He would only exercise this power in conjunction with a mutation which provided the elephant with an appropriately improved brain to minister to the needs of this soul. An argument of exactly similar form may be made for the case of machines. It may seem different because it is more difficult to “swallow”. But this really only means that we think it would be less likely that He would consider the circumstances suitable for conferring a soul. The circumstances in question are discussed in the rest of this paper. In attempting to construct such machines we should not be irreverently usurping His power of creating souls, any more than we are in the procreation of children: rather we are, in either case, instruments of His will providing mansions for the souls that He creates.") ]
+
+#zh(id: "S058")[ #text("我不能接受其中任何部分，但仍尝试从神学角度回应。如果动物被与人归在一起，我会觉得论证更有说服力，因为在我看来，典型生命体与无生命物之间的差异，大于人类与其他动物之间的差异。若从其他宗教共同体成员的角度看，就更能看出传统观点的任意性。例如，基督徒会怎样看待“女人没有灵魂”这一被归于穆斯林的观点？暂且搁置这一点，回到主要论证。我认为上述论证严重限制了全能上帝的力量。我们承认，有些事他不能做，例如让一等于二；但难道不应该相信，只要他认为合适，就有自由赋予大象灵魂吗？我们或许会预期，他只会在大象发生变异、获得适当改良的大脑以满足灵魂需要时，行使这种力量。完全同样的论证也适用于机器。这可能显得不同，只是因为更难让人接受；但这实际上仅意味着，我们认为他不太可能认为条件适合赋予机器灵魂。本文其余部分讨论的正是这些条件。尝试制造这种机器，并不比生育孩子更加不敬，也不是僭越他创造灵魂的力量。两种情况下，我们都只是他意志的工具，为他创造的灵魂提供居所。") ]
+
+#html.p(id: "en-S059")[ #text("However, this is mere speculation. I am not very impressed with theological arguments whatever they may be used to support. Such arguments have often been found unsatisfactory in the past. In the time of Galileo it was argued that the texts, “And the sun stood still … and hasted not to go down about a whole day” (Joshua x. 13) and “He laid the foundations of the earth, that it should not move at any time” (Psalm cv. 5) were an adequate refutation of the Copernican theory. With our present knowledge such an argument appears futile. When that knowledge was not available it made a quite different impression.") ]
+
+#zh(id: "S059")[ #text("然而，这只是推测。我对神学论证并不特别信服，无论它们被用来支持什么。过去，这类论证常常不令人满意。伽利略时代，人们曾认为“日头停住，……约有一日之久，不急速下落”（《约书亚记》10:13）以及“他将地立在根基上，使地永不动摇”（《诗篇》105:5），足以驳倒哥白尼学说。依据我们今天的知识，这种论证显得徒劳；但在当时尚无这些知识的情况下，它给人的印象大不相同。") ]
+
+=== (2) The ‘Heads in the Sand’ Objection / “把头埋进沙子”的反对意见
+
+#html.p(id: "en-S060")[ #text("“The consequences of machines thinking would be too dreadful. Let us hope and believe that they cannot do so.”") ]
+
+#zh(id: "S060")[ #text("“机器思考的后果太可怕了。让我们希望并相信，它们不能思考。”") ]
+
+#html.p(id: "en-S061")[ #text("This argument is seldom expressed quite so openly as in the form above. But it affects most of us who think about it at all. We like to believe that Man is in some subtle way superior to the rest of creation. It is best if he can be shown to be necessarily superior, for then there is no danger of him losing his commanding position. The popularity of the theological argument is clearly connected with this feeling. It is likely to be quite strong in intellectual people, since they value the power of thinking more highly than others, and are more inclined to base their belief in the superiority of Man on this power.") ]
+
+#zh(id: "S061")[ #text("这种论证很少像上面这样坦率地表达出来，但它影响着几乎所有思考过此事的人。我们喜欢相信，人类在某种微妙意义上优于其他一切造物。如果能够证明这种优越性是必然的，那就最好不过，因为他便不会有失去主导地位的危险。神学论证的流行，显然与这种感受有关。知识分子可能尤其强烈地抱有这种感受，因为他们比其他人更重视思考能力，也更倾向于把相信人类优越性的依据建立在这一能力上。") ]
+
+#html.p(id: "en-S062")[ #text("I do not think that this argument is sufficiently substantial to require refutation. Consolation would be more appropriate: perhaps this should be sought in the transmigration of souls.") ]
+
+#zh(id: "S062")[ #text("我认为这个论证不够实质，无需反驳。给予安慰也许更合适，或许可以从灵魂转生中寻求这种安慰。") ]
+
+=== (3) The Mathematical Objection / 数学反对意见
+
+#html.p(id: "en-S063")[ #text("There are a number of results of mathematical logic which can be used to show that there are limitations to the powers of discrete-state machines. The best known of these results is known as Gödel's theorem, ") #link("#turing-note-2", "[note 2]") #text(" and shows that in any sufficiently powerful logical system statements can be formulated which can neither be proved nor disproved within the system, unless possibly the system itself is inconsistent. There are other, in some respects similar, results due to Church, Kleene, Rosser, and Turing. The latter result is the most convenient to consider, since it refers directly to machines, whereas the others can only be used in a comparatively indirect argument: for instance if Gödel's theorem is to be used we need in addition to have some means of describing logical systems in terms of machines, and machines in terms of logical systems. The result in question refers to a type of machine which is essentially a digital computer with an infinite capacity. It states that there are certain things that such a machine cannot do. If it is rigged up to give answers to questions as in the imitation game, there will be some questions to which it will either give a wrong answer, or fail to give an answer at all however much time is allowed for a reply. There may, of course, be many such questions, and questions which cannot be answered by one machine may be satisfactorily answered by another. We are of course supposing for the present that the questions are of the kind to which an answer ‘Yes’ or ‘No’ is appropriate, rather than questions such as ‘What do you think of Picasso?’ The questions that we know the machines must fail on are of this type, “Consider the machine specified as follows…. Will this machine ever answer ‘Yes’ to any question?” The dots are to be replaced by a description of some machine in a standard form, which could be something like that used in §5. When the machine described bears a certain comparatively simple relation to the machine which is under interrogation, it can be shown that the answer is either wrong or not forthcoming. This is the mathematical result: it is argued that it proves a disability of machines to which the human intellect is not subject.") ]
+
+#zh(id: "S063")[ #text("数理逻辑的若干结果可以用来说明离散状态机能力的局限。其中最著名的是哥德尔定理 ") #link("#turing-note-2", "[注 2]") #text("：在任何足够强大的逻辑系统中，都可以构造某些命题，除非系统本身不一致，否则在系统内部既无法证明，也无法证伪。丘奇、克莱尼、罗瑟和图灵也有在某些方面类似的结果。图灵的结果最便于讨论，因为它直接涉及机器；其他结果只能用于相对间接的论证，例如使用哥德尔定理时，还必须能够用机器描述逻辑系统，以及用逻辑系统描述机器。这里所说的结果涉及一种本质上具有无限容量的数字计算机，并指出它有些事情无法完成。如果让它像模仿游戏中那样回答问题，就总有一些问题，它会答错，或者无论给它多少时间都不回答。当然，可能有许多这样的题；某台机器答不出的问题，另一台却可能答得好。这里暂时假定问题适合回答“是”或“否”，而不是“你怎么看毕加索？”已知机器必定失败的问题具有如下形式：“考虑按如下方式规定的机器……它会不会对某个问题回答‘是’？”省略号应替换为以标准形式描述的某台机器，例如第 5 节使用的形式。如果所描述的机器与正在受询问的机器具有某种较简单的关系，就能证明回答不是错误，就是不会出现。这便是数学结果；有人据此认为，它证明机器存在一种人类智力不受其限制的缺陷。") ]
+
+#html.p(id: "en-S064")[ #text("The short answer to this argument is that although it is established that there are limitations to the powers of any particular machine, it has only been stated, without any sort of proof, that no such limitations apply to the human intellect. But I do not think this view can be dismissed quite so lightly. Whenever one of these machines is asked the appropriate critical question, and gives a definite answer, we know that this answer must be wrong, and this gives us a certain feeling of superiority. Is this feeling illusory? It is no doubt quite genuine, but I do not think too much importance should be attached to it. We too often give wrong answers to questions ourselves to be justified in being very pleased at such evidence of fallibility on the part of the machines. Further, our superiority can only be felt on such an occasion in relation to the one machine over which we have scored our petty triumph. There would be no question of triumphing simultaneously over all machines. In short, then, there might be men cleverer than any given machine, but then again there might be other machines cleverer again, and so on.") ]
+
+#zh(id: "S064")[ #text("简短的回应是：虽然已经证明任何特定机器的能力都有限，但“人类智力不受同类限制”只是一种未经任何证明的断言。不过，我也不认为可以如此轻率地否定这个观点。每当某台机器被问到恰当的关键问题，并给出明确回答时，我们知道答案必定错误，由此产生某种优越感。这种感受是错觉吗？感受本身无疑真实，但我认为不应过于重视。我们自己也经常答错问题，没有理由因看到机器会犯错便沾沾自喜。此外，在这种场合，我们的优越感只针对那台让我们取得小小胜利的机器，不可能同时战胜所有机器。简言之，可能有比任何给定机器更聪明的人，也可能有比这些人更聪明的其他机器，如此往复。") ]
+
+#html.p(id: "en-S065")[ #text("Those who hold to the mathematical argument would, I think, mostly be willing to accept the imitation game as a basis for discussion. Those who believe in the two previous objections would probably not be interested in any criteria.") ]
+
+#zh(id: "S065")[ #text("我认为，支持数学论证的人，大多愿意以模仿游戏为讨论基础；而相信前两种反对意见的人，可能对任何判定标准都不感兴趣。") ]
+
+=== (4) The Argument from Consciousness / 意识论证
+
+#html.p(id: "en-S066")[ #text("This argument is very well expressed in Professor Jefferson's Lister Oration for 1949, from which I quote. “Not until a machine can write a sonnet or compose a concerto because of thoughts and emotions felt, and not by the chance fall of symbols, could we agree that machine equals brain—that is, not only write it but know that it had written it. No mechanism could feel (and not merely artificially signal, an easy contrivance) pleasure at its successes, grief when its valves fuse, be warmed by flattery, be made miserable by its mistakes, be charmed by sex, be angry or depressed when it cannot get what it wants.”") ]
+
+#zh(id: "S066")[ #text("杰斐逊教授在 1949 年李斯特演讲中很好地表达了这一论证，我引述如下：“只有当机器因为感受到思想和情绪，而非符号偶然组合，写出十四行诗或协奏曲时，我们才能同意机器等同于大脑；也就是说，它不仅写出作品，还知道自己写出了作品。没有任何机械装置能因成功而喜悦，因电子管烧毁而悲伤，因奉承而感到温暖，因犯错而痛苦，因性而着迷，或因得不到想要的东西而愤怒、沮丧；这指的是实际感受，而非容易设计的人为信号。”") ]
+
+#html.p(id: "en-S067")[ #text("This argument appears to be a denial of the validity of our test. According to the most extreme form of this view the only way by which one could be sure that a machine thinks is to be the machine and to feel oneself thinking. One could then describe these feelings to the world, but of course no one would be justified in taking any notice. Likewise according to this view the only way to know that a man thinks is to be that particular man. It is in fact the solipsist point of view. It may be the most logical view to hold but it makes communication of ideas difficult. A is liable to believe ‘A thinks but B does not’ whilst B believes ‘B thinks but A does not’. Instead of arguing continually over this point it is usual to have the polite convention that everyone thinks.") ]
+
+#zh(id: "S067")[ #text("这个论证似乎否认我们测试的有效性。按照其最极端形式，唯一能确定机器在思考的方法，就是成为那台机器，亲自感到自己在思考。然后可以向世界描述这些感受，但当然，没有人有充分理由相信。同样，要知道某个人在思考，就必须成为那个人。这其实是唯我论观点，也许最符合逻辑，却使思想交流困难。A 容易相信“A 在思考，B 没有”，而 B 相信“B 在思考，A 没有”。通常，我们不持续争论这一点，而采取一种礼貌的约定：每个人都在思考。") ]
+
+#html.p(id: "en-S068")[ #text("I am sure that Professor Jefferson does not wish to adopt the extreme and solipsist point of view. Probably he would be quite willing to accept the imitation game as a test. The game (with the player B omitted) is frequently used in practice under the name of viva voce to discover whether some one really understands something or has ‘learnt it parrot fashion’. Let us listen in to a part of such a viva voce:") ]
+
+#zh(id: "S068")[ #text("我相信杰斐逊教授并不想采取这种极端的唯我论观点。他很可能愿意接受模仿游戏作为测试。事实上，去掉参与者 B 后，这种游戏经常用于口试，以判断一个人是真正理解，还是像鹦鹉一样死记硬背。让我们听一段口试：") ]
+
+#html.p(id: "en-S069")[ #text("Interrogator: In the first line of your sonnet which reads ‘Shall I compare thee to a summer's day’, would not ‘a spring day’ do as well or better?") ]
+
+#zh(id: "S069")[ #text("提问者：你的十四行诗第一句是“我是否能把你比作夏日”，换成“春日”会不会同样好，甚至更好？") ]
+
+#html.p(id: "en-S070")[ #text("Witness: It wouldn’t scan.") ]
+
+#zh(id: "S070")[ #text("被询问者：那样不符合诗的格律。") ]
+
+#html.p(id: "en-S071")[ #text("Interrogator: How about ‘a winter's day’ That would scan all right.") ]
+
+#zh(id: "S071")[ #text("提问者：那“冬日”呢？它符合格律。") ]
+
+#html.p(id: "en-S072")[ #text("Witness: Yes, but nobody wants to be compared to a winter's day.") ]
+
+#zh(id: "S072")[ #text("被询问者：是的，但没人愿意被比作冬日。") ]
+
+#html.p(id: "en-S073")[ #text("Interrogator: Would you say Mr. Pickwick reminded you of Christmas?") ]
+
+#zh(id: "S073")[ #text("提问者：你会说匹克威克先生让你想起圣诞节吗？") ]
+
+#html.p(id: "en-S074")[ #text("Witness: In a way.") ]
+
+#zh(id: "S074")[ #text("被询问者：在某种程度上，会。") ]
+
+#html.p(id: "en-S075")[ #text("Interrogator: Yet Christmas is a winter's day, and I do not think Mr. Pickwick would mind the comparison.") ]
+
+#zh(id: "S075")[ #text("提问者：可圣诞节也是冬天的一天，我想匹克威克先生不会介意这种比较。") ]
+
+#html.p(id: "en-S076")[ #text("Witness: I don’t think you’re serious. By a winter's day one means a typical winter's day, rather than a special one like Christmas.") ]
+
+#zh(id: "S076")[ #text("被询问者：我觉得你不是认真的。说“冬日”时，指的是典型的冬天一天，而不是像圣诞节这样的特殊日子。") ]
+
+#html.p(id: "en-S077")[ #text("And so on. What would Professor Jefferson say if the sonnet-writing machine was able to answer like this in the viva voce? I do not know whether he would regard the machine as ‘merely artificially signalling’ these answers, but if the answers were as satisfactory and sustained as in the above passage I do not think he would describe it as ‘an easy contrivance’. This phrase is, I think, intended to cover such devices as the inclusion in the machine of a record of someone reading a sonnet, with appropriate switching to turn it on from time to time.") ]
+
+#zh(id: "S077")[ #text("如此等等。如果写十四行诗的机器能在口试中这样回答，杰斐逊教授会怎么说？我不知道他是否会认为机器只是“人为发出信号”来给出这些回答。但如果回答像上面那样令人满意，而且能够持续下去，我想他不会称它为“容易设计的装置”。我认为，这句话所指的是：在机器中放入某人朗诵十四行诗的录音，再通过适当的开关不时播放之类的办法。") ]
+
+#html.p(id: "en-S078")[ #text("In short then, I think that most of those who support the argument from consciousness could be persuaded to abandon it rather than be forced into the solipsist position. They will then probably be willing to accept our test.") ]
+
+#zh(id: "S078")[ #text("因此，我认为，多数支持意识论证的人，与其被迫接受唯我论，更可能被说服放弃这个论证。之后，他们大概会愿意接受我们的测试。") ]
+
+#html.p(id: "en-S079")[ #text("I do not wish to give the impression that I think there is no mystery about consciousness. There is, for instance, something of a paradox connected with any attempt to localise it. But I do not think these mysteries necessarily need to be solved before we can answer the question with which we are concerned in this paper.") ]
+
+#zh(id: "S079")[ #text("我不想让人以为，我觉得意识毫无谜团。例如，任何试图确定意识所在位置的做法，都与某种悖论有关。但我认为，要回答本文关心的问题，并不一定要先解决这些谜团。") ]
+
+=== (5) Arguments from Various Disabilities / 关于各种能力缺失的论证
+
+#html.p(id: "en-S080")[ #text("These arguments take the form, “I grant you that you can make machines do all the things you have mentioned but you will never be able to make one to do X”. Numerous features X are suggested in this connexion. I offer a selection:") ]
+
+#zh(id: "S080")[ #text("这类论证具有如下形式：“我承认你能让机器完成你所说的一切，但你永远无法让它完成 X。”人们为 X 提出许多特征，这里列举一部分：") ]
+
+#html.p(id: "en-S081")[ #text("Be kind, resourceful, beautiful, friendly (p. 448), have initiative, have a sense of humour, tell right from wrong, make mistakes (p. 448), fall in love, enjoy strawberries and cream (p. 448), make some one fall in love with it, learn from experience (pp. 456 f.), use words properly, be the subject of its own thought (p. 449), have as much diversity of behaviour as a man, do something really new (p. 450). (Some of these disabilities are given special consideration as indicated by the page numbers.)") ]
+
+#zh(id: "S081")[ #text("善良、机智、美丽、友好（第 448 页），有主动性、有幽默感、能分辨对错、会犯错（第 448 页）、会坠入爱河、会享受草莓配奶油（第 448 页）、能让别人爱上它、能从经验中学习（第 456 页及后文）、能恰当地使用词语、能以自身为思考对象（第 449 页）、行为像人类一样多样，以及能做真正新颖的事（第 450 页）。（其中一些所谓的能力缺失将在所示页码处专门讨论。）") ]
+
+#html.p(id: "en-S082")[ #text("No support is usually offered for these statements. I believe they are mostly founded on the principle of scientific induction. A man has seen thousands of machines in his lifetime. From what he sees of them he draws a number of general conclusions. They are ugly, each is designed for a very limited purpose, when required for a minutely different purpose they are useless, the variety of behaviour of any one of them is very small, etc., etc. Naturally he concludes that these are necessary properties of machines in general. Many of these limitations are associated with the very small storage capacity of most machines. (I am assuming that the idea of storage capacity is extended in some way to cover machines other than discrete-state machines. The exact definition does not matter as no mathematical accuracy is claimed in the present discussion.) A few years ago, when very little had been heard of digital computers, it was possible to elicit much incredulity concerning them, if one mentioned their properties without describing their construction. That was presumably due to a similar application of the principle of scientific induction. These applications of the principle are of course largely unconscious. When a burnt child fears the fire and shows that he fears it by avoiding it, I should say that he was applying scientific induction. (I could of course also describe his behaviour in many other ways.) The works and customs of mankind do not seem to be very suitable material to which to apply scientific induction. A very large part of space-time must be investigated, if reliable results are to be obtained. Otherwise we may (as most English children do) decide that everybody speaks English, and that it is silly to learn French.") ]
+
+#zh(id: "S082")[ #text("这些断言通常没有提供证据。我相信，它们大多建立在科学归纳原则上。一个人一生见过成千上万台机器，并根据观察作出若干一般结论：机器丑陋；每台只为很有限的用途设计，换成稍有不同的用途就无用；任何一台的行为种类都很少，等等。于是他自然地认为，这些是所有机器必然具有的性质。其中许多限制与大多数机器的存储容量很小有关。（这里假定存储容量这一概念可适当推广到离散状态机以外的机器；确切定义并不重要，因为本节不要求数学上的精确。）几年前，人们还很少听说数字计算机时，如果只提到它们的性质而不说明构造，很容易引来强烈怀疑。这大概也是科学归纳原则的类似运用。人们当然大多是无意识地这样做。被火烫过的孩子害怕火，并通过躲避火来表现这种恐惧，我会说他在应用科学归纳；当然也可以用许多其他方式描述。人类的活动与习俗似乎不太适合直接应用科学归纳。若要得到可靠结果，必须考察极大范围的时空。否则，我们可能像多数英国儿童一样，认为人人都说英语，学习法语很愚蠢。") ]
+
+#html.p(id: "en-S083")[ #text("There are, however, special remarks to be made about many of the disabilities that have been mentioned. The inability to enjoy strawberries and cream may have struck the reader as frivolous. Possibly a machine might be made to enjoy this delicious dish, but any attempt to make one do so would be idiotic. What is important about this disability is that it contributes to some of the other disabilities, e.g. to the difficulty of the same kind of friendliness occurring between man and machine as between white man and white man, or between black man and black man.") ]
+
+#zh(id: "S083")[ #text("不过，对许多已经提到的能力缺失，还需要专门说明。不能享受草莓配奶油这一点，可能让读者觉得无关紧要。也许可以造出享受这道美食的机器，但这样尝试会很愚蠢。这个缺陷的重要之处，在于它会促成其他一些缺陷，例如使人与机器之间难以产生白人与白人之间、或黑人与黑人之间那种同类的友好关系。") ]
+
+#html.p(id: "en-S084")[ #text("The claim that “machines cannot make mistakes” seems a curious one. One is tempted to retort, “Are they any the worse for that?” But let us adopt a more sympathetic attitude, and try to see what is really meant. I think this criticism can be explained in terms of the imitation game. It is claimed that the interrogator could distinguish the machine from the man simply by setting them a number of problems in arithmetic. The machine would be unmasked because of its deadly accuracy. The reply to this is simple. The machine (programmed for playing the game) would not attempt to give the right answers to the arithmetic problems. It would deliberately introduce mistakes in a manner calculated to confuse the interrogator. A mechanical fault would probably show itself through an unsuitable decision as to what sort of a mistake to make in the arithmetic. Even this interpretation of the criticism is not sufficiently sympathetic. But we cannot afford the space to go into it much further. It seems to me that this criticism depends on a confusion between two kinds of mistake. We may call them ‘errors of functioning’ and ‘errors of conclusion’. Errors of functioning are due to some mechanical or electrical fault which causes the machine to behave otherwise than it was designed to do. In philosophical discussions one likes to ignore the possibility of such errors; one is therefore discussing ‘abstract machines’. These abstract machines are mathematical fictions rather than physical objects. By definition they are incapable of errors of functioning. In this sense we can truly say that ‘machines can never make mistakes’. Errors of conclusion can only arise when some meaning is attached to the output signals from the machine. The machine might, for instance, type out mathematical equations, or sentences in English. When a false proposition is typed we say that the machine has committed an error of conclusion. There is clearly no reason at all for saying that a machine cannot make this kind of mistake. It might do nothing but type out repeatedly ‘") $0 = 1$ #text("’. To take a less perverse example, it might have some method for drawing conclusions by scientific induction. We must expect such a method to lead occasionally to erroneous results.") ]
+
+#zh(id: "S084")[ #text("“机器不会犯错”这一说法颇奇怪。人们很容易反问：“这有什么不好？”但让我们采取更体谅的态度，看看它究竟意味着什么。我认为，这种批评可以用模仿游戏解释：提问者只需设置若干算术题，就能区分机器与人，因为机器的绝对准确会暴露身份。回应很简单：为游戏编程的机器不会一味给出正确算术答案，而会有意引入错误，使提问者困惑。机械故障可能表现为没有恰当地决定应犯哪种算术错误。即使这种解释，也还不够体谅，但这里没有篇幅继续展开。我觉得这种批评混淆了两种错误，可以称为“运行错误”和“结论错误”。运行错误由机械或电气故障引起，使机器的行为偏离设计。哲学讨论中通常忽略这类错误，所以讨论的是“抽象机器”，它们是数学上的理想化对象，而非物理物体。按定义，它们不会发生运行错误。在这个意义上，确实可以说“机器永远不会犯错”。只有赋予机器输出信号某种意义时，才会产生结论错误。例如，机器可以打印数学方程或英语句子；当它打印出错误命题时，就称其犯了结论错误。显然，没有理由说机器不能犯这种错误。它甚至可以不停打印“") $0 = 1$ #text("”。举一个不那么反常的例子：机器可能具有利用科学归纳得出结论的方法，我们必须预期这种方法偶尔会产生错误结果。") ]
+
+#html.p(id: "en-S085")[ #text("The claim that a machine cannot be the subject of its own thought can of course only be answered if it can be shown that the machine has some thought with some subject matter. Nevertheless, ‘the subject matter of a machine's operations’ does seem to mean something, at least to the people who deal with it. If, for instance, the machine was trying to find a solution of the equation ") $x^2 - 40 x - 11 = 0$ #text(" one would be tempted to describe this equation as part of the machine's subject matter at that moment. In this sort of sense a machine undoubtedly can be its own subject matter. It may be used to help in making up its own programmes, or to predict the effect of alterations in its own structure. By observing the results of its own behaviour it can modify its own programmes so as to achieve some purpose more effectively. These are possibilities of the near future, rather than Utopian dreams.") ]
+
+#zh(id: "S085")[ #text("要回答“机器不能以自身为思考对象”这一说法，当然首先必须证明机器能够对某种对象进行思考。不过，“机器操作的对象”似乎确实有意义，至少对与机器打交道的人如此。例如，机器尝试求解方程 ") $x^2 - 40 x - 11 = 0$ #text(" 时，我们很容易把这个方程称为机器此刻处理的对象。在这一意义上，机器无疑可以以自身为对象：它可以帮助编写自己的程序，或预测自身结构改变的效果。通过观察自己行为的结果，它可以修改自己的程序，以更有效地实现某个目标。这些是近期未来的可能性，而非乌托邦式梦想。") ]
+
+#html.p(id: "en-S086")[ #text("The criticism that a machine cannot have much diversity of behaviour is just a way of saying that it cannot have much storage capacity. Until fairly recently a storage capacity of even a thousand digits was very rare.") ]
+
+#zh(id: "S086")[ #text("“机器不可能具有很多样的行为”这一批评，只是在说它不可能具有很大存储容量。直到不久前，哪怕只有一千个数字的存储容量，也十分罕见。") ]
+
+#html.p(id: "en-S087")[ #text("The criticisms that we are considering here are often disguised forms of the argument from consciousness. Usually if one maintains that a machine can do one of these things, and describes the kind of method that the machine could use, one will not make much of an impression. It is thought that the method (whatever it may be, for it must be mechanical) is really rather base. Compare the parenthesis in Jefferson's statement quoted on p. 21.") ]
+
+#zh(id: "S087")[ #text("这里讨论的批评，常常是意识论证的变体。通常，即使有人主张机器能完成这些事情中的某一项，并说明可采用的方法，也难以让人信服。人们认为，这种方法无论是什么，都必定是机械的，因而显得低级。可以对照第 21 页所引杰斐逊说法中的括号部分。") ]
+
+=== (6) Lady Lovelace's Objection / 洛夫莱斯夫人的反对意见
+
+#html.p(id: "en-S088")[ #text("Our most detailed information of Babbage's Analytical Engine comes from a memoir by Lady Lovelace. In it she states, “The Analytical Engine has no pretensions to originate anything. It can do whatever we know how to order it to perform” (her italics). This statement is quoted by Hartree (p. 70) who adds: “This does not imply that it may not be possible to construct electronic equipment which will ‘think for itself’, or in which, in biological terms, one could set up a conditioned reflex, which would serve as a basis for ‘learning’. Whether this is possible in principle or not is a stimulating and exciting question, suggested by some of these recent developments. But it did not seem that the machines constructed or projected at the time had this property”.") ]
+
+#zh(id: "S088")[ #text("关于巴贝奇分析机，最详细的资料来自洛夫莱斯夫人的一篇论述。她写道：“分析机并不声称能创造任何东西。它能做的是我们知道如何命令它完成的任何事情。”（斜体为她所加。）哈特里在第 70 页引用此言，并补充：“这并不意味着不可能制造出能够‘自行思考’的电子设备，或用生物学术语来说，建立一种作为‘学习’基础的条件反射。原则上能否做到，是近期某些发展所提出、令人振奋且激动的问题。但当时已经制造或规划的机器，似乎并不具有这种性质。”") ]
+
+#html.p(id: "en-S089")[ #text("I am in thorough agreement with Hartree over this. It will be noticed that he does not assert that the machines in question had not got the property, but rather that the evidence available to Lady Lovelace did not encourage her to believe that they had it. It is quite possible that the machines in question had in a sense got this property. For suppose that some discrete-state machine has the property. The Analytical Engine was a universal digital computer, so that, if its storage capacity and speed were adequate, it could by suitable programming be made to mimic the machine in question. Probably this argument did not occur to the Countess or to Babbage. In any case there was no obligation on them to claim all that could be claimed.") ]
+
+#zh(id: "S089")[ #text("在这一点上，我完全同意哈特里。应注意，他并没有断言那些机器不具有这种性质，而是说洛夫莱斯夫人当时掌握的证据，不足以使她相信它们具有。那些机器完全可能在某种意义上已经具备这种性质。假定某台离散状态机具有它，而分析机是一台通用数字计算机，那么只要存储容量与速度足够，就能通过适当编程模仿该机器。伯爵夫人或巴贝奇大概没有想到这一论证。无论如何，他们没有义务把一切可能主张的东西都主张出来。") ]
+
+#html.p(id: "en-S090")[ #text("This whole question will be considered again under the heading of learning machines.") ]
+
+#zh(id: "S090")[ #text("这个问题将在“学习机器”部分再次讨论。") ]
+
+#html.p(id: "en-S091")[ #text("A variant of Lady Lovelace's objection states that a machine can ‘never do anything really new’. This may be parried for a moment with the saw, ‘There is nothing new under the sun’. Who can be certain that ‘original work’ that he has done was not simply the growth of the seed planted in him by teaching, or the effect of following well-known general principles. A better variant of the objection says that a machine can never ‘take us by surprise’. This statement is a more direct challenge and can be met directly. Machines take me by surprise with great frequency. This is largely because I do not do sufficient calculation to decide what to expect them to do, or rather because, although I do a calculation, I do it in a hurried, slipshod fashion, taking risks. Perhaps I say to myself, ‘I suppose the voltage here ought to be the same as there: anyway let's assume it is.’ Naturally I am often wrong, and the result is a surprise for me for by the time the experiment is done these assumptions have been forgotten. These admissions lay me open to lectures on the subject of my vicious ways, but do not throw any doubt on my credibility when I testify to the surprises I experience.") ]
+
+#zh(id: "S091")[ #text("洛夫莱斯夫人反对意见的一种变体是：机器“永远做不出真正新颖的事”。可以暂时用“太阳底下无新事”这句谚语回应。谁能确定，自己完成的“原创工作”，不是教育播下的种子的生长，或遵循已知一般原则的结果？一个更好的变体是：机器永远不能“让我们惊讶”。这个说法更直接，可以直接回应。机器经常让我惊讶，很大程度上是因为我没有充分计算来判断它会做什么；或者虽然做了计算，却匆忙、草率，并冒了风险。我也许会对自己说：“这里的电压大概应该与那里一样，姑且这样假定。”自然，我常常错了，而实验完成时已经忘记那些假设，结果便让我惊讶。这些坦白可能招来别人对我不良习惯的训诫，但不能使我关于自身惊讶体验的证言失去可信度。") ]
+
+#html.p(id: "en-S092")[ #text("I do not expect this reply to silence my critic. He will probably say that such surprises are due to some creative mental act on my part, and reflect no credit on the machine. This leads us back to the argument from consciousness, and far from the idea of surprise. It is a line of argument we must consider closed, but it is perhaps worth remarking that the appreciation of something as surprising requires as much of a ‘creative mental act’ whether the surprising event originates from a man, a book, a machine or anything else.") ]
+
+#zh(id: "S092")[ #text("我不指望这种回答能使批评者沉默。他很可能会说，惊讶来自我的某种创造性心智活动，功劳不属于机器。这又把我们带回意识论证，远离了惊讶本身。我们必须认为这条论证路线已经结束。不过或许值得指出：无论令人惊讶的事件来自人、书、机器，还是其他东西，把它认识为令人惊讶，都同样需要一种“创造性心智活动”。") ]
+
+#html.p(id: "en-S093")[ #text("The view that machines cannot give rise to surprises is due, I believe, to a fallacy to which philosophers and mathematicians are particularly subject. This is the assumption that as soon as a fact is presented to a mind all consequences of that fact spring into the mind simultaneously with it. It is a very useful assumption under many circumstances, but one too easily forgets that it is false. A natural consequence of doing so is that one then assumes that there is no virtue in the mere working out of consequences from data and general principles.") ]
+
+#zh(id: "S093")[ #text("我认为，“机器不能带来惊讶”源于哲学家和数学家尤其容易犯的一种谬误：假定一个事实一旦呈现在头脑中，其所有后果就同时进入头脑。这种假定在许多情况下很有用，但人们太容易忘记它其实是假的。由此自然导致另一种假定：单纯从数据与一般原则推演结果，没有任何价值。") ]
+
+=== (7) Argument from Continuity in the Nervous System / 神经系统连续性论证
+
+#html.p(id: "en-S094")[ #text("The nervous system is certainly not a discrete-state machine. A small error in the information about the size of a nervous impulse impinging on a neuron, may make a large difference to the size of the outgoing impulse. It may be argued that, this being so, one cannot expect to be able to mimic the behaviour of the nervous system with a discrete-state system.") ]
+
+#zh(id: "S094")[ #text("神经系统肯定不是离散状态机。对于到达神经元的神经冲动强度，信息中的微小误差，可能使输出冲动的强度发生很大变化。因此，有人可能认为，不能指望用离散状态系统模仿神经系统的行为。") ]
+
+#html.p(id: "en-S095")[ #text("It is true that a discrete-state machine must be different from a continuous machine. But if we adhere to the conditions of the imitation game, the interrogator will not be able to take any advantage of this difference. The situation can be made clearer if we consider some other simpler continuous machine. A differential analyser will do very well. (A differential analyser is a certain kind of machine not of the discrete-state type used for some kinds of calculation.) Some of these provide their answers in a typed form, and so are suitable for taking part in the game. It would not be possible for a digital computer to predict exactly what answers the differential analyser would give to a problem, but it would be quite capable of giving the right sort of answer. For instance, if asked to give the value of π (actually about 3.1416) it would be reasonable to choose at random between the values 3.12, 3.13, 3.14, 3.15, 3.16 with the probabilities of 0.05, 0.15, 0.55, 0.19, 0.06 (say). Under these circumstances it would be very difficult for the interrogator to distinguish the differential analyser from the digital computer.") ]
+
+#zh(id: "S095")[ #text("离散状态机确实不同于连续机器。但如果遵守模仿游戏的条件，提问者无法利用这种差异。考虑一种较简单的连续机器，可以让情况更清楚，微分分析机就很合适。它是用于某些计算的一类非离散状态机器。有些微分分析机以打字形式输出答案，因此适合参加游戏。数字计算机不能准确预测微分分析机对某问题给出的答案，但完全能够给出同类答案。例如，被问到 π 的值时，真实值约为 3.1416，可以随机选择 3.12、3.13、3.14、3.15、3.16，概率分别设为 0.05、0.15、0.55、0.19、0.06。在这种情况下，提问者很难区分微分分析机与数字计算机。") ]
+
+=== (8) The Argument from Informality of Behaviour / 行为非形式性论证
+
+#html.p(id: "en-S096")[ #text("It is not possible to produce a set of rules purporting to describe what a man should do in every conceivable set of circumstances. One might for instance have a rule that one is to stop when one sees a red traffic light, and to go if one sees a green one, but what if by some fault both appear together? One may perhaps decide that it is safest to stop. But some further difficulty may well arise from this decision later. To attempt to provide rules of conduct to cover every eventuality, even those arising from traffic lights, appears to be impossible. With all this I agree.") ]
+
+#zh(id: "S096")[ #text("不可能制定一套规则，声称能描述人在每种可设想情境中应该做什么。例如，规则可以要求遇到红灯停下、遇到绿灯前进，但如果因故障红绿灯同时亮起呢？也许可以决定停下最安全，但这个决定后来还可能引发新困难。试图用行为准则涵盖所有可能情况，哪怕仅限于交通灯引起的情况，似乎也不可能。对此，我完全同意。") ]
+
+#html.p(id: "en-S097")[ #text("From this it is argued that we cannot be machines. I shall try to reproduce the argument, but I fear I shall hardly do it justice. It seems to run something like this. ‘If each man had a definite set of rules of conduct by which he regulated his life he would be no better than a machine. But there are no such rules, so men cannot be machines.’ The undistributed middle is glaring. I do not think the argument is ever put quite like this, but I believe this is the argument used nevertheless. There may however be a certain confusion between ‘rules of conduct’ and ‘laws of behaviour’ to cloud the issue. By ‘rules of conduct’ I mean precepts such as ‘Stop if you see red lights’, on which one can act, and of which one can be conscious. By ‘laws of behaviour’ I mean laws of nature as applied to a man's body such as ‘if you pinch him he will squeak’. If we substitute ‘laws of behaviour which regulate his life’ for ‘laws of conduct by which he regulates his life’ in the argument quoted the undistributed middle is no longer insuperable. For we believe that it is not only true that being regulated by laws of behaviour implies being some sort of machine (though not necessarily a discrete-state machine), but that conversely being such a machine implies being regulated by such laws. However, we cannot so easily convince ourselves of the absence of complete laws of behaviour as of complete rules of conduct. The only way we know of for finding such laws is scientific observation, and we certainly know of no circumstances under which we could say, ‘We have searched enough. There are no such laws.’") ]
+
+#zh(id: "S097")[ #text("有人由此论证，我们不可能是机器。我尝试复述这一论证，但恐怕不能充分表达它。它大致是：“如果每个人都依照一套确定的行为准则生活，他便与机器无异。但不存在这种准则，所以人不可能是机器。”其中中项不周延的逻辑错误显而易见。我不认为人们真的会这样表述，但我相信实际上使用的就是这类论证。不过，“行为准则”与“行为规律”之间的混淆，也可能让问题模糊。我说的行为准则，是“见红灯停下”这类人可以意识到并据以行动的规定；行为规律，则是适用于人体的自然规律，例如“掐他一下，他就叫出声”。如果把论证中的“他据以安排生活的行为准则”改为“支配他生活的行为规律”，中项不周延就不再是无法克服的问题。因为我们相信，受行为规律支配意味着属于某种机器，虽然未必是离散状态机；反过来，属于这种机器也意味着受这些规律支配。然而，我们无法像确信不存在完整行为准则那样，轻易确信不存在完整行为规律。发现这些规律的唯一已知方法是科学观察，我们当然不知道在什么情况下可以说：“已经找够了，不存在这样的规律。”") ]
+
+#html.p(id: "en-S098")[ #text("We can demonstrate more forcibly that any such statement would be unjustified. For suppose we could be sure of finding such laws if they existed. Then given a discrete-state machine it should certainly be possible to discover by observation sufficent about it to predict its future behaviour, and this within a reasonable time, say a thousand years. But this does not seem to be the case. I have set up on the Manchester computer a small programme using only 1000 units of storage, whereby the machine supplied with one sixteen figure number replies with another within two seconds. I would defy anyone to learn from these replies sufficient about the programme to be able to predict any replies to untried values.") ]
+
+#zh(id: "S098")[ #text("我们可以更有力地说明，这种断言没有依据。假设只要这些规律存在，我们就肯定能够找到。那么，给定一台离散状态机，就应能通过观察，在合理时间内，比如一千年，充分了解它，以预测其未来行为。但事实似乎并非如此。我在曼彻斯特计算机上编写了一个只使用 1000 个存储单元的小程序：给它一个十六位数，它便在两秒内返回另一个数。我挑战任何人，仅从这些回答中了解程序，并预测它对尚未测试过的输入会作出什么回答。") ]
+
+=== (9) The Argument from Extra-Sensory Perception / 超感官知觉论证
+
+#html.p(id: "en-S099")[ #text("I assume that the reader is familiar with the idea of extra-sensory perception, and the meaning of the four items of it, viz. telepathy, clairvoyance, precognition and psycho-kinesis. These disturbing phenomena seem to deny all our usual scientific ideas. How we should like to discredit them! Unfortunately the statistical evidence, at least for telepathy, is overwhelming. It is very difficult to rearrange one's ideas so as to fit these new facts in. Once one has accepted them it does not seem a very big step to believe in ghosts and bogies. The idea that our bodies move simply according to the known laws of physics, together with some others not yet discovered but somewhat similar, would be one of the first to go.") ]
+
+#zh(id: "S099")[ #text("我假定读者熟悉超感官知觉这一概念，以及它的四种形式：心灵感应、千里眼、预知和意念移物。这些令人不安的现象，似乎否定了我们通常的全部科学观念。我们多么希望能够驳斥它们！但不幸的是，至少对于心灵感应，统计证据是压倒性的。重新整理观念以容纳这些新事实，十分困难。一旦接受它们，相信鬼魂和妖怪似乎也不再是很大的一步。“人体只依照已知物理定律以及某些尚未发现但性质相近的定律运动”这一观念，将首先被放弃。") ]
+
+#html.p(id: "en-S100")[ #text("This argument is to my mind quite a strong one. One can say in reply that many scientific theories seem to remain workable in practice, in spite of clashing with E.S.P.; that in fact one can get along very nicely if one forgets about it. This is rather cold comfort, and one fears that thinking is just the kind of phenomenon where E.S.P. may be especially relevant.") ]
+
+#zh(id: "S100")[ #text("在我看来，这个论证相当有力。可以回应说，许多科学理论虽然与超感官知觉冲突，在实际中仍然有效；事实上，忘掉它也能过得很好。但这种安慰很有限，而且人们担心，思考恰好是超感官知觉可能特别相关的一类现象。") ]
+
+#html.p(id: "en-S101")[ #text("A more specific argument based on E.S.P. might run as follows: “Let us play the imitation game, using as witnesses a man who is good as a telepathic receiver, and a digital computer. The interrogator can ask such questions as ‘What suit does the card in my right hand belong to?’ The man by telepathy or clairvoyance gives the right answer 130 times out of 400 cards. The machine can only guess at random, and perhaps gets 104 right, so the interrogator makes the right identification.” There is an interesting possibility which opens here. Suppose the digital computer contains a random number generator. Then it will be natural to use this to decide what answer to give. But then the random number generator will be subject to the psycho-kinetic powers of the interrogator. Perhaps this psycho-kinesis might cause the machine to guess right more often than would be expected on a probability calculation, so that the interrogator might still be unable to make the right identification. On the other hand, he might be able to guess right without any questioning, by clairvoyance. With E.S.P. anything may happen.") ]
+
+#zh(id: "S101")[ #text("基于超感官知觉的更具体论证可以这样展开：“让一位擅长接收心灵感应的人，与一台数字计算机作为被询问者参与模仿游戏。提问者可以问：‘我右手中的牌是什么花色？’人凭心灵感应或千里眼，在 400 张牌中答对 130 次；机器只能随机猜测，可能答对 104 次，因此提问者可以正确识别身份。”这里出现一种有趣的可能性。假如数字计算机包含随机数发生器，自然会用它决定答案。但发生器也可能受到提问者意念移物能力的影响。也许这种影响使机器猜对的频率高于概率计算的预期，于是提问者仍无法正确识别。另一方面，他也可能无需提问，就靠千里眼猜对。若有超感官知觉，什么都可能发生。") ]
+
+#html.p(id: "en-S102")[ #text("If telepathy is admitted it will be necessary to tighten our test up. The situation could be regarded as analogous to that which would occur if the interrogator were talking to himself and one of the competitors was listening with his ear to the wall. To put the competitors into a ‘telepathy-proof room’ would satisfy all requirements.") ]
+
+#zh(id: "S102")[ #text("如果承认心灵感应存在，就必须收紧测试条件。这类似于提问者自言自语，而某个参与者把耳朵贴在墙上偷听。让参与者进入“防心灵感应的房间”，就能满足全部要求。") ]
+
+== 7. Learning Machines / 学习机器
+
+#html.p(id: "en-S103")[ #text("The reader will have anticipated that I have no very convincing arguments of a positive nature to support my views. If I had I should not have taken such pains to point out the fallacies in contrary views. Such evidence as I have I shall now give.") ]
+
+#zh(id: "S103")[ #text("读者大概已经料到，我没有特别有说服力的正面论证来支持自己的观点。否则，我不会如此费力地指出相反观点中的谬误。现在，我将给出自己掌握的那些证据。") ]
+
+#html.p(id: "en-S104")[ #text("Let us return for a moment to Lady Lovelace's objection, which stated that the machine can only do what we tell it to do. One could say that a man can ‘inject’ an idea into the machine, and that it will respond to a certain extent and then drop into quiescence, like a piano string struck by a hammer. Another simile would be an atomic pile of less than critical size: an injected idea is to correspond to a neutron entering the pile from without. Each such neutron will cause a certain disturbance which eventually dies away. If, however, the size of the pile is sufficiently increased, the disturbance caused by such an incoming neutron will very likely go on and on increasing until the whole pile is destroyed. Is there a corresponding phenomenon for minds, and is there one for machines? There does seem to be one for the human mind. The majority of them seem to be ‘sub-critical’, i.e. to correspond in this analogy to piles of sub-critical size. An idea presented to such a mind will on average give rise to less than one idea in reply. A smallish proportion are super-critical. An idea presented to such a mind may give rise to a whole ‘theory’ consisting of secondary, tertiary and more remote ideas. Animals minds seem to be very definitely sub-critical. Adhering to this analogy we ask, ‘Can a machine be made to be super-critical?’") ]
+
+#zh(id: "S104")[ #text("暂且回到洛夫莱斯夫人的反对意见：机器只能做我们告诉它去做的事。可以说，人能够向机器“注入”一个想法，它作出一定反应后便恢复平静，像被琴槌敲击的钢琴弦。另一个比方是未达到临界规模的原子反应堆：注入的想法对应从外部进入的中子，每个中子引发一些扰动，最后消失。但如果堆的规模足够大，入射中子引起的扰动便很可能持续增强，直到整个反应堆被摧毁。心智和机器中是否也有对应现象？人类心智中似乎存在。多数心智像“次临界”反应堆：给它一个想法，平均引出的新想法不到一个。少部分则是超临界的，一个想法可能引出完整“理论”，包含第二级、第三级和更远的想法。动物心智似乎明确属于次临界。沿着这个类比，我们问：“能否让机器成为超临界的？”") ]
+
+#html.p(id: "en-S105")[ #text("The ‘skin of an onion’ analogy is also helpful. In considering the functions of the mind or the brain we find certain operations which we can explain in purely mechanical terms. This we say does not correspond to the real mind: it is a sort of skin which we must strip off if we are to find the real mind. But then in what remains we find a further skin to be stripped off, and so on. Proceeding in this way do we ever come to the ‘real’ mind, or do we eventually come to the skin which has nothing in it? In the latter case the whole mind is mechanical. (It would not be a discrete-state machine however. We have discussed this.)") ]
+
+#zh(id: "S105")[ #text("“剥洋葱”的类比也有帮助。考察心智或大脑的功能时，我们发现某些操作可以完全用机械方式解释。于是我们说，这不是实际的心智，只是一层必须剥去、才能找到真正心智的外皮。然而在剩余部分中，又发现一层需要剥去的皮，如此下去。这样做，最终能否找到“真正的”心智，还是会发现最后只剩一层里面什么也没有的皮？若是后者，整个心智就是机械性的。（但它并不是离散状态机，这一点已经讨论过。）") ]
+
+#html.p(id: "en-S106")[ #text("These last two paragraphs do not claim to be convincing arguments. They should rather be described as ‘recitations tending to produce belief’.") ]
+
+#zh(id: "S106")[ #text("前两段并不声称是有说服力的论证，更适合称为“旨在使人相信的陈述”。") ]
+
+#html.p(id: "en-S107")[ #text("The only really satisfactory support that can be given for the view expressed at the beginning of § 6, will be that provided by waiting for the end of the century and then doing the experiment described. But what can we say in the meantime? What steps should be taken now if the experiment is to be successful?") ]
+
+#zh(id: "S107")[ #text("对于第 6 节开头表达的观点，真正令人满意的支持，只能来自等到世纪末再做上述实验。但在此期间能说些什么？为了让实验成功，现在应该采取哪些步骤？") ]
+
+#html.p(id: "en-S108")[ #text("As I have explained, the problem is mainly one of programming. Advances in engineering will have to be made too, but it seems unlikely that these will not be adequate for the requirements. Estimates of the storage capacity of the brain vary from ") $10^10$ #text(" to ") $10^15$ #text(" binary digits. I incline to the lower values and believe that only a very small fraction is used for the higher types of thinking. Most of it is probably used for the retention of visual impressions. I should be surprised if more than ") $10^9$ #text(" was required for satisfactory playing of the imitation game, at any rate against a blind man. (Note—The capacity of the Encyclopaedia Britannica, 11th edition, is 2 × ") $10^9$ #text(".) A storage capacity of ") $10^7$ #text(" would be a very practicable possibility even by present techniques. It is probably not necessary to increase the speed of operations of the machines at all. Parts of modern machines which can be regarded as analogues of nerve cells work about a thousand times faster than the latter. This should provide a ‘margin of safety’ which could cover losses of speed arising in many ways. Our problem then is to find out how to programme these machines to play the game. At my present rate of working I produce about a thousand digits of programme a day, so that about sixty workers, working steadily through the fifty years might accomplish the job, if nothing went into the waste-paper basket. Some more expeditious method seems desirable.") ]
+
+#zh(id: "S108")[ #text("如前所述，问题主要在于编程。工程技术也需要进步，但这种进步无法满足需求的可能性似乎不大。人脑存储容量的估计范围为 ") $10^10$ #text(" 至 ") $10^15$ #text(" 个二进制位。我倾向于较小的估计，并相信只有极少部分用于高级思考，大部分可能用于保留视觉印象。如果令人满意地参与模仿游戏需要超过 ") $10^9$ #text(" 的容量，至少面对盲人提问者时如此，我会感到惊讶。（注：第 11 版《大英百科全书》的容量约为 2 × ") $10^9$ #text("。）即便采用现有技术，") $10^7$ #text(" 的存储容量也很可行。机器的运行速度可能完全不需要提高。现代机器中可视为神经细胞对应物的部件，工作速度约快一千倍，这应能提供“安全余量”，补偿各种方式引起的速度损失。因此，问题是如何给这些机器编程，使其参与游戏。按我目前的工作速度，每天约能编写一千个程序数字；若没有任何内容被扔进废纸篓，约六十人持续工作五十年，或许能够完成任务。看来需要更快捷的方法。") ]
+
+#html.p(id: "en-S109")[ #text("In the process of trying to imitate an adult human mind we are bound to think a good deal about the process which has brought it to the state that it is in. We may notice three components,") ]
+
+#zh(id: "S109")[ #text("尝试模仿成年人的心智时，我们必然会认真思考使其达到当前状态的过程。可以注意到三个组成部分：") ]
+
+#html.p(id: "en-S110")[ #text("The initial state of the mind, say at birth,") ]
+
+#zh(id: "S110")[ #text("心智的初始状态，例如出生时的状态；") ]
+
+#html.p(id: "en-S111")[ #text("The education to which it has been subjected,") ]
+
+#zh(id: "S111")[ #text("它所接受的教育；") ]
+
+#html.p(id: "en-S112")[ #text("Other experience, not to be described as education, to which it has been subjected.") ]
+
+#zh(id: "S112")[ #text("它经历的、不能称为教育的其他经验。") ]
+
+#html.p(id: "en-S113")[ #text("Instead of trying to produce a programme to simulate the adult mind, why not rather try to produce one which simulates the child's? If this were then subjected to an appropriate course of education one would obtain the adult brain. Presumably the child-brain is something like a note-book as one buys it from the stationers. Rather little mechanism, and lots of blank sheets. (Mechanism and writing are from our point of view almost synonymous.) Our hope is that there is so little mechanism in the child-brain that something like it can be easily programmed. The amount of work in the education we can assume, as a first approximation, to be much the same as for the human child.") ]
+
+#zh(id: "S113")[ #text("与其编写模拟成人心智的程序，为什么不尝试编写模拟儿童心智的程序？如果再让它接受适当教育，就会得到成年人的大脑。儿童的大脑大概像从文具店买来的笔记本：内部机制很少，空白纸页很多。（从我们的角度看，机制和书写几乎同义。）我们希望儿童大脑中的机制足够少，使类似结构容易编程实现。作为初步近似，可以假定教育所需工作量与教育人类儿童大致相同。") ]
+
+#html.p(id: "en-S114")[ #text("We have thus divided our problem into two parts. The child-programme and the education process. These two remain very closely connected. We cannot expect to find a good child-machine at the first attempt. One must experiment with teaching one such machine and see how well it learns. One can then try another and see if it is better or worse. There is an obvious connection between this process and evolution, by the identifications") ]
+
+#zh(id: "S114")[ #text("这样，我们把问题分成两部分：儿童程序与教育过程。两者仍然密切相关。不能指望第一次尝试就找到好的儿童机器，必须实验性地教一台机器，观察它学得怎样，再尝试另一台，比较好坏。通过如下对应，可以看出这个过程与进化之间明显的联系：") ]
+
+#table(
+  columns: 2, inset: 6pt, stroke: 0.4pt,
+  [Structure of the child machine #zh-caption[儿童机器的结构]], [#text("= Hereditary material") #zh-caption[遗传材料]],
+  [Changes #zh-caption[结构的改变]], [#text("= Mutations") #zh-caption[变异]],
+  [Natural selection #zh-caption[自然选择]], [#text("= Judgment of the experimenter") #zh-caption[实验者的判断]],
+)
+
+#html.p(id: "en-S115")[ #text("One may hope, however, that this process will be more expeditious than evolution. The survival of the fittest is a slow method for measuring advantages. The experimenter, by the exercise of intelligence, should be able to speed it up. Equally important is the fact that he is not restricted to random mutations. If he can trace a cause for some weakness he can probably think of the kind of mutation which will improve it.") ]
+
+#zh(id: "S115")[ #text("不过，我们可以希望这个过程比进化更快。适者生存是一种缓慢的优势衡量方法，实验者运用智力，应能加速它。同样重要的是，他不局限于随机变异。如果能够找到某种弱点的原因，就很可能想到哪种变异能改善它。") ]
+
+#html.p(id: "en-S116")[ #text("It will not be possible to apply exactly the same teaching process to the machine as to a normal child. It will not, for instance, be provided with legs, so that it could not be asked to go out and fill the coal scuttle. Possibly it might not have eyes. But however well these deficiencies might be overcome by clever engineering, one could not send the creature to school without the other children making excessive fun of it. It must be given some tuition. We need not be too concerned about the legs, eyes, etc. The example of Miss Helen Keller shows that education can take place provided that communication in both directions between teacher and pupil can take place by some means or other.") ]
+
+#zh(id: "S116")[ #text("不可能将与普通儿童完全相同的教学过程应用于机器。例如，它没有腿，因此不能要求它出去装满煤桶；也许它也没有眼睛。不过，不论精巧工程怎样克服这些不足，若把它送到学校，其他孩子都可能过分嘲笑它，因此必须给它单独的指导。我们不必过于担心腿、眼睛等问题。海伦·凯勒女士的例子说明，只要教师与学生能够通过某种方式双向交流，教育就能够进行。") ]
+
+#html.p(id: "en-S117")[ #text("We normally associate punishments and rewards with the teaching process. Some simple child-machines can be constructed or programmed on this sort of principle. The machine has to be so constructed that events which shortly preceded the occurrence of a punishment-signal are unlikely to be repeated, whereas a reward-signal increased the probability of repetition of the events which led up to it. These definitions do not presuppose any feelings on the part of the machine. I have done some experiments with one such child-machine, and succeeded in teaching it a few things, but the teaching method was too unorthodox for the experiment to be considered really successful.") ]
+
+#zh(id: "S117")[ #text("我们通常把惩罚与奖励同教学过程联系起来。可以按照这种原则构造或编写一些简单的儿童机器。机器的构造应使惩罚信号出现之前不久发生的事件不容易再次出现，而奖励信号会提高导致奖励的事件再次发生的概率。这些定义并不预设机器具有任何感受。我曾用一台这样的儿童机器做过一些实验，并成功教会它几件事，但教学方式过于非传统，还不能认为实验真正成功。") ]
+
+#html.p(id: "en-S118")[ #text("The use of punishments and rewards can at best be a part of the teaching process. Roughly speaking, if the teacher has no other means of communicating to the pupil, the amount of information which can reach him does not exceed the total number of rewards and punishments applied. By the time a child has learnt to repeat ‘Casabianca’ he would probably feel very sore indeed, if the text could only be discovered by a ‘Twenty Questions’ technique, every ‘NO’ taking the form of a blow. It is necessary therefore to have some other ‘unemotional’ channels of communication. If these are available it is possible to teach a machine by punishments and rewards to obey orders given in some language, e.g. a symbolic language. These orders are to be transmitted through the ‘unemotional’ channels. The use of this language will diminish greatly the number of punishments and rewards required.") ]
+
+#zh(id: "S118")[ #text("奖励与惩罚充其量只能是教学过程的一部分。粗略说，如果教师没有其他沟通方式，能传给学生的信息量就不会超过奖励与惩罚的总次数。假如只能通过“二十问”式方法发现《卡萨比安卡》的文本，而且每个“不”都伴随一次击打，那么孩子学会背诵时，恐怕早已遍体疼痛。因此，还需要其他“非情绪性”的交流渠道。有了这些渠道，就可以通过奖励和惩罚，教机器服从某种语言——例如符号语言——发出的命令；命令通过这些非情绪性渠道传递。使用这种语言，会大幅减少所需的奖励与惩罚次数。") ]
+
+#html.p(id: "en-S119")[ #text("Opinions may vary as to the complexity which is suitable in the child machine. One might try to make it as simple as possible consistently with the general principles. Alternatively one might have a complete system of logical inference ‘built in’. ") #link("#turing-note-3", "[note 3]") #text(" In the latter case the store would be largely occupied with definitions and propositions. The propositions would have various kinds of status, e.g. well-established facts, conjectures, mathematically proved theorems, statements given by an authority, expressions having the logical form of proposition but not belief-value. Certain propositions may be described as ‘imperatives’. The machine should be so constructed that as soon as an imperative is classed as ‘well-established’ the appropriate action automatically takes place. To illustrate this, suppose the teacher says to the machine, ‘Do your homework now’. This may cause “Teacher says ‘Do your homework now’” to be included amongst the well-established facts. Another such fact might be, “Everything that teacher says is true”. Combining these may eventually lead to the imperative, ‘Do your homework now’, being included amongst the well-established facts, and this, by the construction of the machine, will mean that the homework actually gets started, but the effect is very satisfactory. The processes of inference used by the machine need not be such as would satisfy the most exacting logicians. There might for instance be no hierarchy of types. But this need not mean that type fallacies will occur, any more than we are bound to fall over unfenced cliffs. Suitable imperatives (expressed within the systems, not forming part of the rules of the system) such as ‘Do not use a class unless it is a subclass of one which has been mentioned by teacher’ can have a similar effect to ‘Do not go too near the edge’.") ]
+
+#zh(id: "S119")[ #text("对于儿童机器适合具有多大复杂度，人们可能意见不同。可以在符合一般原则的前提下尽量简化，也可以“内置”完整的逻辑推理系统 ") #link("#turing-note-3", "[注 3]") #text("。在后一种情况下，存储器将主要保存定义和命题。命题具有不同状态，例如确证事实、猜想、数学上证明的定理、权威给出的陈述，以及具有命题逻辑形式但没有信念价值的表达。某些命题可以称为“命令”。机器的构造应保证：命令一旦被归为“确证”，相应行动就自动发生。例如，教师对机器说“现在做作业”，这可能使“教师说了‘现在做作业’”成为确证事实。另一个事实可能是“教师说的都是真的”。结合两者，最终可使命令“现在做作业”成为确证事实，而机器的结构便使作业真正开始，效果很好。机器使用的推理过程不一定要满足最严格的逻辑学家，例如可以没有类型层级，但这并不意味着一定发生类型谬误，就像没有围栏的悬崖并不意味着我们必定掉下去。系统内部表达、却不属于系统规则的合适命令，如“不要使用某个类，除非它是教师提到过的类的子类”，可以起到类似于“别太靠近边缘”的作用。") ]
+
+#html.p(id: "en-S120")[ #text("The imperatives that can be obeyed by a machine that has no limbs are bound to be of a rather intellectual character, as in the example (doing homework) given above. Important amongst such imperatives will be ones which regulate the order in which the rules of the logical system concerned are to be applied. For at each stage when one is using a logical system, there is a very large number of alternative steps, any of which one is permitted to apply, so far as obedience to the rules of the logical system is concerned. These choices make the difference between a brilliant and a footling reasoner, not the difference between a sound and a fallacious one. Propositions leading to imperatives of this kind might be “When Socrates is mentioned, use the syllogism in Barbara” or “If one method has been proved to be quicker than another, do not use the slower method”. Some of these may be ‘given by authority’, but others may be produced by the machine itself, e.g. by scientific induction.") ]
+
+#zh(id: "S120")[ #text("没有肢体的机器能够服从的命令，必定主要是智力性的，如上述做作业的例子。重要的一类命令，是调节相关逻辑系统规则应用次序的命令。因为使用逻辑系统时，每一步都有大量可选操作，任何一种都不违反系统规则。这些选择决定推理者是出色还是平庸，而不是推理是否有效。例如，产生这类命令的命题可以是“提到苏格拉底时，使用 Barbara 式三段论”，或“如果已证明一种方法快于另一种，就不要使用较慢的方法”。其中有些可以由权威给出，另一些则可以由机器自行产生，例如通过科学归纳。") ]
+
+#html.p(id: "en-S121")[ #text("The idea of a learning machine may appear paradoxical to some readers. How can the rules of operation of the machine change? They should describe completely how the machine will react whatever its history might be, whatever changes it might undergo. The rules are thus quite time-invariant. This is quite true. The explanation of the paradox is that the rules which get changed in the learning process are of a rather less pretentious kind, claiming only an ephemeral validity. The reader may draw a parallel with the Constitution of the United States.") ]
+
+#zh(id: "S121")[ #text("学习机器的思想对某些读者而言，似乎是悖论：机器的运行规则怎么能改变？规则应当完整描述机器无论经历怎样的历史、发生怎样的变化，会如何反应，因此应当完全不随时间变化。这一点确实成立。悖论的解释是：学习过程中改变的规则，是地位较低、只声称暂时有效的那一类规则。读者可以将它与美国宪法作类比。") ]
+
+#html.p(id: "en-S122")[ #text("An important feature of a learning machine is that its teacher will often be very largely ignorant of quite what is going on inside, although he may still be able to some extent to predict his pupil's behaviour. This should apply most strongly to the later education of a machine arising from a child-machine of well-tried design (or programme). This is in clear contrast with normal procedure when using a machine to do computations: one's object is then to have a clear mental picture of the state of the machine at each moment in the computation. This object can only be achieved with a struggle. The view that ‘the machine can only do what we know how to order it to do’, ") #link("#turing-note-4", "[note 4]") #text(" appears strange in face of this. Most of the programmes which we can put into the machine will result in its doing something that we cannot make sense of at all, or which we regard as completely random behaviour. Intelligent behaviour presumably consists in a departure from the completely disciplined behaviour involved in computation, but a rather slight one, which does not give rise to random behaviour, or to pointless repetitive loops. Another important result of preparing our machine for its part in the imitation game by a process of teaching and learning is that ‘human fallibility’ is likely to be omitted in a rather natural way, i.e. without special ‘coaching’. (The reader should reconcile this with the point of view on pp. 24, 25.) Processes that are learnt do not produce a hundred per cent. certainty of result; if they did they could not be unlearnt.") ]
+
+#zh(id: "S122")[ #text("学习机器的一个重要特点是：教师常常对机器内部究竟发生什么几乎一无所知，尽管仍能在一定程度上预测学生的行为。对于从经过充分验证的设计或程序构造出的儿童机器，后期教育中这一特点应尤其明显。这与通常使用机器计算时的做法形成鲜明对比：计算时，人们希望在脑中清楚掌握机器每一时刻的状态，而要做到这一点必须付出努力。在此背景下，“机器只能做我们知道如何命令它完成的事” ") #link("#turing-note-4", "[注 4]") #text(" 就显得奇怪。我们能放入机器的大多数程序，都会让它做出我们完全无法理解、或视为完全随机的行为。智能行为大概是对计算中完全受约束行为的轻微偏离，但这种偏离不至于造成随机行为或毫无意义的重复循环。通过教与学来准备机器参加模仿游戏，还有一个重要结果：人的“易错性”很可能以相当自然的方式被省略，而不需要专门“训练”。（读者应将此与第 24、25 页的观点协调起来。）学习所得的过程并不能百分之百保证结果；否则，这些过程也无法被忘却。") ]
+
+#html.p(id: "en-S123")[ #text("It is probably wise to include a random element in a learning machine (see p. 438). A random element is rather useful when we are searching for a solution of some problem. Suppose for instance we wanted to find a number between 50 and 200 which was equal to the square of the sum of its digits, we might start at 51 then try 52 and go on until we got a number that worked. Alternatively we might choose numbers at random until we got a good one. This method has the advantage that it is unnecessary to keep track of the values that have been tried, but the disadvantage that one may try the same one twice, but this is not very important if there are several solutions. The systematic method has the disadvantage that there may be an enormous block without any solutions in the region which has to be investigated first. Now the learning process may be regarded as a search for a form of behaviour which will satisfy the teacher (or some other criterion). Since there is probably a very large number of satisfactory solutions the random method seems to be better than the systematic. It should be noticed that it is used in the analogous process of evolution. But there the systematic method is not possible. How could one keep track of the different genetical combinations that had been tried, so as to avoid trying them again?") ]
+
+#zh(id: "S123")[ #text("在学习机器中加入随机因素，可能是明智的（见第 438 页）。寻找问题解时，随机因素相当有用。例如，若要找一个 50 至 200 之间、等于其各位数字之和的平方的数，可以从 51 开始，再试 52，依次尝试直到找到，也可以随机选数直到成功。随机方法的优点，是不必记录已经尝试过的数；缺点是可能重复尝试，但若存在多个解，这并不太重要。系统方法的缺点，则是可能必须先搜索一大片没有解的区域。学习可以看作寻找某种让教师或其他标准满意的行为方式。由于可能存在大量满意的解，随机方法似乎优于系统方法。应该注意，类似的进化过程也使用随机方法；但在进化中，系统方法不可行。怎么能记录已经尝试过的不同遗传组合，以避免再次尝试呢？") ]
+
+#html.p(id: "en-S124")[ #text("We may hope that machines will eventually compete with men in all purely intellectual fields. But which are the best ones to start with? Even this is a difficult decision. Many people think that a very abstract activity, like the playing of chess, would be best. It can also be maintained that it is best to provide the machine with the best sense organs that money can buy, and then teach it to understand and speak English. This process could follow the normal teaching of a child. Things would be pointed out and named, etc. Again I do not know what the right answer is, but I think both approaches should be tried.") ]
+
+#zh(id: "S124")[ #text("我们可以希望，机器最终能够在所有纯智力领域与人竞争。但从哪些领域开始最好？这同样难以决定。许多人认为，国际象棋这类高度抽象的活动最合适。也可以主张，为机器配备资金能够购买的最佳感官，再教它理解和说英语。这个过程可以沿用普通儿童教育的方法，例如指着东西说出名称，等等。我仍不知道正确答案，但认为两种方法都应尝试。") ]
+
+#html.p(id: "en-S125")[ #text("We can only see a short distance ahead, but we can see plenty there that needs to be done.") ]
+
+#zh(id: "S125")[ #text("我们只能看见前方不远的地方，但已经能看见那里有许多事情需要去做。") ]
+
+== Notes / 注释
+
+#html.p(id: "turing-note-1")[[1] #text("Possibly this view is heretical. St. Thomas Aquinas ( Summa Theologica , quoted by Bertrand Russell, p. 480) states that God cannot make a man to have no soul. But this may not be a real restriction on His powers, but only a result of the fact that men's souls are immortal, and therefore indestructible.")]
+
+#zh(id: "N001")[[1] #text("这种看法或许属于异端。圣托马斯·阿奎那在《神学大全》中指出，上帝不能让人没有灵魂（引自伯特兰·罗素，第 480 页）。但这未必真正限制了他的力量，可能只是因为人的灵魂不朽，因而不可毁灭。")]
+
+#html.p(id: "turing-note-2")[[2] #text("Author's names in italics refer to the Bibliography.")]
+
+#zh(id: "N002")[[2] #text("以斜体出现的作者姓名，指向参考文献。")]
+
+#html.p(id: "turing-note-3")[[3] #text("Or rather ‘programmed in’ for our child-machine will be programmed in a digital computer. But the logical system will not have to be learnt.")]
+
+#zh(id: "N003")[[3] #text("更准确地说，是“编程内置”，因为儿童机器将在数字计算机上实现。但这个逻辑系统不需要通过学习获得。")]
+
+#html.p(id: "turing-note-4")[[4] #text("Compare Lady Lovelace's statement (p. 450), which does not contain the word ‘only’.")]
+
+#zh(id: "N004")[[4] #text("请对照洛夫莱斯夫人的说法（第 450 页），其中没有“只能”这个词。")]
+
+== Bibliography / 参考文献
+
+- #text("Samuel Butler, Erewhon, London, 1865. Chapters 23, 24, 25, The Book of the Machines.")
+
+- #text("Alonzo Church, “ An Unsolvable Problem of Elementary Number Theory ”, American J. of Math., 58 (1936), 345 – 363.")
+
+- #text("K. Gödel, “ Über formal unentscheildbare Sätze der Principia Mathematica und verwandter Systeme, I ”, Monatshefle für Math, und Phys., (1931), 173 – 189.")
+
+- #text("D. R. Hartree, Calculating Instruments and Machines, New York, 1949.")
+
+- #text("S. C. Kleene, “ General Recursive Functions of Natural Numbers ”, American J. of Math., 57 (1935), 153 – 173 and 219 – 244.")
+
+- #text("G. Jefferson, “ The Mind of Mechanical Man”. Lister Oration for 1949. British Medical Journal, vol. i (1949), 1105 – 1121.")
+
+- #text("Countess of Lovelace, ‘ Translator's notes to an article on Babbage's Analytical Engiro ’, Scientific Memoirs (ed. by R. Taylor), vol. 3 (1842), 691 – 731.")
+
+- #text("Bertrand Russell, History of Western Philosophy, London, 1940.")
+
+- #text("A. M. Turing, “ On Computable Numbers, with an Application to the Entscheidungsproblem ”, Proc. London Math. Soc. (2), 42 (1937), 230 – 265.")

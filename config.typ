@@ -12,7 +12,7 @@
     "/": "Home",
     "/Docs/": "Docs",
     "/Blog/": "Blog",
-    "/Study/": "Study",
+    "/Essay/": "Essay",
     "/CV/": "CV",
   ),
   

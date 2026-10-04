@@ -1,0 +1,632 @@
+#import "../index.typ": template, tufted
+#import "../../_essay/bilingual.typ": zh, zh-caption
+#show: template.with(
+  title: "Deep Residual Learning for Image Recognition",
+  author: "Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun",
+  description: "ResNet 原始论文逐段中英对照，包含残差学习、ImageNet 与 CIFAR-10 实验及目标检测和定位附录。",
+  date: "2016",
+  extra-info: "CVPR 2016 · arXiv v1 全文中英对照",
+  lang: "en",
+  css: ("/assets/custom.css", "/assets/essay.css"),
+)
+
+= Deep Residual Learning for Image Recognition / 深度残差学习与图像识别
+
+#html.div(class: "essay-paper-info")[
+*Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun* · Microsoft Research. \
+_Proceedings of CVPR 2016_, pp. 770–778. \
+*Text edition / 正文版本：* arXiv:1512.03385v1，2015-12-10，依据提供的 12 页 PDF。 \
+#link("https://doi.org/10.1109/CVPR.2016.90")[DOI] · #link("https://arxiv.org/abs/1512.03385")[arXiv] · #link("https://arxiv.org/pdf/1512.03385v1")[Original PDF / 原文 PDF]
+]
+
+
+== Abstract / 摘要
+
+#html.p(id: "en-S001", lang: "en")[#text("Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers—8 ") $times$ #text(" deeper than VGG nets [41] but still having lower complexity. An ensemble of these residual nets achieves 3.57% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers.")]
+
+#zh(id: "S001")[#text("更深的神经网络更难训练。我们提出一种残差学习框架，以便训练比以往网络深得多的模型。我们明确地将这些层重新表述为学习相对于层输入的残差函数，而不是学习没有参照的函数。我们提供了全面的实验证据，表明这些残差网络更容易优化，并能从显著增加的深度中获得准确率提升。在 ImageNet 数据集上，我们评估了深达 152 层的残差网络，其深度是 VGG 网络 [41] 的 8 倍，计算复杂度却更低。这些残差网络的集成模型在 ImageNet 测试集上取得 3.57% 的错误率，赢得了 ILSVRC 2015 图像分类任务的第一名。我们还在 CIFAR-10 上分析了 100 层和 1000 层网络。")]
+
+#html.p(id: "en-S002", lang: "en")[#text("The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC & COCO 2015 competitions , where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.") #link("#resnet-note-1")[[注 1]]]
+
+#zh(id: "S002")[#text("表示的深度对许多视觉识别任务至关重要。仅凭极深的特征表示，我们就在 COCO 目标检测数据集上取得了 28% 的相对提升。深度残差网络是我们参加 ILSVRC 和 COCO 2015 竞赛的基础；我们还赢得了 ImageNet 检测、ImageNet 定位、COCO 检测和 COCO 分割任务的第一名。") #link("#resnet-note-1")[[注 1]]]
+
+== 1. Introduction / 引言
+
+#html.figure(class: "essay-paper-figure", id: "resnet-F1")[
+#image("assets/figure-1.png", width: 100%, alt: "Figure 1. Training error (left) and test error (right) on CIFAR-10 with 20-layer and 56-layer “plain” networks. The deeper network has higher training error, and thus test error. Similar phenomena on ImageNet is presented in Fig. 4.")
+#html.figcaption[#text("Figure 1. Training error (left) and test error (right) on CIFAR-10 with 20-layer and 56-layer “plain” networks. The deeper network has higher training error, and thus test error. Similar phenomena on ImageNet is presented in Fig. 4.") #zh-caption[#text("图 1：CIFAR-10 上 20 层与 56 层普通网络的训练错误率（左）和测试错误率（右）。较深网络的训练错误率更高，因而测试错误率也更高。ImageNet 上的类似现象见图 4。")]]
+]
+
+#html.p(id: "en-S003", lang: "en")[#text("Deep convolutional neural networks [22,21] have led to a series of breakthroughs for image classification [21,50,40] . Deep networks naturally integrate low/mid/high-level features [50] and classifiers in an end-to-end multi-layer fashion, and the “levels” of features can be enriched by the number of stacked layers (depth). Recent evidence [41,44] reveals that network depth is of crucial importance, and the leading results [41,44,13,16] on the challenging ImageNet dataset [36] all exploit “very deep” [41] models, with a depth of sixteen [41] to thirty [16] . Many other nontrivial visual recognition tasks [8,12,7,32,27] have also greatly benefited from very deep models.")]
+
+#zh(id: "S003")[#text("深度卷积神经网络 [22,21] 推动了图像分类的一系列突破 [21,50,40]。深度网络以端到端的多层结构，自然地整合低层、中层、高层特征 [50] 和分类器；增加堆叠层数，也就是深度，可以丰富特征的“层次”。近期证据 [41,44] 表明，网络深度十分关键；在富有挑战性的 ImageNet 数据集 [36] 上取得领先结果的方法 [41,44,13,16]，都使用了“非常深”的模型 [41]，深度从 16 层 [41] 到 30 层 [16]。许多其他非平凡的视觉识别任务 [8,12,7,32,27] 也从很深的模型中获益良多。")]
+
+#html.p(id: "en-S004", lang: "en")[#text("Driven by the significance of depth, a question arises: Is learning better networks as easy as stacking more layers? An obstacle to answering this question was the notorious problem of vanishing/exploding gradients [1,9] , which hamper convergence from the beginning. This problem, however, has been largely addressed by normalized initialization [23,9,37,13] and intermediate normalization layers [16] , which enable networks with tens of layers to start converging for stochastic gradient descent (SGD) with backpropagation [22] .")]
+
+#zh(id: "S004")[#text("深度的重要性引出了一个问题：学习更好的网络，是否只需堆叠更多层？回答这个问题曾受到臭名昭著的梯度消失／爆炸问题 [1,9] 的阻碍，因为它们从训练开始就妨碍收敛。不过，归一化初始化 [23,9,37,13] 和中间归一化层 [16] 已在很大程度上解决这一问题，使数十层网络可以通过带反向传播 [22] 的随机梯度下降（SGD）开始收敛。")]
+
+#html.p(id: "en-S005", lang: "en")[#text("When deeper networks are able to start converging, a degradation problem has been exposed: with the network depth increasing, accuracy gets saturated (which might be unsurprising) and then degrades rapidly. Unexpectedly, such degradation is not caused by overfitting , and adding more layers to a suitably deep model leads to higher training error , as reported in [11,42] and thoroughly verified by our experiments. Fig. 1 shows a typical example.")]
+
+#zh(id: "S005")[#text("当更深的网络能够开始收敛时，退化问题暴露出来：随着深度增加，准确率先趋于饱和，这也许并不意外，随后却迅速下降。出乎意料的是，这种退化并非过拟合所致；给一个已有适当深度的模型增加层数，反而会使训练错误率更高。这一现象已在 [11,42] 中报告，并得到我们实验的充分验证。图 1 展示了一个典型例子。")]
+
+#html.p(id: "en-S006", lang: "en")[#text("The degradation (of training accuracy) indicates that not all systems are similarly easy to optimize. Let us consider a shallower architecture and its deeper counterpart that adds more layers onto it. There exists a solution by construction to the deeper model: the added layers are identity mapping, and the other layers are copied from the learned shallower model. The existence of this constructed solution indicates that a deeper model should produce no higher training error than its shallower counterpart. But experiments show that our current solvers on hand are unable to find solutions that are comparably good or better than the constructed solution (or unable to do so in feasible time).")]
+
+#zh(id: "S006")[#text("训练准确率的退化说明，不同系统的优化难度并不相同。考虑一个较浅的网络，以及通过添加更多层构造的较深对应网络。对于较深模型，可以人为构造一个解：新增层执行恒等映射，其余层复制已训练的较浅模型。这个构造解的存在意味着，较深模型的训练错误率本应不高于较浅模型。然而，实验表明，我们现有的求解器找不到与这个构造解同样好或更好的解，或者无法在可行的时间内找到。")]
+
+#html.p(id: "en-S007", lang: "en")[#text("In this paper, we address the degradation problem by introducing a deep residual learning framework. Instead of hoping each few stacked layers directly fit a desired underlying mapping, we explicitly let these layers fit a residual mapping. Formally, denoting the desired underlying mapping as ") $cal(H)(bold(x))$ #text(" , we let the stacked nonlinear layers fit another mapping of ") $cal(F)(bold(x)):=cal(H)(bold(x))-bold(x)$ #text(" . The original mapping is recast into ") $cal(F)(bold(x))+bold(x)$ #text(" . We hypothesize that it is easier to optimize the residual mapping than to optimize the original, unreferenced mapping. To the extreme, if an identity mapping were optimal, it would be easier to push the residual to zero than to fit an identity mapping by a stack of nonlinear layers.")]
+
+#zh(id: "S007")[#text("本文通过引入深度残差学习框架来解决退化问题。我们不再期望每几个堆叠层直接拟合所需的底层映射，而明确让它们拟合残差映射。形式上，将所需映射记为 ") $cal(H)(bold(x))$ #text("，让堆叠的非线性层拟合另一映射 ") $cal(F)(bold(x)) := cal(H)(bold(x)) - bold(x)$ #text("。原映射因而改写为 ") $cal(F)(bold(x)) + bold(x)$ #text("。我们假设，优化残差映射比优化原来没有参照的映射更容易。极端情况下，如果恒等映射是最优解，那么将残差压到零，应比用一组非线性层拟合恒等映射更容易。")]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-F2")[
+#image("assets/figure-2.png", width: 100%, alt: "Figure 2. Residual learning: a building block.")
+#html.figcaption[#text("Figure 2. Residual learning: a building block.") #zh-caption[#text("图 2：残差学习的基本模块。")]]
+]
+
+#html.p(id: "en-S008", lang: "en")[#text("The formulation of ") $cal(F)(bold(x))+bold(x)$ #text(" can be realized by feedforward neural networks with “shortcut connections” (Fig. 2). Shortcut connections [2,34,49] are those skipping one or more layers. In our case, the shortcut connections simply perform identity mapping, and their outputs are added to the outputs of the stacked layers (Fig. 2). Identity shortcut connections add neither extra parameter nor computational complexity. The entire network can still be trained end-to-end by SGD with backpropagation, and can be easily implemented using common libraries ( e.g . , Caffe [19] ) without modifying the solvers.")]
+
+#zh(id: "S008")[$cal(F)(bold(x)) + bold(x)$ #text(" 可以通过带有“快捷连接”的前馈神经网络实现，见图 2。快捷连接 [2,34,49] 跨过一层或多层。在我们的模型中，快捷连接只执行恒等映射，其输出与堆叠层的输出相加，见图 2。恒等快捷连接既不增加额外参数，也不增加计算复杂度。整个网络仍可通过反向传播和 SGD 进行端到端训练，还能用常见库，例如 Caffe [19]，轻松实现，无需修改求解器。")]
+
+#html.p(id: "en-S009", lang: "en")[#text("We present comprehensive experiments on ImageNet [36] to show the degradation problem and evaluate our method. We show that: 1) Our extremely deep residual nets are easy to optimize, but the counterpart “plain” nets (that simply stack layers) exhibit higher training error when the depth increases; 2) Our deep residual nets can easily enjoy accuracy gains from greatly increased depth, producing results substantially better than previous networks.")]
+
+#zh(id: "S009")[#text("我们在 ImageNet [36] 上开展全面实验，展示退化问题并评估方法。结果表明：1）极深的残差网络容易优化，而对应的普通网络，也就是简单堆叠层的网络，在深度增加时会出现更高的训练错误率；2）深度残差网络能轻松从大幅增加的深度中获得准确率提升，结果明显优于以往网络。")]
+
+#html.p(id: "en-S010", lang: "en")[#text("Similar phenomena are also shown on the CIFAR-10 set [20] , suggesting that the optimization difficulties and the effects of our method are not just akin to a particular dataset. We present successfully trained models on this dataset with over 100 layers, and explore models with over 1000 layers.")]
+
+#zh(id: "S010")[#text("CIFAR-10 数据集 [20] 上也出现了类似现象，说明优化困难以及我们方法的作用，并非某个特定数据集独有。我们在该数据集上成功训练了超过 100 层的模型，并探索了超过 1000 层的模型。")]
+
+#html.p(id: "en-S011", lang: "en")[#text("On the ImageNet classification dataset [36] , we obtain excellent results by extremely deep residual nets. Our 152-layer residual net is the deepest network ever presented on ImageNet, while still having lower complexity than VGG nets [41] . Our ensemble has 3.57% top-5 error on the ImageNet test set, and won the 1st place in the ILSVRC 2015 classification competition . The extremely deep representations also have excellent generalization performance on other recognition tasks, and lead us to further win the 1st places on: ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation in ILSVRC & COCO 2015 competitions. This strong evidence shows that the residual learning principle is generic, and we expect that it is applicable in other vision and non-vision problems.")]
+
+#zh(id: "S011")[#text("在 ImageNet 分类数据集 [36] 上，极深的残差网络取得了出色结果。我们的 152 层残差网络是当时在 ImageNet 上展示过的最深网络，复杂度却仍低于 VGG 网络 [41]。集成模型在 ImageNet 测试集上的 top-5 错误率为 3.57%，赢得了 ILSVRC 2015 分类竞赛第一名。极深的表示在其他识别任务上也具有出色的泛化能力，帮助我们进一步赢得 ILSVRC 和 COCO 2015 竞赛中的 ImageNet 检测、ImageNet 定位、COCO 检测、COCO 分割第一名。这些有力证据说明，残差学习原则具有通用性，我们预计它也适用于其他视觉及非视觉问题。")]
+
+== 2. Related Work / 相关工作
+
+#html.p(id: "en-S012", lang: "en")[#text("Residual Representations. In image recognition, VLAD [18] is a representation that encodes by the residual vectors with respect to a dictionary, and Fisher Vector [30] can be formulated as a probabilistic version [18] of VLAD. Both of them are powerful shallow representations for image retrieval and classification [4,48] . For vector quantization, encoding residual vectors [17] is shown to be more effective than encoding original vectors.")]
+
+#zh(id: "S012")[#text("残差表示。在图像识别中，VLAD [18] 使用相对于字典的残差向量进行编码；Fisher Vector [30] 可以表述为 VLAD 的概率版本 [18]。两者都是图像检索和分类中强有力的浅层表示 [4,48]。在向量量化中，已有研究表明，编码残差向量 [17] 比编码原始向量更有效。")]
+
+#html.p(id: "en-S013", lang: "en")[#text("In low-level vision and computer graphics, for solving Partial Differential Equations (PDEs), the widely used Multigrid method [3] reformulates the system as subproblems at multiple scales, where each subproblem is responsible for the residual solution between a coarser and a finer scale. An alternative to Multigrid is hierarchical basis preconditioning [45,46] , which relies on variables that represent residual vectors between two scales. It has been shown [3,45,46] that these solvers converge much faster than standard solvers that are unaware of the residual nature of the solutions. These methods suggest that a good reformulation or preconditioning can simplify the optimization.")]
+
+#zh(id: "S013")[#text("在底层视觉与计算机图形学中，求解偏微分方程（PDE）时，广泛使用的多重网格方法 [3] 将系统改写为多个尺度上的子问题，每个子问题负责求解较粗尺度与较细尺度之间的残差。另一种方法是层次基预条件处理 [45,46]，它依赖表示两个尺度间残差向量的变量。研究 [3,45,46] 表明，这些求解器比不考虑解的残差性质的标准求解器收敛得快得多。这些方法启示我们，恰当的重新表述或预条件处理可以简化优化。")]
+
+#html.p(id: "en-S014", lang: "en")[#text("Shortcut Connections. Practices and theories that lead to shortcut connections [2,34,49] have been studied for a long time. An early practice of training multi-layer perceptrons (MLPs) is to add a linear layer connected from the network input to the output [34,49] . In [44,24] , a few intermediate layers are directly connected to auxiliary classifiers for addressing vanishing/exploding gradients. The papers of [39,38,31,47] propose methods for centering layer responses, gradients, and propagated errors, implemented by shortcut connections. In [44] , an “inception” layer is composed of a shortcut branch and a few deeper branches.")]
+
+#zh(id: "S014")[#text("快捷连接。促成快捷连接的实践与理论 [2,34,49] 已有长期研究。训练多层感知机（MLP）的一种早期做法，是增加一个从网络输入连接到输出的线性层 [34,49]。在 [44,24] 中，一些中间层直接连接辅助分类器，以应对梯度消失／爆炸。文献 [39,38,31,47] 提出了对层响应、梯度和传播误差进行中心化的方法，并用快捷连接实现。在 [44] 中，一个 inception 层由一个快捷分支和若干更深的分支组成。")]
+
+#html.p(id: "en-S015", lang: "en")[#text("Concurrent with our work, “highway networks” [42,43] present shortcut connections with gating functions [15] . These gates are data-dependent and have parameters, in contrast to our identity shortcuts that are parameter-free. When a gated shortcut is “closed” (approaching zero), the layers in highway networks represent non-residual functions. On the contrary, our formulation always learns residual functions; our identity shortcuts are never closed, and all information is always passed through, with additional residual functions to be learned. In addition, highway networks have not demonstrated accuracy gains with extremely increased depth ( e.g . , over 100 layers).")]
+
+#zh(id: "S015")[#text("与我们的工作同期，highway 网络 [42,43] 提出了带门控函数 [15] 的快捷连接。这些门依赖数据并具有参数，而我们的恒等快捷连接没有参数。当门控快捷连接“关闭”，也就是接近零时，highway 网络中的层表示非残差函数。相反，我们的表述始终学习残差函数；恒等快捷连接从不关闭，所有信息始终能够通过，同时还学习附加的残差函数。此外，highway 网络尚未展示出深度极大增加，例如超过 100 层，所带来的准确率收益。")]
+
+== 3. Deep Residual Learning / 深度残差学习
+
+=== 3.1. Residual Learning / 残差学习
+
+#html.p(id: "en-S016", lang: "en")[#text("Let us consider ") $cal(H)(bold(x))$ #text(" as an underlying mapping to be fit by a few stacked layers (not necessarily the entire net), with ") $bold(x)$ #text(" denoting the inputs to the first of these layers. If one hypothesizes that multiple nonlinear layers can asymptotically approximate complicated functions , then it is equivalent to hypothesize that they can asymptotically approximate the residual functions, i.e . , ") $cal(H)(bold(x))-bold(x)$ #text(" (assuming that the input and output are of the same dimensions). So rather than expect stacked layers to approximate ") $cal(H)(bold(x))$ #text(" , we explicitly let these layers approximate a residual function ") $cal(F)(bold(x)):=cal(H)(bold(x))-bold(x)$ #text(" . The original function thus becomes ") $cal(F)(bold(x))+bold(x)$ #text(" . Although both forms should be able to asymptotically approximate the desired functions (as hypothesized), the ease of learning might be different.") #link("#resnet-note-2")[[注 2]]]
+
+#zh(id: "S016")[#text("将 ") $cal(H)(bold(x))$ #text(" 视为由几个堆叠层拟合的底层映射，这些层不一定构成整个网络，") $bold(x)$ #text(" 表示其中第一层的输入。如果假设多个非线性层能够渐近逼近复杂函数，那么也等价于假设它们能够渐近逼近残差函数，即 ") $cal(H)(bold(x)) - bold(x)$ #text("，这里假定输入与输出维度相同。因此，我们不期望堆叠层逼近 ") $cal(H)(bold(x))$ #text("，而明确让它们逼近残差函数 ") $cal(F)(bold(x)) := cal(H)(bold(x)) - bold(x)$ #text("。原函数因而变为 ") $cal(F)(bold(x)) + bold(x)$ #text("。虽然按照上述假设，两种形式都应能渐近逼近目标函数，但学习的难易程度可能不同。") #link("#resnet-note-2")[[注 2]]]
+
+#html.p(id: "en-S017", lang: "en")[#text("This reformulation is motivated by the counterintuitive phenomena about the degradation problem (Fig. 1, left). As we discussed in the introduction, if the added layers can be constructed as identity mappings, a deeper model should have training error no greater than its shallower counterpart. The degradation problem suggests that the solvers might have difficulties in approximating identity mappings by multiple nonlinear layers. With the residual learning reformulation, if identity mappings are optimal, the solvers may simply drive the weights of the multiple nonlinear layers toward zero to approach identity mappings.")]
+
+#zh(id: "S017")[#text("这种改写受到退化问题中反直觉现象的启发，见图 1 左。如引言所述，如果新增层可以构造为恒等映射，那么较深模型的训练错误率本应不高于较浅模型。退化问题说明，求解器可能难以通过多个非线性层逼近恒等映射。改写为残差学习之后，若恒等映射是最优的，求解器只需将多个非线性层的权重推向零，就能逼近恒等映射。")]
+
+#html.p(id: "en-S018", lang: "en")[#text("In real cases, it is unlikely that identity mappings are optimal, but our reformulation may help to precondition the problem. If the optimal function is closer to an identity mapping than to a zero mapping, it should be easier for the solver to find the perturbations with reference to an identity mapping, than to learn the function as a new one. We show by experiments (Fig. 7) that the learned residual functions in general have small responses, suggesting that identity mappings provide reasonable preconditioning.")]
+
+#zh(id: "S018")[#text("在实际问题中，恒等映射不太可能是最优解，但我们的改写可能有助于对问题进行预条件处理。如果最优函数比起零映射更接近恒等映射，那么求解器寻找相对于恒等映射的扰动，应比将该函数作为全新函数来学习更容易。实验中我们发现，学到的残差函数通常具有较小响应，见图 7；这表明恒等映射提供了合理的预条件。")]
+
+=== 3.2. Identity Mapping by Shortcuts / 通过快捷连接实现恒等映射
+
+#html.p(id: "en-S019", lang: "en")[#text("We adopt residual learning to every few stacked layers. A building block is shown in Fig. 2. Formally, in this paper we consider a building block defined as:")]
+
+#zh(id: "S019")[#text("我们对每几个堆叠层应用残差学习。图 2 展示了一个基本模块。形式上，本文考虑如下定义的模块：")]
+
+$ bold(y) = cal(F)(bold(x), {W_i}) + bold(x) $ <eq-resnet-1>
+
+#html.p(id: "en-S020", lang: "en")[#text("Here ") $bold(x)$ #text(" and ") $bold(y)$ #text(" are the input and output vectors of the layers considered. The function ") $cal(F)(bold(x),{W_i})$ #text(" represents the residual mapping to be learned. For the example in Fig. 2 that has two layers, ") $cal(F)=W_2sigma(W_1bold(x))$ #text(" in which ") $sigma$ #text(" denotes ReLU [29] and the biases are omitted for simplifying notations. The operation ") $cal(F)+bold(x)$ #text(" is performed by a shortcut connection and element-wise addition. We adopt the second nonlinearity after the addition ( i.e . , ") $sigma(bold(y))$ #text(" , see Fig. 2).")]
+
+#zh(id: "S020")[#text("这里，") $bold(x)$ #text(" 和 ") $bold(y)$ #text(" 是所讨论层的输入与输出向量；函数 ") $cal(F)(bold(x), {W_i})$ #text(" 表示待学习的残差映射。对于图 2 的两层例子，") $cal(F) = W_2 sigma(W_1 bold(x))$ #text("，其中 σ 表示 ReLU [29]；为简化记号，省略了偏置。") $cal(F) + bold(x)$ #text(" 通过快捷连接和逐元素相加实现。第二个非线性变换放在相加之后，也就是 σ(y)，见图 2。")]
+
+#html.p(id: "en-S021", lang: "en")[#text("The shortcut connections in Eqn.(1) introduce neither extra parameter nor computation complexity. This is not only attractive in practice but also important in our comparisons between plain and residual networks. We can fairly compare plain/residual networks that simultaneously have the same number of parameters, depth, width, and computational cost (except for the negligible element-wise addition).")]
+
+#zh(id: "S021")[#text("公式（1）的快捷连接既不引入额外参数，也不增加计算复杂度。这在实践中很有吸引力，也对普通网络与残差网络的比较十分重要。我们可以公平地比较参数量、深度、宽度和计算成本均相同的普通／残差网络，只有可忽略的逐元素加法不同。")]
+
+#html.p(id: "en-S022", lang: "en")[#text("The dimensions of ") $bold(x)$ #text(" and ") $cal(F)$ #text(" must be equal in Eqn.(1). If this is not the case ( e.g . , when changing the input/output channels), we can perform a linear projection ") $W_s$ #text(" by the shortcut connections to match the dimensions:")]
+
+#zh(id: "S022")[#text("公式（1）要求 ") $bold(x)$ #text(" 与 ") $cal(F)$ #text(" 的维度相同。若不相同，例如改变输入／输出通道数时，我们可以通过快捷连接执行线性投影 ") $W_s$ #text(" 来匹配维度：")]
+
+$ bold(y) = cal(F)(bold(x), {W_i}) + W_s bold(x) $ <eq-resnet-2>
+
+#html.p(id: "en-S023", lang: "en")[#text("We can also use a square matrix ") $W_s$ #text(" in Eqn.(1). But we will show by experiments that the identity mapping is sufficient for addressing the degradation problem and is economical, and thus ") $W_s$ #text(" is only used when matching dimensions.")]
+
+#zh(id: "S023")[#text("我们也可以在公式（1）中使用方阵 ") $W_s$ #text("。不过，实验将表明，恒等映射足以解决退化问题，而且更加经济；因此，只有需要匹配维度时才使用 ") $W_s$ #text("。")]
+
+#html.p(id: "en-S024", lang: "en")[#text("The form of the residual function ") $cal(F)$ #text(" is flexible. Experiments in this paper involve a function ") $cal(F)$ #text(" that has two or three layers (Fig. 5), while more layers are possible. But if ") $cal(F)$ #text(" has only a single layer, Eqn.(1) is similar to a linear layer: ") $bold(y)=W_1bold(x)+bold(x)$ #text(" , for which we have not observed advantages.")]
+
+#zh(id: "S024")[#text("残差函数 ") $cal(F)$ #text(" 的形式可以灵活选择。本文实验中的 ") $cal(F)$ #text(" 包含两层或三层，见图 5，也可以使用更多层。但若 ") $cal(F)$ #text(" 只有一层，公式（1）就类似一个线性层：") $bold(y) = W_1 bold(x) + bold(x)$ #text("；我们没有观察到这种形式的优势。")]
+
+#html.p(id: "en-S025", lang: "en")[#text("We also note that although the above notations are about fully-connected layers for simplicity, they are applicable to convolutional layers. The function ") $cal(F)(bold(x),{W_i})$ #text(" can represent multiple convolutional layers. The element-wise addition is performed on two feature maps, channel by channel.")]
+
+#zh(id: "S025")[#text("还需说明，上述记号为简洁起见使用全连接层，但同样适用于卷积层。函数 ") $cal(F)(bold(x), {W_i})$ #text(" 可以表示多个卷积层，逐元素相加则在两张特征图上逐通道进行。")]
+
+=== 3.3. Network Architectures / 网络架构
+
+#html.p(id: "en-S026", lang: "en")[#text("We have tested various plain/residual nets, and have observed consistent phenomena. To provide instances for discussion, we describe two models for ImageNet as follows.")]
+
+#zh(id: "S026")[#text("我们测试了多种普通／残差网络，并观察到一致现象。为了提供具体的讨论实例，下面描述两个用于 ImageNet 的模型。")]
+
+#html.p(id: "en-S027", lang: "en")[#text("Plain Network. Our plain baselines (Fig. 3, middle) are mainly inspired by the philosophy of VGG nets [41] (Fig. 3, left). The convolutional layers mostly have 3 ") $times$ #text(" 3 filters and follow two simple design rules: (i) for the same output feature map size, the layers have the same number of filters; and (ii) if the feature map size is halved, the number of filters is doubled so as to preserve the time complexity per layer. We perform downsampling directly by convolutional layers that have a stride of 2. The network ends with a global average pooling layer and a 1000-way fully-connected layer with softmax. The total number of weighted layers is 34 in Fig. 3 (middle).")]
+
+#zh(id: "S027")[#text("普通网络。我们的普通基线网络，见图 3 中，主要受到 VGG 网络 [41] 设计理念的启发，见图 3 左。卷积层大多使用 3×3 滤波器，并遵循两条简单规则：1）输出特征图尺寸相同时，使用相同数量的滤波器；2）特征图尺寸减半时，滤波器数翻倍，以保持每层的时间复杂度。我们直接使用步长为 2 的卷积层进行下采样。网络以全局平均池化层、1000 类全连接层和 softmax 结束。图 3 中的带权重层总数为 34。")]
+
+#html.p(id: "en-S028", lang: "en")[#text("It is worth noticing that our model has fewer filters and lower complexity than VGG nets [41] (Fig. 3, left). Our 34-layer baseline has 3.6 billion FLOPs (multiply-adds), which is only 18% of VGG-19 (19.6 billion FLOPs).")]
+
+#zh(id: "S028")[#text("我们的模型比 VGG 网络 [41]，见图 3 左，使用更少的滤波器，复杂度也更低。34 层基线的 FLOPs，即乘加运算量，为 36 亿，仅为 VGG-19 的 196 亿 FLOPs 的 18%。")]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-F3")[
+#image("assets/figure-3.png", width: 100%, alt: "Figure 3. Example network architectures for ImageNet. Left: the VGG-19 model [41] (19.6 billion FLOPs) as a reference. Middle: a plain network with 34 parameter layers (3.6 billion FLOPs). Right: a residual network with 34 parameter layers (3.6 billion FLOPs). The dotted shortcuts increase dimensions. Table 1 shows more details and other variants.")
+#html.figcaption[#text("Figure 3. Example network architectures for ImageNet. Left: the VGG-19 model [41] (19.6 billion FLOPs) as a reference. Middle: a plain network with 34 parameter layers (3.6 billion FLOPs). Right: a residual network with 34 parameter layers (3.6 billion FLOPs). The dotted shortcuts increase dimensions. Table 1 shows more details and other variants.") #zh-caption[#text("图 3：ImageNet 网络架构示例。左：作为参照的 VGG-19 [41]，196 亿 FLOPs。中：34 个参数层的普通网络，36 亿 FLOPs。右：34 个参数层的残差网络，36 亿 FLOPs。虚线快捷连接用于增加维度。更多细节与变体见表 1。")]]
+]
+
+#html.figure(class: "essay-paper-figure essay-wide", id: "resnet-T1")[
+#image("assets/table-1.png", width: 100%, alt: "Table 1. Architectures for ImageNet. Building blocks are shown in brackets (see also Fig. 5), with the numbers of blocks stacked. Downsampling is performed by conv3 1, conv4 1, and conv5 1 with a stride of 2.")
+#html.figcaption[#text("Table 1. Architectures for ImageNet. Building blocks are shown in brackets (see also Fig. 5), with the numbers of blocks stacked. Downsampling is performed by conv3 1, conv4 1, and conv5 1 with a stride of 2.") #zh-caption[#text("表 1：ImageNet 网络架构。方括号表示基本模块，见图 5，旁边的数字为堆叠次数。conv3_1、conv4_1、conv5_1 以步长 2 下采样。表头依次为层名、输出尺寸和各网络深度；FLOPs 表示浮点运算量。")]]
+]
+
+#html.p(id: "en-S029", lang: "en")[#text("Residual Network. Based on the above plain network, we insert shortcut connections (Fig. 3, right) which turn the network into its counterpart residual version. The identity shortcuts (Eqn.(1)) can be directly used when the input and output are of the same dimensions (solid line shortcuts in Fig. 3). When the dimensions increase (dotted line shortcuts in Fig. 3), we consider two options: (A) The shortcut still performs identity mapping, with extra zero entries padded for increasing dimensions. This option introduces no extra parameter; (B) The projection shortcut in Eqn.(2) is used to match dimensions (done by 1 ") $times$ #text(" 1 convolutions). For both options, when the shortcuts go across feature maps of two sizes, they are performed with a stride of 2.")]
+
+#zh(id: "S029")[#text("残差网络。在上述普通网络上加入快捷连接，见图 3 右，就得到对应的残差版本。输入和输出维度相同时，可直接使用公式（1）的恒等快捷连接，对应图 3 中的实线。当维度增加时，对应虚线连接，我们考虑两种方案：A）快捷连接仍执行恒等映射，通过填充额外的零来增加维度，不引入新参数；B）使用公式（2）的投影快捷连接匹配维度，以 1×1 卷积实现。两种方案在跨越不同尺寸的特征图时，都使用步长 2。")]
+
+=== 3.4. Implementation / 实现
+
+#html.p(id: "en-S030", lang: "en")[#text("Our implementation for ImageNet follows the practice in [21,41] . The image is resized with its shorter side randomly sampled in ") $[256,480]$ #text(" for scale augmentation [41] . A 224 ") $times$ #text(" 224 crop is randomly sampled from an image or its horizontal flip, with the per-pixel mean subtracted [21] . The standard color augmentation in [21] is used. We adopt batch normalization (BN) [16] right after each convolution and before activation, following [16] . We initialize the weights as in [13] and train all plain/residual nets from scratch. We use SGD with a mini-batch size of 256. The learning rate starts from 0.1 and is divided by 10 when the error plateaus, and the models are trained for up to ") $60 times  10^(4)$ #text(" iterations. We use a weight decay of 0.0001 and a momentum of 0.9. We do not use dropout [14] , following the practice in [16] .")]
+
+#zh(id: "S030")[#text("ImageNet 的实现沿用 [21,41]。将图像短边随机缩放到 [256,480] 内，进行尺度增强 [41]。从图像或其水平翻转中随机裁剪 224×224 区域，并减去逐像素均值 [21]；使用 [21] 的标准颜色增强。按照 [16]，在每个卷积之后、激活之前应用批量归一化（BN）[16]。权重按 [13] 初始化，所有普通／残差网络均从头训练。使用 SGD，批量大小为 256；学习率从 0.1 开始，错误率进入平台期时除以 10，最多训练 60×10⁴ 次迭代。权重衰减为 0.0001，动量为 0.9。按照 [16] 的做法，不使用 dropout [14]。")]
+
+#html.p(id: "en-S031", lang: "en")[#text("In testing, for comparison studies we adopt the standard 10-crop testing [21] . For best results, we adopt the fully-convolutional form as in [41,13] , and average the scores at multiple scales (images are resized such that the shorter side is in ") ${224,256,384,480,640}$ #text(" ).")]
+
+#zh(id: "S031")[#text("测试时，比较实验使用标准的 10 裁剪测试 [21]。为取得最佳结果，按照 [41,13] 使用全卷积形式，并对多个尺度的得分取平均；图像短边依次缩放至 {224,256,384,480,640}。")]
+
+== 4. Experiments / 实验
+
+=== 4.1. ImageNet Classification / ImageNet 分类
+
+#html.p(id: "en-S032", lang: "en")[#text("We evaluate our method on the ImageNet 2012 classification dataset [36] that consists of 1000 classes. The models are trained on the 1.28 million training images, and evaluated on the 50k validation images. We also obtain a final result on the 100k test images, reported by the test server. We evaluate both top-1 and top-5 error rates.")]
+
+#zh(id: "S032")[#text("我们在 ImageNet 2012 分类数据集 [36] 上评估方法，该数据集包含 1000 个类别。模型在 128 万张训练图像上训练，在 5 万张验证图像上评估。此外，还在 10 万张测试图像上取得由测试服务器报告的最终结果。评估指标为 top-1 和 top-5 错误率。")]
+
+#html.figure(class: "essay-paper-figure essay-wide", id: "resnet-F4")[
+#image("assets/figure-4.png", width: 100%, alt: "Figure 4. Training on ImageNet. Thin curves denote training error, and bold curves denote validation error of the center crops. Left: plain networks of 18 and 34 layers. Right: ResNets of 18 and 34 layers. In this plot, the residual networks have no extra parameter compared to their plain counterparts.")
+#html.figcaption[#text("Figure 4. Training on ImageNet. Thin curves denote training error, and bold curves denote validation error of the center crops. Left: plain networks of 18 and 34 layers. Right: ResNets of 18 and 34 layers. In this plot, the residual networks have no extra parameter compared to their plain counterparts.") #zh-caption[#text("图 4：ImageNet 上的训练。细线表示训练错误率，粗线表示中心裁剪的验证错误率。左：18 层与 34 层普通网络。右：18 层与 34 层 ResNet。此图中的残差网络与对应普通网络相比没有额外参数。")]]
+]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T2")[
+#image("assets/table-2.png", width: 100%, alt: "Table 2. Top-1 error (%, 10-crop testing) on ImageNet validation. Here the ResNets have no extra parameter compared to their plain counterparts. Fig. 4 shows the training procedures.")
+#html.figcaption[#text("Table 2. Top-1 error (%, 10-crop testing) on ImageNet validation. Here the ResNets have no extra parameter compared to their plain counterparts. Fig. 4 shows the training procedures.") #zh-caption[#text("表 2：ImageNet 验证集上的 top-1 错误率，单位为 %，采用 10 裁剪测试。这里的 ResNet 与对应普通网络相比没有额外参数。训练过程见图 4。")]]
+]
+
+#html.p(id: "en-S033", lang: "en")[#text("Plain Networks. We first evaluate 18-layer and 34-layer plain nets. The 34-layer plain net is in Fig. 3 (middle). The 18-layer plain net is of a similar form. See Table 1 for detailed architectures.")]
+
+#zh(id: "S033")[#text("普通网络。首先评估 18 层与 34 层普通网络。34 层网络见图 3 中，18 层网络采用类似结构。详细架构见表 1。")]
+
+#html.p(id: "en-S034", lang: "en")[#text("The results in Table 2 show that the deeper 34-layer plain net has higher validation error than the shallower 18-layer plain net. To reveal the reasons, in Fig. 4 (left) we compare their training/validation errors during the training procedure. We have observed the degradation problem - the 34-layer plain net has higher training error throughout the whole training procedure, even though the solution space of the 18-layer plain network is a subspace of that of the 34-layer one.")]
+
+#zh(id: "S034")[#text("表 2 表明，更深的 34 层普通网络比更浅的 18 层网络具有更高的验证错误率。为揭示原因，图 4 左比较了训练过程中的训练／验证错误率。我们观察到了退化问题：尽管 18 层网络的解空间是 34 层网络解空间的子空间，34 层普通网络在整个训练过程中仍具有更高的训练错误率。")]
+
+#html.p(id: "en-S035", lang: "en")[#text("We argue that this optimization difficulty is unlikely to be caused by vanishing gradients. These plain networks are trained with BN [16] , which ensures forward propagated signals to have non-zero variances. We also verify that the backward propagated gradients exhibit healthy norms with BN. So neither forward nor backward signals vanish. In fact, the 34-layer plain net is still able to achieve competitive accuracy (Table 3), suggesting that the solver works to some extent. We conjecture that the deep plain nets may have exponentially low convergence rates, which impact the reducing of the training error . The reason for such optimization difficulties will be studied in the future.") #link("#resnet-note-3")[[注 3]]]
+
+#zh(id: "S035")[#text("我们认为，这种优化困难不太可能由梯度消失引起。普通网络使用 BN [16] 训练，保证前向传播信号具有非零方差；我们还验证了，使用 BN 时，反向传播梯度的范数也正常，因此前向与反向信号都未消失。事实上，34 层普通网络仍能达到有竞争力的准确率，见表 3，说明求解器在一定程度上能够工作。我们推测，深层普通网络的收敛速度可能呈指数级降低，从而影响训练错误率的下降。 这种优化困难的原因有待未来研究。") #link("#resnet-note-3")[[注 3]]]
+
+#html.p(id: "en-S036", lang: "en")[#text("Residual Networks. Next we evaluate 18-layer and 34-layer residual nets ( ResNets ). The baseline architectures are the same as the above plain nets, expect that a shortcut connection is added to each pair of 3 ") $times$ #text(" 3 filters as in Fig. 3 (right). In the first comparison (Table 2 and Fig. 4 right), we use identity mapping for all shortcuts and zero-padding for increasing dimensions (option A). So they have no extra parameter compared to the plain counterparts.")]
+
+#zh(id: "S036")[#text("残差网络。接着评估 18 层与 34 层残差网络（ResNet）。基线架构与上述普通网络相同，只是给每对 3×3 卷积层增加快捷连接，见图 3 右。在第一组比较中，见表 2 与图 4 右，所有快捷连接均使用恒等映射，维度增加时补零，即方案 A。因此，它们比普通网络没有额外参数。")]
+
+#html.p(id: "en-S037", lang: "en")[#text("We have three major observations from Table 2 and Fig. 4. First, the situation is reversed with residual learning – the 34-layer ResNet is better than the 18-layer ResNet (by 2.8%). More importantly, the 34-layer ResNet exhibits considerably lower training error and is generalizable to the validation data. This indicates that the degradation problem is well addressed in this setting and we manage to obtain accuracy gains from increased depth.")]
+
+#zh(id: "S037")[#text("表 2 和图 4 给出三个主要观察。首先，残差学习使情况发生逆转：34 层 ResNet 比 18 层 ResNet 好 2.8 个百分点。更重要的是，34 层 ResNet 的训练错误率明显更低，且能泛化到验证数据。这说明，在该设置下退化问题得到有效解决，我们成功从增加的深度中获得了准确率提升。")]
+
+#html.p(id: "en-S038", lang: "en")[#text("Second, compared to its plain counterpart, the 34-layer ResNet reduces the top-1 error by 3.5% (Table 2), resulting from the successfully reduced training error (Fig. 4 right vs . left). This comparison verifies the effectiveness of residual learning on extremely deep systems.")]
+
+#zh(id: "S038")[#text("其次，相比对应的普通网络，34 层 ResNet 的 top-1 错误率降低了 3.5 个百分点，见表 2；这得益于成功降低了训练错误率，比较图 4 右与左。这验证了残差学习对极深系统的有效性。")]
+
+#html.p(id: "en-S039", lang: "en")[#text("Last, we also note that the 18-layer plain/residual nets are comparably accurate (Table 2), but the 18-layer ResNet converges faster (Fig. 4 right vs . left). When the net is “not overly deep” (18 layers here), the current SGD solver is still able to find good solutions to the plain net. In this case, the ResNet eases the optimization by providing faster convergence at the early stage.")]
+
+#zh(id: "S039")[#text("最后，18 层普通／残差网络的准确率相近，见表 2，但 18 层 ResNet 收敛更快，比较图 4 右与左。当网络“还没有过深”，这里为 18 层时，现有 SGD 求解器仍能为普通网络找到良好的解。在这种情况下，ResNet 通过加快早期收敛来简化优化。")]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T3")[
+#image("assets/table-3.png", width: 100%, alt: "Table 3. Error rates (%, 10-crop testing) on ImageNet validation. VGG-16 is based on our test. ResNet-50/101/152 are of option B that only uses projections for increasing dimensions.")
+#html.figcaption[#text("Table 3. Error rates (%, 10-crop testing) on ImageNet validation. VGG-16 is based on our test. ResNet-50/101/152 are of option B that only uses projections for increasing dimensions.") #zh-caption[#text("表 3：ImageNet 验证集错误率，单位为 %，采用 10 裁剪测试。VGG-16 的结果来自我们的测试。ResNet-50／101／152 使用方案 B，仅在增加维度时使用投影。")]]
+]
+
+#html.p(id: "en-S040", lang: "en")[#text("Identity vs . Projection Shortcuts. We have shown that parameter-free, identity shortcuts help with training. Next we investigate projection shortcuts (Eqn.(2)). In Table 3 we compare three options: (A) zero-padding shortcuts are used for increasing dimensions, and all shortcuts are parameter-free (the same as Table 2 and Fig. 4 right); (B) projection shortcuts are used for increasing dimensions, and other shortcuts are identity; and (C) all shortcuts are projections.")]
+
+#zh(id: "S040")[#text("恒等与投影快捷连接。我们已经证明，无参数的恒等快捷连接有助于训练。接着考察公式（2）的投影快捷连接。表 3 比较三种方案：A）增加维度时使用补零快捷连接，所有快捷连接都没有参数，与表 2 和图 4 右相同；B）增加维度时使用投影，其余快捷连接使用恒等映射；C）所有快捷连接都使用投影。")]
+
+#html.p(id: "en-S041", lang: "en")[#text("Table 3 shows that all three options are considerably better than the plain counterpart. B is slightly better than A. We argue that this is because the zero-padded dimensions in A indeed have no residual learning. C is marginally better than B, and we attribute this to the extra parameters introduced by many (thirteen) projection shortcuts. But the small differences among A/B/C indicate that projection shortcuts are not essential for addressing the degradation problem. So we do not use option C in the rest of this paper, to reduce memory/time complexity and model sizes. Identity shortcuts are particularly important for not increasing the complexity of the bottleneck architectures that are introduced below.")]
+
+#zh(id: "S041")[#text("表 3 表明，三种方案都明显优于对应的普通网络。B 略优于 A，我们认为原因是 A 中补零的维度实际上没有残差学习。C 比 B 略好，我们将其归因于大量投影快捷连接，共 13 个，引入了额外参数。但 A／B／C 的差异很小，说明解决退化问题并不必须使用投影快捷连接。为降低内存／时间复杂度及模型大小，本文其余部分不使用方案 C。对于下面介绍的瓶颈架构，恒等快捷连接尤其重要，因为它不会增加复杂度。")]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-F5")[
+#image("assets/figure-5.png", width: 100%, alt: "Figure 5. A deeper residual function F for ImageNet. Left: a building block (on 56×56 feature maps) as in Fig. 3 for ResNet- 34. Right: a “bottleneck” building block for ResNet-50/101/152.")
+#html.figcaption[#text("Figure 5. A deeper residual function F for ImageNet. Left: a building block (on 56×56 feature maps) as in Fig. 3 for ResNet- 34. Right: a “bottleneck” building block for ResNet-50/101/152.") #zh-caption[#text("图 5：ImageNet 上更深的残差函数 F。左：ResNet-34 在 56×56 特征图上使用的模块，与图 3 相同。右：ResNet-50／101／152 使用的瓶颈模块。")]]
+]
+
+#html.p(id: "en-S042", lang: "en")[#text("Deeper Bottleneck Architectures. Next we describe our deeper nets for ImageNet. Because of concerns on the training time that we can afford, we modify the building block as a bottleneck design . For each residual function ") $cal(F)$ #text(" , we use a stack of 3 layers instead of 2 (Fig. 5). The three layers are 1 ") $times$ #text(" 1, 3 ") $times$ #text(" 3, and 1 ") $times$ #text(" 1 convolutions, where the 1 ") $times$ #text(" 1 layers are responsible for reducing and then increasing (restoring) dimensions, leaving the 3 ") $times$ #text(" 3 layer a bottleneck with smaller input/output dimensions. Fig. 5 shows an example, where both designs have similar time complexity.") #link("#resnet-note-4")[[注 4]]]
+
+#zh(id: "S042")[#text("更深的瓶颈架构。下面描述更深的 ImageNet 网络。考虑到可承担的训练时间，我们将基本模块改为瓶颈设计。每个残差函数 ") $cal(F)$ #text(" 使用三层堆叠，替代两层，见图 5。三层卷积依次为 1×1、3×3、1×1；1×1 层负责先降低、再提高，也就是恢复维度，使 3×3 层成为输入／输出维度较小的瓶颈。图 5 给出了例子，两种设计具有相近的时间复杂度。") #link("#resnet-note-4")[[注 4]]]
+
+#html.p(id: "en-S043", lang: "en")[#text("The parameter-free identity shortcuts are particularly important for the bottleneck architectures. If the identity shortcut in Fig. 5 (right) is replaced with projection, one can show that the time complexity and model size are doubled, as the shortcut is connected to the two high-dimensional ends. So identity shortcuts lead to more efficient models for the bottleneck designs.")]
+
+#zh(id: "S043")[#text("无参数的恒等快捷连接对瓶颈架构尤其重要。如果将图 5 右的恒等连接替换为投影，可以证明时间复杂度和模型大小都会翻倍，因为快捷连接连接的是两端的高维表示。因此，恒等快捷连接使瓶颈设计更加高效。")]
+
+#html.p(id: "en-S044", lang: "en")[#text("50-layer ResNet: We replace each 2-layer block in the 34-layer net with this 3-layer bottleneck block, resulting in a 50-layer ResNet (Table 1). We use option B for increasing dimensions. This model has 3.8 billion FLOPs.")]
+
+#zh(id: "S044")[#text("50 层 ResNet：将 34 层网络中的每个两层模块替换为三层瓶颈模块，就得到 50 层 ResNet，见表 1。增加维度时使用方案 B。该模型的 FLOPs 为 38 亿。")]
+
+#html.p(id: "en-S045", lang: "en")[#text("101-layer and 152-layer ResNets: We construct 101-layer and 152-layer ResNets by using more 3-layer blocks (Table 1). Remarkably, although the depth is significantly increased, the 152-layer ResNet (11.3 billion FLOPs) still has lower complexity than VGG-16/19 nets (15.3/19.6 billion FLOPs).")]
+
+#zh(id: "S045")[#text("101 层和 152 层 ResNet：通过使用更多三层模块，构造出 101 层和 152 层 ResNet，见表 1。值得注意的是，尽管深度显著增加，152 层 ResNet 的 113 亿 FLOPs 仍低于 VGG-16／19 的 153／196 亿 FLOPs。")]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T4")[
+#image("assets/table-4.png", width: 100%, alt: "Table 4. Error rates (%) of single-model results on the ImageNet validation set (except † reported on the test set).")
+#html.figcaption[#text("Table 4. Error rates (%) of single-model results on the ImageNet validation set (except † reported on the test set).") #zh-caption[#text("表 4：ImageNet 验证集上的单模型错误率，单位为 %；标记 † 的结果在测试集上报告。")]]
+]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T5")[
+#image("assets/table-5.png", width: 100%, alt: "Table 5. Error rates (%) of ensembles. The top-5 error is on the test set of ImageNet and reported by the test server.")
+#html.figcaption[#text("Table 5. Error rates (%) of ensembles. The top-5 error is on the test set of ImageNet and reported by the test server.") #zh-caption[#text("表 5：集成模型错误率，单位为 %。top-5 错误率在 ImageNet 测试集上评估，由测试服务器报告。")]]
+]
+
+#html.p(id: "en-S046", lang: "en")[#text("The 50/101/152-layer ResNets are more accurate than the 34-layer ones by considerable margins (Table 3 and 4 ).")]
+
+#zh(id: "S046")[#text("50／101／152 层 ResNet 的准确率明显高于 34 层版本，见表 3 和表 4。")]
+
+#html.p(id: "en-S047", lang: "en")[#text("We do not observe the degradation problem and thus enjoy significant accuracy gains from considerably increased depth. The benefits of depth are witnessed for all evaluation metrics (Table 3 and 4 ).")]
+
+#zh(id: "S047")[#text("我们没有观察到退化问题，因此可以从显著增加的深度中获得明显的准确率收益。这种深度收益在所有评估指标上都可以看到，见表 3 和表 4。")]
+
+#html.p(id: "en-S048", lang: "en")[#text("Comparisons with State-of-the-art Methods. In Table 4 we compare with the previous best single-model results. Our baseline 34-layer ResNets have achieved very competitive accuracy. Our 152-layer ResNet has a single-model top-5 validation error of 4.49%. This single-model result outperforms all previous ensemble results (Table 5).")]
+
+#zh(id: "S048")[#text("与当时最先进方法比较。表 4 将我们的方法与以往最佳单模型结果比较。34 层 ResNet 基线已经具有很强的竞争力。152 层 ResNet 的单模型 top-5 验证错误率为 4.49%，这一单模型结果优于所有以往集成结果，见表 5。")]
+
+#html.p(id: "en-S049", lang: "en")[#text("We combine six models of different depth to form an ensemble (only with two 152-layer ones at the time of submitting). This leads to 3.57% top-5 error on the test set (Table 5). This entry won the 1st place in ILSVRC 2015.")]
+
+#zh(id: "S049")[#text("我们组合六个不同深度的模型形成集成，提交时其中只有两个是 152 层模型，在测试集上取得 3.57% 的 top-5 错误率，见表 5。这一提交赢得了 ILSVRC 2015 第一名。")]
+
+=== 4.2. CIFAR-10 and Analysis / CIFAR-10 与分析
+
+#html.p(id: "en-S050", lang: "en")[#text("We conducted more studies on the CIFAR-10 dataset [20] , which consists of 50k training images and 10k testing images in 10 classes. We present experiments trained on the training set and evaluated on the test set. Our focus is on the behaviors of extremely deep networks, but not on pushing the state-of-the-art results, so we intentionally use simple architectures as follows.")]
+
+#zh(id: "S050")[#text("我们在 CIFAR-10 数据集 [20] 上开展了更多研究。该数据集包含 10 个类别、5 万张训练图像和 1 万张测试图像。实验使用训练集训练、测试集评估。我们关注极深网络的行为，而非追求当时最先进的结果，因此有意采用下面的简单架构。")]
+
+#html.p(id: "en-S051", lang: "en")[#text("The plain/residual architectures follow the form in Fig. 3 (middle/right). The network inputs are 32 ") $times$ #text(" 32 images, with the per-pixel mean subtracted. The first layer is 3 ") $times$ #text(" 3 convolutions. Then we use a stack of ") $6n$ #text(" layers with 3 ") $times$ #text(" 3 convolutions on the feature maps of sizes ") ${32,16,8}$ #text(" respectively, with 2 ") $n$ #text(" layers for each feature map size. The numbers of filters are ") ${16,32,64}$ #text(" respectively. The subsampling is performed by convolutions with a stride of 2. The network ends with a global average pooling, a 10-way fully-connected layer, and softmax. There are totally 6 ") $n$ #text(" +2 stacked weighted layers. The following table summarizes the architecture:")]
+
+#zh(id: "S051")[#text("普通／残差架构沿用图 3 中／右的形式。输入为减去逐像素均值的 32×32 图像，第一层为 3×3 卷积。随后在尺寸分别为 {32,16,8} 的特征图上堆叠 6n 个 3×3 卷积层，每个尺寸使用 2n 层，滤波器数量分别为 {16,32,64}。下采样使用步长为 2 的卷积。网络以全局平均池化、10 类全连接层和 softmax 结束，总共有 6n+2 个带权重层。下表概括其结构：")]
+
+#table(columns: 4,
+  [Output map size / 输出尺寸], [32×32], [16×16], [8×8],
+  [Layers / 层数], [1+2n], [2n], [2n],
+  [Filters / 滤波器数量], [16], [32], [64],
+)
+
+#html.p(id: "en-S052", lang: "en")[#text("When shortcut connections are used, they are connected to the pairs of 3 ") $times$ #text(" 3 layers (totally ") $3n$ #text(" shortcuts). On this dataset we use identity shortcuts in all cases ( i.e . , option A), so our residual models have exactly the same depth, width, and number of parameters as the plain counterparts.")]
+
+#zh(id: "S052")[#text("使用快捷连接时，连接每对 3×3 层，共有 3n 条快捷连接。在该数据集上，所有情况下都采用恒等快捷连接，即方案 A。因此，残差模型与对应普通模型的深度、宽度和参数量完全相同。")]
+
+#html.p(id: "en-S053", lang: "en")[#text("We use a weight decay of 0.0001 and momentum of 0.9, and adopt the weight initialization in [13] and BN [16] but with no dropout. These models are trained with a mini-batch size of 128 on two GPUs. We start with a learning rate of 0.1, divide it by 10 at 32k and 48k iterations, and terminate training at 64k iterations, which is determined on a 45k/5k train/val split. We follow the simple data augmentation in [24] for training: 4 pixels are padded on each side, and a 32 ") $times$ #text(" 32 crop is randomly sampled from the padded image or its horizontal flip. For testing, we only evaluate the single view of the original 32 ") $times$ #text(" 32 image.")]
+
+#zh(id: "S053")[#text("权重衰减为 0.0001，动量为 0.9；采用 [13] 的权重初始化与 BN [16]，但不使用 dropout。模型在两块 GPU 上训练，批量大小为 128。学习率从 0.1 开始，在 3.2 万和 4.8 万次迭代时除以 10，6.4 万次迭代时结束训练；这一安排根据 4.5 万／5000 的训练／验证划分确定。训练采用 [24] 的简单数据增强：图像每侧填充 4 个像素，再从填充图像或其水平翻转中随机裁剪 32×32 区域。测试时只评估原始 32×32 图像的单一视图。")]
+
+#html.figure(class: "essay-paper-figure essay-wide", id: "resnet-F6")[
+#image("assets/figure-6.png", width: 100%, alt: "Figure 6. Training on CIFAR-10. Dashed lines denote training error, and bold lines denote testing error. Left: plain networks. The error of plain-110 is higher than 60% and not displayed. Middle: ResNets. Right: ResNets with 110 and 1202 layers.")
+#html.figcaption[#text("Figure 6. Training on CIFAR-10. Dashed lines denote training error, and bold lines denote testing error. Left: plain networks. The error of plain-110 is higher than 60% and not displayed. Middle: ResNets. Right: ResNets with 110 and 1202 layers.") #zh-caption[#text("图 6：CIFAR-10 上的训练。虚线表示训练错误率，粗线表示测试错误率。左：普通网络；plain-110 错误率高于 60%，未显示。中：ResNet。右：110 层与 1202 层 ResNet。")]]
+]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T6")[
+#image("assets/table-6.png", width: 100%, alt: "Table 6. Classification error on the CIFAR-10 test set. All methods are with data augmentation. For ResNet-110, we run it 5 times and show “best (mean±std)” as in [43].")
+#html.figcaption[#text("Table 6. Classification error on the CIFAR-10 test set. All methods are with data augmentation. For ResNet-110, we run it 5 times and show “best (mean±std)” as in [43].") #zh-caption[#text("表 6：CIFAR-10 测试集分类错误率。所有方法均使用数据增强。ResNet-110 运行 5 次，像 [43] 一样报告“最佳值（均值±标准差）”。表头包含方法、层数、参数量和错误率。")]]
+]
+
+#html.p(id: "en-S054", lang: "en")[#text("We compare ") $n={3,5,7,9}$ #text(" , leading to 20, 32, 44, and 56-layer networks. Fig. 6 (left) shows the behaviors of the plain nets. The deep plain nets suffer from increased depth, and exhibit higher training error when going deeper. This phenomenon is similar to that on ImageNet (Fig. 4, left) and on MNIST (see [42] ), suggesting that such an optimization difficulty is a fundamental problem.")]
+
+#zh(id: "S054")[#text("我们比较 n={3,5,7,9}，分别得到 20、32、44、56 层网络。图 6 左展示普通网络的行为。深层普通网络受到增加深度的负面影响，越深，训练错误率越高。该现象与 ImageNet 上的图 4 左和 MNIST 上的结果，见 [42]，类似，说明这种优化困难是一个基本问题。")]
+
+#html.p(id: "en-S055", lang: "en")[#text("Fig. 6 (middle) shows the behaviors of ResNets. Also similar to the ImageNet cases (Fig. 4, right), our ResNets manage to overcome the optimization difficulty and demonstrate accuracy gains when the depth increases.")]
+
+#zh(id: "S055")[#text("图 6 中展示 ResNet 的行为。与 ImageNet 上的图 4 右类似，ResNet 克服了优化困难，并在深度增加时获得准确率提升。")]
+
+#html.p(id: "en-S056", lang: "en")[#text("We further explore ") $n=18$ #text(" that leads to a 110-layer ResNet. In this case, we find that the initial learning rate of 0.1 is slightly too large to start converging . So we use 0.01 to warm up the training until the training error is below 80% (about 400 iterations), and then go back to 0.1 and continue training. The rest of the learning schedule is as done previously. This 110-layer network converges well (Fig. 6, middle). It has fewer parameters than other deep and thin networks such as FitNet [35] and Highway [42] (Table 6), yet is among the state-of-the-art results (6.43%, Table 6).") #link("#resnet-note-5")[[注 5]]]
+
+#zh(id: "S056")[#text("我们进一步探索 n=18，即 110 层 ResNet。此时，初始学习率 0.1 稍大，难以立即开始收敛。 因此，先使用 0.01 预热，直到训练错误率低于 80%，约需 400 次迭代，再恢复到 0.1 继续训练。其余学习安排与之前相同。这个 110 层网络收敛良好，见图 6 中；它的参数比 FitNet [35]、Highway [42] 等其他深而窄的网络更少，见表 6，却仍处于当时领先结果之列，错误率为 6.43%。") #link("#resnet-note-5")[[注 5]]]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-F7")[
+#image("assets/figure-7.png", width: 100%, alt: "Figure 7. Standard deviations (std) of layer responses on CIFAR- 10. The responses are the outputs of each 3×3 layer, after BN and before nonlinearity. Top: the layers are shown in their original order. Bottom: the responses are ranked in descending order.")
+#html.figcaption[#text("Figure 7. Standard deviations (std) of layer responses on CIFAR- 10. The responses are the outputs of each 3×3 layer, after BN and before nonlinearity. Top: the layers are shown in their original order. Bottom: the responses are ranked in descending order.") #zh-caption[#text("图 7：CIFAR-10 上层响应的标准差。响应是每个 3×3 层在 BN 之后、非线性变换之前的输出。上：按原始层顺序排列。下：按响应大小降序排列。")]]
+]
+
+#html.p(id: "en-S057", lang: "en")[#text("Analysis of Layer Responses. Fig. 7 shows the standard deviations (std) of the layer responses. The responses are the outputs of each 3 ") $times$ #text(" 3 layer, after BN and before other nonlinearity (ReLU/addition). For ResNets, this analysis reveals the response strength of the residual functions. Fig. 7 shows that ResNets have generally smaller responses than their plain counterparts. These results support our basic motivation (Sec. 3.1 ) that the residual functions might be generally closer to zero than the non-residual functions. We also notice that the deeper ResNet has smaller magnitudes of responses, as evidenced by the comparisons among ResNet-20, 56, and 110 in Fig. 7. When there are more layers, an individual layer of ResNets tends to modify the signal less.")]
+
+#zh(id: "S057")[#text("层响应分析。图 7 展示层响应的标准差。响应指每个 3×3 层在 BN 之后、其他非线性操作，即 ReLU／相加，之前的输出。对于 ResNet，这种分析揭示了残差函数的响应强度。图 7 表明，ResNet 的响应通常比对应普通网络小。这支持了第 3.1 节的基本动机：残差函数通常可能比非残差函数更接近零。我们还观察到，ResNet 越深，响应幅度越小，图 7 中 ResNet-20、56、110 的比较提供了证据。层数更多时，ResNet 的单个层倾向于更少地修改信号。")]
+
+#html.p(id: "en-S058", lang: "en")[#text("Exploring Over 1000 layers. We explore an aggressively deep model of over 1000 layers. We set ") $n=200$ #text(" that leads to a 1202-layer network, which is trained as described above. Our method shows no optimization difficulty , and this ") $10^(3)$ #text(" -layer network is able to achieve training error ") $<$ #text(" 0.1% (Fig. 6, right). Its test error is still fairly good (7.93%, Table 6).")]
+
+#zh(id: "S058")[#text("探索超过 1000 层的网络。我们探索了一个超过 1000 层的极深模型。设 n=200，就得到 1202 层网络，并按上述方法训练。该方法没有表现出优化困难，这个 10³ 层网络可以达到低于 0.1% 的训练错误率，见图 6 右。其测试错误率也仍然相当不错，为 7.93%，见表 6。")]
+
+#html.p(id: "en-S059", lang: "en")[#text("But there are still open problems on such aggressively deep models. The testing result of this 1202-layer network is worse than that of our 110-layer network, although both have similar training error. We argue that this is because of overfitting. The 1202-layer network may be unnecessarily large (19.4M) for this small dataset. Strong regularization such as maxout [10] or dropout [14] is applied to obtain the best results ( [10,25,24,35] ) on this dataset. In this paper, we use no maxout/dropout and just simply impose regularization via deep and thin architectures by design, without distracting from the focus on the difficulties of optimization. But combining with stronger regularization may improve results, which we will study in the future.")]
+
+#zh(id: "S059")[#text("不过，这类极深模型仍有未解决的问题。尽管训练错误率相近，1202 层网络的测试结果却差于 110 层网络。我们认为原因是过拟合：对于这个小数据集，1202 层网络的 1940 万参数可能不必要地过大。该数据集上的最佳结果 [10,25,24,35] 使用了 maxout [10]、dropout [14] 等强正则化。本文不使用 maxout／dropout，而只是通过设计深而窄的架构进行正则化，以免偏离优化困难这一研究重点。不过，结合更强的正则化可能改善结果，我们将在未来研究。")]
+
+=== 4.3. Object Detection on PASCAL and MS COCO / PASCAL 与 MS COCO 目标检测
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T7")[
+#image("assets/table-7.png", width: 100%, alt: "Table 7. Object detection mAP (%) on the PASCAL VOC 2007/2012 test sets using baseline Faster R-CNN. See also Table 10 and 11 for better results.")
+#html.figcaption[#text("Table 7. Object detection mAP (%) on the PASCAL VOC 2007/2012 test sets using baseline Faster R-CNN. See also Table 10 and 11 for better results.") #zh-caption[#text("表 7：基线 Faster R-CNN 在 PASCAL VOC 2007／2012 测试集上的目标检测 mAP，单位为 %。更好结果见表 10、11。training data 为训练数据，test data 为测试数据。")]]
+]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T8")[
+#image("assets/table-8.png", width: 100%, alt: "Table 8. Object detection mAP (%) on the COCO validation set using baseline Faster R-CNN. See also Table 9 for better results.")
+#html.figcaption[#text("Table 8. Object detection mAP (%) on the COCO validation set using baseline Faster R-CNN. See also Table 9 for better results.") #zh-caption[#text("表 8：基线 Faster R-CNN 在 COCO 验证集上的目标检测 mAP，单位为 %。更好结果见表 9。两列分别为 IoU=0.5 的 mAP 和 IoU 从 .5 到 .95 的平均 mAP。")]]
+]
+
+#html.p(id: "en-S060", lang: "en")[#text("Our method has good generalization performance on other recognition tasks. Table 7 and 8 show the object detection baseline results on PASCAL VOC 2007 and 2012 [5] and COCO [26] . We adopt Faster R-CNN [32] as the detection method. Here we are interested in the improvements of replacing VGG-16 [41] with ResNet-101. The detection implementation (see appendix) of using both models is the same, so the gains can only be attributed to better networks. Most remarkably, on the challenging COCO dataset we obtain a 6.0% increase in COCO’s standard metric (mAP@[.5, .95]), which is a 28% relative improvement. This gain is solely due to the learned representations.")]
+
+#zh(id: "S060")[#text("我们的方法在其他识别任务上具有良好的泛化能力。表 7 和表 8 展示 PASCAL VOC 2007／2012 [5] 与 COCO [26] 上的目标检测基线结果。检测方法采用 Faster R-CNN [32]。这里关注的是用 ResNet-101 替换 VGG-16 [41] 的收益。两种模型的检测实现相同，见附录，因此提升只能归因于更好的网络。尤其是在富有挑战性的 COCO 上，标准指标 mAP@[.5,.95] 提高了 6.0 个百分点，相对提升为 28%。这一收益完全来自学到的表示。")]
+
+#html.p(id: "en-S061", lang: "en")[#text("Based on deep residual nets, we won the 1st places in several tracks in ILSVRC & COCO 2015 competitions: ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation. The details are in the appendix.")]
+
+#zh(id: "S061")[#text("基于深度残差网络，我们赢得了 ILSVRC 和 COCO 2015 竞赛多个赛道的第一名：ImageNet 检测、ImageNet 定位、COCO 检测和 COCO 分割。详情见附录。")]
+
+== Appendix A. Object Detection Baselines / 附录 A：目标检测基线
+
+#html.p(id: "en-S062", lang: "en")[#text("In this section we introduce our detection method based on the baseline Faster R-CNN [32] system. The models are initialized by the ImageNet classification models, and then fine-tuned on the object detection data. We have experimented with ResNet-50/101 at the time of the ILSVRC & COCO 2015 detection competitions.")]
+
+#zh(id: "S062")[#text("本节介绍基于 Faster R-CNN [32] 基线系统的检测方法。模型由 ImageNet 分类模型初始化，再在目标检测数据上微调。在 ILSVRC 和 COCO 2015 检测竞赛期间，我们实验了 ResNet-50／101。")]
+
+#html.p(id: "en-S063", lang: "en")[#text("Unlike VGG-16 used in [32] , our ResNet has no hidden fc layers. We adopt the idea of “Networks on Conv feature maps” (NoC) [33] to address this issue. We compute the full-image shared conv feature maps using those layers whose strides on the image are no greater than 16 pixels ( i.e . , conv1, conv2_ x, conv3_x, and conv4_x, totally 91 conv layers in ResNet-101; Table 1). We consider these layers as analogous to the 13 conv layers in VGG-16, and by doing so, both ResNet and VGG-16 have conv feature maps of the same total stride (16 pixels). These layers are shared by a region proposal network (RPN, generating 300 proposals) [32] and a Fast R-CNN detection network [7] . RoI pooling [7] is performed before conv5_1. On this RoI-pooled feature, all layers of conv5_x and up are adopted for each region, playing the roles of VGG-16’s fc layers. The final classification layer is replaced by two sibling layers (classification and box regression [7] ).")]
+
+#zh(id: "S063")[#text("与 [32] 使用的 VGG-16 不同，ResNet 没有隐藏全连接层。我们采用“卷积特征图上的网络”（NoC）[33] 来处理这一问题。使用相对图像步长不超过 16 像素的层计算整张图像共享的卷积特征图，即 conv1、conv2_x、conv3_x、conv4_x；在 ResNet-101 中共 91 个卷积层，见表 1。将这些层视为 VGG-16 的 13 个卷积层的对应部分，就能让两种网络的卷积特征图具有相同的总步长 16 像素。这些层由区域提议网络 RPN [32] 和 Fast R-CNN 检测网络 [7] 共享，RPN 生成 300 个提议。在 conv5_1 之前执行 RoI 池化 [7]；对每个区域，在池化特征上应用 conv5_x 及之后的所有层，代替 VGG-16 的全连接层。最终分类层替换为两个并列输出层，分别执行分类与边界框回归 [7]。")]
+
+#html.p(id: "en-S064", lang: "en")[#text("For the usage of BN layers, after pre-training, we compute the BN statistics (means and variances) for each layer on the ImageNet training set. Then the BN layers are fixed during fine-tuning for object detection. As such, the BN layers become linear activations with constant offsets and scales, and BN statistics are not updated by fine-tuning. We fix the BN layers mainly for reducing memory consumption in Faster R-CNN training.")]
+
+#zh(id: "S064")[#text("关于 BN 层的使用，预训练之后，我们在 ImageNet 训练集上计算每层的 BN 统计量，即均值和方差。随后，在目标检测微调中固定 BN 层。这样，BN 层就成为具有固定偏移和缩放的线性激活，统计量不会随微调更新。固定 BN 的主要目的，是减少 Faster R-CNN 训练的内存消耗。")]
+
+=== PASCAL VOC
+
+#html.p(id: "en-S065", lang: "en")[#text("Following [7,32] , for the PASCAL VOC 2007 test set, we use the 5k trainval images in VOC 2007 and 16k trainval images in VOC 2012 for training (“07+12”). For the PASCAL VOC 2012 test set, we use the 10k trainval + test images in VOC 2007 and 16k trainval images in VOC 2012 for training (“07++12”). The hyper-parameters for training Faster R-CNN are the same as in [32] . Table 7 shows the results. ResNet-101 improves the mAP by ") $>$ #text(" 3% over VGG-16. This gain is solely because of the improved features learned by ResNet.")]
+
+#zh(id: "S065")[#text("按照 [7,32]，评估 PASCAL VOC 2007 测试集时，使用 VOC 2007 的 5000 张 trainval 图像和 VOC 2012 的 1.6 万张 trainval 图像训练，记为“07+12”。评估 VOC 2012 测试集时，使用 VOC 2007 的 1 万张 trainval 与 test 图像，以及 VOC 2012 的 1.6 万张 trainval 图像训练，记为“07++12”。Faster R-CNN 的训练超参数与 [32] 相同。表 7 展示结果：ResNet-101 比 VGG-16 的 mAP 提高超过 3 个百分点。这一收益完全来自 ResNet 学到的更好特征。")]
+
+=== MS COCO
+
+#html.p(id: "en-S066", lang: "en")[#text("The MS COCO dataset [26] involves 80 object categories. We evaluate the PASCAL VOC metric (mAP @ IoU = 0.5) and the standard COCO metric (mAP @ IoU = .5:.05:.95). We use the 80k images on the train set for training and the 40k images on the val set for evaluation. Our detection system for COCO is similar to that for PASCAL VOC. We train the COCO models with an 8-GPU implementation, and thus the RPN step has a mini-batch size of 8 images ( i.e . , 1 per GPU) and the Fast R-CNN step has a mini-batch size of 16 images. The RPN step and Fast R-CNN step are both trained for 240k iterations with a learning rate of 0.001 and then for 80k iterations with 0.0001.")]
+
+#zh(id: "S066")[#text("MS COCO 数据集 [26] 包含 80 个目标类别。我们评估 PASCAL VOC 指标，即 IoU=0.5 的 mAP，以及标准 COCO 指标，即 IoU 从 .5 到 .95、步长 .05 的 mAP。使用 train 集的 8 万张图像训练、val 集的 4 万张图像评估。COCO 检测系统与 PASCAL VOC 类似。采用 8 GPU 实现，因此 RPN 阶段的批量大小为 8 张图像，每块 GPU 一张；Fast R-CNN 阶段的批量大小为 16 张图像。两个阶段均先以学习率 0.001 训练 24 万次迭代，再以 0.0001 训练 8 万次。")]
+
+#html.p(id: "en-S067", lang: "en")[#text("Table 8 shows the results on the MS COCO validation set. ResNet-101 has a 6% increase of mAP@[.5, .95] over VGG-16, which is a 28% relative improvement, solely contributed by the features learned by the better network. Remarkably, the mAP@[.5, .95]’s absolute increase (6.0%) is nearly as big as mAP@.5’s (6.9%). This suggests that a deeper network can improve both recognition and localization.")]
+
+#zh(id: "S067")[#text("表 8 展示 MS COCO 验证集结果。ResNet-101 比 VGG-16 的 mAP@[.5,.95] 提高 6 个百分点，相对提升为 28%，完全来自更好网络学到的特征。尤其值得注意的是，mAP@[.5,.95] 的绝对提升 6.0 个百分点，几乎与 mAP@.5 的 6.9 个百分点一样大。这说明，更深的网络能同时改善识别和定位。")]
+
+== Appendix B. Object Detection Improvements / 附录 B：目标检测改进
+
+#html.p(id: "en-S068", lang: "en")[#text("For completeness, we report the improvements made for the competitions. These improvements are based on deep features and thus should benefit from residual learning.")]
+
+#zh(id: "S068")[#text("为了完整起见，本节报告为竞赛采用的改进。这些改进基于深层特征，因此应能从残差学习中获益。")]
+
+=== MS COCO
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T9")[
+#image("assets/table-9.png", width: 100%, alt: "Table 9. Object detection improvements on MS COCO using Faster R-CNN and ResNet-101.")
+#html.figcaption[#text("Table 9. Object detection improvements on MS COCO using Faster R-CNN and ResNet-101.") #zh-caption[#text("表 9：Faster R-CNN 与 ResNet-101 在 MS COCO 上的检测改进。box refinement：边界框细化；context：上下文；multi-scale：多尺度；ensemble：集成。勾选项表示采用相应改进。")]]
+]
+
+#html.p(id: "en-S069", lang: "en")[#text("Box refinement. Our box refinement partially follows the iterative localization in [6] . In Faster R-CNN, the final output is a regressed box that is different from its proposal box. So for inference, we pool a new feature from the regressed box and obtain a new classification score and a new regressed box. We combine these 300 new predictions with the original 300 predictions. Non-maximum suppression (NMS) is applied on the union set of predicted boxes using an IoU threshold of 0.3 [8] , followed by box voting [6] . Box refinement improves mAP by about 2 points (Table 9).")]
+
+#zh(id: "S069")[#text("边界框细化。我们的边界框细化部分沿用 [6] 的迭代定位方法。Faster R-CNN 最终输出的是经过回归的边界框，与原提议框不同。因此，推理时从回归框中池化新特征，获得新的分类得分和再次回归的边界框。将这 300 个新预测与原来的 300 个预测合并，在预测框并集上以 IoU 阈值 0.3 执行非极大值抑制（NMS）[8]，再执行边界框投票 [6]。边界框细化使 mAP 提高约 2 个百分点，见表 9。")]
+
+#html.p(id: "en-S070", lang: "en")[#text("Global context. We combine global context in the Fast R-CNN step. Given the full-image conv feature map, we pool a feature by global Spatial Pyramid Pooling [12] (with a “single-level” pyramid) which can be implemented as “RoI” pooling using the entire image’s bounding box as the RoI. This pooled feature is fed into the post-RoI layers to obtain a global context feature. This global feature is concatenated with the original per-region feature, followed by the sibling classification and box regression layers. This new structure is trained end-to-end. Global context improves mAP@.5 by about 1 point (Table 9).")]
+
+#zh(id: "S070")[#text("全局上下文。我们在 Fast R-CNN 阶段整合全局上下文。给定整张图像的卷积特征图，使用全局空间金字塔池化 [12] 得到一个特征，这里使用“单层”金字塔，可以将整张图像的边界框作为 RoI，用 RoI 池化实现。将池化特征送入 RoI 之后的层，得到全局上下文特征，再与原来的逐区域特征拼接，接入并列的分类与边界框回归层。新结构采用端到端训练。全局上下文使 mAP@.5 提高约 1 个百分点，见表 9。")]
+
+#html.p(id: "en-S071", lang: "en")[#text("Multi-scale testing. In the above, all results are obtained by single-scale training/testing as in [32] , where the image’s shorter side is ") $s=600$ #text(" pixels. Multi-scale training/testing has been developed in [12,7] by selecting a scale from a feature pyramid, and in [33] by using maxout layers. In our current implementation, we have performed multi-scale testing following [33] ; we have not performed multi-scale training because of limited time. In addition, we have performed multi-scale testing only for the Fast R-CNN step (but not yet for the RPN step). With a trained model, we compute conv feature maps on an image pyramid, where the image’s shorter sides are ") $s in {200,400,600,800,1000}$ #text(" . We select two adjacent scales from the pyramid following [33] . RoI pooling and subsequent layers are performed on the feature maps of these two scales [33] , which are merged by maxout as in [33] . Multi-scale testing improves the mAP by over 2 points (Table 9).")]
+
+#zh(id: "S071")[#text("多尺度测试。上述结果均采用 [32] 的单尺度训练／测试，图像短边 s=600 像素。[12,7] 通过从特征金字塔选择尺度、[33] 通过使用 maxout 层，发展了多尺度训练／测试。在当前实现中，我们按照 [33] 执行多尺度测试；由于时间有限，没有进行多尺度训练。此外，多尺度测试只用于 Fast R-CNN 阶段，尚未用于 RPN。对训练好的模型，在图像金字塔上计算卷积特征图，图像短边为 s∈{200,400,600,800,1000}。按照 [33] 从金字塔选择两个相邻尺度，在这两个尺度的特征图上执行 RoI 池化及后续层，并像 [33] 一样通过 maxout 合并。多尺度测试使 mAP 提高超过 2 个百分点，见表 9。")]
+
+#html.p(id: "en-S072", lang: "en")[#text("Using validation data. Next we use the 80k+40k trainval set for training and the 20k test-dev set for evaluation. The test-dev set has no publicly available ground truth and the result is reported by the evaluation server. Under this setting, the results are an mAP@.5 of 55.7% and an mAP@[.5, .95] of 34.9% (Table 9). This is our single-model result.")]
+
+#zh(id: "S072")[#text("使用验证数据。接着使用 8 万加 4 万张 trainval 图像训练，在 2 万张 test-dev 图像上评估。test-dev 没有公开真值，结果由评估服务器报告。在该设置下，mAP@.5 为 55.7%，mAP@[.5,.95] 为 34.9%，见表 9。这是单模型结果。")]
+
+#html.p(id: "en-S073", lang: "en")[#text("Ensemble. In Faster R-CNN, the system is designed to learn region proposals and also object classifiers, so an ensemble can be used to boost both tasks. We use an ensemble for proposing regions, and the union set of proposals are processed by an ensemble of per-region classifiers. Table 9 shows our result based on an ensemble of 3 networks. The mAP is 59.0% and 37.4% on the test-dev set. This result won the 1st place in the detection task in COCO 2015.")]
+
+#zh(id: "S073")[#text("集成。Faster R-CNN 同时学习区域提议和目标分类器，因此可通过集成来提升两项任务。我们用集成模型提出区域，再由逐区域分类器的集成处理提议的并集。表 9 展示三个网络集成的结果：test-dev 上的两种 mAP 分别为 59.0% 和 37.4%。该结果赢得了 COCO 2015 检测任务第一名。")]
+
+=== PASCAL VOC
+
+#html.figure(class: "essay-paper-figure essay-wide", id: "resnet-T10")[
+#image("assets/table-10.png", width: 100%, alt: "Table 10. Detection results on the PASCAL VOC 2007 test set. The baseline is the Faster R-CNN system. The system “baseline+++” include box refinement, context, and multi-scale testing in Table 9.")
+#html.figcaption[#text("Table 10. Detection results on the PASCAL VOC 2007 test set. The baseline is the Faster R-CNN system. The system “baseline+++” include box refinement, context, and multi-scale testing in Table 9.") #zh-caption[#text("表 10：PASCAL VOC 2007 测试集检测结果。基线为 Faster R-CNN。“baseline+++”包含表 9 中的边界框细化、上下文和多尺度测试。net 为网络，data 为训练数据，其后为总体 mAP 与各类别 AP。")]]
+]
+
+#html.figure(class: "essay-paper-figure essay-wide", id: "resnet-T11")[
+#image("assets/table-11.png", width: 100%, alt: "Table 11. Detection results on the PASCAL VOC 2012 test set (http://host.robots.ox.ac.uk:8080/leaderboard/ displaylb.php?challengeid=11&compid=4). The baseline is the Faster R-CNN system. The system “baseline+++” include box refinement, context, and multi-scale testing in Table 9.")
+#html.figcaption[#text("Table 11. Detection results on the PASCAL VOC 2012 test set (http://host.robots.ox.ac.uk:8080/leaderboard/ displaylb.php?challengeid=11&compid=4). The baseline is the Faster R-CNN system. The system “baseline+++” include box refinement, context, and multi-scale testing in Table 9.") #zh-caption[#text("表 11：PASCAL VOC 2012 测试集检测结果。基线为 Faster R-CNN。“baseline+++”包含表 9 中的边界框细化、上下文和多尺度测试。其后列出总体 mAP 与各类别 AP。")]]
+]
+
+#html.p(id: "en-S074", lang: "en")[#text("We revisit the PASCAL VOC dataset based on the above model. With the single model on the COCO dataset (55.7% mAP@.5 in Table 9), we fine-tune this model on the PASCAL VOC sets. The improvements of box refinement, context, and multi-scale testing are also adopted. By doing so we achieve 85.6% mAP on PASCAL VOC 2007 (Table 10) and 83.8% on PASCAL VOC 2012 (Table 11) . The result on PASCAL VOC 2012 is 10 points higher than the previous state-of-the-art result [6] .") #link("#resnet-note-6")[[注 6]]]
+
+#zh(id: "S074")[#text("我们基于上述模型重新评估 PASCAL VOC。将 COCO 上的单模型，即表 9 中 mAP@.5 为 55.7% 的模型，在 PASCAL VOC 数据上微调，并采用边界框细化、上下文与多尺度测试。这样，在 PASCAL VOC 2007 上取得 85.6% mAP，见表 10，在 VOC 2012 上取得 83.8%，见表 11。 VOC 2012 的结果比此前最先进的结果 [6] 高 10 个百分点。") #link("#resnet-note-6")[[注 6]]]
+
+=== ImageNet Detection / ImageNet 目标检测
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T12")[
+#image("assets/table-12.png", width: 100%, alt: "Table 12. Our results (mAP, %) on the ImageNet detection dataset. Our detection system is Faster R-CNN [32] with the improvements in Table 9, using ResNet-101.")
+#html.figcaption[#text("Table 12. Our results (mAP, %) on the ImageNet detection dataset. Our detection system is Faster R-CNN [32] with the improvements in Table 9, using ResNet-101.") #zh-caption[#text("表 12：ImageNet 检测数据集上的结果，指标为 mAP，单位为 %。系统使用 ResNet-101、Faster R-CNN [32] 以及表 9 的改进。val2 为验证集，test 为测试集。")]]
+]
+
+#html.p(id: "en-S075", lang: "en")[#text("The ImageNet Detection (DET) task involves 200 object categories. The accuracy is evaluated by mAP@.5. Our object detection algorithm for ImageNet DET is the same as that for MS COCO in Table 9. The networks are pre-trained on the 1000-class ImageNet classification set, and are fine-tuned on the DET data. We split the validation set into two parts (val1/val2) following [8] . We fine-tune the detection models using the DET training set and the val1 set. The val2 set is used for validation. We do not use other ILSVRC 2015 data. Our single model with ResNet-101 has 58.8% mAP and our ensemble of 3 models has 62.1% mAP on the DET test set (Table 12). This result won the 1st place in the ImageNet detection task in ILSVRC 2015 , surpassing the second place by 8.5 points (absolute).")]
+
+#zh(id: "S075")[#text("ImageNet 检测（DET）任务包含 200 个目标类别，以 mAP@.5 评估准确率。检测算法与表 9 的 MS COCO 算法相同。网络先在 1000 类 ImageNet 分类集上预训练，再在 DET 数据上微调。按照 [8] 将验证集划分为 val1／val2；使用 DET 训练集和 val1 微调，val2 用于验证，不使用其他 ILSVRC 2015 数据。ResNet-101 单模型在 DET 测试集上的 mAP 为 58.8%，三个模型集成为 62.1%，见表 12。该结果赢得了 ILSVRC 2015 ImageNet 检测第一名，比第二名绝对高出 8.5 个百分点。")]
+
+== Appendix C. ImageNet Localization / 附录 C：ImageNet 定位
+
+#html.p(id: "en-S076", lang: "en")[#text("The ImageNet Localization (LOC) task [36] requires to classify and localize the objects. Following [40,41] , we assume that the image-level classifiers are first adopted for predicting the class labels of an image, and the localization algorithm only accounts for predicting bounding boxes based on the predicted classes. We adopt the “per-class regression” (PCR) strategy [40,41] , learning a bounding box regressor for each class. We pre-train the networks for ImageNet classification and then fine-tune them for localization. We train networks on the provided 1000-class ImageNet training set.")]
+
+#zh(id: "S076")[#text("ImageNet 定位（LOC）任务 [36] 要求对目标分类并定位。按照 [40,41]，先采用图像级分类器预测类别，定位算法只负责基于预测类别产生边界框。我们采用“逐类别回归”（PCR）策略 [40,41]，为每个类别学习一个边界框回归器。网络先进行 ImageNet 分类预训练，再为定位微调。训练使用提供的 1000 类 ImageNet 训练集。")]
+
+#html.p(id: "en-S077", lang: "en")[#text("Our localization algorithm is based on the RPN framework of [32] with a few modifications. Unlike the way in [32] that is category-agnostic, our RPN for localization is designed in a per-class form. This RPN ends with two sibling 1 ") $times$ #text(" 1 convolutional layers for binary classification ( cls ) and box regression ( reg ), as in [32] . The cls and reg layers are both in a per-class from, in contrast to [32] . Specifically, the cls layer has a 1000-d output, and each dimension is binary logistic regression for predicting being or not being an object class; the reg layer has a 1000 ") $times$ #text(" 4-d output consisting of box regressors for 1000 classes. As in [32] , our bounding box regression is with reference to multiple translation-invariant “anchor” boxes at each position.")]
+
+#zh(id: "S077")[#text("定位算法基于 [32] 的 RPN 框架，并作少量修改。与 [32] 的类别无关形式不同，定位 RPN 按类别设计。像 [32] 一样，RPN 以两个并列的 1×1 卷积层结束，分别执行二元分类 cls 和边界框回归 reg。但 cls 与 reg 都按类别组织：cls 输出 1000 维，每一维是预测是否属于某个目标类别的二元逻辑回归；reg 输出 1000×4 维，为 1000 类分别提供边界框回归器。按照 [32]，边界框回归以每个位置上的多个平移不变“锚框”为参照。")]
+
+#html.p(id: "en-S078", lang: "en")[#text("As in our ImageNet classification training (Sec. 3.4 ), we randomly sample 224 ") $times$ #text(" 224 crops for data augmentation. We use a mini-batch size of 256 images for fine-tuning. To avoid negative samples being dominate, 8 anchors are randomly sampled for each image, where the sampled positive and negative anchors have a ratio of 1:1 [32] . For testing, the network is applied on the image fully-convolutionally.")]
+
+#zh(id: "S078")[#text("与第 3.4 节的 ImageNet 分类训练一样，随机采样 224×224 裁剪进行数据增强。微调批量大小为 256 张图像。为避免负样本占主导，每张图像随机采样 8 个锚框，正负锚框比例为 1:1 [32]。测试时，以全卷积形式将网络应用于图像。")]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T13")[
+#image("assets/table-13.png", width: 100%, alt: "Table 13. Localization error (%) on the ImageNet validation. In the column of “LOC error on GT class” ([41]), the ground truth class is used. In the “testing” column, “1-crop” denotes testing on a center crop of 224×224 pixels, “dense” denotes dense (fully convolutional) and multi-scale testing.")
+#html.figcaption[#text("Table 13. Localization error (%) on the ImageNet validation. In the column of “LOC error on GT class” ([41]), the ground truth class is used. In the “testing” column, “1-crop” denotes testing on a center crop of 224×224 pixels, “dense” denotes dense (fully convolutional) and multi-scale testing.") #zh-caption[#text("表 13：ImageNet 验证集定位错误率，单位为 %。“LOC error on GT class”列使用真实类别 [41]。“testing”列的 1-crop 表示 224×224 中心裁剪，dense 表示密集全卷积及多尺度测试。其余列列出定位方法、定位网络、分类网络及最终定位错误率。")]]
+]
+
+#html.figure(class: "essay-paper-figure", id: "resnet-T14")[
+#image("assets/table-14.png", width: 100%, alt: "Table 14. Comparisons of localization error (%) on the ImageNet dataset with state-of-the-art methods.")
+#html.figcaption[#text("Table 14. Comparisons of localization error (%) on the ImageNet dataset with state-of-the-art methods.") #zh-caption[#text("表 14：与当时最先进方法比较 ImageNet 定位错误率，单位为 %。表列出方法及 top-5 定位错误率。")]]
+]
+
+#html.p(id: "en-S079", lang: "en")[#text("Table 13 compares the localization results. Following [41] , we first perform “oracle” testing using the ground truth class as the classification prediction. VGG’s paper [41] reports a center-crop error of 33.1% (Table 13) using ground truth classes. Under the same setting, our RPN method using ResNet-101 net significantly reduces the center-crop error to 13.3%. This comparison demonstrates the excellent performance of our framework. With dense (fully convolutional) and multi-scale testing, our ResNet-101 has an error of 11.7% using ground truth classes. Using ResNet-101 for predicting classes (4.6% top-5 classification error, Table 4), the top-5 localization error is 14.4%.")]
+
+#zh(id: "S079")[#text("表 13 比较定位结果。按照 [41]，首先使用真实类别作为分类预测，进行 oracle 测试。VGG 论文 [41] 报告，在使用真实类别时，中心裁剪错误率为 33.1%，见表 13。相同设置下，基于 ResNet-101 的 RPN 将中心裁剪错误率显著降至 13.3%，展示了框架的出色性能。采用密集，也就是全卷积，以及多尺度测试时，使用真实类别的 ResNet-101 错误率为 11.7%。使用 ResNet-101 预测类别，top-5 分类错误率为 4.6%，见表 4，此时 top-5 定位错误率为 14.4%。")]
+
+#html.p(id: "en-S080", lang: "en")[#text("The above results are only based on the proposal network (RPN) in Faster R-CNN [32] . One may use the detection network (Fast R-CNN [7] ) in Faster R-CNN to improve the results. But we notice that on this dataset, one image usually contains a single dominate object, and the proposal regions highly overlap with each other and thus have very similar RoI-pooled features. As a result, the image-centric training of Fast R-CNN [7] generates samples of small variations, which may not be desired for stochastic training. Motivated by this, in our current experiment we use the original R-CNN [8] that is RoI-centric, in place of Fast R-CNN.")]
+
+#zh(id: "S080")[#text("上述结果只使用 Faster R-CNN [32] 的提议网络 RPN。还可以用其中的检测网络 Fast R-CNN [7] 改善结果。不过，我们注意到该数据集的图像通常只包含一个主要目标，提议区域彼此高度重叠，RoI 池化特征也很相似。因此，Fast R-CNN [7] 以图像为中心的训练产生了变化很小的样本，这对随机训练可能不理想。受此启发，当前实验使用以 RoI 为中心的原始 R-CNN [8]，替代 Fast R-CNN。")]
+
+#html.p(id: "en-S081", lang: "en")[#text("Our R-CNN implementation is as follows. We apply the per-class RPN trained as above on the training images to predict bounding boxes for the ground truth class. These predicted boxes play a role of class-dependent proposals. For each training image, the highest scored 200 proposals are extracted as training samples to train an R-CNN classifier. The image region is cropped from a proposal, warped to 224 ") $times$ #text(" 224 pixels, and fed into the classification network as in R-CNN [8] . The outputs of this network consist of two sibling fc layers for cls and reg , also in a per-class form. This R-CNN network is fine-tuned on the training set using a mini-batch size of 256 in the RoI-centric fashion. For testing, the RPN generates the highest scored 200 proposals for each predicted class, and the R-CNN network is used to update these proposals’ scores and box positions.")]
+
+#zh(id: "S081")[#text("R-CNN 的实现如下。将上述按类别训练的 RPN 应用于训练图像，预测真实类别的边界框，作为依赖类别的提议。每张训练图像提取得分最高的 200 个提议，作为 R-CNN 分类器的训练样本。像 R-CNN [8] 一样，从提议中裁剪图像区域，变形到 224×224，送入分类网络。网络输出包含两个并列的全连接层 cls 和 reg，也按类别组织。采用以 RoI 为中心的方式，在训练集上以批量大小 256 微调。测试时，RPN 为每个预测类别生成得分最高的 200 个提议，再由 R-CNN 更新提议的得分和边界框位置。")]
+
+#html.p(id: "en-S082", lang: "en")[#text("This method reduces the top-5 localization error to 10.6% (Table 13). This is our single-model result on the validation set. Using an ensemble of networks for both classification and localization, we achieve a top-5 localization error of 9.0% on the test set. This number significantly outperforms the ILSVRC 14 results (Table 14), showing a 64% relative reduction of error. This result won the 1st place in the ImageNet localization task in ILSVRC 2015.")]
+
+#zh(id: "S082")[#text("该方法将 top-5 定位错误率降至 10.6%，见表 13。这是验证集上的单模型结果。对分类与定位都使用网络集成后，测试集 top-5 定位错误率达到 9.0%，明显优于 ILSVRC 2014 的结果，见表 14，错误率相对降低 64%。该结果赢得了 ILSVRC 2015 ImageNet 定位任务第一名。")]
+
+== Notes / 注释
+
+#html.p(id: "resnet-note-1")[#text("[1] http://image-net.org/challenges/LSVRC/2015/ and http://mscoco.org/dataset/#detections-challenge2015.")]
+
+#zh(id: "N001")[#text("[1] ILSVRC 2015 和 COCO 2015 检测竞赛的原始网站地址。")]
+
+#html.p(id: "resnet-note-2")[#text("[2] This hypothesis, however, is still an open question. See [28].")]
+
+#zh(id: "N002")[#text("[2] 不过，这一假设仍是未解决的问题，见 [28]。")]
+
+#html.p(id: "resnet-note-3")[#text("[3] We have experimented with more training iterations (3×) and still observed the degradation problem, suggesting that this problem cannot be feasibly addressed by simply using more iterations.")]
+
+#zh(id: "N003")[#text("[3] 我们将训练迭代次数增加到 3 倍，仍然观察到退化问题，说明单纯增加迭代次数并不能切实解决问题。")]
+
+#html.p(id: "resnet-note-4")[#text("[4] Deeper non-bottleneck ResNets (e.g., Fig. 5 left) also gain accuracy from increased depth (as shown on CIFAR-10), but are not as economical as the bottleneck ResNets. So the usage of bottleneck designs is mainly due to practical considerations. We further note that the degradation problem of plain nets is also witnessed for the bottleneck designs.")]
+
+#zh(id: "N004")[#text("[4] 更深的非瓶颈 ResNet，例如图 5 左，也能从增加深度中获得准确率提升，CIFAR-10 实验展示了这一点，但它们不如瓶颈 ResNet 经济。因此，使用瓶颈设计主要出于实践考虑。还需说明，普通网络的瓶颈设计也会出现退化问题。")]
+
+#html.p(id: "resnet-note-5")[#text("[5] With an initial learning rate of 0.1, it starts converging (<90% error) after several epochs, but still reaches similar accuracy.")]
+
+#zh(id: "N005")[#text("[5] 若初始学习率为 0.1，网络会在若干轮训练后开始收敛，错误率低于 90%，最终仍能达到相近准确率。")]
+
+#html.p(id: "resnet-note-6")[#text("[6] http://host.robots.ox.ac.uk:8080/anonymous/3OJ4OJ.html, submitted on 2015-11-26.")]
+
+#zh(id: "N006")[#text("[6] VOC 2012 的原始结果页面；提交日期为 2015-11-26。")]
+
+== References / 参考文献
+
+#html.p(id: "resnet-ref-1")[#text("[1] Y. Bengio, P. Simard, and P. Frasconi. Learning long-term dependencies with gradient descent is difficult. IEEE Transactions on Neural Networks , 5(2):157–166, 1994.")]
+
+#html.p(id: "resnet-ref-2")[#text("[2] C. M. Bishop. Neural networks for pattern recognition . Oxford university press, 1995.")]
+
+#html.p(id: "resnet-ref-3")[#text("[3] W. L. Briggs, S. F. McCormick, et al. A Multigrid Tutorial . Siam, 2000.")]
+
+#html.p(id: "resnet-ref-4")[#text("[4] K. Chatfield, V. Lempitsky, A. Vedaldi, and A. Zisserman. The devil is in the details: an evaluation of recent feature encoding methods. In BMVC , 2011.")]
+
+#html.p(id: "resnet-ref-5")[#text("[5] M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman. The Pascal Visual Object Classes (VOC) Challenge. IJCV , pages 303–338, 2010.")]
+
+#html.p(id: "resnet-ref-6")[#text("[6] S. Gidaris and N. Komodakis. Object detection via a multi-region & semantic segmentation-aware cnn model. In ICCV , 2015.")]
+
+#html.p(id: "resnet-ref-7")[#text("[7] R. Girshick. Fast R-CNN. In ICCV , 2015.")]
+
+#html.p(id: "resnet-ref-8")[#text("[8] R. Girshick, J. Donahue, T. Darrell, and J. Malik. Rich feature hierarchies for accurate object detection and semantic segmentation. In CVPR , 2014.")]
+
+#html.p(id: "resnet-ref-9")[#text("[9] X. Glorot and Y. Bengio. Understanding the difficulty of training deep feedforward neural networks. In AISTATS , 2010.")]
+
+#html.p(id: "resnet-ref-10")[#text("[10] I. J. Goodfellow, D. Warde-Farley, M. Mirza, A. Courville, and Y. Bengio. Maxout networks. arXiv:1302.4389 , 2013.")]
+
+#html.p(id: "resnet-ref-11")[#text("[11] K. He and J. Sun. Convolutional neural networks at constrained time cost. In CVPR , 2015.")]
+
+#html.p(id: "resnet-ref-12")[#text("[12] K. He, X. Zhang, S. Ren, and J. Sun. Spatial pyramid pooling in deep convolutional networks for visual recognition. In ECCV , 2014.")]
+
+#html.p(id: "resnet-ref-13")[#text("[13] K. He, X. Zhang, S. Ren, and J. Sun. Delving deep into rectifiers: Surpassing human-level performance on imagenet classification. In ICCV , 2015.")]
+
+#html.p(id: "resnet-ref-14")[#text("[14] G. E. Hinton, N. Srivastava, A. Krizhevsky, I. Sutskever, and R. R. Salakhutdinov. Improving neural networks by preventing co-adaptation of feature detectors. arXiv:1207.0580 , 2012.")]
+
+#html.p(id: "resnet-ref-15")[#text("[15] S. Hochreiter and J. Schmidhuber. Long short-term memory. Neural computation , 9(8):1735–1780, 1997.")]
+
+#html.p(id: "resnet-ref-16")[#text("[16] S. Ioffe and C. Szegedy. Batch normalization: Accelerating deep network training by reducing internal covariate shift. In ICML , 2015.")]
+
+#html.p(id: "resnet-ref-17")[#text("[17] H. Jegou, M. Douze, and C. Schmid. Product quantization for nearest neighbor search. TPAMI , 33, 2011.")]
+
+#html.p(id: "resnet-ref-18")[#text("[18] H. Jegou, F. Perronnin, M. Douze, J. Sanchez, P. Perez, and C. Schmid. Aggregating local image descriptors into compact codes. TPAMI , 2012.")]
+
+#html.p(id: "resnet-ref-19")[#text("[19] Y. Jia, E. Shelhamer, J. Donahue, S. Karayev, J. Long, R. Girshick, S. Guadarrama, and T. Darrell. Caffe: Convolutional architecture for fast feature embedding. arXiv:1408.5093 , 2014.")]
+
+#html.p(id: "resnet-ref-20")[#text("[20] A. Krizhevsky. Learning multiple layers of features from tiny images. Tech Report , 2009.")]
+
+#html.p(id: "resnet-ref-21")[#text("[21] A. Krizhevsky, I. Sutskever, and G. Hinton. Imagenet classification with deep convolutional neural networks. In NIPS , 2012.")]
+
+#html.p(id: "resnet-ref-22")[#text("[22] Y. LeCun, B. Boser, J. S. Denker, D. Henderson, R. E. Howard, W. Hubbard, and L. D. Jackel. Backpropagation applied to handwritten zip code recognition. Neural computation , 1989.")]
+
+#html.p(id: "resnet-ref-23")[#text("[23] Y. LeCun, L. Bottou, G. B. Orr, and K.-R. Müller. Efficient backprop. In Neural Networks: Tricks of the Trade , pages 9–50. Springer, 1998.")]
+
+#html.p(id: "resnet-ref-24")[#text("[24] C.-Y. Lee, S. Xie, P. Gallagher, Z. Zhang, and Z. Tu. Deeply-supervised nets. arXiv:1409.5185 , 2014.")]
+
+#html.p(id: "resnet-ref-25")[#text("[25] M. Lin, Q. Chen, and S. Yan. Network in network. arXiv:1312.4400 , 2013.")]
+
+#html.p(id: "resnet-ref-26")[#text("[26] T.-Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Dollár, and C. L. Zitnick. Microsoft COCO: Common objects in context. In ECCV . 2014.")]
+
+#html.p(id: "resnet-ref-27")[#text("[27] J. Long, E. Shelhamer, and T. Darrell. Fully convolutional networks for semantic segmentation. In CVPR , 2015.")]
+
+#html.p(id: "resnet-ref-28")[#text("[28] G. Montúfar, R. Pascanu, K. Cho, and Y. Bengio. On the number of linear regions of deep neural networks. In NIPS , 2014.")]
+
+#html.p(id: "resnet-ref-29")[#text("[29] V. Nair and G. E. Hinton. Rectified linear units improve restricted boltzmann machines. In ICML , 2010.")]
+
+#html.p(id: "resnet-ref-30")[#text("[30] F. Perronnin and C. Dance. Fisher kernels on visual vocabularies for image categorization. In CVPR , 2007.")]
+
+#html.p(id: "resnet-ref-31")[#text("[31] T. Raiko, H. Valpola, and Y. LeCun. Deep learning made easier by linear transformations in perceptrons. In AISTATS , 2012.")]
+
+#html.p(id: "resnet-ref-32")[#text("[32] S. Ren, K. He, R. Girshick, and J. Sun. Faster R-CNN: Towards real-time object detection with region proposal networks. In NIPS , 2015.")]
+
+#html.p(id: "resnet-ref-33")[#text("[33] S. Ren, K. He, R. Girshick, X. Zhang, and J. Sun. Object detection networks on convolutional feature maps. arXiv:1504.06066 , 2015.")]
+
+#html.p(id: "resnet-ref-34")[#text("[34] B. D. Ripley. Pattern recognition and neural networks . Cambridge university press, 1996.")]
+
+#html.p(id: "resnet-ref-35")[#text("[35] A. Romero, N. Ballas, S. E. Kahou, A. Chassang, C. Gatta, and Y. Bengio. Fitnets: Hints for thin deep nets. In ICLR , 2015.")]
+
+#html.p(id: "resnet-ref-36")[#text("[36] O. Russakovsky, J. Deng, H. Su, J. Krause, S. Satheesh, S. Ma, Z. Huang, A. Karpathy, A. Khosla, M. Bernstein, et al. Imagenet large scale visual recognition challenge. arXiv:1409.0575 , 2014.")]
+
+#html.p(id: "resnet-ref-37")[#text("[37] A. M. Saxe, J. L. McClelland, and S. Ganguli. Exact solutions to the nonlinear dynamics of learning in deep linear neural networks. arXiv:1312.6120 , 2013.")]
+
+#html.p(id: "resnet-ref-38")[#text("[38] N. N. Schraudolph. Accelerated gradient descent by factor-centering decomposition. Technical report, 1998.")]
+
+#html.p(id: "resnet-ref-39")[#text("[39] N. N. Schraudolph. Centering neural network gradient factors. In Neural Networks: Tricks of the Trade , pages 207–226. Springer, 1998.")]
+
+#html.p(id: "resnet-ref-40")[#text("[40] P. Sermanet, D. Eigen, X. Zhang, M. Mathieu, R. Fergus, and Y. LeCun. Overfeat: Integrated recognition, localization and detection using convolutional networks. In ICLR , 2014.")]
+
+#html.p(id: "resnet-ref-41")[#text("[41] K. Simonyan and A. Zisserman. Very deep convolutional networks for large-scale image recognition. In ICLR , 2015.")]
+
+#html.p(id: "resnet-ref-42")[#text("[42] R. K. Srivastava, K. Greff, and J. Schmidhuber. Highway networks. arXiv:1505.00387 , 2015.")]
+
+#html.p(id: "resnet-ref-43")[#text("[43] R. K. Srivastava, K. Greff, and J. Schmidhuber. Training very deep networks. 1507.06228 , 2015.")]
+
+#html.p(id: "resnet-ref-44")[#text("[44] C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. Reed, D. Anguelov, D. Erhan, V. Vanhoucke, and A. Rabinovich. Going deeper with convolutions. In CVPR , 2015.")]
+
+#html.p(id: "resnet-ref-45")[#text("[45] R. Szeliski. Fast surface interpolation using hierarchical basis functions. TPAMI , 1990.")]
+
+#html.p(id: "resnet-ref-46")[#text("[46] R. Szeliski. Locally adapted hierarchical basis preconditioning. In SIGGRAPH , 2006.")]
+
+#html.p(id: "resnet-ref-47")[#text("[47] T. Vatanen, T. Raiko, H. Valpola, and Y. LeCun. Pushing stochastic gradient towards second-order methods–backpropagation learning with transformations in nonlinearities. In Neural Information Processing , 2013.")]
+
+#html.p(id: "resnet-ref-48")[#text("[48] A. Vedaldi and B. Fulkerson. VLFeat: An open and portable library of computer vision algorithms, 2008.")]
+
+#html.p(id: "resnet-ref-49")[#text("[49] W. Venables and B. Ripley. Modern applied statistics with s-plus. 1999.")]
+
+#html.p(id: "resnet-ref-50")[#text("[50] M. D. Zeiler and R. Fergus. Visualizing and understanding convolutional neural networks. In ECCV , 2014.")]

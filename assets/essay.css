@@ -1,0 +1,103 @@
+/* Paragraph-aligned Chinese translations for the Essay reading collection. */
+.essay-translation {
+	box-sizing: border-box;
+	width: 55%;
+	margin: 0.35rem 0 1.6rem;
+	padding: 0.15rem 0 0.15rem 1rem;
+	border-left: 2px solid var(--theme-table-border, #ccc);
+	font-size: 1.25rem;
+	line-height: 1.85;
+	text-align: justify;
+	overflow-wrap: anywhere;
+}
+
+.essay-translation p {
+	width: 100%;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+}
+
+li > .essay-translation {
+	width: 100%;
+	margin-bottom: 0.7rem;
+}
+
+.essay-caption-translation {
+	display: block;
+	margin-top: 0.5em;
+	line-height: 1.7;
+}
+
+.essay-paper-info {
+	width: 55%;
+	font-size: 1rem;
+	line-height: 1.7;
+	margin: 0.75rem 0 1.75rem;
+}
+
+.essay-paper-info p {
+	width: 100%;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+}
+
+.essay-paper-figure {
+	width: 55%;
+	max-width: 55%;
+	clear: both;
+}
+
+.essay-paper-figure.essay-wide {
+	width: 100%;
+	max-width: 100%;
+}
+
+.essay-paper-figure > img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.essay-paper-figure > figcaption {
+	display: block;
+	float: none;
+	position: static;
+	width: 100%;
+	max-width: 100%;
+	margin: 0.8rem 0 1.5rem;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+	.site-nav {
+		flex-wrap: wrap;
+		gap: 0.4rem;
+	}
+
+	.theme-toggle-btn {
+		flex: 0 0 2.4rem;
+		margin-right: 0;
+	}
+
+	.essay-translation,
+	.essay-paper-info,
+	.essay-paper-figure {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	article table {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto;
+	}
+
+	article .math-inline {
+		max-width: 100%;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+}

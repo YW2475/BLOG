@@ -1,0 +1,33 @@
+/* Keep the 13-column ablation table and its caption in separate rows. */
+article > section figure.attention-variations {
+	width: 100%;
+	max-width: 100%;
+	clear: both;
+}
+
+.attention-variations-scroll {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.attention-variations table {
+	margin: 0;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.attention-variations th,
+.attention-variations td {
+	padding: 0.5em;
+}
+
+.attention-variations > figcaption {
+	display: block;
+	float: none;
+	position: static;
+	width: auto;
+	max-width: 100%;
+	margin-top: 0.8rem;
+	font-size: 1rem;
+	line-height: 1.5;
+}
