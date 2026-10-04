@@ -1,20 +1,8 @@
-#set page(
-  paper: "a4",
-  margin: (x: 2.6cm, y: 2.4cm),
+#import "../index.typ": template, tufted
+#show: template.with(
+  title: "论文写作",
+  description: "论文写作",
 )
-
-#set text(
-  lang: "zh",
-  size: 10.5pt,
-)
-
-#set par(
-  justify: true,
-  leading: 0.65em,
-  first-line-indent: 2em,
-)
-
-#set heading(numbering: none)
 
 = 引言（The Introduction）
 
