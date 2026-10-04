@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Tufted Blog Template</title>
+    <link>https://tufted-blog.pages.dev</link>
+    <description>Tufted Blog Template, Powered by Typst</description>
+    <language>zh</language>
+    <lastBuildDate>Sun, 04 Oct 2026 07:49:50 +0000</lastBuildDate>
+    <atom:link href="https://tufted-blog.pages.dev/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beyond Genetic Diversity: Preserving Future Options in Breeding</title>
+      <link>https://tufted-blog.pages.dev/Blog/2026-10-3 Beyond Genetic Diversity/</link>
+      <guid isPermaLink="true">https://tufted-blog.pages.dev/Blog/2026-10-3 Beyond Genetic Diversity/</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Blog</category>
+      <description>对于论文和目前的育种工作的一些设想。</description>
+    </item>
+    <item>
+      <title>The Normal Distribution: A Fundamental Concept in Statistics</title>
+      <link>https://tufted-blog.pages.dev/Blog/2025-10-30-normal-distribution/</link>
+      <guid isPermaLink="true">https://tufted-blog.pages.dev/Blog/2025-10-30-normal-distribution/</guid>
+      <pubDate>Thu, 30 Oct 2025 00:00:00 +0000</pubDate>
+      <category>Blog</category>
+      <description>An in-depth look at the normal distribution, its properties, significance, and real-world applications across various fields.</description>
+    </item>
+    <item>
+      <title>Monkeys vs Apes: Understanding the Difference</title>
+      <link>https://tufted-blog.pages.dev/Blog/2025-04-16-monkeys-apes/</link>
+      <guid isPermaLink="true">https://tufted-blog.pages.dev/Blog/2025-04-16-monkeys-apes/</guid>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
+      <category>Blog</category>
+      <description>Exploring the key differences between monkeys and apes, including physical traits, intelligence, and evolutionary relationships.</description>
+    </item>
+    <item>
+      <title>Iterators vs Generators in Python</title>
+      <link>https://tufted-blog.pages.dev/Blog/2024-10-04-iterators-generators/</link>
+      <guid isPermaLink="true">https://tufted-blog.pages.dev/Blog/2024-10-04-iterators-generators/</guid>
+      <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
+      <category>Blog</category>
+      <description>Understanding the differences between iterators and generators in Python, and when to use each.</description>
+    </item>
+  </channel>
+</rss>
