@@ -7,6 +7,7 @@
 = 文档 / Docs
 
 - 中文文档
+  - #link("writing/", "论文写作")
   - #link("website-config/", "网站配置")
   - #link("typst-example/", "Typst 功能速览与样例")
   - #link("github-deploy/", "GitHub 网站部署")
