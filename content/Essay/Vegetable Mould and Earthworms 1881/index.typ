@@ -11,6 +11,10 @@
 
 = The Formation of Vegetable Mould, through the Action of Worms, with Observations on their Habits / 蚯蚓的作用与腐殖土的形成及其习性观察
 
+#tufted.margin-note(
+  image("Charles Robert Darwin.png"),
+)
+
 == Chapter VII. Conclusion / 第七章：结论
 
 #html.p(id: "en-S001")[#text("WORMS have played a more important part in the history of the world than most persons would at first suppose. In almost all humid countries they are extraordinarily numerous, and for their size possess great muscular power. In many parts of England a weight of more than ten tons (10,516 kilogrammes) of dry earth annually passes through their bodies and is brought to the surface on each acre of land; so that the whole superficial bed of vegetable mould passes through their bodies in the course of every few years. From the collapsing of the old burrows the mould is in constant though slow movement, and the particles composing it are thus rubbed together. By these means fresh surfaces are continually exposed to the action of the carbonic acid in the soil, and of the humus-acids which appear to be still more efficient in the decomposition of rocks. The generation of the humus-acids is probably hastened during the digestion of the many half-decayed leaves which worms consume. Thus the particles of earth, forming the superficial mould, are subjected to conditions eminently favourable for their decomposition and disintegration. Moreover, the particles of the softer rocks suffer some amount of mechanical trituration in the muscular gizzards of worms, in which small stones serve as mill-stones.")]
