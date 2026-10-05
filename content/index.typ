@@ -8,7 +8,6 @@
 = YinWang
 
 #{
-  tufted.margin-note(image("head.jpg"))
   tufted.margin-note[
     #html.span(class: "liujian-font")[
       天行有常，不为尧存，不为桀亡。

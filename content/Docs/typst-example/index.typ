@@ -142,7 +142,7 @@
 
 你可以使用 `tufted.margin-note()` 函数在任何地方添加任意的*不分段的*边栏内容。例如，你可以添加一行文本图片、行内代码、行内公式等#footnote[`box()` 函数可以将内容设置在一段内。]。
 #tufted.margin-note[
-  #image("../../imgs/tufted-duck-male.webp")
+  #image("assets/tufted-duck-male.webp")
 ]
 #tufted.margin-note[
   ⬆️这是一只鸭，这是 `一个行内代码`，这是一个行内公式 $1 + 1 = 2$。\
@@ -152,7 +152,7 @@
 ```typ
 // 这是设置右侧图片和文本的 Typst 代码。
 #tufted.margin-note[
-  #image("../../imgs/tufted-duck-male.webp")
+  #image("assets/tufted-duck-male.webp")
 ]
 #tufted.margin-note[
   ⬆️这是一只鸭，这是 `一个行内代码`，这是一个行内公式 $1 + 1 = 2$。\
@@ -209,17 +209,17 @@
 使用 `image()` 函数可以添加图片，使用 `width`、`height` 参数可以控制大小，例如 `figure + image`：
 
 #figure(caption: "这也是鸭鸭。")[
-  #image("../../imgs/tufted-duck-female-with-duckling.webp", width: 250pt)
+  #image("assets/tufted-duck-female-with-duckling.webp", width: 250pt)
 ]<鸭鸭>
 
-#image("../../imgs/gorilla.webp", height: 250pt)
+#image("assets/gorilla.webp", height: 250pt)
 
 ```typ
 #figure(caption: "这也是鸭鸭。")[
-  #image("../../imgs/tufted-duck-female-with-duckling.webp", width: 250pt)
+  #image("assets/tufted-duck-female-with-duckling.webp", width: 250pt)
 ]
 
-#image("../../imgs/gorilla.webp", height: 250pt)
+#image("assets/gorilla.webp", height: 250pt)
 ```
 
 

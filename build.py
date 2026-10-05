@@ -797,6 +797,8 @@ def get_site_url() -> str | None:
             如果未配置或解析失败则返回 None。
     """
     index_html = SITE_DIR / "index.html"
+    if not index_html.is_file():
+        return None
     parser = parse_html_metadata(index_html)
 
     if parser.get("link"):

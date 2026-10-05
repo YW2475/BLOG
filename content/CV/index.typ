@@ -1,4 +1,4 @@
-#import "../index.typ": template, tufted
+#import "../../config.typ": template, tufted
 #show: template.with(
   title: "Edward R. Tufte",
   description: "CV of Edward R. Tufte",
