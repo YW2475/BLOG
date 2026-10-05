@@ -12,7 +12,7 @@
 = The Formation of Vegetable Mould, through the Action of Worms, with Observations on their Habits / 蚯蚓的作用与腐殖土的形成及其习性观察
 
 #tufted.margin-note(
-  image("Charles Robert Darwin.png"),
+  image("imgs/Charles Robert Darwin.png"),
 )
 
 == Chapter VII. Conclusion / 第七章：结论
