@@ -1,0 +1,106 @@
+{
+  "paper": {
+    "id": "haldane",
+    "title": "On Being the Right Size",
+    "zh_title": "论大小适宜",
+    "author": "J. B. S. Haldane",
+    "year": 1926,
+    "category": "自然与演化",
+    "kind": "full",
+    "folder": "On Being the Right Size 1926",
+    "citation": "Essay (1926); collected in Possible Worlds and Other Essays (1927), pp. 18–26.",
+    "source": "https://www.cs.utexas.edu/~witchel/380L/papers/right-size.html",
+    "secondary": "https://jbshaldane.org/books/1927-Possible-Worlds/index.html",
+    "description": "巨人为什么站不起来？从骨骼、呼吸、飞行与保温看动物大小的限制。",
+    "note": "正文为历史科学随笔，保留当时的例子与判断；其中生物数量、物种分布和社会制度论断应结合时代背景阅读。",
+    "rights": "1926 年原作；公版文本。中文为本站译稿。"
+  },
+  "scope": "full",
+  "translation_method": "assistant-translated and corrected",
+  "glossary": {
+    "surface tension": "表面张力",
+    "surface": "表面积",
+    "volume": "体积",
+    "tracheae": "气管"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "en": "The most obvious differences between different animals are differences of size, but for some reason the zoologists have paid singularly little attention to them. In a large textbook of zoology before me I find no indication that the eagle is larger than the sparrow, or the hippopotamus bigger than the hare, though some grudging admissions are made in the case of the mouse and the whale. But yet it is easy to show that a hare could not be as large as a hippopotamus, or a whale as small as a herring. For every type of animal there is a most convenient size, and a large change in size inevitably carries with it a change of form.",
+      "id": "S001",
+      "zh": "不同动物之间最明显的区别是体型大小，但不知为什么，动物学家对此关注得少得出奇。我面前有一本厚厚的动物学教科书，里面没有指出鹰比麻雀大，也没有说河马比野兔大，虽然谈到老鼠与鲸时倒勉强承认了大小的区别。然而，要证明野兔不可能长到河马那么大、鲸也不可能小到像鲱鱼一样，并不困难。每一种动物都有最适宜的大小；体型大幅改变，必然伴随着形态的改变。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Let us take the most obvious of possible cases, and consider a giant man sixty feet high—about the height of Giant Pope and Giant Pagan in the illustrated Pilgrim’s Progress of my childhood. These monsters were not only ten times as high as Christian, but ten times as wide and ten times as thick, so that their total weight was a thousand times his, or about eighty to ninety tons. Unfortunately the cross sections of their bones were only a hundred times those of Christian, so that every square inch of giant bone had to support ten times the weight borne by a square inch of human bone. As the human thigh-bone breaks under about ten times the human weight, Pope and Pagan would have broken their thighs every time they took a step. This was doubtless why they were sitting down in the picture I remember. But it lessens one’s respect for Christian and Jack the Giant Killer.",
+      "id": "S002",
+      "zh": "让我们看一个最显而易见的例子：一个身高六十英尺的巨人，大约就是我童年读到的插图版《天路历程》中教皇巨人与异教巨人的高度。这些怪物不仅比基督徒高十倍，宽度和厚度也都是十倍，因此总重量是他的千倍，约八十至九十吨。不幸的是，他们骨骼的横截面积只有基督徒的百倍，所以每平方英寸的巨人骨骼必须承受人类骨骼十倍的重量。人的股骨在承受约十倍体重时就会折断，因此教皇巨人与异教巨人每走一步，股骨都会断裂。这无疑解释了为什么在我记得的插图中他们坐着。但这也让人对基督徒和巨人杀手杰克的敬意减了几分。"
+    },
+    {
+      "type": "paragraph",
+      "en": "To turn to zoology, suppose that a gazelle, a graceful little creature with long thin legs, is to become large, it will break its bones unless it does one of two things. It may make its legs short and thick, like the rhinoceros, so that every pound of weight has still about the same area of bone to support it. Or it can compress its body and stretch out its legs obliquely to gain stability, like the giraffe. I mention these two beasts because they happen to belong to the same order as the gazelle, and both are quite successful mechanically, being remarkably fast runners.",
+      "id": "S003",
+      "zh": "回到动物学。假如一只长着细长腿、体态优美的小羚羊要长得很大，除非采取两种办法之一，否则它的骨头就会折断。它可以像犀牛那样把腿变得粗短，使每磅体重仍有差不多同样的骨骼面积支撑；或者像长颈鹿那样缩短躯干，并把腿斜向伸展来获得稳定性。我提到这两种动物，是因为它们与小羚羊属于同一目，而且在力学上都相当成功，奔跑速度很快。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Gravity, a mere nuisance to Christian, was a terror to Pope, Pagan, and Despair. To the mouse and any smaller animal it presents practically no dangers. You can drop a mouse down a thousand-yard mine shaft; and, on arriving at the bottom, it gets a slight shock and walks away, provided that the ground is fairly soft. A rat is killed, a man is broken, a horse splashes. For the resistance presented to movement by the air is proportional to the surface of the moving object. Divide an animal’s length, breadth, and height each by ten; its weight is reduced to a thousandth, but its surface only to a hundredth. So the resistance to falling in the case of the small animal is relatively ten times greater than the driving force.",
+      "id": "S004",
+      "zh": "重力对基督徒只是麻烦，对教皇、异教徒与绝望巨人却是可怕的威胁。对老鼠和更小的动物来说，重力几乎不构成危险。你可以把一只小鼠丢进一千码深的矿井；只要地面比较柔软，它落到底部时只是稍受震动，随后便走开了。大鼠会摔死，人会摔得粉身碎骨，马则会摔得四散飞溅。这是因为空气对运动的阻力与运动物体的表面积成正比。把动物的长、宽、高都缩小到十分之一，它的重量便缩至千分之一，表面积却只缩至百分之一。因此，对小动物而言，阻碍下落的阻力相对于推动下落的力，增大了十倍。"
+    },
+    {
+      "type": "paragraph",
+      "en": "An insect, therefore, is not afraid of gravity; it can fall without danger, and can cling to the ceiling with remarkably little trouble. It can go in for elegant and fantastic forms of support like that of the daddy-longlegs. But there is a force which is as formidable to an insect as gravitation to a mammal. This is surface tension. A man coming out of a bath carries with him a film of water of about one-fiftieth of an inch in thickness. This weighs roughly a pound. A wet mouse has to carry about its own weight of water. A wet fly has to lift many times its own weight and, as everyone knows, a fly once wetted by water or any other liquid is in a very serious position indeed. An insect going for a drink is in as great danger as a man leaning out over a precipice in search of food. If it once falls into the grip of the surface tension of the water—that is to say, gets wet—it is likely to remain so until it drowns. A few insects, such as water-beetles, contrive to be unwettable; the majority keep well away from their drink by means of a long proboscis.",
+      "id": "S005",
+      "zh": "所以，昆虫不怕重力：它们可以安全地落下，也能轻易攀附在天花板上。它们甚至可以采用长脚蛛那样优雅而奇异的支撑形态。但有一种力，对昆虫来说就像重力对哺乳动物一样可怕，那就是表面张力。一个人出浴时，身上附着一层厚约五十分之一英寸的水膜，重约一磅。一只湿小鼠必须背负大约等于自身重量的水；一只湿苍蝇则要举起数倍于自身体重的水。众所周知，苍蝇一旦被水或其他液体浸湿，处境就十分危险。昆虫去喝水，其危险程度就像一个人俯身探向悬崖边寻找食物。一旦被水的表面张力抓住，也就是被打湿，它很可能无法脱身，直至淹死。少数昆虫，例如水甲虫，设法使自身不被浸湿；大多数昆虫则借助长吻，远远地伸向饮水处。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Of course tall land animals have other difficulties. They have to pump their blood to greater heights than a man, and, therefore, require a larger blood pressure and tougher blood-vessels. A great many men die from burst arteries, especially in the brain, and this danger is presumably still greater for an elephant or a giraffe. But animals of all kinds find difficulties in size for the following reason. A typical small animal, say a microscopic worm or rotifer, has a smooth skin through which all the oxygen it requires can soak in, a straight gut with sufficient surface to absorb its food, and a single kidney. Increase its dimensions tenfold in every direction, and its weight is increased a thousand times, so that if it is to use its muscles as efficiently as its miniature counterpart, it will need a thousand times as much food and oxygen per day and will excrete a thousand times as much of waste products.",
+      "id": "S006",
+      "zh": "当然，高大的陆生动物还有别的困难。它们必须把血液泵到比人更高的地方，因此需要更高的血压和更坚韧的血管。许多人死于动脉破裂，尤其是脑部动脉破裂；对大象或长颈鹿而言，这种危险想必更大。但所有动物在大小方面都会遇到下面的困难。一种典型的小动物，例如微小的蠕虫或轮虫，皮肤光滑，所需的全部氧气都能透过皮肤进入体内；它有一条表面积足够吸收食物的直肠道，以及一个肾脏。如果把它各个方向的尺寸增大十倍，重量就会增大一千倍。若它的肌肉仍要像小型同类那样有效工作，每天便需要一千倍的食物和氧气，也要排出一千倍的废物。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Now if its shape is unaltered its surface will be increased only a hundredfold, and ten times as much oxygen must enter per minute through each square millimetre of skin, ten times as much food through each square millimetre of intestine. When a limit is reached to their absorptive powers their surface has to be increased by some special device. For example, a part of the skin may be drawn out into tufts to make gills or pushed in to make lungs, thus increasing the oxygen-absorbing surface in proportion to the animal’s bulk. A man, for example, has a hundred square yards of lung. Similarly, the gut, instead of being smooth and straight, becomes coiled and develops a velvety surface, and other organs increase in complication. The higher animals are not larger than the lower because they are more complicated. They are more complicated because they are larger. Just the same is true of plants. The simplest plants, such as the green algae growing in stagnant water or on the bark of trees, are mere round cells. The higher plants increase their surface by putting out leaves and roots. Comparative anatomy is largely the story of the struggle to increase surface in proportion to volume. Some of the methods of increasing the surface are useful up to a point, but not capable of a very wide adaptation. For example, while vertebrates carry the oxygen from the gills or lungs all over the body in the blood, insects take air directly to every part of their body by tiny blind tubes called tracheae which open to the surface at many different points. Now, although by their breathing movements they can renew the air in the outer part of the tracheal system, the oxygen has to penetrate the finer branches by means of diffusion. Gases can diffuse easily through very small distances, not many times larger than the average length traveled by a gas molecule between collisions with other molecules. But when such vast journeys—from the point of view of a molecule—as a quarter of an inch have to be made, the process becomes slow. So the portions of an insect’s body more than a quarter of an inch from the air would always be short of oxygen. In consequence hardly any insects are much more than half an inch thick. Land crabs are built on the same general plan as insects, but are much clumsier. Yet like ourselves they carry oxygen around in their blood, and are therefore able to grow far larger than any insects. If the insects had hit on a plan for driving air through their tissues instead of letting it soak in, they might well have become as large as lobsters, though other considerations would have prevented them from becoming as large as man.",
+      "id": "S007",
+      "zh": "但如果形状不变，表面积只增大一百倍，于是每平方毫米皮肤每分钟必须吸收十倍的氧气，每平方毫米肠道也必须吸收十倍的食物。吸收能力一旦达到限度，就必须通过某种特殊办法增加表面积。例如，部分皮肤可以向外形成簇状的鳃，或者向内凹陷形成肺，使吸收氧气的表面积与动物的体积相称。以人为例，肺有一百平方码的表面积。同样，肠道不再光滑笔直，而是盘曲起来，并形成绒毛状表面，其他器官也变得更复杂。高等动物并不是因为更复杂才更大，而是因为更大才更复杂。植物也是如此。最简单的植物，例如静水中或树皮上的绿藻，只是圆形细胞；高等植物则通过长出叶与根来增加表面积。比较解剖学在很大程度上，就是生物为使表面积与体积保持比例而奋斗的故事。某些增加表面积的办法在一定范围内有效，却不能适应很大的变化。例如，脊椎动物利用血液把氧气从鳃或肺输送到全身，昆虫却通过称为气管的细小盲管，把空气直接送往身体各处；这些管道在体表有许多开口。虽然呼吸运动可以更新气管系统外部的空气，氧气进入更细的分支仍须依靠扩散。气体容易扩散的距离很小，不过是气体分子两次碰撞之间平均路程的几倍。从分子的角度看，四分之一英寸已是漫长旅程，扩散会变得缓慢。因此，昆虫身体中距离空气超过四分之一英寸的部分，总会缺氧。结果是，几乎没有昆虫的厚度远超半英寸。陆蟹与昆虫的基本构造相同，但笨拙得多；不过，它们像我们一样利用血液输送氧气，所以能够长得比昆虫大得多。假如昆虫想到一种办法，让空气被主动驱动着穿过组织，而不是任其慢慢渗入，它们也许能长到龙虾那么大；不过，其他因素仍会阻止它们长到人那么大。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Exactly the same difficulties attach to flying. It is an elementary principle of aeronautics that the minimum speed needed to keep an aeroplane of a given shape in the air varies as the square root of its length. If its linear dimensions are increased four times, it must fly twice as fast. Now the power needed for the minimum speed increases more rapidly than the weight of the machine. So the larger aeroplane, which weighs sixty-four times as much as the smaller, needs one hundred and twenty-eight times its horsepower to keep up. Applying the same principle to the birds, we find that the limit to their size is soon reached. An angel whose muscles developed no more power weight for weight than those of an eagle or a pigeon would require a breast projecting for about four feet to house the muscles engaged in working its wings, while to economize in weight, its legs would have to be reduced to mere stilts. Actually a large bird such as an eagle or kite does not keep in the air mainly by moving its wings. It is generally to be seen soaring, that is to say balanced on a rising column of air. And even soaring becomes more and more difficult with increasing size. Were this not the case eagles might be as large as tigers and as formidable to man as hostile aeroplanes.",
+      "id": "S008",
+      "zh": "飞行也有同样的困难。航空学的一项基本原理是：对于形状给定的飞机，维持飞行所需的最低速度，与它长度的平方根成正比。如果线性尺寸增大四倍，它必须飞得快一倍。而维持最低速度所需的功率，比机器重量增长得更快。因此，一架重量为小飞机六十四倍的大飞机，需要小飞机一百二十八倍的马力才能维持飞行。把同一原理用于鸟类，很快就会遇到体型的上限。假如天使的肌肉按单位重量计，产生的功率只与鹰或鸽子相同，那么为了容纳驱动翅膀的肌肉，它的胸部必须向前突出约四英尺；为了节省重量，它的腿则必须细得像高跷。实际上，鹰或鸢这样的大鸟，并不主要依靠拍打翅膀维持飞行，通常是在滑翔，也就是平衡地停留在上升气流上。即便是滑翔，体型越大也越困难。否则，鹰可能长得像老虎一样大，像敌机一样可怕。"
+    },
+    {
+      "type": "paragraph",
+      "en": "But it is time that we pass to some of the advantages of size. One of the most obvious is that it enables one to keep warm. All warmblooded animals at rest lose the same amount of heat from a unit area of skin, for which purpose they need a food-supply proportional to their surface and not to their weight. Five thousand mice weigh as much as a man. Their combined surface and food or oxygen consumption are about seventeen times a man’s. In fact a mouse eats about one quarter its own weight of food every day, which is mainly used in keeping it warm. For the same reason small animals cannot live in cold countries. In the arctic regions there are no reptiles or amphibians, and no small mammals. The smallest mammal in Spitzbergen is the fox. The small birds fly away in winter, while the insects die, though their eggs can survive six months or more of frost. The most successful mammals are bears, seals, and walruses.",
+      "id": "S009",
+      "zh": "不过，现在该谈谈大体型的好处了。最明显的一点，是它有助于保温。所有静止的温血动物，每单位皮肤面积散失的热量相同，因此用于维持体温的食物需求，与表面积成正比，而不是与重量成正比。五千只小鼠的重量与一个人差不多，但它们合计的表面积，以及食物或氧气消耗量，大约是人的十七倍。实际上，小鼠每天要吃约相当于自身重量四分之一的食物，大部分用于保温。由于同样的原因，小动物无法生活在寒冷地区。在北极地区，没有爬行动物或两栖动物，也没有小型哺乳动物。斯匹次卑尔根岛上最小的哺乳动物是狐狸。小鸟冬季飞走，昆虫则死去，尽管它们的卵可以熬过六个月甚至更长时间的严寒。最成功的哺乳动物是熊、海豹和海象。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Similarly, the eye is a rather inefficient organ until it reaches a large size. The back of the human eye on which an image of the outside world is thrown, and which corresponds to the film of a camera, is composed of a mosaic of “rods and cones” whose diameter is little more than a length of an average light wave. Each eye has about a half a million, and for two objects to be distinguishable their images must fall on separate rods or cones. It is obvious that with fewer but larger rods and cones we should see less distinctly. If they were twice as broad two points would have to be twice as far apart before we could distinguish them at a given distance. But if their size were diminished and their number increased we should see no better. For it is impossible to form a definite image smaller than a wave-length of light. Hence a mouse’s eye is not a small-scale model of a human eye. Its rods and cones are not much smaller than ours, and therefore there are far fewer of them. A mouse could not distinguish one human face from another six feet away. In order that they should be of any use at all the eyes of small animals have to be much larger in proportion to their bodies than our own. Large animals on the other hand only require relatively small eyes, and those of the whale and elephant are little larger than our own. For rather more recondite reasons the same general principle holds true of the brain. If we compare the brain-weights of a set of very similar animals such as the cat, cheetah, leopard, and tiger, we find that as we quadruple the body-weight the brain-weight is only doubled. The larger animal with proportionately larger bones can economize on brain, eyes, and certain other organs.",
+      "id": "S010",
+      "zh": "同样，眼睛在达到较大尺寸之前，也是一种效率相当低的器官。外界影像投射在人的眼底上，相当于相机的胶片；这里排列着视杆细胞与视锥细胞，它们的直径只比普通光波的波长稍大。每只眼睛大约有五十万个这样的细胞；要分辨两个物体，它们的影像必须落在不同的视杆或视锥细胞上。显然，如果细胞更少而更大，视物便不那么清晰。假如细胞宽度增大一倍，在给定距离上，两个点就必须相距两倍，才能被区分。不过，即使把细胞变小、数量增加，我们也不会看得更好，因为不可能形成小于光波波长的清晰影像。所以，小鼠的眼睛并不是人眼按比例缩小的模型。它的视杆与视锥细胞并不比我们的细小多少，因此数量少得多。六英尺以外，小鼠就无法分辨不同的人脸。小动物的眼睛若要有用，相对于身体就必须比我们的眼睛大得多。反过来，大动物只需相对较小的眼睛；鲸与象的眼睛只比我们的稍大。出于更深奥一些的原因，同样的基本原理也适用于大脑。如果比较猫、猎豹、豹和老虎这样非常相似的动物，会发现体重增大四倍时，脑重只增大一倍。大动物虽然需要相对更大的骨骼，却能在大脑、眼睛以及其他某些器官上节省。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Such are a very few of the considerations which show that for every type of animal there is an optimum size. Yet although Galileo demonstrated the contrary more than three hundred years ago, people still believe that if a flea were as large as a man it could jump a thousand feet into the air. As a matter of fact the height to which an animal can jump is more nearly independent of its size than proportional to it. A flea can jump about two feet, a man about five. To jump a given height, if we neglect the resistance of air, requires an expenditure of energy proportional to the jumper’s weight. But if the jumping muscles form a constant fraction of the animal’s body, the energy developed per ounce of muscle is independent of the size, provided it can be developed quickly enough in the small animal. As a matter of fact an insect’s muscles, although they can contract more quickly than our own, appear to be less efficient; as otherwise a flea or grasshopper could rise six feet into the air.",
+      "id": "S011",
+      "zh": "以上只是说明每一种动物都有最佳体型的少数例子。尽管伽利略在三百多年前就证明事实并非如此，人们仍然相信：如果跳蚤像人一样大，它就能跳到一千英尺高。实际上，动物能跳的高度，与其说和体型成正比，不如说大体独立于体型。跳蚤能跳约两英尺，人能跳约五英尺。忽略空气阻力，跳到给定高度所需的能量，与跳跃者的重量成正比。但若负责跳跃的肌肉占身体的比例固定，那么每盎司肌肉产生的能量就与体型无关，前提是小动物能够足够快地释放这些能量。事实上，昆虫的肌肉虽然收缩得比我们的快，效率似乎更低；否则跳蚤或蚱蜢就能跳到六英尺高。"
+    },
+    {
+      "type": "paragraph",
+      "en": "And just as there is a best size for every animal, so the same is true for every human institution. In the Greek type of democracy all the citizens could listen to a series of orators and vote directly on questions of legislation. Hence their philosophers held that a small city was the largest possible democratic state. The English invention of representative government made a democratic nation possible, and the possibility was first realized in the United States, and later elsewhere. With the development of broadcasting it has once more become possible for every citizen to listen to the political views of representative orators, and the future may perhaps see the return of the national state to the Greek form of democracy. Even the referendum has been made possible only by the institution of daily newspapers.",
+      "id": "S012",
+      "zh": "正如每一种动物都有最合适的大小，每一种人类制度也是如此。在希腊式民主中，全体公民可以听一系列演说，并直接对立法问题投票。因此，希腊哲学家认为，一座小城就是民主国家能够达到的最大规模。英国发明的代议制，使民主民族国家成为可能；这种可能性首先在美国实现，随后在别处实现。广播的发展，再次使每一位公民都能听到代表性演说者的政治观点；未来，也许会看到民族国家回到希腊式民主的形式。即使是公民投票，也只有日报制度建立以后才成为可能。"
+    },
+    {
+      "type": "paragraph",
+      "en": "To the biologist the problem of socialism appears largely as a problem of size. The extreme socialists desire to run every nation as a single business concern. I do not suppose that Henry Ford would find much difficulty in running Andorra or Luxembourg on a socialistic basis. He has already more men on his pay-roll than their population. It is conceivable that a syndicate of Fords, if we could find them, would make Belgium Ltd or Denmark Inc. pay their way. But while nationalization of certain industries is an obvious possibility in the largest of states, I find it no easier to picture a completely socialized British Empire or United States than an elephant turning somersaults or a hippopotamus jumping a hedge.",
+      "id": "S013",
+      "zh": "在生物学家看来，社会主义的问题，在很大程度上也像是大小的问题。极端的社会主义者希望把每个国家当作一家企业来经营。我不认为亨利·福特按社会主义方式经营安道尔或卢森堡会有多大困难；他工资册上的员工人数已经超过了这两个国家的人口。如果能找到一批福特，组成一个联合体，那么“比利时有限公司”或“丹麦股份公司”能够盈利，也不是不可想象的。不过，尽管在最大的国家中，某些行业实行国有化显然是可能的，要想象一个完全社会主义化的大英帝国或美国，我觉得并不比想象大象翻跟头、河马跳树篱容易。"
+    }
+  ]
+}

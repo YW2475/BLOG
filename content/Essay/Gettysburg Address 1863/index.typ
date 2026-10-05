@@ -1,0 +1,15 @@
+#import "../index.typ": template, tufted
+#import "../../_essay/bilingual.typ": zh, zh-caption
+#show: template.with(
+  title: "Gettysburg Address",
+  author: "Abraham Lincoln",
+  date: "1863",
+  lang: "en",
+  css: ("/assets/custom.css", "/assets/essay.css"),
+)
+
+= Gettysburg Address / 葛底斯堡演说
+
+#html.p(id: "en-S001")[#text("Fourscore and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated can long endure. We are met on a great battlefield of that war. We have come to dedicate a portion of that field as a final resting-place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this. But in a larger sense, we cannot dedicate, we cannot consecrate, we cannot hallow this ground. The brave men, living and dead who struggled here have consecrated it far above our poor power to add or detract. The world will little note nor long remember what we say here, but it can never forget what they did here. It is for us the living rather to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us—that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion—that we here highly resolve that these dead shall not have died in vain, that this nation under God shall have a new birth of freedom, and that government of the people, by the people, for the people shall not perish from the earth.")]
+
+#zh(id: "S001")[#text("八十七年前，我们的先辈在这片大陆上创建了一个新的国家。它孕育于自由，并奉行人人生而平等的信念。如今，我们正在进行一场伟大的内战，考验着这个国家，或者任何这样孕育、奉行这样信念的国家，能否长久存在。我们相聚在这场战争的一处重要战场。我们来到这里，要把这片战场的一部分奉献为那些献出生命、使国家得以生存的人们最后的安息之地。这样做，完全合宜，也完全应当。然而，从更深的意义上说，我们无法奉献、无法祝圣、无法使这片土地成为圣地。那些曾在这里战斗的勇士，无论生者还是死者，早已使它成为圣地，远非我们微薄的力量所能增减。世人不会太在意，也不会长久记得我们在这里说了什么，却永远不会忘记他们在这里做了什么。真正应当在这里献身的，是我们这些活着的人：献身于他们在这里英勇推进、却尚未完成的事业。更应当由我们在这里献身于面前仍未完成的伟大任务：从这些光荣的死者身上，汲取更大的决心，投入他们为之献出全部忠诚与生命的事业；在这里坚定决意，使他们不至于白白死去，使这个国家在上帝之下获得自由的新生，使这个民有、民治、民享的政府永不从大地上消失。")]

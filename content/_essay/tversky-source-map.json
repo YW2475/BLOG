@@ -1,0 +1,51 @@
+{
+  "paper": {
+    "id": "tversky",
+    "title": "Judgment under Uncertainty: Heuristics and Biases",
+    "zh_title": "不确定性下的判断：启发式与偏差",
+    "author": "Amos Tversky; Daniel Kahneman",
+    "year": 1974,
+    "category": "心智与判断",
+    "kind": "guide",
+    "folder": "Judgment under Uncertainty 1974",
+    "citation": "Science, 185(4157), 27 September 1974, pp. 1124–1131. DOI: 10.1126/science.185.4157.1124.",
+    "source": "https://doi.org/10.1126/science.185.4157.1124",
+    "secondary": "https://pubmed.ncbi.nlm.nih.gov/17835457/",
+    "description": "代表性、可得性与锚定：直觉怎样节省思考，又怎样制造可预测的错误？",
+    "note": "本站双语导读，非原文全文或逐句翻译。原文实验中的数字与条件请在原文中阅读，本页不重构实验结果。",
+    "rights": "原论文受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+  },
+  "scope": "guide",
+  "translation_method": "editor-authored bilingual guide",
+  "glossary": {
+    "representativeness": "代表性",
+    "availability": "可得性",
+    "anchoring": "锚定"
+  },
+  "blocks": [
+    {
+      "id": "G001",
+      "type": "paragraph",
+      "en": "The article examines three shortcuts in uncertain judgment: representativeness, availability, and adjustment from an anchor. Each can save effort while introducing predictable errors.",
+      "zh": "文章考察不确定性判断中的三种捷径：代表性、可得性，以及从锚点出发的调整。它们能节省思考，也会带来可预测的错误。"
+    },
+    {
+      "id": "G002",
+      "type": "paragraph",
+      "en": "A description may seem representative of a category; an example may come readily to mind; a suggested number may shape an estimate. These cues are not interchangeable with probability evidence.",
+      "zh": "一段描述可能很像某个类别，一个例子可能很容易被想起，一个给出的数字可能影响估计。这些线索并不等同于概率证据。"
+    },
+    {
+      "id": "G003",
+      "type": "paragraph",
+      "en": "Try making your own judgment before reading an experiment's discussion. Then identify the information you used and the information you neglected. The original conditions matter.",
+      "zh": "可以先作出自己的判断，再读实验讨论。接着找出自己使用了哪些信息，又忽略了哪些信息。原实验的条件很重要。"
+    },
+    {
+      "id": "G004",
+      "type": "paragraph",
+      "en": "Reading question: when does a useful shortcut cease to track the quantity being estimated? This is more informative than simply labeling an answer irrational.",
+      "zh": "阅读时可以追问：一种通常有用的捷径，什么时候不再对应我们正在估计的量？这比简单把某个答案贴上“不理性”的标签更有帮助。"
+    }
+  ]
+}

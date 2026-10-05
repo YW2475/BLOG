@@ -1,0 +1,132 @@
+- generic [active] [ref=e1]:
+  - banner
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Home" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - link "Docs" [ref=e5] [cursor=pointer]:
+        - /url: /Docs/
+      - link "Blog" [ref=e6] [cursor=pointer]:
+        - /url: /Blog/
+      - link "Essay" [ref=e7] [cursor=pointer]:
+        - /url: /Essay/
+      - link "CV" [ref=e8] [cursor=pointer]:
+        - /url: /CV/
+      - button "切换到深色模式" [ref=e9] [cursor=pointer]
+  - navigation "文章目录" [ref=e12]:
+    - list [ref=e13]:
+      - listitem [ref=e14]:
+        - link "Essay" [ref=e15] [cursor=pointer]:
+          - /url: "#toc-1"
+      - listitem [ref=e16]:
+        - link "Nature and Evolution / 自然与演化" [ref=e17] [cursor=pointer]:
+          - /url: "#toc-2"
+      - listitem [ref=e18]:
+        - link "Mind and Judgment / 心智与判断" [ref=e19] [cursor=pointer]:
+          - /url: "#toc-3"
+      - listitem [ref=e20]:
+        - link "Mathematics and Physics / 数学与物理" [ref=e21] [cursor=pointer]:
+          - /url: "#toc-4"
+      - listitem [ref=e22]:
+        - link "Information and Technology / 信息与技术" [ref=e23] [cursor=pointer]:
+          - /url: "#toc-5"
+      - listitem [ref=e24]:
+        - link "Economy and Society / 经济与社会" [ref=e25] [cursor=pointer]:
+          - /url: "#toc-6"
+  - article [ref=e26]:
+    - generic [ref=e27]:
+      - heading "Essay" [level=2] [ref=e28]
+      - paragraph [ref=e29]: A collection of influential essays, lectures, and papers across disciplines. English paragraphs are followed by Chinese translations; each entry identifies whether it is a full text, a selected chapter, or a reading guide.
+      - generic [ref=e30]: 收藏跨学科、有影响力且值得反复阅读的随笔、演讲与论文。英文段落下附中文译文；每篇注明全文、选章或导读。
+      - generic [ref=e31]: 17 篇收藏 · 全文 8 篇 · 选章 1 篇 · 导读 8 篇
+      - heading "Nature and Evolution / 自然与演化" [level=3] [ref=e32]
+      - generic [ref=e33]:
+        - generic [ref=e34]: "1855"
+        - link "On the Law Which Has Regulated the Introduction of New Species / 论支配新物种出现的规律" [ref=e36] [cursor=pointer]:
+          - /url: On the Introduction of New Species 1855/
+      - generic [ref=e37]: Alfred Russel Wallace · 全文对照 · 为什么相近的物种常常也住得近？从地理分布与地质时间寻找演化的线索。
+      - generic [ref=e38]:
+        - generic [ref=e39]: "1881"
+        - link "The Formation of Vegetable Mould, through the Action of Worms, with Observations on their Habits / 蚯蚓的作用与腐殖土的形成及其习性观察" [ref=e41] [cursor=pointer]:
+          - /url: Vegetable Mould and Earthworms 1881/
+      - generic [ref=e42]: Charles Darwin · 选章对照 · 不起眼的蚯蚓怎样改变地表、埋藏遗迹，并为植物准备土壤？
+      - generic [ref=e43]:
+        - generic [ref=e44]: "1926"
+        - link "On Being the Right Size / 论大小适宜" [ref=e46] [cursor=pointer]:
+          - /url: On Being the Right Size 1926/
+      - generic [ref=e47]: J. B. S. Haldane · 全文对照 · 巨人为什么站不起来？从骨骼、呼吸、飞行与保温看动物大小的限制。
+      - generic [ref=e48]:
+        - generic [ref=e49]: "1973"
+        - link "Decoding the Language of the Bee / 蜜蜂语言的译码" [ref=e51] [cursor=pointer]:
+          - /url: Decoding the Language of the Bee 1973/
+      - generic [ref=e52]: Karl von Frisch · 双语导读 · 蜜蜂怎样用舞蹈传递食物的位置？从观察行为到设计解码实验。
+      - generic [ref=e53]:
+        - generic [ref=e54]: "1979"
+        - 'link "The Spandrels of San Marco and the Panglossian Paradigm: A Critique of the Adaptationist Programme / 圣马可的拱肩与潘格洛斯范式：对适应主义纲领的批评" [ref=e56] [cursor=pointer]':
+          - /url: The Spandrels of San Marco 1979/
+      - generic [ref=e57]: Stephen Jay Gould; Richard C. Lewontin · 双语导读 · 教堂建筑的拱肩怎样成为演化思想的比喻？一个特征存在，不等于它是为某个用途进化出来的。
+      - heading "Mind and Judgment / 心智与判断" [level=3] [ref=e58]
+      - generic [ref=e59]:
+        - generic [ref=e60]: "1974"
+        - link "What Is It Like to Be a Bat? / 成为一只蝙蝠是什么感觉？" [ref=e62] [cursor=pointer]:
+          - /url: What Is It Like to Be a Bat 1974/
+      - generic [ref=e63]: Thomas Nagel · 双语导读 · 知道蝙蝠的大脑和回声定位机制，能否知道它体验世界的感觉？
+      - generic [ref=e64]:
+        - generic [ref=e65]: "1974"
+        - 'link "Judgment under Uncertainty: Heuristics and Biases / 不确定性下的判断：启发式与偏差" [ref=e67] [cursor=pointer]':
+          - /url: Judgment under Uncertainty 1974/
+      - generic [ref=e68]: Amos Tversky; Daniel Kahneman · 双语导读 · 代表性、可得性与锚定：直觉怎样节省思考，又怎样制造可预测的错误？
+      - heading "Mathematics and Physics / 数学与物理" [level=3] [ref=e69]
+      - generic [ref=e70]:
+        - generic [ref=e71]: "1960"
+        - link "There's Plenty of Room at the Bottom / 底部还有很大空间" [ref=e73] [cursor=pointer]:
+          - /url: Plenty of Room at the Bottom 1960/
+      - generic [ref=e74]: Richard P. Feynman · 全文对照 · 把百科全书写在针尖上，制造微型工厂，逐个排列原子：费曼如何认真讨论这些想象？
+      - generic [ref=e75]:
+        - generic [ref=e76]: "1960"
+        - link "The Unreasonable Effectiveness of Mathematics in the Natural Sciences / 数学在自然科学中不可思议的有效性" [ref=e78] [cursor=pointer]:
+          - /url: The Unreasonable Effectiveness of Mathematics 1960/
+      - generic [ref=e79]: Eugene P. Wigner · 双语导读 · 抽象数学为什么能如此准确地描述自然？关于数学、物理和解释的经典追问。
+      - generic [ref=e80]:
+        - generic [ref=e81]: "1972"
+        - 'link "Predictability: Does the Flap of a Butterfly''s Wings in Brazil Set Off a Tornado in Texas? / 可预测性：巴西蝴蝶扇动翅膀，会在得克萨斯引发龙卷风吗？" [ref=e83] [cursor=pointer]':
+          - /url: Predictability and the Butterfly Effect 1972/
+      - generic [ref=e84]: Edward N. Lorenz · 双语导读 · 从蝴蝶效应的原始设问，理解微小差异如何限制长期天气预测。
+      - heading "Information and Technology / 信息与技术" [level=3] [ref=e85]
+      - generic [ref=e86]:
+        - generic [ref=e87]: "1945"
+        - link "As We May Think / 诚如所思" [ref=e89] [cursor=pointer]:
+          - /url: As We May Think 1945/
+      - generic [ref=e90]: Vannevar Bush · 双语导读 · 在个人电脑出现之前，设想一张可以储存资料、批注并连接阅读线索的书桌。
+      - generic [ref=e91]:
+        - generic [ref=e92]: "1950"
+        - link "Computing Machinery and Intelligence / 计算机器与智能" [ref=e94] [cursor=pointer]:
+          - /url: Computing Machinery and Intelligence 1950/
+      - generic [ref=e95]: Alan M. Turing · 全文对照 · 模仿游戏、反对意见与学习机器：机器智能的经典设问。
+      - generic [ref=e96]:
+        - generic [ref=e97]: "2016"
+        - link "Deep Residual Learning for Image Recognition / 深度残差学习与图像识别" [ref=e99] [cursor=pointer]:
+          - /url: Deep Residual Learning for Image Recognition 2016/
+      - generic [ref=e100]: Kaiming He; Xiangyu Zhang; Shaoqing Ren; Jian Sun · 全文对照 · 残差连接怎样帮助训练更深的网络？含原文图表与附录。
+      - generic [ref=e101]:
+        - generic [ref=e102]: "2017"
+        - link "Attention Is All You Need / 注意力就是你所需要的" [ref=e104] [cursor=pointer]:
+          - /url: Attention is All you Need 2017/
+      - generic [ref=e105]: Ashish Vaswani et al. · 全文对照 · 用注意力构建 Transformer，重新组织序列建模。
+      - heading "Economy and Society / 经济与社会" [level=3] [ref=e106]
+      - generic [ref=e107]:
+        - generic [ref=e108]: "1930"
+        - link "Economic Possibilities for Our Grandchildren / 我们后代的经济前景" [ref=e110] [cursor=pointer]:
+          - /url: Economic Possibilities for Our Grandchildren 1930/
+      - generic [ref=e111]: John Maynard Keynes · 全文对照 · 生产力提高以后，每周十五小时的工作可能吗？摆脱生存压力以后，人又怎样生活？
+      - generic [ref=e112]:
+        - generic [ref=e113]: "1956"
+        - link "Body Ritual among the Nacirema / 纳西雷马人的身体仪式" [ref=e115] [cursor=pointer]:
+          - /url: Body Ritual among the Nacirema 1956/
+      - generic [ref=e116]: Horace Miner · 全文对照 · 一本正经地描述一个族群古怪的身体仪式：读着读着，熟悉的生活开始变得陌生。
+      - generic [ref=e117]:
+        - generic [ref=e118]: "2009"
+        - 'link "Beyond Markets and States: Polycentric Governance of Complex Economic Systems / 超越市场与国家：复杂经济系统的多中心治理" [ref=e120] [cursor=pointer]':
+          - /url: Beyond Markets and States 2009/
+      - generic [ref=e121]: Elinor Ostrom · 双语导读 · 森林、渔场与灌溉系统由使用者共同管理时，人们怎样建立可持续的合作规则？
+  - contentinfo

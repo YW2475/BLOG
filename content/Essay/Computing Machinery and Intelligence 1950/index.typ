@@ -5,17 +5,11 @@
   author: "Alan M. Turing",
   description: "图灵 1950 年经典论文《计算机器与智能》逐段中英对照，包含模仿游戏、九种反对意见与学习机器。",
   date: datetime(year: 1950, month: 10, day: 1),
-  extra-info: "Mind 59(236): 433–460 · 中英逐段对照",
   lang: "en",
   css: ("/assets/custom.css", "/assets/essay.css"),
 )
 
 = Computing Machinery and Intelligence / 计算机器与智能
-
-#html.div(class: "essay-paper-info")[
-*A. M. Turing* · _Mind_, Volume LIX, Issue 236, October 1950, pp. 433–460. \
-#link("https://doi.org/10.1093/mind/LIX.236.433")[DOI / 出版方原文] · #link("https://turingarchive.kings.cam.ac.uk/publications-lectures-and-talks-amtb/amt-b-9")[The Turing Digital Archive / 图灵档案]
-]
 
 == 1. The Imitation Game / 模仿游戏
 

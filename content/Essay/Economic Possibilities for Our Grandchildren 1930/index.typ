@@ -1,0 +1,228 @@
+#import "../index.typ": template, tufted
+#import "../../_essay/bilingual.typ": zh
+#show: template.with(
+  title: "Economic Possibilities for Our Grandchildren",
+  author: "John Maynard Keynes",
+  date: "1930",
+  description: "生产力提高以后，每周十五小时的工作可能吗？摆脱生存压力以后，人又怎样生活？",
+  lang: "en",
+  css: ("/assets/custom.css", "/assets/essay.css"),
+)
+
+= Economic Possibilities for Our Grandchildren / 我们后代的经济前景
+
+#html.p(id: "en-S001")[#text("We are suffering just now from a bad attack of economic pessimism. It is common to hear people say that the epoch of enormous economic progress which characterised the nineteenth century is over; that the rapid improvement in the standard of life is now going to slow down – at any rate in Great Britain; that a decline in prosperity is more likely than an improvement in the decade which lies ahead of us.")]
+
+#zh(id: "S001")[#text("眼下，我们正遭受一场严重的经济悲观主义袭击。人们常说，十九世纪那种巨大的经济进步已经结束；生活水平迅速提高的速度如今将放缓，至少在英国如此；在未来十年，繁荣衰退的可能性大于改善的可能性。")]
+
+#html.p(id: "en-S002")[#text("I believe that this is a wildly mistaken interpretation of what is happening to us. We are suffering, not from the rheumatics of old age, but from the growing-pains of over-rapid changes, from the painfulness of readjustment between one economic period and another. The increase of technical efficiency has been taking place faster than we can deal with the problem of labour absorption; the improvement in the standard of life has been a little too quick; the banking and monetary system of the world has been preventing the rate of interest from falling as fast as equilibrium requires. And even so, the waste and confusion which ensue relate to not more than 7½ per cent of the national income; we are muddling away one and sixpence in the £, and have only 18s. 6d., when we might, if we were more sensible, have £1; yet, nevertheless, the 18s. 6d. mounts up to as much as the £1 would have been five or six years ago. We forget that in 1929 the physical output of the industry of Great Britain was greater than ever before, and that the net surplus of our foreign balance available for new foreign investment, after paying for all our imports, was greater last year than that of any other country, being indeed 50 per cent greater than the corresponding surplus of the United States. Or again-if it is to be a matter of comparisons – suppose that we were to reduce our wages by a half, repudiate four fifths of the national debt, and hoard our surplus wealth in barren gold instead of lending it at 6 per cent or more, we should resemble the now much-envied France. But would it be an improvement?")]
+
+#zh(id: "S002")[#text("我认为，这是对我们正在经历的事情极其错误的解释。我们承受的并非老年的风湿病，而是变化过快造成的成长之痛，是从一个经济时期向另一个时期调整的痛苦。技术效率提高的速度，超过了我们解决劳动力吸纳问题的速度；生活水平改善得略快了一点；世界的银行与货币体系，又阻碍利率按照均衡所要求的速度下降。即便如此，由此产生的浪费与混乱也不超过国民收入的 7½%。我们把每一英镑中的一先令六便士糊里糊涂地浪费掉，只剩十八先令六便士；如果明智一点，本可拥有完整的一英镑。然而，这十八先令六便士，仍相当于五六年前的一英镑。我们忘记了，1929 年英国工业的实物产出高于以往任何时候；去年，在支付全部进口以后，可用于新海外投资的国际收支净盈余，比其他任何国家都多，比美国相应的盈余还高 50%。或者，如果要比较，假设我们把工资减半，赖掉五分之四的国债，把剩余财富囤成不会生息的黄金，而不是以 6% 或更高利率贷出，我们就会像如今备受羡慕的法国。但这算改善吗？")]
+
+#html.p(id: "en-S003")[#text("The prevailing world depression, the enormous anomaly of unemployment in a world full of wants, the disastrous mistakes we have made, blind us to what is going on under the surface to the true interpretation. of the trend of things. For I predict that both of the two opposed errors of pessimism which now make so much noise in the world will be proved wrong in our own time – the pessimism of the revolutionaries who think that things are so bad that nothing can save us but violent change, and the pessimism of the reactionaries who consider the balance of our economic and social life so precarious that we must risk no experiments.")]
+
+#zh(id: "S003")[#text("当前的世界萧条、在充满需求的世界中出现失业这一巨大反常现象，以及我们犯下的灾难性错误，使我们看不清表面之下正在发生的事情，也无法正确理解事物的趋势。我预言，当今世界上喧嚣不休的两种相反的悲观主义，都会在我们的时代被证明错误：一种是革命者的悲观主义，认为情况如此糟糕，只有剧烈变革才能挽救我们；另一种是反动者的悲观主义，认为经济与社会生活的平衡如此脆弱，我们不能冒险作任何试验。")]
+
+#html.p(id: "en-S004")[#text("My purpose in this essay, however, is not to examine the present or the near future, but to disembarrass myself of short views and take wings into the future. What can we reasonably expect the level of our economic life to be a hundred years hence? What are the economic possibilities for our grandchildren?")]
+
+#zh(id: "S004")[#text("不过，我写这篇文章的目的，不是考察现在或近期，而是摆脱短期眼光，展翅飞向未来。一百年后，我们有理由期待经济生活达到什么水平？我们的后代会面对怎样的经济可能性？")]
+
+#html.p(id: "en-S005")[#text("From the earliest times of which we have record – back, say, to two thousand years before Christ – down to the beginning of the eighteenth century, there was no very great change in the standard of life of the average man living in the civilised centres of the earth. Ups and downs certainly. Visitations of plague, famine, and war. Golden intervals. But no progressive, violent change. Some periods perhaps So per cent better than others at the utmost 1 00 per cent better – in the four thousand years which ended (say) in A. D. 1700.")]
+
+#zh(id: "S005")[#text("从有记录的最早时代——比如公元前两千年——直到十八世纪初，生活在世界文明中心的普通人的生活水平，并没有发生特别大的变化。当然有起伏，有瘟疫、饥荒与战争，也有黄金时期。但没有持续而剧烈的进步。在截至大约公元 1700 年的这四千年中，有些时期也许比其他时期好 50%，至多好 100%。")]
+
+#html.p(id: "en-S006")[#text("This slow rate of progress, or lack of progress, was due to two reasons – to the remarkable absence of important technical improvements and to the failure of capital to accumulate.")]
+
+#zh(id: "S006")[#text("这种缓慢的进步，或者说缺少进步，源于两个原因：重要技术改进明显缺乏，以及资本未能积累。")]
+
+#html.p(id: "en-S007")[#text("The absence of important technical inventions between the prehistoric age and comparatively modern times is truly remarkable. Almost everything which really matters and which the world possessed at the commencement of the modern age was already known to man at the dawn of history. Language, fire, the same domestic animals which we have to-day, wheat, barley, the vine and the olive, the plough, the wheel, the oar, the sail, leather, linen and cloth, bricks and pots, gold and silver, copper, tin, and lead – and iron was added to the list before 1000 B.C. – banking, statecraft, mathematics, astronomy, and religion. There is no record of when we first possessed these things.")]
+
+#zh(id: "S007")[#text("史前时代与较近的现代之间，重要技术发明的缺乏，确实令人惊讶。现代开始时世界拥有的、几乎一切真正重要的东西，人类在历史曙光初现时就已知道：语言、火、今天同样饲养的家畜、小麦、大麦、葡萄与橄榄、犁、轮、桨、帆、皮革、亚麻与织物、砖与陶器、金银铜锡铅——铁也在公元前 1000 年以前加入了这个清单——以及银行业、治国术、数学、天文学与宗教。我们何时首次拥有这些事物，并没有记录。")]
+
+#html.p(id: "en-S008")[#text("At some epoch before the dawn of history perhaps even in one of the comfortable intervals before the last ice age – there must have been an era of progress and invention comparable to that in which we live to-day. But through the greater part of recorded history there was nothing of the kind.")]
+
+#zh(id: "S008")[#text("在历史曙光之前的某个时期，也许甚至是最后一次冰期之前某个舒适的间歇期，必定曾有一个进步与发明的时代，可以与我们今天的时代相比。但在有记录历史的大部分时期，没有这样的情形。")]
+
+#html.p(id: "en-S009")[#text("The modern age opened; I think, with the accumulation of capital which began in the sixteenth century. I believe – for reasons with which I must not encumber the present argument – that this was initially due to the rise of prices, and the profits to which that led, which resulted from the treasure of gold and silver which Spain brought from the New World into the Old. From that time until to-day the power of accumulation by compound interest, which seems to have been sleeping for many generations, was re-born and renewed its strength. And the power of compound interest over two hundred years is such as to stagger the imagination.")]
+
+#zh(id: "S009")[#text("我认为，现代随着十六世纪开始的资本积累而揭幕。我相信——这里不宜用相关理由加重论述的负担——起初是西班牙把新大陆的金银财宝带到旧大陆，造成物价上涨，以及由此产生的利润。从那时直到今天，似乎沉睡了许多代的复利积累力量重新苏醒，恢复了活力。两百年间复利的力量，足以使想象力震惊。")]
+
+#html.p(id: "en-S010")[#text("Let me give in illustration of this a sum which I have worked out. The value of Great Britain’s foreign investments to-day is estimated at about £4,000,000,000. This yields us an income at the rate of about 6½ per cent. Half of this we bring home and enjoy; the other half, namely, 3¼ per cent, we leave to accumulate abroad at compound interest. Something of this sort has now been going on for about 250 years.")]
+
+#zh(id: "S010")[#text("让我用自己算过的一笔账说明。英国今天的海外投资价值，估计约为四十亿英镑，每年为我们带来约 6½% 的收益。其中一半被带回国内享用，另一半，也就是 3¼%，留在海外按复利积累。类似的过程已经持续了约二百五十年。")]
+
+#html.p(id: "en-S011")[#text("For I trace the beginnings of British foreign investment to the treasure which Drake stole from Spain in 1580. In that year he returned to England bringing with him the prodigious spoils of the Golden Hind. Queen Elizabeth was a considerable shareholder in the syndicate which had financed the expedition. Out of her share she paid off the whole of England’s foreign debt, balanced her Budget, and found herself with about £40,000 in hand. This she invested in the Levant Company – which prospered. Out of the profits of the Levant Company, the East India Company was founded; and the profits of this great enterprise were the foundation of England’s subsequent foreign investment. Now it happens that £40,000 accumulating at 3½ per cent compound interest approximately corresponds to the actual volume of England’s foreign investments at various dates, and would actually amount to-day to the total of £4,000,000,000 which I have already quoted as being what our foreign investments now are. Thus, every £1 which Drake brought home in 1580 has now become £100,000. Such is the power of compound interest!")]
+
+#zh(id: "S011")[#text("因为我把英国海外投资的起点，追溯到德雷克在 1580 年从西班牙掠夺的财宝。那一年，他带着“金鹿号”获得的巨额战利品返回英国。伊丽莎白女王是资助这次远征的联合体中的大股东。她用自己所得的份额，偿清英国全部外债、平衡预算，手中还剩约四万英镑。她把钱投进黎凡特公司，公司随后兴盛起来。东印度公司从黎凡特公司的利润中建立，而这家大企业的利润，成为英国后来海外投资的基础。巧的是，四万英镑按 3½% 的复利积累，所得数额大致对应英国在不同时期实际拥有的海外投资；到今天，恰好达到前面所说的四十亿英镑。因此，德雷克在 1580 年带回的每一英镑，如今都变成了十万英镑。这就是复利的力量！")]
+
+#html.p(id: "en-S012")[#text("From the sixteenth century, with a cumulative crescendo after the eighteenth, the great age of science and technical inventions began, which since the beginning of the nineteenth century has been in full flood – coal, steam, electricity, petrol, steel, rubber, cotton, the chemical industries, automatic machinery and the methods of mass production, wireless, printing, Newton, Darwin, and Einstein, and thousands of other things and men too famous and familiar to catalogue.")]
+
+#zh(id: "S012")[#text("从十六世纪开始，十八世纪以后又不断加速，科学与技术发明的伟大时代到来了；从十九世纪初起，浪潮更已全面涌现：煤、蒸汽、电力、汽油、钢铁、橡胶、棉花、化学工业、自动机械与大规模生产方法、无线电、印刷，以及牛顿、达尔文、爱因斯坦，还有数千种过于著名、过于熟悉，无法一一列举的事物与人物。")]
+
+#html.p(id: "en-S013")[#text("What is the result? In spite of an enormous growth in the population of the world, which it has been necessary to equip with houses and machines, the average standard of life in Europe and the United States has been raised, I think, about fourfold. The growth of capital has been on a scale which is far beyond a hundredfold of what any previous age had known. And from now on we need not expect so great an increase of population.")]
+
+#zh(id: "S013")[#text("结果如何？尽管世界人口大幅增长，需要为他们配备房屋与机器，我认为，欧洲与美国的平均生活水平仍已提高到约四倍。资本增长的规模，远远超过过去任何时代所知水平的百倍。而从现在起，我们不必预期人口还会出现那么大的增长。")]
+
+#html.p(id: "en-S014")[#text("If capital increases, say, 2 per cent per annum, the capital equipment of the world will have increased by a half in twenty years, and seven and a half times in a hundred years. Think of this in terms of material things – houses, transport, and the like.")]
+
+#zh(id: "S014")[#text("假如资本每年增长 2%，世界的资本设备二十年后就会增加一半，一百年后达到七倍半。可以用房屋、交通设施等实物来想象这件事。")]
+
+#html.p(id: "en-S015")[#text("At the same time technical improvements in manufacture and transport have been proceeding at a greater rate in the last ten years than ever before in history. In the United States factory output per head was 40 per cent greater in 1925 than in 1919. In Europe we are held back by temporary obstacles, but even so it is safe to say that technical efficiency is increasing by more than 1 per cent per annum compound. There is evidence that the revolutionary technical changes, which have so far chiefly affected industry, may soon be attacking agriculture. We may be on the eve of improvements in the efficiency of food production as great as those which have already taken place in mining, manufacture, and transport. In quite a few years – in our own lifetimes I mean – we may be able to perform all the operations of agriculture, mining, and manufacture with a quarter of the human effort to which we have been accustomed.")]
+
+#zh(id: "S015")[#text("与此同时，最近十年，制造业与运输业的技术改进速度，比历史上任何时期都快。美国 1925 年的人均工厂产出，比 1919 年高 40%。欧洲受到一些暂时障碍的拖累，但即便如此，仍可有把握地说，技术效率正以每年超过 1% 的复合速度增长。有证据显示，迄今主要影响工业的革命性技术变化，可能很快就会进入农业。我们也许正处在粮食生产效率大幅改善的前夕，其程度将与采矿、制造及运输业已经实现的改善相当。在不太多的几年里——我是说，在我们有生之年——我们也许能仅用过去习惯投入的人力的四分之一，完成农业、采矿与制造的全部作业。")]
+
+#html.p(id: "en-S016")[#text("For the moment the very rapidity of these changes is hurting us and bringing difficult problems to solve. Those countries are suffering relatively which are not in the vanguard of progress. We are being afflicted with a new disease of which some readers may not yet have heard the name, but of which they will hear a great deal in the years to come – namely, technological unemployment. This means unemployment due to our discovery of means of economising the use of labour outrunning the pace at which we can find new uses for labour.")]
+
+#zh(id: "S016")[#text("眼下，正是变化如此迅速，伤害了我们，也带来了难以解决的问题。那些没有走在进步前列的国家，相对而言受到损害。我们正遭受一种新疾病：有些读者也许还没听说过它的名字，但未来几年会频繁听到，那就是技术性失业。它指的是，我们发现节省劳动使用的办法，其速度超过了为劳动寻找新用途的速度，由此造成失业。")]
+
+#html.p(id: "en-S017")[#text("But this is only a temporary phase of maladjustment. All this means in the long run that mankind is solving its economic problem. I would predict that the standard of life in progressive countries one hundred years hence will be between four and eight times as high as it is to-day. There would be nothing surprising in this even in the light of our present knowledge. It would not be foolish to contemplate the possibility of afar greater progress still.")]
+
+#zh(id: "S017")[#text("但这只是一个暂时的失调阶段。从长远看，这一切意味着人类正在解决自己的经济问题。我预言，一百年后，进步国家的生活水平将达到今天的四至八倍。即便根据我们目前的知识，这也不足为奇。考虑还可能出现更大的进步，并不愚蠢。")]
+
+#html.p(id: "en-S018")[#text("Let us, for the sake of argument, suppose that a hundred years hence we are all of us, on the average, eight times better off in the economic sense than we are to-day. Assuredly there need be nothing here to surprise us.")]
+
+#zh(id: "S018")[#text("为了展开讨论，让我们假设：一百年以后，从经济意义上说，我们的平均生活水平是今天的八倍。这当然不必让我们感到惊讶。")]
+
+#html.p(id: "en-S019")[#text("Now it is true that the needs of human beings may seem to be insatiable. But they fall into two classes – those needs which are absolute in the sense that we feel them whatever the situation of our fellow human beings may be, and those which are relative in the sense that we feel them only if their satisfaction lifts us above, makes us feel superior to, our fellows. Needs of the second class, those which satisfy the desire for superiority, may indeed be insatiable; for the higher the general level, the higher still are they. But this is not so true of the absolute needs – a point may soon be reached, much sooner perhaps than we are all of us aware of, when these needs are satisfied in the sense that we prefer to devote our further energies to non-economic purposes.")]
+
+#zh(id: "S019")[#text("的确，人的需求看起来可能永远无法满足。但需求分为两类：绝对的需求，不管别人处于什么状况，我们都会感受到；相对的需求，则只有在满足它们能使我们高于他人、觉得自己优于他人时，才会感受到。第二类，也就是满足优越欲望的需求，确实可能永无止境；一般水平越高，它们也会升得更高。但绝对需求并非完全如此。也许很快就会达到一个点，比我们所有人意识到的还快：这些需求得到满足，我们更愿意把剩余精力投入非经济的目标。")]
+
+#html.p(id: "en-S020")[#text("Now for my conclusion, which you will find, I think, to become more and more startling to the imagination the longer you think about it.")]
+
+#zh(id: "S020")[#text("现在谈我的结论。我想，你思考得越久，就越会觉得这个结论令人惊异。")]
+
+#html.p(id: "en-S021")[#text("I draw the conclusion that, assuming no important wars and no important increase in population, the economic problem may be solved, or be at least within sight of solution, within a hundred years. This means that the economic problem is not – if we look into the future – the permanent problem of the human race.")]
+
+#zh(id: "S021")[#text("我的结论是：假设没有重大战争，人口也没有大幅增长，经济问题可能在一百年内得到解决，或者至少能看到解决的前景。这意味着，如果朝未来看，经济问题并不是人类永久的问题。")]
+
+#html.p(id: "en-S022")[#text("Why, you may ask, is this so startling? It is startling because – if, instead of looking into the future, we look into the past – we find that the economic problem, the struggle for subsistence, always has been hitherto the primary, most pressing problem of the human race – not only of the human race, but of the whole of the biological kingdom from the beginnings of life in its most primitive forms.")]
+
+#zh(id: "S022")[#text("你也许会问：这为什么如此惊人？因为如果我们不看未来，而看过去，就会发现，经济问题，也就是为生存而奋斗，迄今一直是人类最主要、最迫切的问题；不仅对人类如此，从生命最原始的形态开始，整个生物界也都如此。")]
+
+#html.p(id: "en-S023")[#text("Thus we have been expressly evolved by nature – with all our impulses and deepest instincts – for the purpose of solving the economic problem. If the economic problem is solved, mankind will be deprived of its traditional purpose.")]
+
+#zh(id: "S023")[#text("因此，我们连同所有冲动与最深的本能，都由自然演化出来，专门用于解决经济问题。如果经济问题得到解决，人类就会失去传统的目的。")]
+
+#html.p(id: "en-S024")[#text("Will this be a benefit? If one believes at all in the real values of life, the prospect at least opens up the possibility of benefit. Yet I think with dread of the readjustment of the habits and instincts of the ordinary man, bred into him for countless generations, which he may be asked to discard within a few decades.")]
+
+#zh(id: "S024")[#text("这会是好事吗？只要相信生活有真正的价值，这种前景至少为益处打开了可能性。不过，我也恐惧地想到，普通人的习惯与本能，经过无数代培育才形成，如今也许被要求在几十年间抛弃；重新调整它们，将会怎样？")]
+
+#html.p(id: "en-S025")[#text("To use the language of to-day – must we not expect a general “nervous breakdown“? We already have a little experience of what I mean – a nervous breakdown of the sort which is already common enough in England and the United States amongst the wives of the well-to-do classes, unfortunate women, many of them, who have been deprived by their wealth of their traditional tasks and occupations – who cannot find it sufficiently amusing, when deprived of the spur of economic necessity, to cook and clean and mend, yet are quite unable to find anything more amusing.")]
+
+#zh(id: "S025")[#text("用今天的话说，我们难道不应预料到普遍的“神经崩溃”吗？我们对这种情况已经有一点经验：在英国与美国的富裕阶层妻子中，这种神经崩溃已颇为常见。许多人是不幸的女人，财富剥夺了她们传统的任务与职业；没有经济必要性的鞭策，做饭、清扫、缝补便不足以使她们感到有趣，但她们又完全找不到更有趣的事。")]
+
+#html.p(id: "en-S026")[#text("To those who sweat for their daily bread leisure is a longed-for sweet – until they get it.")]
+
+#zh(id: "S026")[#text("对那些为每日面包而流汗的人，闲暇是渴望已久的甜美事物——直到他们真正得到它。")]
+
+#html.p(id: "en-S027")[#text("There is the traditional epitaph written for herself by the old charwoman: –")]
+
+#zh(id: "S027")[#text("有一段传统的墓志铭，是一位年老的女清洁工为自己写的：")]
+
+#html.p(id: "en-S028")[#text("Don’t mourn for me, friends, don’t weep for me never, For I’m going to do nothing for ever and ever.")]
+
+#zh(id: "S028")[#text("朋友们，别为我哀伤，永远别为我哭泣；因为我将永远、永远什么也不做。")]
+
+#html.p(id: "en-S029")[#text("This was her heaven. Like others who look forward to leisure, she conceived how nice it would be to spend her time listening-in – for there was another couplet which occurred in her poem: –")]
+
+#zh(id: "S029")[#text("这就是她的天堂。像其他盼望闲暇的人一样，她想象，花时间听别人演唱会多么美好；因为她的诗里还有另一副对句：")]
+
+#html.p(id: "en-S030")[#text("With psalms and sweet music the heavens’ll be ringing, But I shall have nothing to do with the singing.")]
+
+#zh(id: "S030")[#text("赞美诗与悦耳音乐将响彻天堂，但歌唱将完全与我无关。")]
+
+#html.p(id: "en-S031")[#text("Yet it will only be for those who have to do with the singing that life will be tolerable and how few of us can sing!")]
+
+#zh(id: "S031")[#text("然而，只有那些参与歌唱的人，生活才会可以忍受；而我们之中，有多少人会唱歌呢！")]
+
+#html.p(id: "en-S032")[#text("Thus for the first time since his creation man will be faced with his real, his permanent problem – how to use his freedom from pressing economic cares, how to occupy the leisure, which science and compound interest will have won for him, to live wisely and agreeably and well.")]
+
+#zh(id: "S032")[#text("因此，人类从诞生以来，将首次面对自己真正的、永久的问题：怎样利用摆脱迫切经济忧虑后获得的自由，怎样度过科学与复利为他赢得的闲暇，从而明智、愉快而美好地生活。")]
+
+#html.p(id: "en-S033")[#text("The strenuous purposeful money-makers may carry all of us along with them into the lap of economic abundance. But it will be those peoples, who can keep alive, and cultivate into a fuller perfection, the art of life itself and do not sell themselves for the means of life, who will be able to enjoy the abundance when it comes.")]
+
+#zh(id: "S033")[#text("那些奋力赚钱、目标明确的人，也许会带着我们所有人进入经济丰裕的怀抱。但丰裕真正到来时，能够享受它的，将是那些让生活本身的艺术保持活力、培养得更完善，而不把自己出卖给生活手段的人们。")]
+
+#html.p(id: "en-S034")[#text("Yet there is no country and no people, I think, who can look forward to the age of leisure and of abundance without a dread. For we have been trained too long to strive and not to enjoy. It is a fearful problem for the ordinary person, with no special talents, to occupy himself, especially if he no longer has roots in the soil or in custom or in the beloved conventions of a traditional society. To judge from the behaviour and the achievements of the wealthy classes to-day in any quarter of the world, the outlook is very depressing! For these are, so to speak, our advance guard – those who are spying out the promised land for the rest of us and pitching their camp there. For they have most of them failed disastrously, so it seems to me – those who have an independent income but no associations or duties or ties – to solve the problem which has been set them.")]
+
+#zh(id: "S034")[#text("不过，我认为，没有一个国家、一个民族，能够毫无恐惧地迎接闲暇与丰裕的时代。我们接受努力而非享受的训练，实在太久了。对一个没有特殊才能的普通人而言，如何安排自己是一道可怕的难题，尤其当他不再植根于土地、习俗或传统社会中珍爱的惯例时。观察今天世界各地富裕阶层的行为与成就，前景非常令人沮丧！因为他们可以说是我们的先遣队，替其余人探查应许之地，并在那里扎营。在我看来，他们中的大多数——有独立收入，却没有组织联系、职责或牵绊的人——在解决摆在自己面前的问题上，已遭到灾难性的失败。")]
+
+#html.p(id: "en-S035")[#text("I feel sure that with a little more experience we shall use the new-found bounty of nature quite differently from the way in which the rich use it to-day, and will map out for ourselves a plan of life quite otherwise than theirs.")]
+
+#zh(id: "S035")[#text("我确信，只要再积累一些经验，我们就会以一种与今天富人截然不同的方式，使用自然新近赐予我们的丰裕，并为自己规划一种完全不同于他们的生活。")]
+
+#html.p(id: "en-S036")[#text("For many ages to come the old Adam will be so strong in us that everybody will need to do some work if he is to be contented. We shall do more things for ourselves than is usual with the rich to-day, only too glad to have small duties and tasks and routines. But beyond this, we shall endeavour to spread the bread thin on the butter – to make what work there is still to be done to be as widely shared as possible. Three-hour shifts or a fifteen-hour week may put off the problem for a great while. For three hours a day is quite enough to satisfy the old Adam in most of us!")]
+
+#zh(id: "S036")[#text("在未来很长的时期里，我们心中的旧亚当仍会十分强大，因此每个人都需要做一些工作，才能感到满足。我们会比今天的富人更常亲自做事，而且很乐意承担一些小职责、小任务与日常事务。不仅如此，我们还将努力把面包薄薄地摊在黄油上——也就是让仍然需要完成的工作，尽可能广泛地分摊给大家。每天三小时的轮班，或者每周十五小时的工作，也许能使这个问题推迟很久。因为每天三小时，已经足以满足我们多数人心中的旧亚当了！")]
+
+#html.p(id: "en-S037")[#text("There are changes in other spheres too which we must expect to come. When the accumulation of wealth is no longer of high social importance, there will be great changes in the code of morals. We shall be able to rid ourselves of many of the pseudo-moral principles which have hag-ridden us for two hundred years, by which we have exalted some of the most distasteful of human qualities into the position of the highest virtues. We shall be able to afford to dare to assess the money-motive at its true value. The love of money as a possession – as distinguished from the love of money as a means to the enjoyments and realities of life – will be recognised for what it is, a somewhat disgusting morbidity, one of those semi-criminal, semi-pathological propensities which one hands over with a shudder to the specialists in mental disease. All kinds of social customs and economic practices, affecting the distribution of wealth and of economic rewards and penalties, which we now maintain at all costs, however distasteful and unjust they may be in themselves, because they are tremendously useful in promoting the accumulation of capital, we shall then be free, at last, to discard.")]
+
+#zh(id: "S037")[#text("其他领域也会发生我们必须预料到的变化。当财富积累不再具有很高的社会重要性时，道德准则就会发生巨变。我们将能够摆脱两百年来一直纠缠着我们的许多伪道德原则；正是借助这些原则，我们把人类某些最令人反感的品质，抬升到了最高美德的位置。我们将能够大胆地按照金钱动机的真实价值评价它。把金钱当作财产本身而加以热爱——区别于把金钱当作享受生活、接触真实生活的手段而加以热爱——将被看清其本来面目：一种多少令人厌恶的病态，一种半犯罪、半病理的倾向，令人战栗地将其交给精神疾病专家处理。今天，我们不惜代价地维持各种影响财富分配，以及经济奖赏与惩罚的社会习俗和经济做法，无论它们本身多么令人反感、多么不公正，因为它们对促进资本积累极其有用；到那时，我们终于可以自由地将它们抛弃。")]
+
+#html.p(id: "en-S038")[#text("Of course there will still be many people with intense, unsatisfied purposiveness who will blindly pursue wealth – unless they can find some plausible substitute. But the rest of us will no longer be under any obligation to applaud and encourage them. For we shall inquire more curiously than is safe to-day into the true character of this “purposiveness” with which in varying degrees Nature has endowed almost all of us. For purposiveness means that we are more concerned with the remote future results of our actions than with their own quality or their immediate effects on our own environment. The “purposive” man is always trying to secure a spurious and delusive immortality for his acts by pushing his interest in them forward into time. He does not love his cat, but his cat’s kittens; nor, in truth, the kittens, but only the kittens’ kittens, and so on forward forever to the end of cat-dom. For him jam is not jam unless it is a case of jam to-morrow and never jam to-day. Thus by pushing his jam always forward into the future, he strives to secure for his act of boiling it an immortality.")]
+
+#zh(id: "S038")[#text("当然，仍有许多人怀着强烈而未获满足的目的性，盲目追逐财富，除非他们找到某种可信的替代物。但我们其余的人，将不再有义务鼓掌、鼓励他们。我们会比今天敢做的，更好奇地探究这种“目的性”的真正性质；自然几乎赋予我们每个人这种品质，只是程度不同。目的性意味着，我们更关注行动在遥远未来的结果，而不是行动本身的品质，或它对身边环境的即时作用。这个“有目的的人”，总想把自己对行动的兴趣向未来延伸，为行动取得一种虚假、迷惑性的永生。他爱的不是自己的猫，而是猫的幼崽；其实也不是幼崽，而只是幼崽的幼崽，如此一直向前，直到猫族的尽头。对他而言，果酱若不是明天的果酱、永远不是今天的果酱，就算不上果酱。他把果酱不断推往未来，以此努力使自己熬煮果酱的行动获得永生。")]
+
+#html.p(id: "en-S039")[#text("Let me remind you of the Professor in Sylvie and Bruno :")]
+
+#zh(id: "S039")[#text("让我提醒你们，《西尔维与布鲁诺》中的那位教授：")]
+
+#html.p(id: "en-S040")[#text("“Only the tailor, sir, with your little bill,” said a meek voce outside the door.")]
+
+#zh(id: "S040")[#text("“只是裁缝，先生，带着您的那点账单。”门外一个温顺的声音说。")]
+
+#html.p(id: "en-S041")[#text("“Ah, well, I can soon settle his business,” the Professor said to the children, “if you’ll just wait a minute. How much is it, this year, my man?” The tailor had come in while he was speaking.")]
+
+#zh(id: "S041")[#text("“啊，好吧，我很快就能处理他的事，”教授对孩子们说，“只要你们稍等一分钟。今年是多少，我的朋友？”他说话时，裁缝已经走进来了。")]
+
+#html.p(id: "en-S042")[#text("“Well, it’s been a-doubling so many years, you see,” the tailor replied, a little gruffly, “and I think I’d like the money now. It’s two thousand pound, it is!”")]
+
+#zh(id: "S042")[#text("“唔，您知道，已经翻倍这么多年了，”裁缝略显粗声地回答，“我想，现在该要钱了。已经两千英镑啦！”")]
+
+#html.p(id: "en-S043")[#text("“Oh, that’s nothing!” the Professor carelessly remarked, feeling in his pocket, as if he always carried at least that amount about with him. “But wouldn’t you like to wait just another year and make it four thousand? Just think how rich you’d be! Why, you might be a king, if you liked!”")]
+
+#zh(id: "S043")[#text("“哦，那不算什么！”教授漫不经心地说，一边摸着口袋，好像他总随身带着至少那么多钱。“但你难道不想再等一年，让它变成四千吗？想想你会多么富有！啊，只要愿意，你都可以当国王了！”")]
+
+#html.p(id: "en-S044")[#text("“I don’t know as I’d care about being a king,” the man said thoughtfully. “But it dew sound a powerful sight o’ money! Well, I think I’ll wait – “")]
+
+#zh(id: "S044")[#text("“我不知道自己想不想当国王，”那人若有所思地说，“不过，那听起来确实是一大笔钱！好吧，我想我还是等——”")]
+
+#html.p(id: "en-S045")[#text("“Of course you will!” said the Professor. “There’s good sense in you, I see. Good-day to you, my man!”")]
+
+#zh(id: "S045")[#text("“你当然会等！”教授说，“我看得出，你很有见识。再见，我的朋友！”")]
+
+#html.p(id: "en-S046")[#text("“Will you ever have to pay him that four thousand pounds?” Sylvie asked as the door closed on the departing creditor.")]
+
+#zh(id: "S046")[#text("债主离开，门关上之后，西尔维问：“您将来真的要付给他那四千英镑吗？”")]
+
+#html.p(id: "en-S047")[#text("“Never, my child!” the Professor replied emphatically. “He’ll go on doubling it till he dies. You see, it’s always worth while waiting another year to get twice as much money!”")]
+
+#zh(id: "S047")[#text("“永远不会，我的孩子！”教授肯定地回答。“他会一直翻倍，直到死去。你看，为了拿到两倍的钱，再等一年总是值得的！”")]
+
+#html.p(id: "en-S048")[#text("Perhaps it is not an accident that the race which did most to bring the promise of immortality into the heart and essence of our religions has also done most for the principle of compound interest and particularly loves this most purposive of human institutions.")]
+
+#zh(id: "S048")[#text("也许并非偶然：那个最致力于把永生的承诺带入我们宗教核心与本质的民族，也最致力于复利原则，并且特别热爱这种最有目的性的人类制度。")]
+
+#html.p(id: "en-S049")[#text("I see us free, therefore, to return to some of the most sure and certain principles of religion and traditional virtue – that avarice is a vice, that the exaction of usury is a misdemeanour, and the love of money is detestable, that those walk most truly in the paths of virtue and sane wisdom who take least thought for the morrow. We shall once more value ends above means and prefer the good to the useful. We shall honour those who can teach us how to pluck the hour and the day virtuously and well, the delightful people who are capable of taking direct enjoyment in things, the lilies of the field who toil not, neither do they spin.")]
+
+#zh(id: "S049")[#text("所以，我看到，我们将可以自由地回到某些最可靠、最确定的宗教原则和传统美德：贪婪是恶德，索取高利贷是罪过，爱钱可憎；最少为明天忧虑的人，才最真正地走在美德与健全智慧的道路上。我们将再次重视目的胜于手段，偏好善而非有用。我们将尊敬那些教我们怎样善良而美好地把握每时每日的人，尊敬那些能直接享受事物的可爱的人，尊敬田野中的百合——它们不劳作，也不纺织。")]
+
+#html.p(id: "en-S050")[#text("But beware! The time for all this is not yet. For at least another hundred years we must pretend to ourselves and to every one that fair is foul and foul is fair; for foul is useful and fair is not. Avarice and usury and precaution must be our gods for a little longer still. For only they can lead us out of the tunnel of economic necessity into daylight.")]
+
+#zh(id: "S050")[#text("但要小心！这一切的时机还没有到。至少再过一百年，我们仍须对自己与每个人假装：美即丑，丑即美；因为丑有用，美却没有用。贪婪、高利贷与谨慎，还得再做一段时间我们的神。因为只有它们，才能引领我们走出经济必要性的隧道，来到日光之下。")]
+
+#html.p(id: "en-S051")[#text("I look forward, therefore, in days not so very remote, to the greatest change which has ever occurred in the material environment of life for human beings in the aggregate. But, of course, it will all happen gradually, not as a catastrophe. Indeed, it has already begun. The course of affairs will simply be that there will be ever larger and larger classes and groups of people from whom problems of economic necessity have been practically removed. The critical difference will be realised when this condition has become so general that the nature of one’s duty to one’s neighbour is changed. For it will remain reasonable to be economically purposive for others after it has ceased to be reasonable for oneself.")]
+
+#zh(id: "S051")[#text("因此，我期待，在并不遥远的将来，人类总体生活的物质环境，将发生有史以来最大的变化。当然，这会逐渐发生，而非突然剧变。事实上，它已经开始。事情的发展，只会使越来越大的阶层与群体，实际上摆脱经济必要性的问题。当这种状况变得如此普遍，以至于一个人对邻人的义务性质也改变时，关键区别便会显现。因为，当为自己追求经济目标已不再合理时，为他人这样做仍会合理。")]
+
+#html.p(id: "en-S052")[#text("The pace at which we can reach our destination of economic bliss will be governed by four things – our power to control population, our determination to avoid wars and civil dissensions, our willingness to entrust to science the direction of those matters which are properly the concern of science, and the rate of accumulation as fixed by the margin between our production and our consumption; of which the last will easily look after itself, given the first three.")]
+
+#zh(id: "S052")[#text("我们抵达经济幸福这一目的地的速度，将受四件事决定：控制人口的能力；避免战争与内争的决心；愿意把应由科学处理的事务交给科学指导；以及由生产与消费之间的差额所决定的积累速度。只要具备前三项，最后一项自然容易得到照顾。")]
+
+#html.p(id: "en-S053")[#text("Meanwhile there will be no harm in making mild preparations for our destiny, in encouraging, and experimenting in, the arts of life as well as the activities of purpose.")]
+
+#zh(id: "S053")[#text("与此同时，为我们的未来稍作准备，在有目的的活动之外，也鼓励并试验生活的艺术，并无坏处。")]
+
+#html.p(id: "en-S054")[#text("But, chiefly, do not let us overestimate the importance of the economic problem, or sacrifice to its supposed necessities other matters of greater and more permanent significance. It should be a matter for specialists-like dentistry. If economists could manage to get themselves thought of as humble, competent people, on a level with dentists, that would be splendid!")]
+
+#zh(id: "S054")[#text("但最主要的是，不要高估经济问题的重要性，也不要为了它所谓的必要性，牺牲其他更重要、更长久的事情。经济问题应该成为像牙科那样的专门事务。如果经济学家能让人们把自己看作谦逊而能干的人，与牙医处于同一层次，那就太好了！")]

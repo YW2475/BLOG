@@ -5,20 +5,11 @@
   author: "Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun",
   description: "ResNet 原始论文逐段中英对照，包含残差学习、ImageNet 与 CIFAR-10 实验及目标检测和定位附录。",
   date: "2016",
-  extra-info: "CVPR 2016 · arXiv v1 全文中英对照",
   lang: "en",
   css: ("/assets/custom.css", "/assets/essay.css"),
 )
 
 = Deep Residual Learning for Image Recognition / 深度残差学习与图像识别
-
-#html.div(class: "essay-paper-info")[
-*Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun* · Microsoft Research. \
-_Proceedings of CVPR 2016_, pp. 770–778. \
-*Text edition / 正文版本：* arXiv:1512.03385v1，2015-12-10，依据提供的 12 页 PDF。 \
-#link("https://doi.org/10.1109/CVPR.2016.90")[DOI] · #link("https://arxiv.org/abs/1512.03385")[arXiv] · #link("https://arxiv.org/pdf/1512.03385v1")[Original PDF / 原文 PDF]
-]
-
 
 == Abstract / 摘要
 

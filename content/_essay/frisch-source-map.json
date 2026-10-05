@@ -1,0 +1,50 @@
+{
+  "paper": {
+    "id": "frisch",
+    "title": "Decoding the Language of the Bee",
+    "zh_title": "蜜蜂语言的译码",
+    "author": "Karl von Frisch",
+    "year": 1973,
+    "category": "自然与演化",
+    "kind": "guide",
+    "folder": "Decoding the Language of the Bee 1973",
+    "citation": "Nobel Lecture, 12 December 1973.",
+    "source": "https://www.nobelprize.org/uploads/2018/06/frisch-lecture.pdf",
+    "secondary": "https://www.nobelprize.org/prizes/medicine/1973/press-release/",
+    "description": "蜜蜂怎样用舞蹈传递食物的位置？从观察行为到设计解码实验。",
+    "note": "本站双语导读，非原文全文或逐句翻译。原演讲的正文、图表与实验细节请通过原文入口阅读。",
+    "rights": "原演讲受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+  },
+  "scope": "guide",
+  "translation_method": "editor-authored bilingual guide",
+  "glossary": {
+    "waggle dance": "摇摆舞",
+    "food source": "食物来源"
+  },
+  "blocks": [
+    {
+      "id": "G001",
+      "type": "paragraph",
+      "en": "Start with a practical puzzle: a bee finds food, returns to its colony, and other bees reach the same place. How can an experiment distinguish communication from merely following a scent?",
+      "zh": "先从一个实际问题开始：一只蜜蜂找到食物，返回蜂群，其他蜜蜂随后也能到达那个地点。实验怎样才能区分信息交流与单纯追随气味？"
+    },
+    {
+      "id": "G002",
+      "type": "paragraph",
+      "en": "Von Frisch connects features of the dance with the direction and distance of a food source. Watching the behavior matters, but changing the feeding conditions makes its meaning testable.",
+      "zh": "冯·弗里施把舞蹈的特征与食物的方向、距离联系起来。观察行为很重要，而改变投喂条件，才能使对舞蹈含义的解释接受检验。"
+    },
+    {
+      "id": "G003",
+      "type": "paragraph",
+      "en": "The interesting shift is methodological: an apparently strange movement becomes a system of signals. Read the lecture's figures alongside the experiments, rather than treating the dance as a human sentence.",
+      "zh": "有意思的转变在于研究方法：看似奇怪的动作变成了一套信号系统。阅读时应把图示与实验放在一起看，不必把蜜蜂舞蹈理解成人类语言中的一句话。"
+    },
+    {
+      "id": "G004",
+      "type": "paragraph",
+      "en": "Reading question: which observations reveal a pattern, and which interventions support the interpretation of that pattern? This distinction travels well beyond animal behavior.",
+      "zh": "阅读时可以追问：哪些观察发现了规律，哪些干预支持了对规律的解释？这个区别同样适用于动物行为以外的研究。"
+    }
+  ]
+}

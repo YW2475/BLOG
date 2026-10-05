@@ -1,0 +1,170 @@
+[
+  {
+    "id": "darwin-bird",
+    "round": 1,
+    "title": "Note on the Habits of the Pampas Woodpecker",
+    "zh_title": "潘帕斯啄木鸟习性札记",
+    "author": "Charles Darwin",
+    "year": 1870,
+    "category": "自然与演化",
+    "folder": "Habits of the Pampas Woodpecker 1870",
+    "source": "https://darwin-online.org.uk/converted/manuscripts/Darwin_C_R_CUL-DAR135.14.html",
+    "edition": "Proceedings of the Zoological Society of London, 1870, pp. 705–706; original body and two original notes, modern editorial notes excluded.",
+    "glossary": {
+      "Pampas": "潘帕斯平原",
+      "nidification": "筑巢",
+      "Banda Oriental": "东岸地区"
+    }
+  },
+  {
+    "id": "galton",
+    "round": 1,
+    "title": "Vox Populi",
+    "zh_title": "大众之声",
+    "author": "Francis Galton",
+    "year": 1907,
+    "category": "心智与判断",
+    "folder": "Vox Populi 1907",
+    "source": "https://galton.org/essays/1900-1911/galton-1907-vox-populi.pdf",
+    "secondary": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Collective_Intelligence/Galton_1907_Vox_Populi.pdf",
+    "edition": "Nature 75, pp. 450–451, 7 March 1907. All nine body paragraphs, original table and diagram. The direction of the quartile deviations in paragraph S005 contradicts the table; the historical wording is preserved.",
+    "glossary": {
+      "middlemost estimate": "中位估计值",
+      "probable error": "或然误差",
+      "dressed weight": "胴体重量",
+      "vox populi": "大众之声"
+    }
+  },
+  {
+    "id": "einstein",
+    "round": 2,
+    "title": "Does the Inertia of a Body Depend upon its Energy-Content?",
+    "zh_title": "物体的惯性是否取决于它的能量含量？",
+    "author": "Albert Einstein",
+    "year": 1905,
+    "category": "数学与物理",
+    "folder": "Inertia and Energy Content 1905",
+    "source": "https://www.fourmilab.ch/etexts/einstein/E_mc2/www/",
+    "edition": "Original German paper, Annalen der Physik 18, 639–641 (1905); English translation in The Principle of Relativity (1923), W. Perrett and G. B. Jeffery. Full paper including six equations and original note. Fourmilab explicitly releases its derived edition to the public domain.",
+    "glossary": {
+      "inertia": "惯性",
+      "energy-content": "能量含量",
+      "principle of relativity": "相对性原理"
+    }
+  },
+  {
+    "id": "franklin",
+    "round": 2,
+    "title": "The Kite Experiment",
+    "zh_title": "风筝实验",
+    "author": "Benjamin Franklin",
+    "year": 1752,
+    "category": "数学与物理",
+    "folder": "The Kite Experiment 1752",
+    "source": "https://founders.archives.gov/documents/Franklin/01-04-02-0135",
+    "edition": "The Pennsylvania Gazette, 19 October 1752. Franklin’s complete six-paragraph statement only; later Priestley account and modern editorial introduction excluded.",
+    "glossary": {
+      "Electric Fire": "电火",
+      "Phial": "莱顿瓶"
+    }
+  },
+  {
+    "id": "bacon-studies",
+    "round": 3,
+    "title": "Of Studies",
+    "zh_title": "论读书",
+    "author": "Francis Bacon",
+    "year": 1625,
+    "category": "心智与判断",
+    "folder": "Of Studies 1625",
+    "source": "https://www.gutenberg.org/cache/epub/56463/pg56463-images.html",
+    "edition": "Complete essay in the expanded 1625 edition of Essays; text transcribed from the 1884 collected edition. Modern reading apparatus removed, original Latin retained and translated in context.",
+    "glossary": {
+      "studies": "读书",
+      "natural philosophy": "自然哲学"
+    }
+  },
+  {
+    "id": "bacon-truth",
+    "round": 3,
+    "title": "Of Truth",
+    "zh_title": "论真理",
+    "author": "Francis Bacon",
+    "year": 1625,
+    "category": "心智与判断",
+    "folder": "Of Truth 1625",
+    "source": "https://www.gutenberg.org/cache/epub/56463/pg56463-images.html",
+    "edition": "Complete 1625 essay; text transcribed from the 1884 collected edition. Editorial annotation numbers and running page numbers excluded.",
+    "glossary": {
+      "truth": "真理",
+      "civil business": "世俗事务"
+    }
+  },
+  {
+    "id": "bastiat",
+    "round": 4,
+    "title": "The Candlemakers’ Petition",
+    "zh_title": "蜡烛制造商的请愿书",
+    "author": "Frédéric Bastiat",
+    "year": 1845,
+    "category": "经济与社会",
+    "folder": "The Candlemakers Petition 1845",
+    "source": "https://www.gutenberg.org/files/44145/44145-h/44145-h.htm",
+    "edition": "Economic Sophisms, First Series, essay VII (1845), complete; Patrick James Stirling’s English translation, 1873. Obvious transcription errors com/corn and natural/national corrected.",
+    "glossary": {
+      "protection": "贸易保护",
+      "gratuitous": "无偿的",
+      "national industry": "本国产业"
+    }
+  },
+  {
+    "id": "lincoln",
+    "round": 4,
+    "title": "Gettysburg Address",
+    "zh_title": "葛底斯堡演说",
+    "author": "Abraham Lincoln",
+    "year": 1863,
+    "category": "经济与社会",
+    "folder": "Gettysburg Address 1863",
+    "source": "https://loc.gov/exhibits/gettysburg-address/ext/trans-nicolay-inscribed.html",
+    "edition": "Complete standard text inscribed on the Lincoln Memorial, transcribed by the Library of Congress; speech delivered 19 November 1863.",
+    "glossary": {
+      "a new birth of freedom": "自由的新生",
+      "consecrate": "奉为圣地"
+    }
+  },
+  {
+    "id": "swift",
+    "round": 5,
+    "title": "A Modest Proposal",
+    "zh_title": "一个小小的建议",
+    "author": "Jonathan Swift",
+    "year": 1729,
+    "category": "文学与思想",
+    "folder": "A Modest Proposal 1729",
+    "source": "https://www.gutenberg.org/files/1080/1080-h/1080-h.htm",
+    "edition": "Complete 1729 essay, 33 body paragraphs, with original subtitle. Project Gutenberg edition 1080; Gutenberg name and distribution wrapper excluded.",
+    "glossary": {
+      "Papists": "天主教徒",
+      "publick": "公众",
+      "breeders": "生育者"
+    }
+  },
+  {
+    "id": "chesterton",
+    "round": 5,
+    "title": "A Piece of Chalk",
+    "zh_title": "一块粉笔",
+    "author": "G. K. Chesterton",
+    "year": 1909,
+    "category": "文学与思想",
+    "folder": "A Piece of Chalk 1909",
+    "source": "https://www.gutenberg.org/files/8092/8092-h/8092-h.htm",
+    "edition": "Complete essay II in Tremendous Trifles (1909), nine body paragraphs. Preserve paragraph order, omit typographical dot separators.",
+    "glossary": {
+      "brown paper": "牛皮纸",
+      "downs": "白垩丘陵",
+      "chalk": "粉笔／白垩"
+    }
+  }
+]

@@ -6,7 +6,6 @@
   title: "Attention Is All You Need",
   description: "Transformer 原论文的逐段中英对照：自注意力、编码器与解码器、训练及机器翻译实验。",
   author: "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin",
-  extra-info: "NeurIPS 2017 · 中英逐段对照",
   date: datetime(year: 2017, month: 12, day: 4),
   lang: "en",
   css: ("/assets/custom.css", "/assets/essay.css", "/Essay/Attention is All you Need 2017/assets/article.css"),
@@ -35,12 +34,6 @@ Attention mechanisms have become an integral part of compelling sequence modelin
 In this work we propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between input and output. The Transformer allows for significantly more parallelization and can reach a new state of the art in translation quality after being trained for as little as twelve hours on eight P100 GPUs.
 
 #zh(id: "S005")[本文提出 Transformer：一种不使用循环结构、完全依靠注意力机制建立输入和输出之间全局依赖关系的模型架构。Transformer 能够实现显著更多的并行计算，只需在八块 P100 GPU 上训练十二小时，就能达到新的先进翻译水平。]
-
-#html.div(class: "essay-paper-info")[
-31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA.
-#zh-caption[第 31 届神经信息处理系统大会（NIPS 2017），美国加利福尼亚州长滩。]
-#link("https://arxiv.org/abs/1706.03762")[论文来源 / Source]
-]
 
 = Background / 背景
 
@@ -204,7 +197,6 @@ Since our model contains no recurrence and no convolution, in order for the mode
 
 #zh(id: "S033")[由于模型不包含循环或卷积，为了让模型利用序列顺序，我们必须加入有关词元相对位置或绝对位置的信息。因此，我们在编码器和解码器堆叠的底部，将“位置编码”加到输入嵌入中。位置编码与嵌入具有相同的 $d_"model"$ 维度，因此两者可以直接相加。位置编码有许多选择，包括可学习的和固定的编码 @ref08。]
 
-
 In this work, we use sine and cosine functions of different frequencies:
 
 #zh(id: "S034")[本文使用不同频率的正弦与余弦函数：]
@@ -238,7 +230,6 @@ We also experimented with using learned positional embeddings @ref08 instead, an
   ),
   caption: [Maximum path lengths, per-layer complexity and minimum number of sequential operations for different layer types. $n$ is the sequence length, $d$ is the representation dimension, $k$ is the kernel size of convolutions and $r$ the size of the neighborhood in restricted self-attention. #zh-caption[不同层类型的最大路径长度、每层复杂度和顺序操作的最少次数。$n$ 为序列长度，$d$ 为表示维度，$k$ 为卷积核大小，$r$ 为受限自注意力的邻域大小。]],
 ) <tab-complexity>
-
 
 In this section we compare various aspects of self-attention layers to the recurrent and convolutional layers commonly used for mapping one variable-length sequence of symbol representations $(x_1, ..., x_n)$ to another sequence of equal length $(z_1, ..., z_n)$, with $x_i, z_i in RR^d$, such as a hidden layer in a typical sequence transduction encoder or decoder. Motivating our use of self-attention we consider three desiderata.
 

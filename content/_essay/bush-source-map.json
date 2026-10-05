@@ -1,0 +1,50 @@
+{
+  "paper": {
+    "id": "bush",
+    "title": "As We May Think",
+    "zh_title": "诚如所思",
+    "author": "Vannevar Bush",
+    "year": 1945,
+    "category": "信息与技术",
+    "kind": "guide",
+    "folder": "As We May Think 1945",
+    "citation": "The Atlantic, July 1945.",
+    "source": "https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/",
+    "secondary": "https://www.cs.princeton.edu/~chazelle/courses/BIB/vannevar-bush.pdf",
+    "description": "在个人电脑出现之前，设想一张可以储存资料、批注并连接阅读线索的书桌。",
+    "note": "本站双语导读，非原文全文或逐句翻译。Memex 是设想中的机械化知识工具，不是已经实现的个人电脑。",
+    "rights": "原文章受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+  },
+  "scope": "guide",
+  "translation_method": "editor-authored bilingual guide",
+  "glossary": {
+    "memex": "Memex（设想中的个人知识工具）",
+    "associative trails": "联想路径"
+  },
+  "blocks": [
+    {
+      "id": "G001",
+      "type": "paragraph",
+      "en": "Bush imagines a personal device for keeping documents and following connections between them. The problem is how accumulated knowledge can remain usable for a working mind.",
+      "zh": "布什设想一种个人设备，用来保存资料，并沿着资料之间的联系阅读。问题在于：不断积累的知识，怎样才能持续为思考所用？"
+    },
+    {
+      "id": "G002",
+      "type": "paragraph",
+      "en": "Memex combines storage, retrieval, annotation, and associative trails. Its proposed machinery belongs to its era, while the emphasis on connecting information remains recognizable.",
+      "zh": "Memex 把存储、检索、批注和联想路径结合起来。设想中的机械装置属于它的时代，而把信息连接起来的思路，今天读来仍很熟悉。"
+    },
+    {
+      "id": "G003",
+      "type": "paragraph",
+      "en": "The essay is especially relevant to a personal reading collection: saving an article is only one step. Recording why it connects to another article can preserve a line of thought.",
+      "zh": "这篇文章特别适合个人阅读收藏：保存文章只是一步。记录它为什么与另一篇文章相连，才能保存一条思考的线索。"
+    },
+    {
+      "id": "G004",
+      "type": "paragraph",
+      "en": "Reading question: which relationships would you want your own archive to remember? Compare a collection organized by folders with one organized around questions and connections.",
+      "zh": "阅读时可以追问：你希望自己的资料库记住哪些关系？试着比较按文件夹整理的收藏，与围绕问题和联系组织的收藏。"
+    }
+  ]
+}

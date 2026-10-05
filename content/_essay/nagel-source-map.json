@@ -1,0 +1,50 @@
+{
+  "paper": {
+    "id": "nagel",
+    "title": "What Is It Like to Be a Bat?",
+    "zh_title": "成为一只蝙蝠是什么感觉？",
+    "author": "Thomas Nagel",
+    "year": 1974,
+    "category": "心智与判断",
+    "kind": "guide",
+    "folder": "What Is It Like to Be a Bat 1974",
+    "citation": "The Philosophical Review, 83(4), pp. 435–450. DOI: 10.2307/2183914.",
+    "source": "https://doi.org/10.2307/2183914",
+    "secondary": "https://philosophy.uconn.edu/wp-content/uploads/sites/365/2020/03/Nagel-What-is-it-like-to-be-a-bat.pdf",
+    "description": "知道蝙蝠的大脑和回声定位机制，能否知道它体验世界的感觉？",
+    "note": "本站双语导读，非原文全文或逐句翻译。可与图灵的《计算机器与智能》对照阅读。",
+    "rights": "原论文受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+  },
+  "scope": "guide",
+  "translation_method": "editor-authored bilingual guide",
+  "glossary": {
+    "subjective experience": "主观体验",
+    "echolocation": "回声定位"
+  },
+  "blocks": [
+    {
+      "id": "G001",
+      "type": "paragraph",
+      "en": "Imagine knowing a bat's anatomy and the mechanisms of echolocation. Nagel asks whether this objective knowledge gives access to the experience of being that animal.",
+      "zh": "想象我们知道蝙蝠的解剖结构，也明白回声定位的机制。内格尔追问：这些客观知识，是否让我们能够进入作为这种动物的体验？"
+    },
+    {
+      "id": "G002",
+      "type": "paragraph",
+      "en": "The problem concerns the point of view carried by conscious experience. Imagining yourself flying in darkness may reveal your imagination without revealing the bat's experience.",
+      "zh": "问题涉及意识体验所带有的视角。想象自己在黑暗中飞行，可能揭示的是你的想象方式，而不是蝙蝠的体验。"
+    },
+    {
+      "id": "G003",
+      "type": "paragraph",
+      "en": "Read this beside Turing: a criterion for observable performance and an account of subjective experience address different questions. Their difference makes the pairing productive.",
+      "zh": "可以把它与图灵对照阅读：可观察行为的判定标准，与主观体验的解释，回答的是不同问题。正因为问题不同，两篇放在一起才有启发。"
+    },
+    {
+      "id": "G004",
+      "type": "paragraph",
+      "en": "Reading question: what would count as understanding an experience, and whose perspective would that understanding preserve? The article helps formulate the difficulty before offering an easy solution.",
+      "zh": "阅读时可以追问：什么才算理解一种体验？这种理解又保留了谁的视角？文章的价值在于先把困难说清楚，而不是急着给出轻松的答案。"
+    }
+  ]
+}

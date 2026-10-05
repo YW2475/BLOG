@@ -1,0 +1,191 @@
+{
+  "paper": {
+    "id": "bastiat",
+    "round": 4,
+    "title": "The Candlemakers’ Petition",
+    "zh_title": "蜡烛制造商的请愿书",
+    "author": "Frédéric Bastiat",
+    "year": 1845,
+    "category": "经济与社会",
+    "folder": "The Candlemakers Petition 1845",
+    "source": "https://www.gutenberg.org/files/44145/44145-h/44145-h.htm",
+    "edition": "Economic Sophisms, First Series, essay VII (1845), complete; Patrick James Stirling’s English translation, 1873. Obvious transcription errors com/corn and natural/national corrected.",
+    "glossary": {
+      "protection": "贸易保护",
+      "gratuitous": "无偿的",
+      "national industry": "本国产业"
+    }
+  },
+  "scope": "full",
+  "rights": "Public-domain original text and historical English edition. Source and edition records are kept outside the visible article.",
+  "translation_method": "assistant-translated",
+  "glossary": {
+    "protection": "贸易保护",
+    "gratuitous": "无偿的",
+    "national industry": "本国产业"
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "type": "paragraph",
+      "en": "OF CANDLES, WAX-LIGHTS, LAMPS, CANDLESTICKS, STREET LAMPS, SNUFFERS, EXTINGUISHERS, AND OF THE PRODUCERS OF OIL, TALLOW, ROSIN, ALCOHOL, AND, GENERALLY, OF EVERYTHING CONNECTED WITH LIGHTING.",
+      "zh": "来自蜡烛、蜡灯、灯具、烛台、路灯、烛花剪和灭烛器的制造商，以及油、兽脂、松香、酒精和一切与照明有关物品的生产者。"
+    },
+    {
+      "id": "S002",
+      "type": "paragraph",
+      "en": "To Messieurs the Members of the Chamber of Deputies.",
+      "zh": "致众议院各位议员先生。"
+    },
+    {
+      "id": "S003",
+      "type": "paragraph",
+      "en": "Gentlemen,—You are on the right road. You reject abstract theories, and have little consideration for cheapness and plenty. Your chief care is the interest of the producer. You desire to emancipate him from external competition, and reserve the national market for national industry .",
+      "zh": "诸位先生：你们走在正确的道路上。你们拒绝抽象理论，对价格低廉和供应充足不大在意。你们首要关心的是生产者的利益。你们希望让他免受外国竞争，并把本国市场保留给本国产业。"
+    },
+    {
+      "id": "S004",
+      "type": "paragraph",
+      "en": "We are about to offer you an admirable opportunity of applying your—what shall we call it? your theory? No; nothing is more deceptive than theory; your doctrine? your system? your principle? but you dislike doctrines, you abhor systems, and as for principles, you deny that there are any in social economy: we shall say, then, your practice, your practice without theory and without principle.",
+      "zh": "我们即将为你们提供一个绝好的机会，来运用你们的——我们该怎样称呼它呢？理论吗？不，理论最会骗人；学说吗？体系吗？原则吗？可是你们不喜欢学说，憎恶体系；至于原则，你们否认社会经济中存在原则。那么，我们就称它为你们的实践吧：没有理论、没有原则的实践。"
+    },
+    {
+      "id": "S005",
+      "type": "paragraph",
+      "en": "We are suffering from the intolerable competition of a foreign rival, placed, it would seem, in a condition so far superior to ours for the production of light, that he absolutely inundates our national market with it at a price fabulously reduced. The moment he shows himself, our trade leaves us—all consumers apply to him; and a branch of native industry, having countless ramifications, is all at once rendered completely stagnant. This rival, who is no other than the Sun, wages war to the knife against us, and we suspect that he has been raised up by perfidious Albion (good policy as times go); inasmuch as he displays towards that haughty island a circumspection with which he dispenses in our case.",
+      "zh": "我们正在遭受一位外国对手令人无法忍受的竞争。他生产光线的条件，看起来远比我们优越，以至于他用低得不可思议的价格，让光线淹没了我们的整个国内市场。他一露面，我们的生意便消失了：所有消费者都去找他，一个分支无数的本国产业，顷刻间完全停滞。这位对手不是别人，正是太阳。他同我们展开殊死争斗；我们怀疑，他是背信弃义的英国扶植起来的——照眼下的标准，这算是高明的政策——因为他对那个傲慢的岛屿表现出的克制，在对待我们时却完全没有。"
+    },
+    {
+      "id": "S006",
+      "type": "paragraph",
+      "en": "What we pray for is, that it may please you to pass a law ordering the shutting up of all windows, sky-lights, dormer-windows, outside and inside shutters, curtains, blinds, bull's-eyes; in a word, of all openings, holes, chinks, clefts, and fissures, by or through which the light of the sun has been in use to enter houses, to the prejudice of the meritorious manufactures with which we flatter ourselves we have accommodated our country,—a country which, in gratitude, ought not to abandon us now to a strife so unequal.",
+      "zh": "我们请求你们颁布一项法律，命令关闭所有窗户、天窗、屋顶窗、内外百叶窗、帘子、窗罩和圆窗；总之，关闭太阳光惯常借以或穿过而进入屋内的一切开口、孔洞、缝隙、裂口和裂缝。阳光损害了我们这些有功的制造业；我们自信，这些制造业曾为国家提供便利，而国家若懂得感恩，就不该在今日把我们抛入这场如此不平等的争斗。"
+    },
+    {
+      "id": "S007",
+      "type": "paragraph",
+      "en": "We trust, Gentlemen, that you will not regard this our request as a satire, or refuse it without at least previously hearing the reasons which we have to urge in its support.",
+      "zh": "诸位先生，我们相信，你们不会把我们的请求当作讽刺；也不会至少连支持它的理由都未听过，就加以拒绝。"
+    },
+    {
+      "id": "S008",
+      "type": "paragraph",
+      "en": "And, first, if you shut up as much as possible all access to natural light, and create a demand for artificial light, which of our French manufactures will not be encouraged by it?",
+      "zh": "首先，如果你们尽可能封闭自然光的一切入口，制造对人工照明的需求，那么法国的哪一种制造业不会因此受到鼓励？"
+    },
+    {
+      "id": "S009",
+      "type": "paragraph",
+      "en": "If more tallow is consumed, then there must be more oxen and sheep; and, consequently, we shall behold the multiplication of artificial meadows, meat, wool, hides, and, above all, manure, which is the basis and foundation of all agricultural wealth.",
+      "zh": "如果消耗更多兽脂，就必须有更多牛羊；因此，我们将看到人工牧场、肉类、羊毛、兽皮的增加，尤其是粪肥的增加——粪肥是一切农业财富的根基。"
+    },
+    {
+      "id": "S010",
+      "type": "paragraph",
+      "en": "If more oil is consumed, then we shall have an extended cultivation of the poppy, of the olive, and of rape. These rich and exhausting plants will come at the right time to enable us to avail ourselves of the increased fertility which the rearing of additional cattle will impart to our lands.",
+      "zh": "如果消耗更多油，罂粟、橄榄和油菜的种植就会扩大。这些产出丰厚而又消耗地力的植物，恰好能让我们利用增养牲畜带给土地的额外肥力。"
+    },
+    {
+      "id": "S011",
+      "type": "paragraph",
+      "en": "Our heaths will be covered with resinous trees. Numerous swarms of bees will, on the mountains, gather perfumed treasures, now wasting their fragrance on the desert air, like the flowers from which they emanate. No branch of agriculture but will then exhibit a cheering development.",
+      "zh": "我们的荒地将遍布产树脂的树木。成群的蜜蜂将在山中采集芳香的珍宝；这些珍宝如今如同散发它们的花朵一样，徒然把芬芳浪费在荒野的空气里。到那时，没有哪一个农业分支不会呈现令人振奋的发展。"
+    },
+    {
+      "id": "S012",
+      "type": "paragraph",
+      "en": "The same remark applies to navigation. Thousands of vessels will proceed to the whale fishery; and, in a short time, we shall possess a navy capable of maintaining the honour of France, and gratifying the patriotic aspirations of your petitioners, the undersigned candlemakers and others.",
+      "zh": "航海业也是如此。数以千计的船只将出海捕鲸；不久，我们就会拥有足以维护法国荣誉的海军，并满足下列签名的请愿者——蜡烛制造商及其他人——的爱国愿望。"
+    },
+    {
+      "id": "S013",
+      "type": "paragraph",
+      "en": "But what shall we say of the manufacture of articles de Paris? Henceforth you will behold gildings, bronzes, crystals, in candlesticks, in lamps, in lustres, in candelabra, shining forth, in spacious warerooms, compared with which those of the present day can be regarded but as mere shops.",
+      "zh": "至于巴黎精品制造业，我们又该怎样形容呢？今后，你们会看到烛台、灯具、大吊灯和多枝烛台上的镀金、青铜与水晶，在宽敞的陈列室里熠熠生辉；与这些陈列室相比，今天的店面不过是小铺子。"
+    },
+    {
+      "id": "S014",
+      "type": "paragraph",
+      "en": "No poor resinier from his heights on the seacoast, no coalminer from the depth of his sable gallery, but will rejoice in higher wages and increased prosperity.",
+      "zh": "无论是海岸高地上贫穷的采脂工，还是漆黑坑道深处的煤矿工，都将为更高的工资和更大的繁荣而欢欣。"
+    },
+    {
+      "id": "S015",
+      "type": "paragraph",
+      "en": "Only have the goodness to reflect, Gentlemen, and you will be convinced that there is, perhaps, no Frenchman, from the wealthy coalmaster to the humblest vender of lucifer matches, whose lot will not be ameliorated by the success of this our petition.",
+      "zh": "诸位先生，只请你们认真想一想，你们就会确信：从富有的煤矿主到最卑微的火柴小贩，或许没有一个法国人不会因我们的请愿成功而改善境遇。"
+    },
+    {
+      "id": "S016",
+      "type": "paragraph",
+      "en": "We foresee your objections, Gentlemen, but we know that you can oppose to us none but such as you have picked up from the effete works of the partisans of free trade. We defy you to utter a single word against us which will not instantly rebound against yourselves and your entire policy.",
+      "zh": "诸位先生，我们预见到你们的反对意见。但我们知道，你们拿来反对我们的，只能是从自由贸易拥护者那些过时著作里捡来的话。我们敢说，你们反对我们的任何一句话，都会立刻反弹到你们自己和你们的整套政策上。"
+    },
+    {
+      "id": "S017",
+      "type": "paragraph",
+      "en": "You will tell us that, if we gain by the protection which we seek, the country will lose by it, because the consumer must bear the loss.",
+      "zh": "你们会告诉我们：如果我们因所求的保护而获利，国家就会因此受损，因为损失必须由消费者承担。"
+    },
+    {
+      "id": "S018",
+      "type": "paragraph",
+      "en": "We answer:",
+      "zh": "我们的回答是："
+    },
+    {
+      "id": "S019",
+      "type": "paragraph",
+      "en": "You have ceased to have any right to invoke the interest of the consumer; for, whenever his interest is found opposed to that of the producer, you sacrifice the former. You have done so for the purpose of encouraging labour and increasing employment . For the same reason you should do so again.",
+      "zh": "你们早已没有资格援引消费者的利益。因为每当消费者的利益与生产者相冲突时，你们都牺牲前者。你们这样做，是为了鼓励劳动、增加就业；出于同样的理由，你们也该再做一次。"
+    },
+    {
+      "id": "S020",
+      "type": "paragraph",
+      "en": "You have yourselves obviated this objection. When you are told that the consumer is interested in the free importation of iron, coal, corn, textile fabrics—yes, you reply, but the producer is interested in their exclusion. Well, be it so;—if consumers are interested in the free admission of natural light, the producers of artificial light are equally interested in its prohibition.",
+      "zh": "你们自己已经排除了这项反对意见。当有人说，自由进口铁、煤、粮食和纺织品符合消费者利益时，你们回答：是的，但禁止进口符合生产者利益。好吧，既然如此，如果让自然光自由进入符合消费者利益，那么禁止自然光也同样符合人工照明生产者的利益。"
+    },
+    {
+      "id": "S021",
+      "type": "paragraph",
+      "en": "But, again, you may say that the producer and consumer are identical. If the manufacturer gain by protection, he will make the agriculturist also a gainer; and if agriculture prosper, it will open a vent to manufactures. Very well; if you confer upon us the monopoly of furnishing light during the day,—first of all, we shall purchase quantities of tallow, coals, oils, resinous substances, wax, alcohol—besides silver, iron, bronze, crystal—to carry on our manufactures; and then we, and those who furnish us with such commodities, having become rich will consume a great deal, and impart prosperity to all the other branches of our national industry.",
+      "zh": "你们也许还会说，生产者和消费者其实是同一批人。如果制造商因保护而获利，他也会让农业生产者获利；如果农业繁荣，它就会给制造业打开销路。很好，如果你们赋予我们白天供应光线的垄断权，我们首先会采购大量兽脂、煤、油、树脂、蜡和酒精，以及银、铁、青铜和水晶，来经营我们的制造业；然后，我们和向我们供应这些商品的人都富裕起来，就会大量消费，把繁荣传递给本国产业的所有其他分支。"
+    },
+    {
+      "id": "S022",
+      "type": "paragraph",
+      "en": "If you urge that the light of the sun is a gratuitous gift of nature, and that to reject such gifts is to reject wealth itself under pretence of encouraging the means of acquiring it, we would caution you against giving a death-blow to your own policy. Remember that hitherto you have always repelled foreign products, because they approximate more nearly than home products to the character of gratuitous gifts. To comply with the exactions of other monopolists, you have only half a motive ; and to repulse us simply because we stand on a stronger vantage-ground than others would be to adopt the equation, + x + = -; in other words, it would be to heap absurdity upon absurdity .",
+      "zh": "如果你们说，阳光是大自然无偿的馈赠，以鼓励获得财富的手段为借口，拒绝这些馈赠，就是拒绝财富本身，那么我们要提醒你们，不要给自己的政策致命一击。请记住，你们至今一直排斥外国商品，恰恰因为它们比本国商品更接近无偿馈赠的性质。满足其他垄断者的苛求时，你们只有一半的理由；而仅仅因为我们的立足点比别人更强，就拒绝我们，无异于采用‘正数乘正数等于负数’这个等式，换句话说，就是把荒谬叠加在荒谬之上。"
+    },
+    {
+      "id": "S023",
+      "type": "paragraph",
+      "en": "Nature and human labour co-operate in various proportions (depending on countries and climates) in the production of commodities. The part which nature executes is always gratuitous; it is the part executed by human labour which constitutes value, and is paid for.",
+      "zh": "生产商品时，自然与人类劳动按不同的比例共同发挥作用；这些比例随国家和气候而异。自然完成的那一部分，始终是无偿的；由人类劳动完成的部分，才构成价值，才需要付费。"
+    },
+    {
+      "id": "S024",
+      "type": "paragraph",
+      "en": "If a Lisbon orange sells for half the price of a Paris orange, it is because natural, and consequently gratuitous, heat does for the one, what artificial, and therefore expensive, heat must do for the other.",
+      "zh": "里斯本的橙子如果只卖巴黎橙子的一半价格，那是因为前者所需的热量来自自然，因而免费；后者所需的热量却必须人工提供，因而昂贵。"
+    },
+    {
+      "id": "S025",
+      "type": "paragraph",
+      "en": "When an orange comes to us from Portugal, we may conclude that it is furnished in part gratuitously, in part for an onerous consideration; in other words, it comes to us at half-price as compared with those of Paris.",
+      "zh": "一只橙子从葡萄牙来到我们这里，可以说它一部分是免费提供的，一部分是有偿提供的；换句话说，与巴黎的橙子相比，它以一半的价格来到我们这里。"
+    },
+    {
+      "id": "S026",
+      "type": "paragraph",
+      "en": "Now, it is precisely the gratuitous half (pardon the word) which we contend should be excluded. You say, How can national labour sustain competition with foreign labour, when the former has all the work to do, and the latter only does one-half, the sun supplying the remainder? But if this half being gratuitous, determines you to exclude competition, how should the whole, being gratuitous, induce you to admit competition? If you were consistent, you would, while excluding as hurtful to native industry what is half gratuitous, exclude a fortiori and with double zeal, that which is altogether gratuitous.",
+      "zh": "现在，我们主张排除的，恰恰就是那免费的半部分——请原谅这个说法。你们说，本国劳动怎么能与外国劳动竞争？前者必须做全部工作，后者却只做一半，剩下一半由太阳提供。可是，如果这一半因为免费，就使你们决意排除竞争，那么全部免费，又怎么会促使你们允许竞争呢？你们若前后一致，就应当在把半免费的东西视为损害本国产业而排除时，以更强的理由、加倍的热情，排除完全免费的东西。"
+    },
+    {
+      "id": "S027",
+      "type": "paragraph",
+      "en": "Once more, when products such as coal, iron, corn, or textile fabrics, are sent us from abroad, and we can acquire them with less labour than if we made them ourselves, the difference is a free gift conferred upon us. The gift is more or less considerable in proportion as the difference is more or less great. It amounts to a quarter, a half, or three-quarters of the value of the product, when the foreigner only asks us for three-fourths, a half, or a quarter of the price we should otherwise pay. It is as perfect and complete as it can be, when the donor (like the sun in furnishing us with light) asks us for nothing. The question, and we ask it formally, is this, Do you desire for our country the benefit of gratuitous consumption, or the pretended advantages of onerous production? Make your choice, but be logical; for as long as you exclude as you do, coal, iron, corn, foreign fabrics, in proportion as their price approximates to zero, what inconsistency would it be to admit the light of the sun, the price of which is already at zero during the entire day!",
+      "zh": "再说一次，当煤、铁、粮食或纺织品等商品从外国运来，而我们取得它们所需的劳动，比自己生产时更少，那么这个差额就是别人给予我们的免费馈赠。差额越大或越小，馈赠也相应越多或越少。当外国人只要求我们支付原本应付价格的四分之三、二分之一或四分之一时，这份馈赠就占产品价值的四分之一、二分之一或四分之三。如果馈赠者像给我们提供光线的太阳一样，什么也不索取，那么这份馈赠便达到最完善、最完整的程度。问题是——我们郑重地提出这个问题——你们究竟希望我国得到免费消费的好处，还是得到所谓昂贵生产的优势？请选择，但要讲逻辑。只要你们仍像现在这样，越是煤、铁、粮食和外国纺织品的价格趋近于零，就越要排斥它们，那么，容许整个白天价格已经为零的阳光进入，又是多么自相矛盾！"
+    }
+  ]
+}

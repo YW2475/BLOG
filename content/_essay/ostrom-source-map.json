@@ -1,0 +1,51 @@
+{
+  "paper": {
+    "id": "ostrom",
+    "title": "Beyond Markets and States: Polycentric Governance of Complex Economic Systems",
+    "zh_title": "超越市场与国家：复杂经济系统的多中心治理",
+    "author": "Elinor Ostrom",
+    "year": 2009,
+    "category": "经济与社会",
+    "kind": "guide",
+    "folder": "Beyond Markets and States 2009",
+    "citation": "Nobel Prize Lecture, 8 December 2009, Stockholm.",
+    "source": "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf",
+    "secondary": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/",
+    "description": "森林、渔场与灌溉系统由使用者共同管理时，人们怎样建立可持续的合作规则？",
+    "note": "本站双语导读，非原文全文或逐句翻译。共同管理能否成功取决于规则、监督和情境，不意味着所有公共资源都会被自动保护。",
+    "rights": "原演讲受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+  },
+  "scope": "guide",
+  "translation_method": "editor-authored bilingual guide",
+  "glossary": {
+    "polycentric governance": "多中心治理",
+    "common-pool resources": "公共池资源",
+    "monitoring": "监督"
+  },
+  "blocks": [
+    {
+      "id": "G001",
+      "type": "paragraph",
+      "en": "Start with a shared resource: a fishery, forest, or irrigation system. How can users cooperate when each person's choices affect what remains available to others?",
+      "zh": "从一项共同使用的资源开始：渔场、森林，或者灌溉系统。当每个人的选择都影响别人还能使用多少资源时，使用者怎样合作？"
+    },
+    {
+      "id": "G002",
+      "type": "paragraph",
+      "en": "Ostrom studies institutions built around real resources and communities. Rules, monitoring, enforcement, and local conditions help explain why similar-looking arrangements can have different outcomes.",
+      "zh": "奥斯特罗姆研究围绕真实资源与社群建立的制度。规则、监督、执行与地方条件，有助于解释为什么看起来相似的安排会产生不同结果。"
+    },
+    {
+      "id": "G003",
+      "type": "paragraph",
+      "en": "Polycentric governance directs attention to multiple interacting centers of decision-making. The lecture invites comparison of institutional arrangements rather than reliance on one universal prescription.",
+      "zh": "多中心治理把注意力引向多个相互作用的决策中心。演讲邀请读者比较不同的制度安排，而不是依赖一种普遍适用的处方。"
+    },
+    {
+      "id": "G004",
+      "type": "paragraph",
+      "en": "Reading question: who makes the rules, who checks compliance, and how can the rules change? Shared ownership alone does not answer these questions.",
+      "zh": "阅读时可以追问：谁制定规则，谁检查遵守情况，规则又怎样修改？仅仅说资源归大家共同所有，并不能回答这些问题。"
+    }
+  ]
+}

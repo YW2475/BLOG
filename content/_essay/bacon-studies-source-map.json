@@ -1,0 +1,33 @@
+{
+  "paper": {
+    "id": "bacon-studies",
+    "round": 3,
+    "title": "Of Studies",
+    "zh_title": "论读书",
+    "author": "Francis Bacon",
+    "year": 1625,
+    "category": "心智与判断",
+    "folder": "Of Studies 1625",
+    "source": "https://www.gutenberg.org/cache/epub/56463/pg56463-images.html",
+    "edition": "Complete essay in the expanded 1625 edition of Essays; text transcribed from the 1884 collected edition. Modern reading apparatus removed, original Latin retained and translated in context.",
+    "glossary": {
+      "studies": "读书",
+      "natural philosophy": "自然哲学"
+    }
+  },
+  "scope": "full",
+  "rights": "Public-domain original text and historical English edition. Source and edition records are kept outside the visible article.",
+  "translation_method": "assistant-translated",
+  "glossary": {
+    "studies": "读书",
+    "natural philosophy": "自然哲学"
+  },
+  "blocks": [
+    {
+      "id": "S001",
+      "type": "paragraph",
+      "en": "Studies serve for delight, for ornament, and for ability. Their chief use for delight, is in privateness and retiring; for ornament, is in discourse; and for ability, is in the judgment and disposition of business; for expert men can execute, and perhaps judge of particulars one by one; but the general counsels, and the plots and marshalling of affairs, come best from those that are learned. To spend too much time in studies, is sloth; to use them too much for ornament, is affectation; to make judgment wholly by their rules, is the humor of a scholar. They perfect nature, and are perfected by experience; for natural abilities are like natural plants, that need pruning by study; and studies themselves do give forth directions too much at large, except they be bounded in by experience. Crafty men contemn studies, simple men admire them, and wise men use them; for they teach not their own use; but that is a wisdom without them and above them, won by observation. Read not to contradict and confute, nor to believe and take for granted, nor to find talk and discourse, but to weigh and consider. Some books are to be tasted, others to be swallowed, and some few to be chewed and digested; that is, some books are to be read only in parts; others to be read, but not curiously; and some few to be read wholly, and with diligence and attention. Some books also may be read by deputy, and extracts made of them by others; but that would be only in the less important arguments and the meaner sort of books; else distilled books are, like common distilled waters, flashy things. Reading maketh a full man; conference a ready man; and writing an exact man; and, therefore, if a man write little, he had need have a great memory; if he confer little, he had need have a present wit; and if he read little, he had need have much cunning, to seem to know that he doth not. Histories make men wise; poets, witty; the mathematics, subtile; natural philosophy, deep; moral, grave; logic and rhetoric, able to contend: “Abeunt studia in mores;” nay, there is no stand or impediment in the wit, but may be wrought out by fit studies. Like as diseases of the body may have appropriate exercises, bowling is good for the stone and reins, shooting for the lungs and breast, gentle walking for the stomach, riding for the head and the like; so, if a man’s wit be wandering, let him study the mathematics; for in demonstrations, if his wit be called away never so little, he must begin again; if his wit be not apt to distinguish or find difference, let him study the schoolmen, for they are “Cymini sectores.” If he be not apt to beat over matters, and to call up one thing to prove and illustrate another, let him study the lawyers’ cases; so every defect of the mind may have a special receipt.",
+      "zh": "读书可以怡情，可以增添谈吐的文采，也可以增长才干。怡情的主要用途，在独处与闲居时；文采的主要用途，在交谈时；才干的主要用途，在判断和处理事务时。经验丰富的人能够执行工作，也许还能逐一判断具体事情；但通盘的谋划、事务的布局与安排，最适合由有学识的人来做。花太多时间读书，是懒惰；过多地用它装饰谈吐，是做作；完全按照书本的规则作判断，则是书生的习气。读书使天性完善，而读书本身又由经验来完善：天赋如同天然生长的植物，需要靠读书修剪；书本给出的指导往往过于宽泛，必须由经验来限定。狡黠的人轻视读书，单纯的人赞叹读书，明智的人则运用读书；因为书本不会教人怎样使用它，如何使用是一种在书本之外、又在书本之上的智慧，须靠观察获得。阅读不应为了反驳和驳倒，也不应为了全盘相信、照单全收，更不应为了寻找谈资，而应为了权衡和思考。有些书可浅尝，有些书可吞下，少数书则要咀嚼消化：有些书只需读其中一部分，有些书可以通读，却不必细究；少数书则应完整阅读，并且勤勉专注。有些书也可以让别人代读，摘取要点，但只宜用于不那么重要的论题和较次要的书；否则，提炼过的书就像普通的蒸馏水，淡而无味。阅读使人充实，交谈使人敏捷，写作使人精确。所以，一个人若很少写作，就须有很强的记忆；若很少交谈，就须有随时应对的机智；若很少阅读，就须有许多伪装的本领，好让人以为他知道其实不知道的事情。读历史使人明智，读诗使人灵秀，数学使人精细，自然哲学使人深刻，伦理学使人庄重，逻辑与修辞使人善于论辩：‘学问化为品性’。而且，才智中没有哪一种停滞或障碍，不能由适当的学习来消除。身体的疾病可以有相应的锻炼：滚球有益于结石和肾脏，射箭有益于肺与胸部，缓步行走有益于胃，骑马有益于头部，等等。智力也是如此：若一个人的思绪容易游移，就让他学习数学，因为在证明过程中，只要注意力稍稍离开，就必须重新开始；若他不善于辨别和发现差异，就让他学习经院学者，因为他们是‘能剖开孜然粒的人’，极善辨析细微之处；若他不善于反复推敲事情，也不善于调动一件事来证明和阐明另一件事，就让他研究法律案例。这样，心智中的每一种缺陷，都可以有专门的处方。"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "paper": {
+    "id": "wigner",
+    "title": "The Unreasonable Effectiveness of Mathematics in the Natural Sciences",
+    "zh_title": "数学在自然科学中不可思议的有效性",
+    "author": "Eugene P. Wigner",
+    "year": 1960,
+    "category": "数学与物理",
+    "kind": "guide",
+    "folder": "The Unreasonable Effectiveness of Mathematics 1960",
+    "citation": "Communications on Pure and Applied Mathematics, 13(1), February 1960, pp. 1–14. DOI: 10.1002/cpa.3160130102.",
+    "source": "https://doi.org/10.1002/cpa.3160130102",
+    "secondary": "https://web.physics.utah.edu/~detar/phys4910/readings/fundamentals/Wigner.html",
+    "description": "抽象数学为什么能如此准确地描述自然？关于数学、物理和解释的经典追问。",
+    "note": "本站双语导读，非原文全文或逐句翻译。文章讨论的是数学在自然科学中的有效性，并不宣称每个现象都能被数学完整描述。",
+    "rights": "原文章受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+  },
+  "scope": "guide",
+  "translation_method": "editor-authored bilingual guide",
+  "glossary": {
+    "mathematical concept": "数学概念",
+    "physical law": "物理定律"
+  },
+  "blocks": [
+    {
+      "id": "G001",
+      "type": "paragraph",
+      "en": "Wigner asks why mathematics developed through abstract reasoning works so well in describing physical phenomena. The usefulness itself becomes the object of inquiry.",
+      "zh": "维格纳追问：通过抽象推理发展起来的数学，为什么能如此有效地描述物理现象？有效性本身成为了需要解释的问题。"
+    },
+    {
+      "id": "G002",
+      "type": "paragraph",
+      "en": "Distinguish fitting a formula to known observations from finding that a mathematical framework reaches further than expected. The latter makes the puzzle especially striking.",
+      "zh": "应当区分两件事：为已知观察拟合一个公式，以及发现某个数学框架适用的范围超出了预期。后一种情形使这个疑问格外鲜明。"
+    },
+    {
+      "id": "G003",
+      "type": "paragraph",
+      "en": "This is a conceptual essay, so read its examples as invitations to examine the relationship between mathematical concepts and physical laws. It is not a technical proof of universal mathematical coverage.",
+      "zh": "这是一篇概念性的文章，可以借它的例子考察数学概念与物理定律的关系。它不是一份证明数学能够包揽一切现象的技术证明。"
+    },
+    {
+      "id": "G004",
+      "type": "paragraph",
+      "en": "Reading question: does successful prediction fully explain why a model works? Compare practical confidence in a theory with an explanation of its remarkable success.",
+      "zh": "阅读时可以追问：预测成功，是否就完全解释了一个模型为什么有效？可以比较对理论的实用信心，与对其惊人成功的解释。"
+    }
+  ]
+}
