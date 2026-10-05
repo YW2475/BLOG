@@ -7,10 +7,6 @@
 
 = YinWang
 
-#{
-  tufted.margin-note[
-    #html.span(class: "liujian-font")[
-      天行有常，不为尧存，不为桀亡。
-    ]
-  ]
-}
+#quote-box[
+  天行有常，不为尧存，不为桀亡。
+]
