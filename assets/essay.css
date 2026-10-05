@@ -85,6 +85,20 @@ li > .essay-translation {
 	max-width: 100%;
 }
 
+.essay-equation {
+	width: 55%;
+	max-width: 55%;
+	margin: 1.5rem 0;
+	overflow-x: auto;
+	overflow-y: hidden;
+	text-align: center;
+}
+
+.essay-equation > .math-block {
+	width: 100%;
+	max-width: 100%;
+}
+
 .essay-paper-figure > img {
 	display: block;
 	width: 100%;
@@ -103,6 +117,10 @@ li > .essay-translation {
 }
 
 @media (max-width: 760px) {
+	article p {
+		overflow-wrap: anywhere;
+	}
+
 	.site-nav {
 		flex-wrap: wrap;
 		gap: 0.4rem;
@@ -117,7 +135,8 @@ li > .essay-translation {
 	.essay-paper-info,
 	.essay-reading-note,
 	.essay-entry-details,
-	.essay-paper-figure {
+	.essay-paper-figure,
+	.essay-equation {
 		width: 100%;
 		max-width: 100%;
 	}

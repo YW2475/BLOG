@@ -1,4 +1,4 @@
-#import "../index.typ": template, tufted
+#import "../../config.typ": template, tufted
 #import "../_essay/bilingual.typ": zh
 #show: template.with(
   title: "Essay",

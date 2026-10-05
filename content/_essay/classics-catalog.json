@@ -22,14 +22,15 @@
     "author": "Karl von Frisch",
     "year": 1973,
     "category": "自然与演化",
-    "kind": "guide",
+    "kind": "full",
     "folder": "Decoding the Language of the Bee 1973",
     "citation": "Nobel Lecture, 12 December 1973.",
     "source": "https://www.nobelprize.org/uploads/2018/06/frisch-lecture.pdf",
     "secondary": "https://www.nobelprize.org/prizes/medicine/1973/press-release/",
     "description": "蜜蜂怎样用舞蹈传递食物的位置？从观察行为到设计解码实验。",
-    "note": "本站双语导读，非原文全文或逐句翻译。原演讲的正文、图表与实验细节请通过原文入口阅读。",
-    "rights": "原演讲受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+    "note": "",
+    "rights": "User-provided source; full bilingual transcription.",
+    "local_source": "C:/Users/ME/Downloads/frisch-lecture.pdf"
   },
   {
     "id": "darwin",
@@ -69,14 +70,15 @@
     "author": "Stephen Jay Gould; Richard C. Lewontin",
     "year": 1979,
     "category": "自然与演化",
-    "kind": "guide",
+    "kind": "full",
     "folder": "The Spandrels of San Marco 1979",
     "citation": "Proceedings of the Royal Society of London. Series B, 205(1161), pp. 581–598. DOI: 10.1098/rspb.1979.0086.",
     "source": "https://doi.org/10.1098/rspb.1979.0086",
     "secondary": "https://faculty.uca.edu/benw/biol4415/papers/GouldLewontin1979.pdf",
     "description": "教堂建筑的拱肩怎样成为演化思想的比喻？一个特征存在，不等于它是为某个用途进化出来的。",
-    "note": "本站双语导读，非原文全文或逐句翻译。重点是检验适应性解释，不是声称自然选择没有作用。",
-    "rights": "原论文受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+    "note": "",
+    "rights": "User-provided source; full bilingual transcription.",
+    "local_source": "C:/Users/ME/Downloads/Gould_&Lewontin_Proc_Roy_Soc_1979_.pdf"
   },
   {
     "id": "nagel",
@@ -85,14 +87,15 @@
     "author": "Thomas Nagel",
     "year": 1974,
     "category": "心智与判断",
-    "kind": "guide",
+    "kind": "full",
     "folder": "What Is It Like to Be a Bat 1974",
     "citation": "The Philosophical Review, 83(4), pp. 435–450. DOI: 10.2307/2183914.",
     "source": "https://doi.org/10.2307/2183914",
     "secondary": "https://philosophy.uconn.edu/wp-content/uploads/sites/365/2020/03/Nagel-What-is-it-like-to-be-a-bat.pdf",
     "description": "知道蝙蝠的大脑和回声定位机制，能否知道它体验世界的感觉？",
-    "note": "本站双语导读，非原文全文或逐句翻译。可与图灵的《计算机器与智能》对照阅读。",
-    "rights": "原论文受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+    "note": "",
+    "rights": "User-provided source; full bilingual transcription.",
+    "local_source": "C:/Users/ME/Downloads/Nagel-What-is-it-like-to-be-a-bat.pdf"
   },
   {
     "id": "feynman",
@@ -117,14 +120,15 @@
     "author": "Vannevar Bush",
     "year": 1945,
     "category": "信息与技术",
-    "kind": "guide",
+    "kind": "full",
     "folder": "As We May Think 1945",
     "citation": "The Atlantic, July 1945.",
     "source": "https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/",
     "secondary": "https://www.cs.princeton.edu/~chazelle/courses/BIB/vannevar-bush.pdf",
     "description": "在个人电脑出现之前，设想一张可以储存资料、批注并连接阅读线索的书桌。",
-    "note": "本站双语导读，非原文全文或逐句翻译。Memex 是设想中的机械化知识工具，不是已经实现的个人电脑。",
-    "rights": "原文章受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+    "note": "",
+    "rights": "User-provided source; full bilingual transcription.",
+    "local_source": "C:/Users/ME/Downloads/vannevar-bush.pdf"
   },
   {
     "id": "keynes",
@@ -149,14 +153,15 @@
     "author": "Amos Tversky; Daniel Kahneman",
     "year": 1974,
     "category": "心智与判断",
-    "kind": "guide",
+    "kind": "full",
     "folder": "Judgment under Uncertainty 1974",
     "citation": "Science, 185(4157), 27 September 1974, pp. 1124–1131. DOI: 10.1126/science.185.4157.1124.",
     "source": "https://doi.org/10.1126/science.185.4157.1124",
     "secondary": "https://pubmed.ncbi.nlm.nih.gov/17835457/",
     "description": "代表性、可得性与锚定：直觉怎样节省思考，又怎样制造可预测的错误？",
-    "note": "本站双语导读，非原文全文或逐句翻译。原文实验中的数字与条件请在原文中阅读，本页不重构实验结果。",
-    "rights": "原论文受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+    "note": "",
+    "rights": "User-provided source; full bilingual transcription.",
+    "local_source": "C:/Users/ME/Downloads/TverskyKa74.pdf"
   },
   {
     "id": "wigner",
@@ -165,14 +170,15 @@
     "author": "Eugene P. Wigner",
     "year": 1960,
     "category": "数学与物理",
-    "kind": "guide",
+    "kind": "full",
     "folder": "The Unreasonable Effectiveness of Mathematics 1960",
     "citation": "Communications on Pure and Applied Mathematics, 13(1), February 1960, pp. 1–14. DOI: 10.1002/cpa.3160130102.",
     "source": "https://doi.org/10.1002/cpa.3160130102",
     "secondary": "https://web.physics.utah.edu/~detar/phys4910/readings/fundamentals/Wigner.html",
     "description": "抽象数学为什么能如此准确地描述自然？关于数学、物理和解释的经典追问。",
-    "note": "本站双语导读，非原文全文或逐句翻译。文章讨论的是数学在自然科学中的有效性，并不宣称每个现象都能被数学完整描述。",
-    "rights": "原文章受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+    "note": "",
+    "rights": "User-provided source; full bilingual transcription.",
+    "local_source": "C:/Users/ME/.codex/attachments/65f4ea0f-a119-41ec-aa90-486c9110fc98/已粘贴的文本.txt"
   },
   {
     "id": "lorenz",
@@ -181,14 +187,15 @@
     "author": "Edward N. Lorenz",
     "year": 1972,
     "category": "数学与物理",
-    "kind": "guide",
+    "kind": "full",
     "folder": "Predictability and the Butterfly Effect 1972",
     "citation": "AAAS talk, 29 December 1972, Boston.",
     "source": "https://wind.mit.edu/~emanuel/Lorenz/EdLorenz/Butterfly_1972.pdf",
     "secondary": "https://wind.mit.edu/~emanuel/Lorenz/EdLorenz/publications_all.htm",
     "description": "从蝴蝶效应的原始设问，理解微小差异如何限制长期天气预测。",
-    "note": "本站双语导读，非原文全文或逐句翻译。此篇为 1972 年演讲，不是 1963 年《确定性的非周期流》论文；题目是研究问题，不是已经证明的单只蝴蝶因果故事。",
-    "rights": "未确认原演讲的全文转载授权，本页仅提供本站编写的双语导读与来源链接。"
+    "note": "",
+    "rights": "User-provided source; full bilingual transcription.",
+    "local_source": "C:/Users/ME/Downloads/Butterfly_1972.pdf"
   },
   {
     "id": "miner",
@@ -213,13 +220,14 @@
     "author": "Elinor Ostrom",
     "year": 2009,
     "category": "经济与社会",
-    "kind": "guide",
+    "kind": "full",
     "folder": "Beyond Markets and States 2009",
     "citation": "Nobel Prize Lecture, 8 December 2009, Stockholm.",
     "source": "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf",
     "secondary": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/",
     "description": "森林、渔场与灌溉系统由使用者共同管理时，人们怎样建立可持续的合作规则？",
-    "note": "本站双语导读，非原文全文或逐句翻译。共同管理能否成功取决于规则、监督和情境，不意味着所有公共资源都会被自动保护。",
-    "rights": "原演讲受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+    "note": "",
+    "rights": "User-provided source; full bilingual transcription.",
+    "local_source": "C:/Users/ME/Downloads/ostrom_lecture.pdf"
   }
 ]

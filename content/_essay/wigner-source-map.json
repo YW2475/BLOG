@@ -6,45 +6,296 @@
     "author": "Eugene P. Wigner",
     "year": 1960,
     "category": "数学与物理",
-    "kind": "guide",
+    "kind": "full",
     "folder": "The Unreasonable Effectiveness of Mathematics 1960",
     "citation": "Communications on Pure and Applied Mathematics, 13(1), February 1960, pp. 1–14. DOI: 10.1002/cpa.3160130102.",
     "source": "https://doi.org/10.1002/cpa.3160130102",
     "secondary": "https://web.physics.utah.edu/~detar/phys4910/readings/fundamentals/Wigner.html",
     "description": "抽象数学为什么能如此准确地描述自然？关于数学、物理和解释的经典追问。",
-    "note": "本站双语导读，非原文全文或逐句翻译。文章讨论的是数学在自然科学中的有效性，并不宣称每个现象都能被数学完整描述。",
-    "rights": "原文章受版权保护，本页仅提供本站编写的双语导读与来源链接。"
+    "note": "",
+    "rights": "User-provided source; full bilingual transcription.",
+    "local_source": "C:/Users/ME/.codex/attachments/65f4ea0f-a119-41ec-aa90-486c9110fc98/已粘贴的文本.txt"
   },
-  "scope": "guide",
-  "translation_method": "editor-authored bilingual guide",
+  "scope": "full",
+  "translation_method": "assistant-translated; user-provided source",
   "glossary": {
     "mathematical concept": "数学概念",
     "physical law": "物理定律"
   },
   "blocks": [
     {
-      "id": "G001",
-      "type": "paragraph",
-      "en": "Wigner asks why mathematics developed through abstract reasoning works so well in describing physical phenomena. The usefulness itself becomes the object of inquiry.",
-      "zh": "维格纳追问：通过抽象推理发展起来的数学，为什么能如此有效地描述物理现象？有效性本身成为了需要解释的问题。"
+      "id": "Q001",
+      "type": "quote",
+      "en": "Mathematics, rightly viewed, possesses not only truth, but supreme beauty—a beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of painting or music, yet sublimely pure, and capable of a stern perfection such as only the greatest art can show. The true spirit of delight, the exaltation, the sense of being more than Man, which is the touchstone of the highest excellence, is to be found in mathematics as surely as in poetry.",
+      "page": null,
+      "zh": "正确地看待数学，就会发现它不仅拥有真理，而且拥有至高的美——一种像雕塑那样冷峻、严肃的美；它不诉诸人性中软弱的部分，没有绘画或音乐的华丽装饰，却崇高而纯粹，能够达到只有最伟大的艺术才能呈现的严格完美。真正的欢欣精神、激情以及超越凡人的感受，是最高卓越的试金石；它们在数学中与在诗歌中同样可以找到。"
     },
     {
-      "id": "G002",
       "type": "paragraph",
-      "en": "Distinguish fitting a formula to known observations from finding that a mathematical framework reaches further than expected. The latter makes the puzzle especially striking.",
-      "zh": "应当区分两件事：为已知观察拟合一个公式，以及发现某个数学框架适用的范围超出了预期。后一种情形使这个疑问格外鲜明。"
+      "en": "--BERTRAND RUSSELL, Study of Mathematics",
+      "page": null,
+      "id": "S001",
+      "zh": "——伯特兰·罗素，《数学研究》"
     },
     {
-      "id": "G003",
       "type": "paragraph",
-      "en": "This is a conceptual essay, so read its examples as invitations to examine the relationship between mathematical concepts and physical laws. It is not a technical proof of universal mathematical coverage.",
-      "zh": "这是一篇概念性的文章，可以借它的例子考察数学概念与物理定律的关系。它不是一份证明数学能够包揽一切现象的技术证明。"
+      "en": "THERE IS A story about two friends, who were classmates in high school, talking about their jobs. One of them became a statistician and was working on population trends. He showed a reprint to his former classmate. The reprint started, as usual, with the Gaussian distribution and the statistician explained to his former classmate the meaning of the symbols for the actual population, for the average population, and so on. His classmate was a bit incredulous and was not quite sure whether the statistician was pulling his leg. \"How can you know that?\" was his query. \"And what is this symbol here?\" \"Oh,\" said the statistician, \"this is pi.\" \"What is that?\" \"The ratio of the circumference of the circle to its diameter.\" \"Well, now you are pushing your joke too far,\" said the classmate, \"surely the population has nothing to do with the circumference of the circle.\"",
+      "page": null,
+      "id": "S002",
+      "zh": "有这样一个故事：两位高中同学谈起各自的工作。其中一位成了统计学家，从事人口趋势研究。他拿出一篇论文抽印本给老同学看。论文像通常那样以高斯分布开篇，统计学家向同学解释实际人口、平均人口等符号的含义。同学有些不信，也拿不准统计学家是不是在捉弄他。“你怎么会知道这些？”他问，“这里这个符号又是什么？”“哦，”统计学家说，“这是π。”“那是什么？”“圆的周长与直径之比。”“好了，你这玩笑开得太过分了，”同学说，“人口总不至于和圆的周长有什么关系吧。”"
     },
     {
-      "id": "G004",
       "type": "paragraph",
-      "en": "Reading question: does successful prediction fully explain why a model works? Compare practical confidence in a theory with an explanation of its remarkable success.",
-      "zh": "阅读时可以追问：预测成功，是否就完全解释了一个模型为什么有效？可以比较对理论的实用信心，与对其惊人成功的解释。"
+      "en": "Naturally, we are inclined to smile about the simplicity of the classmate's approach. Nevertheless, when I heard this story, I had to admit to an eerie feeling because, surely, the reaction of the classmate betrayed only plain common sense. I was even more confused when, not many days later, someone came to me and expressed his bewilderment [1 The remark to be quoted was made by F. Werner when he was a student in Princeton.] with the fact that we make a rather narrow selection when choosing the data on which we test our theories. \"How do we know that, if we made a theory which focuses its attention on phenomena we disregard and disregards some of the phenomena now commanding our attention, that we could not build another theory which has little in common with the present one but which, nevertheless, explains just as many phenomena as the present theory?\" It has to be admitted that we have no definite evidence that there is no such theory.",
+      "page": null,
+      "id": "S003",
+      "zh": "我们自然倾向于对这位同学想法的简单报以一笑。不过，我听到这个故事时，不得不承认有一种奇怪的感觉，因为这位同学的反应显然不过是朴素的常识。几天后，有人来向我表示困惑，我就更加迷惘了：[1 下文引述的话，是F. Werner在普林斯顿求学时说的。]我们检验理论时，所选择的数据范围相当狭窄。“如果我们建立一种理论，把注意力放在目前忽略的现象上，而忽略目前吸引我们注意的某些现象，我们怎么知道不能建立另一种理论？这种理论与现有理论几乎没有共同之处，却仍能解释同样多的现象。”必须承认，我们没有确凿证据证明不存在这样的理论。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The preceding two stories illustrate the two main points which are the subjects of the present discourse. The first point is that mathematical concepts turn up in entirely unexpected connections. Moreover, they often permit an unexpectedly close and accurate description of the phenomena in these connections. Secondly, just because of this circumstance, and because we do not understand the reasons of their usefulness, we cannot know whether a theory formulated in terms of mathematical concepts is uniquely appropriate. We are in a position similar to that of a man who was provided with a bunch of keys and who, having to open several doors in succession, always hit on the right key on the first or second trial. He became skeptical concerning the uniqueness of the coordination between keys and doors.",
+      "page": null,
+      "id": "S004",
+      "zh": "上面两个故事说明了本次讨论的两个主要问题。第一，数学概念会在完全意想不到的联系中出现；而且，它们常能对这些联系中的现象给出出乎意料地贴切、精确的描述。第二，正因为如此，而且由于我们不了解它们何以有用，我们无法知道用数学概念表述的理论是否具有唯一的适切性。我们的处境就像一个拿到一串钥匙的人：他必须依次打开几扇门，每次第一次或第二次尝试就找到了正确的钥匙。他因此对钥匙与门之间对应关系的唯一性产生了怀疑。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Most of what will be said on these questions will not be new; it has probably occurred to most scientists in one form or another. My principal aim is to illuminate it from several sides. The first point is that the enormous usefulness of mathematics in the natural sciences is something bordering on the mysterious and that there is no rational explanation for it. Second, it is just this uncanny usefulness of mathematical concepts that raises the question of the uniqueness of our physical theories. In order to establish the first point, that mathematics plays an unreasonably important role in physics, it will be useful to say a few words on the question, \"What is mathematics?\", then, \"What is physics?\", then, how mathematics enters physical theories, and last, why the success of mathematics in its role in physics appears so baffling. Much less will be said on the second point: the uniqueness of the theories of physics. A proper answer to this question would require elaborate experimental and theoretical work which has not been undertaken to date.",
+      "page": null,
+      "id": "S005",
+      "zh": "下面关于这些问题的大部分论述并不新颖；多数科学家大概都以某种形式想到过。我的主要目的，是从几个方面加以阐明。第一点是，数学在自然科学中的巨大用处几乎是神秘的，没有合理的解释。第二点是，恰恰是数学概念这种不可思议的用处，引出了物理理论是否唯一的问题。为了确立第一点，即数学在物理学中发挥着大得不合常理的作用，先谈谈“数学是什么”，再谈“物理学是什么”、数学如何进入物理理论，最后谈数学在物理学中的成功为何令人困惑，会有所帮助。第二点，即物理理论的唯一性，将谈得少得多。要恰当地回答这个问题，需要细致的实验与理论工作，而这些工作迄今尚未开展。"
+    },
+    {
+      "type": "heading",
+      "en": "WHAT IS MATHEMATICS?",
+      "page": null,
+      "id": "H001",
+      "zh": "数学是什么？"
+    },
+    {
+      "type": "paragraph",
+      "en": "Somebody once said that philosophy is the misuse of a terminology which was invented just for this purpose. [2 This statement is quoted here from W. Dubislav's Die Philosophie der Mathematik in der Gegenwart (Berlin: Junker and Dunnhaupt Verlag, 1932), p. 1.] In the same vein, I would say that mathematics is the science of skillful operations with concepts and rules invented just for this purpose. The principal emphasis is on the invention of concepts. Mathematics would soon run out of interesting theorems if these had to be formulated in terms of the concepts which already appear in the axioms. Furthermore, whereas it is unquestionably true that the concepts of elementary mathematics and particularly elementary geometry were formulated to describe entities which are directly suggested by the actual world, the same does not seem to be true of the more advanced concepts, in particular the concepts which play such an important role in physics. Thus, the rules for operations with pairs of numbers are obviously designed to give the same results as the operations with fractions which we first learned without reference to \"pairs of numbers.\" The rules for the operations with sequences, that is, with irrational numbers, still belong to the category of rules which were determined so as to reproduce rules for the operations with quantities which were already known to us. Most more advanced mathematical concepts, such as complex numbers, algebras, linear operators, Borel sets—and this list could be continued almost indefinitely—were so devised that they are apt subjects on which the mathematician can demonstrate his ingenuity and sense of formal beauty. In fact, the definition of these concepts, with a realization that interesting and ingenious considerations could be applied to them, is the first demonstration of the ingeniousness of the mathematician who defines them. The depth of thought which goes into the formulation of the mathematical concepts is later justified by the skill with which these concepts are used. The great mathematician fully, almost ruthlessly, exploits the domain of permissible reasoning and skirts the impermissible. That his recklessness does not lead him into a morass of contradictions is a miracle in itself: certainly it is hard to believe that our reasoning power was brought, by Darwin's process of natural selection, to the perfection which it seems to possess. However, this is not our present subject. The principal point which will have to be recalled later is that the mathematician could formulate only a handful of interesting theorems without defining concepts beyond those contained in the axioms and that the concepts outside those contained in the axioms are defined with a view of permitting ingenious logical operations which appeal to our aesthetic sense both as operations and also in their results of great generality and simplicity. [3 M. Polanyi, in his Personal Knowledge (Chicago: University of Chicago Press, 1958), says: \"All these difficulties are but consequences of our refusal to see that mathematics cannot be defined without acknowledging its most obvious feature: namely, that it is interesting\" (p 188).]",
+      "page": null,
+      "id": "S006",
+      "zh": "有人说过，哲学就是误用一套专为此目的发明的术语。[2 此说引自W. Dubislav的《当代数学哲学》（柏林：Junker and Dunnhaupt出版社，1932），第1页。]沿着类似思路，我会说，数学是运用专为此目的发明的概念和规则进行巧妙操作的科学。重点在于概念的发明。如果有趣的定理必须仅用公理中已有的概念来表述，数学很快就会无定理可谈。而且，虽然初等数学、尤其初等几何的概念，无疑是为了描述现实世界直接提示的对象而制定的，但更高等的概念，尤其那些在物理学中如此重要的概念，似乎并非如此。例如，数对的运算规则显然是为了得到与分数运算相同的结果而设计的，而我们最初学习分数时并没有涉及“数对”。序列的运算规则，也就是无理数的运算规则，仍属于为了再现已知量的运算规则而制定的规则。多数更高等的数学概念，如复数、代数、线性算子、博雷尔集——这个名单几乎可以无限延长——其设计方式，使它们成为数学家展示才智与形式美感的适宜对象。事实上，定义这些概念，并意识到可以对它们运用有趣而巧妙的思考，已经是定义者才智的首次展示。后来运用这些概念的技巧，又证明了概念形成时思想的深度。伟大的数学家充分地、几乎毫不留情地利用允许推理的领域，并在不允许的边缘行走。他的大胆没有使他陷入矛盾泥潭，本身就是奇迹：确实很难相信，我们的推理能力通过达尔文式自然选择达到了它似乎拥有的完美程度。不过这不是当前的主题。后面需要记住的要点是：如果不定义超出公理所含概念的新概念，数学家只能建立少数有趣的定理；而那些超出公理的概念，是为了允许巧妙的逻辑操作而定义的，这些操作本身，以及其高度普遍而简单的结果，都能满足我们的审美感。[3 M. Polanyi在《个人知识》（芝加哥：芝加哥大学出版社，1958）中说：“所有这些困难，不过是我们拒绝承认以下事实的后果：如果不承认数学最明显的特征——即它是有趣的——就无法给数学下定义。”（第188页）]"
+    },
+    {
+      "type": "paragraph",
+      "en": "The complex numbers provide a particularly striking example for the foregoing. Certainly, nothing in our experience suggests the introduction of these quantities. Indeed, if a mathematician is asked to justify his interest in complex numbers, he will point, with some indignation, to the many beautiful theorems in the theory of equations, of power series, and of analytic functions in general, which owe their origin to the introduction of complex numbers. The mathematician is not willing to give up his interest in these most beautiful accomplishments of his genius. [4 The reader may be interested, in this connection, in Hilbert's rather testy remarks about intuitionism which \"seeks to break up and to disfigure mathematics,\" Abh. Math. Sem., Univ. Hamburg, 157 (1922), or Gesammelte Werke (Berlin: Springer, 1935), p. 188.]",
+      "page": null,
+      "id": "S007",
+      "zh": "复数是上述情形的一个特别鲜明的例子。我们的经验中当然没有什么提示我们引入这种量。事实上，如果请数学家解释他为何对复数感兴趣，他会带着些许愤慨，指出方程理论、幂级数理论以及一般的解析函数理论中，有许多美妙定理都起源于复数的引入。数学家不愿放弃对这些体现其天才的最美成就的兴趣。[4 对此，读者也许会对希尔伯特颇为恼怒地批评直觉主义的话感兴趣：它“试图拆散并毁损数学”。见《汉堡大学数学研讨班论文集》，157（1922），或《全集》（柏林：Springer，1935），第188页。]"
+    },
+    {
+      "type": "heading",
+      "en": "WHAT IS PHYSICS?",
+      "page": null,
+      "id": "H002",
+      "zh": "物理学是什么？"
+    },
+    {
+      "type": "paragraph",
+      "en": "The physicist is interested in discovering the laws of inanimate nature. In order to understand this statement, it is necessary to analyze the concept, \"law of nature.\"",
+      "page": null,
+      "id": "S008",
+      "zh": "物理学家致力于发现无生命自然界的规律。要理解这句话，就必须分析“自然规律”这个概念。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The world around us is of baffling complexity and the most obvious fact about it is that we cannot predict the future. Although the joke attributes only to the optimist the view that the future is uncertain, the optimist is right in this case: the future is unpredictable. It is, as Schrodinger has remarked, a miracle that in spite of the baffling complexity of the world, certain regularities in the events could be discovered. One such regularity, discovered by Galileo, is that two rocks, dropped at the same time from the same height, reach the ground at the same time. The laws of nature are concerned with such regularities. Galileo's regularity is a prototype of a large class of regularities. It is a surprising regularity for three reasons.",
+      "page": null,
+      "id": "S009",
+      "zh": "我们周围的世界复杂得令人困惑，关于它最明显的事实，就是我们无法预测未来。虽然有句笑话把“未来是不确定的”这种看法只归给乐观主义者，但在这里乐观主义者是对的：未来不可预测。正如薛定谔指出的，尽管世界如此复杂，我们仍能发现事件中的某些规律性，这是一个奇迹。伽利略发现的一种规律性是：两块石头同时从同一高度落下，会同时到达地面。自然规律讨论的就是这样的规律性。伽利略的规律性是一大类规律性的典型。它令人惊讶，有三个原因。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The first reason that it is surprising is that it is true not only in Pisa, and in Galileo's time, it is true everywhere on the Earth, was always true, and will always be true. This property of the regularity is a recognized invariance property and, as I had occasion to point out some time ago, without invariance principles similar to those implied in the preceding generalization of Galileo's observation, physics would not be possible. The second surprising feature is that the regularity which we are discussing is independent of so many conditions which could have an effect on it. It is valid no matter whether it rains or not, whether the experiment is carried out in a room or from the Leaning Tower, no matter whether the person who drops the rocks is a man or a woman. It is valid even if the two rocks are dropped, simultaneously and from the same height, by two different people. There are, obviously, innumerable other conditions which are all immaterial from the point of view of the validity of Galileo's regularity. The irrelevancy of so many circumstances which could play a role in the phenomenon observed has also been called an invariance. However, this invariance is of a different character from the preceding one since it cannot be formulated as a general principle. The exploration of the conditions which do, and which do not, influence a phenomenon is part of the early experimental exploration of a field. It is the skill and ingenuity of the experimenter which show him phenomena which depend on a relatively narrow set of relatively easily realizable and reproducible conditions. [5 See, in this connection, the graphic essay of M. Deutsch, Daedalus 87, 86 (1958). A. Shimony has called my attention to a similar passage in C. S. Peirce's Essays in the Philosophy of Science (New York: The Liberal Arts Press, 1957), p. 237.] In the present case, Galileo's restriction of his observations to relatively heavy bodies was the most important step in this regard. Again, it is true that if there were no phenomena which are independent of all but a manageably small set of conditions, physics would be impossible.",
+      "page": null,
+      "id": "S010",
+      "zh": "第一个原因是，它不仅在比萨、在伽利略的时代成立，而且在地球上任何地方都成立，过去始终成立，将来也始终成立。这种性质是一种公认的不变性；我前些时候曾指出，如果没有类似于上述对伽利略观察结果加以推广时所蕴含的不变性原则，物理学就不可能存在。第二个令人惊讶的特点是，这种规律性不依赖许多本可能影响它的条件。无论下不下雨、实验在室内还是在斜塔上进行、扔石头的是男人还是女人，它都成立。即使两块石头由两个不同的人同时从同一高度扔下，它仍成立。显然，还有无数其他条件与伽利略规律性的成立无关。这么多可能参与所观察现象的情形竟然无关，也被称作不变性。不过这种不变性与前一种性质不同，因为它不能表述成一条一般原则。探究哪些条件影响一种现象、哪些不影响，是一个领域早期实验研究的一部分。实验者凭借技巧与才智，找出那些只依赖少数相对容易实现、容易复现的条件的现象。[5 对此，可参见M. Deutsch生动的文章，《Daedalus》87，86（1958）。A. Shimony提醒我，C. S. Peirce的《科学哲学论文集》（纽约：The Liberal Arts Press，1957）第237页有类似论述。]在这里，伽利略把观察限制在相对较重的物体上，是最重要的一步。同样，如果不存在那些只依赖一小组可处理条件、而与其余条件无关的现象，物理学也不可能存在。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The preceding two points, though highly significant from the point of view of the philosopher, are not the ones which surprised Galileo most, nor do they contain a specific law of nature. The law of nature is contained in the statement that the length of time which it takes for a heavy object to fall from a given height is independent of the size, material, and shape of the body which drops. In the framework of Newton's second \"law,\" this amounts to the statement that the gravitational force which acts on the falling body is proportional to its mass but independent of the size, material, and shape of the body which falls.",
+      "page": null,
+      "id": "S011",
+      "zh": "前两点虽然对哲学家非常重要，却不是最令伽利略惊讶的地方，也没有包含一条具体的自然规律。自然规律包含在以下陈述中：重物从给定高度落下所需的时间，与物体的大小、材料和形状无关。在牛顿第二“定律”的框架内，这相当于说，作用于下落物体的引力与其质量成正比，却与其大小、材料和形状无关。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The preceding discussion is intended to remind us, first, that it is not at all natural that \"laws of nature\" exist, much less that man is able to discover them. [6 E. Schrodinger, in his What Is Life? (Cambridge: Cambridge University Press, 1945), p. 31, says that this second miracle may well be beyond human understanding.] The present writer had occasion, some time ago, to call attention to the succession of layers of \"laws of nature,\" each layer containing more general and more encompassing laws than the previous one and its discovery constituting a deeper penetration into the structure of the universe than the layers recognized before. However, the point which is most significant in the present context is that all these laws of nature contain, in even their remotest consequences, only a small part of our knowledge of the inanimate world. All the laws of nature are conditional statements which permit a prediction of some future events on the basis of the knowledge of the present, except that some aspects of the present state of the world, in practice the overwhelming majority of the determinants of the present state of the world, are irrelevant from the point of view of the prediction. The irrelevancy is meant in the sense of the second point in the discussion of Galileo's theorem. [7 The writer feels sure that it is unnecessary to mention that Galileo's theorem, as given in the text, does not exhaust the content of Galileo's observations in connection with the laws of freely falling bodies.]",
+      "page": null,
+      "id": "S012",
+      "zh": "上述讨论首先想提醒我们，“自然规律”的存在绝不是理所当然的，人类能够发现它们更不是。[6 E. Schrodinger在《生命是什么？》（剑桥：剑桥大学出版社，1945）第31页说，这第二个奇迹很可能超出了人类的理解能力。]我前些时候曾指出，“自然规律”存在层层递进的序列，每一层所包含的规律都比前一层更普遍、涵盖更广；发现新一层，比认识到此前的各层更深入地进入了宇宙结构。不过，就当前讨论而言，最重要的是：所有这些自然规律，即便考虑其最遥远的推论，也只包含我们对无生命世界知识的一小部分。所有自然规律都是条件陈述，允许我们依据对现在的了解预测某些未来事件；但世界现状的某些方面——实际上是决定现状的绝大多数因素——从预测角度看都无关紧要。这里“无关”的含义，与讨论伽利略定理时的第二点相同。[7 我确信，无须说明，正文中给出的伽利略定理并没有穷尽伽利略关于自由落体规律的观察内容。]"
+    },
+    {
+      "type": "paragraph",
+      "en": "As regards the present state of the world, such as the existence of the earth on which we live and on which Galileo's experiments were performed, the existence of the sun and of all our surroundings, the laws of nature are entirely silent. It is in consonance with this, first, that the laws of nature can be used to predict future events only under exceptional circumstances—when all the relevant determinants of the present state of the world are known. It is also in consonance with this that the construction of machines, the functioning of which he can foresee, constitutes the most spectacular accomplishment of the physicist. In these machines, the physicist creates a situation in which all the relevant coordinates are known so that the behavior of the machine can be predicted. Radars and nuclear reactors are examples of such machines.",
+      "page": null,
+      "id": "S013",
+      "zh": "至于世界的现状，例如我们所居住、伽利略曾在其上做实验的地球的存在，太阳的存在，以及我们周围一切事物的存在，自然规律完全保持沉默。与此一致，自然规律只有在特殊情况下才能用来预测未来事件——即世界现状的所有相关决定因素都已知时。同样与此一致，制造运行方式可以预见的机器，构成了物理学家最引人注目的成就。在这些机器中，物理学家创造了所有相关坐标都已知的情境，因此能够预测机器的行为。雷达与核反应堆就是这样的机器。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The principal purpose of the preceding discussion is to point out that the laws of nature are all conditional statements and they relate only to a very small part of our knowledge of the world. Thus, classical mechanics, which is the best known prototype of a physical theory, gives the second derivatives of the positional coordinates of all bodies, on the basis of the knowledge of the positions, etc., of these bodies. It gives no information on the existence, the present positions, or velocities of these bodies. It should be mentioned, for the sake of accuracy, that we discovered about thirty years ago that even the conditional statements cannot be entirely precise: that the conditional statements are probability laws which enable us only to place intelligent bets on future properties of the inanimate world, based on the knowledge of the present state. They do not allow us to make categorical statements, not even categorical statements conditional on the present state of the world. The probabilistic nature of the \"laws of nature\" manifests itself in the case of machines also, and can be verified, at least in the case of nuclear reactors, if one runs them at very low power. However, the additional limitation of the scope of the laws of nature which follows from their probabilistic nature will play no role in the rest of the discussion.",
+      "page": null,
+      "id": "S014",
+      "zh": "上述讨论的主要目的，是指出自然规律都是条件陈述，而且只涉及我们关于世界知识的极小部分。例如，经典力学是最熟悉的物理理论典型，它依据物体的位置等知识，给出所有物体位置坐标的二阶导数。它并不提供这些物体是否存在、当前处在什么位置或具有何种速度的信息。为准确起见应当说明，大约三十年前我们发现，即便条件陈述也不能完全精确：这些陈述是概率规律，只能让我们依据对当前状态的了解，对无生命世界未来的性质作出有根据的押注。它们不允许我们作出确定无疑的陈述，甚至不允许作出以世界现状为条件的确定陈述。“自然规律”的概率性质也表现在机器上；至少在核反应堆以很低功率运行时，可以对此加以验证。不过，自然规律的概率性质对其适用范围施加的额外限制，在下文讨论中不会起作用。"
+    },
+    {
+      "type": "heading",
+      "en": "THE ROLE OF MATHEMATICS IN PHYSICAL THEORIES",
+      "page": null,
+      "id": "H003",
+      "zh": "数学在物理理论中的作用"
+    },
+    {
+      "type": "paragraph",
+      "en": "Having refreshed our minds as to the essence of mathematics and physics, we should be in a better position to review the role of mathematics in physical theories.",
+      "page": null,
+      "id": "S015",
+      "zh": "回顾了数学和物理学的本质之后，我们应当更有条件审视数学在物理理论中的作用。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Naturally, we do use mathematics in everyday physics to evaluate the results of the laws of nature, to apply the conditional statements to the particular conditions which happen to prevail or happen to interest us. In order that this be possible, the laws of nature must already be formulated in mathematical language. However, the role of evaluating the consequences of already established theories is not the most important role of mathematics in physics. Mathematics, or, rather, applied mathematics, is not so much the master of the situation in this function: it is merely serving as a tool.",
+      "page": null,
+      "id": "S016",
+      "zh": "当然，在日常物理工作中，我们确实运用数学来计算自然规律的结果，把条件陈述应用于实际存在或恰好引起我们兴趣的特定条件。要做到这一点，自然规律必须已经用数学语言表述。然而，计算既有理论的推论，并不是数学在物理学中最重要的作用。在这种作用中，数学，或者更准确地说应用数学，并非局面的主宰：它只是一种工具。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Mathematics does play, however, also a more sovereign role in physics. This was already implied in the statement, made when discussing the role of applied mathematics, that the laws of nature must have been formulated in the language of mathematics to be an object for the use of applied mathematics. The statement that the laws of nature are written in the language of mathematics was properly made three hundred years ago;[8 It is attributed to Galileo] it is now more true than ever before. In order to show the importance which mathematical concepts possess in the formulation of the laws of physics, let us recall, as an example, the axioms of quantum mechanics as formulated, explicitly, by the great physicist, Dirac. There are two basic concepts in quantum mechanics: states and observables. The states are vectors in Hilbert space, the observables self-adjoint operators on these vectors. The possible values of the observations are the characteristic values of the operators—but we had better stop here lest we engage in a listing of the mathematical concepts developed in the theory of linear operators.",
+      "page": null,
+      "id": "S017",
+      "zh": "然而，数学在物理学中也扮演着更自主的角色。讨论应用数学时已经暗含了这一点：自然规律必须先用数学语言表述，才能成为应用数学的使用对象。三百年前，人们已经恰当地说过，自然规律是用数学语言写成的；[8 这句话被归于伽利略。]如今它比以往任何时候都更真实。为了说明数学概念在物理定律形成中的重要性，让我们以伟大物理学家狄拉克明确表述的量子力学公理为例。量子力学有两个基本概念：态与可观测量。态是希尔伯特空间中的向量，可观测量是作用于这些向量的自伴算子。观测的可能值是算子的特征值——不过最好就此打住，免得罗列起线性算子理论中发展出来的数学概念。"
+    },
+    {
+      "type": "paragraph",
+      "en": "It is true, of course, that physics chooses certain mathematical concepts for the formulation of the laws of nature, and surely only a fraction of all mathematical concepts is used in physics. It is true also that the concepts which were chosen were not selected arbitrarily from a listing of mathematical terms but were developed, in many if not most cases, independently by the physicist and recognized then as having been conceived before by the mathematician. It is not true, however, as is so often stated, that this had to happen because mathematics uses the simplest possible concepts and these were bound to occur in any formalism. As we saw before, the concepts of mathematics are not chosen for their conceptual simplicityeven sequences of pairs of numbers are far from being the simplest conceptsbut for their amenability to clever manipulations and to striking, brilliant arguments. Let us not forget that the Hilbert space of quantum mechanics is the complex Hilbert space, with a Hermitean scalar product. Surely to the unpreoccupied mind, complex numbers are far from natural or simple and they cannot be suggested by physical observations. Furthermore, the use of complex numbers is in this case not a calculational trick of applied mathematics but comes close to being a necessity in the formulation of the laws of quantum mechanics. Finally, it now begins to appear that not only complex numbers but so-called analytic functions are destined to play a decisive role in the formulation of quantum theory. I am referring to the rapidly developing theory of dispersion relations.",
+      "page": null,
+      "id": "S018",
+      "zh": "当然，物理学会选择某些数学概念来表述自然规律，而用于物理学的无疑只是全部数学概念中的一部分。所选择的概念也并非从数学术语清单中任意挑选；许多、甚至多数情况下，它们由物理学家独立发展出来，然后才被认识到数学家此前已构想过。然而，经常有人说，这是必然的，因为数学采用最简单的概念，而这些概念必定会出现在任何形式体系中；这个说法并不正确。正如前面所见，数学概念的选择，并不是因为其概念上的简单性——甚至数对序列都远非最简单的概念——而是因为它们便于巧妙操作，并适于精彩、出色的论证。不要忘记，量子力学的希尔伯特空间是具有厄米内积的复希尔伯特空间。对于不抱成见的头脑来说，复数显然既不自然，也不简单，更不可能由物理观察直接提示。而且，在这里使用复数并非应用数学中的一种计算技巧，而近乎成为表述量子力学规律的必要条件。最后，现在开始显现的是，不仅复数，而且所谓解析函数，也注定将在量子理论的表述中发挥决定性作用。我指的是迅速发展的色散关系理论。"
+    },
+    {
+      "type": "paragraph",
+      "en": "It is difficult to avoid the impression that a miracle confronts us here, quite comparable in its striking nature to the miracle that the human mind can string a thousand arguments together without getting itself into contradictions, or to the two miracles of the existence of laws of nature and of the human mind's capacity to divine them. The observation which comes closest to an explanation for the mathematical concepts' cropping up in physics which I know is Einstein's statement that the only physical theories which we are willing to accept are the beautiful ones. It stands to argue that the concepts of mathematics, which invite the exercise of so much wit, have the quality of beauty. However, Einstein's observation can at best explain properties of theories which we are willing to believe and has no reference to the intrinsic accuracy of the theory. We shall, therefore, turn to this latter question.",
+      "page": null,
+      "id": "S019",
+      "zh": "我们很难避免这样的印象：这里有一个奇迹；它的惊人程度，不亚于人类头脑能够把一千个论证串联起来而不陷入矛盾，也不亚于自然规律的存在及人类头脑能够猜中它们这两个奇迹。就我所知，最接近于解释数学概念为何出现在物理学中的观察，是爱因斯坦的说法：我们愿意接受的物理理论，只有那些美的理论。可以据此推论，那些容许发挥如此多才智的数学概念具有美的品质。然而，爱因斯坦的观察充其量只能解释我们愿意相信的理论所具有的性质，却与理论内在的准确性无关。因此，我们接下来讨论后一个问题。"
+    },
+    {
+      "type": "heading",
+      "en": "IS THE SUCCESS OF PHYSICAL THEORIES TRULY SURPRISING?",
+      "page": null,
+      "id": "H004",
+      "zh": "物理理论的成功真的令人惊讶吗？"
+    },
+    {
+      "type": "paragraph",
+      "en": "A possible explanation of the physicist's use of mathematics to formulate his laws of nature is that he is a somewhat irresponsible person. As a result, when he finds a connection between two quantities which resembles a connection well-known from mathematics, he will jump at the conclusion that the connection is that discussed in mathematics simply because he does not know of any other similar connection. It is not the intention of the present discussion to refute the charge that the physicist is a somewhat irresponsible person. Perhaps he is. However, it is important to point out that the mathematical formulation of the physicist's often crude experience leads in an uncanny number of cases to an amazingly accurate description of a large class of phenomena. This shows that the mathematical language has more to commend it than being the only language which we can speak; it shows that it is, in a very real sense, the correct language. Let us consider a few examples.",
+      "page": null,
+      "id": "S020",
+      "zh": "物理学家用数学来表述自然规律，一种可能的解释是：他是个有点不负责任的人。因此，当他发现两个量之间的关系类似于数学中某个熟知的关系时，便会贸然断定它就是数学中讨论的那个关系，只因为他不知道还有其他类似关系。这里的讨论并不打算反驳物理学家有点不负责任的指控；也许他的确如此。不过，应当指出的是，物理学家常常粗糙的经验，一经数学表述，在数量多得不可思议的情况下，竟能对一大类现象给出极其准确的描述。这表明，数学语言值得称道，不只是因为它是我们唯一会说的语言；它表明，在一种非常实在的意义上，这就是正确的语言。让我们来看几个例子。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The first example is the oft-quoted one of planetary motion. The laws of falling bodies became rather well established as a result of experiments carried out principally in Italy. These experiments could not be very accurate in the sense in which we understand accuracy today partly because of the effect of air resistance and partly because of the impossibility, at that time, to measure short time intervals. Nevertheless, it is not surprising that, as a result of their studies, the Italian natural scientists acquired a familiarity with the ways in which objects travel through the atmosphere. It was Newton who then brought the law of freely falling objects into relation with the motion of the moon, noted that the parabola of the thrown rock's path on the earth and the circle of the moon's path in the sky are particular cases of the same mathematical object of an ellipse, and postulated the universal law of gravitation on the basis of a single, and at that time very approximate, numerical coincidence. Philosophically, the law of gravitation as formulated by Newton was repugnant to his time and to himself. Empirically, it was based on very scanty observations. The mathematical language in which it was formulated contained the concept of a second derivative and those of us who have tried to draw an osculating circle to a curve know that the second derivative is not a very immediate concept. The law of gravity which Newton reluctantly established and which he could verify with an accuracy of about 4% has proved to be accurate to less than a ten thousandth of a per cent and became so closely associated with the idea of absolute accuracy that only recently did physicists become again bold enough to inquire into the limitations of its accuracy. [9 See, for instance, R. H. Dicke, Am. Sci., 25 (1959).] Certainly, the example of Newton's law, quoted over and over again, must be mentioned first as a monumental example of a law, formulated in terms which appear simple to the mathematician, which has proved accurate beyond all reasonable expectations. Let us just recapitulate our thesis on this example: first, the law, particularly since a second derivative appears in it, is simple only to the mathematician, not to common sense or to non-mathematically-minded freshmen; second, it is a conditional law of very limited scope. It explains nothing about the earth which attracts Galileo's rocks, or about the circular form of the moon's orbit, or about the planets of the sun. The explanation of these initial conditions is left to the geologist and the astronomer, and they have a hard time with them.",
+      "page": null,
+      "id": "S021",
+      "zh": "第一个例子是经常被引用的行星运动。主要在意大利进行的实验，使落体规律得到了相当牢固的确立。按我们今天理解的准确性，这些实验不可能十分精确，一部分由于空气阻力，一部分由于当时无法测量很短的时间间隔。不过，意大利自然科学家通过研究熟悉了物体在大气中运动的方式，并不令人惊讶。后来，牛顿把自由落体规律与月球运动联系起来，注意到地面上抛石的抛物线路径与天空中月球的圆形路径，是椭圆这一同一数学对象的特殊情形；依据一次在当时还很近似的数值吻合，他提出了万有引力定律。从哲学上说，牛顿表述的引力定律令当时的人、甚至他自己都难以接受。从经验上说，它仅以极少的观察为依据。其数学语言包含二阶导数的概念；我们中尝试过给曲线画密切圆的人都知道，二阶导数绝不是一个非常直观的概念。牛顿不情愿地确立、而他只能以约4%的精度验证的引力定律，后来被证明误差小于万分之一百分比；它与绝对准确这一观念联系得如此紧密，直到最近，物理学家才重新大胆探究其准确性的界限。[9 例如见R. H. Dicke，《Am. Sci.》，25（1959）。]牛顿定律这个反复被引用的例子，当然必须首先提及：一个用数学家认为简单的术语表述的定律，竟准确得超过一切合理预期，这是一个里程碑式的例子。就此再复述我们的论点：第一，这个定律，特别由于其中出现了二阶导数，只对数学家简单，对常识或不习惯数学思考的一年级学生并不简单；第二，它是一条适用范围极为有限的条件定律。它不解释吸引伽利略石头的地球，不解释月球轨道为什么呈圆形，也不解释太阳的行星。这些初始条件的解释留给了地质学家和天文学家，而他们对此颇费周折。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The second example is that of ordinary, elementary quantum mechanics. This originated when Max Born noticed that some rules of computation, given by Heisenberg, were formally identical with the rules of computation with matrices, established a long time before by mathematicians. Born, Jordan, and Heisenberg then proposed to replace by matrices the position and momentum variables of the equations of classical mechanics. They applied the rules of matrix mechanics to a few highly idealized problems and the results were quite satisfactory. However, there was, at that time, no rational evidence that their matrix mechanics would prove correct under more realistic conditions. Indeed, they say \"if the mechanics as here proposed should already be correct in its essential traits.\" As a matter of fact, the first application of their mechanics to a realistic problem, that of the hydrogen atom, was given several months later, by Pauli. This application gave results in agreement with experience. This was satisfactory but still understandable because Heisenberg's rules of calculation were abstracted from problems which included the old theory of the hydrogen atom. The miracle occurred only when matrix mechanics, or a mathematically equivalent theory, was applied to problems for which Heisenberg's calculating rules were meaningless. Heisenberg's rules presupposed that the classical equations of motion had solutions with certain periodicity properties; and the equations of motion of the two electrons of the helium atom, or of the even greater number of electrons of heavier atoms, simply do not have these properties, so that Heisenberg's rules cannot be applied to these cases. Nevertheless, the calculation of the lowest energy level of helium, as carried out a few months ago by Kinoshita at Cornell and by Bazley at the Bureau of Standards, agrees with the experimental data within the accuracy of the observations, which is one part in ten million. Surely in this case we \"got something out\" of the equations that we did not put in.",
+      "page": null,
+      "id": "S022",
+      "zh": "第二个例子是普通的初等量子力学。其起源在于马克斯·玻恩注意到，海森堡给出的某些计算规则，在形式上与数学家很早就建立的矩阵计算规则完全相同。于是玻恩、约尔丹和海森堡建议，用矩阵替代经典力学方程中的位置和动量变量。他们将矩阵力学规则用于几个高度理想化的问题，结果十分令人满意。但当时，没有合理证据表明矩阵力学在更现实的条件下会被证明正确。事实上，他们说：“如果这里提出的力学在基本特征上已经正确。”几个月后，泡利才首次把他们的力学用于一个现实问题，即氢原子。应用结果与经验相符。这令人满意，但仍可理解，因为海森堡的计算规则是从包括旧氢原子理论在内的问题中抽象出来的。只有当矩阵力学或与其数学等价的理论，被用于海森堡计算规则根本没有意义的问题时，奇迹才发生。海森堡的规则预设，经典运动方程的解具有某些周期性；而氦原子的两个电子，或更重原子的更多电子的运动方程，根本不具备这些性质，因此海森堡的规则不能用于它们。然而，几个月前康奈尔大学的Kinoshita和标准局的Bazley计算的氦最低能级，与实验数据在观测精度范围内一致，而该精度是千万分之一。无疑，在这里我们从方程中“得到了”并未放进去的东西。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The same is true of the qualitative characteristics of the \"complex spectra,\" that is, the spectra of heavier atoms. I wish to recall a conversation with Jordan, who told me, when the qualitative features of the spectra were derived, that a disagreement of the rules derived from quantum mechanical theory and the rules established by empirical research would have provided the last opportunity to make a change in the framework of matrix mechanics. In other words, Jordan felt that we would have been, at least temporarily, helpless had an unexpected disagreement occurred in the theory of the helium atom. This was, at that time, developed by Kellner and by Hilleraas. The mathematical formalism was too dear and unchangeable so that, had the miracle of helium which was mentioned before not occurred, a true crisis would have arisen. Surely, physics would have overcome that crisis in one way or another. It is true, on the other hand, that physics as we know it today would not be possible without a constant recurrence of miracles similar to the one of the helium atom, which is perhaps the most striking miracle that has occurred in the course of the development of elementary quantum mechanics, but by far not the only one. In fact, the number of analogous miracles is limited, in our view, only by our willingness to go after more similar ones. Quantum mechanics had, nevertheless, many almost equally striking successes which gave us the firm conviction that it is, what we call, correct.",
+      "page": null,
+      "id": "S023",
+      "zh": "“复杂光谱”的定性特征，即更重原子的光谱，也同样如此。我想回忆一次与约尔丹的谈话：他告诉我，在光谱的定性特征被推导出来时，如果量子力学理论推导的规则与经验研究确立的规则不一致，那本来就是最后一次改变矩阵力学框架的机会。换言之，约尔丹认为，如果氦原子理论出现意想不到的不一致，我们至少会暂时束手无策。当时，这一理论由Kellner和Hilleraas发展。数学形式体系太受珍视，已无法改变；所以，倘若前述氦的奇迹没有发生，就会出现真正的危机。物理学当然总会以某种方式克服危机。另一方面，如果类似氦原子的奇迹不不断重现，我们今天所知的物理学也不可能存在。氦原子的奇迹，也许是初等量子力学发展中最惊人的奇迹，但远非唯一的奇迹。事实上，在我们看来，类似奇迹的数量，只受限于我们继续寻找它们的意愿。不过，量子力学还有许多几乎同样惊人的成功，使我们坚信它具有我们所谓的“正确性”。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The last example is that of quantum electrodynamics, or the theory of the Lamb shift. Whereas Newton's theory of gravitation still had obvious connections with experience, experience entered the formulation of matrix mechanics only in the refined or sublimated form of Heisenberg's prescriptions. The quantum theory of the Lamb shift, as conceived by Bethe and established by Schwinger, is a purely mathematical theory and the only direct contribution of experiment was to show the existence of a measurable effect. The agreement with calculation is better than one part in a thousand.",
+      "page": null,
+      "id": "S024",
+      "zh": "最后一个例子是量子电动力学，或者说兰姆位移理论。牛顿的引力理论与经验尚有明显联系，而经验进入矩阵力学的表述时，只以海森堡规定的精炼或升华形式出现。贝特构想、施温格确立的兰姆位移量子理论，则是一种纯数学理论；实验唯一的直接贡献，是表明存在一种可测量的效应。理论计算与实验的吻合优于千分之一。"
+    },
+    {
+      "type": "paragraph",
+      "en": "The preceding three examples, which could be multiplied almost indefinitely, should illustrate the appropriateness and accuracy of the mathematical formulation of the laws of nature in terms of concepts chosen for their manipulability, the \"laws of nature\" being of almost fantastic accuracy but of strictly limited scope. I propose to refer to the observation which these examples illustrate as the empirical law of epistemology. Together with the laws of invariance of physical theories, it is an indispensable foundation of these theories. Without the laws of invariance the physical theories could have been given no foundation of fact; if the empirical law of epistemology were not correct, we would lack the encouragement and reassurance which are emotional necessities, without which the \"laws of nature\" could not have been successfully explored. Dr. R. G. Sachs, with whom I discussed the empirical law of epistemology, called it an article of faith of the theoretical physicist, and it is surely that. However, what he called our article of faith can be well supported by actual examples—many examples in addition to the three which have been mentioned.",
+      "page": null,
+      "id": "S025",
+      "zh": "前面三个例子几乎可以无限增加，它们应能说明：以那些因便于操作而选定的概念，对自然规律作出数学表述，具有适切性和准确性；这些“自然规律”准确得近乎神奇，却具有严格有限的适用范围。我建议把这些例子说明的观察，称作认识论的经验规律。它与物理理论的不变性规律一起，是这些理论不可或缺的基础。没有不变性规律，物理理论就无法获得事实基础；如果认识论的经验规律不成立，我们就缺乏鼓舞与安心，而这些是情感上的必需品，缺少它们，就无法成功探索“自然规律”。我曾与R. G. Sachs博士讨论这一认识论的经验规律，他称之为理论物理学家的信条；它确实是。不过，他称为信条的东西，可以得到真实例子的有力支持——除了上述三个例子，还有许多。"
+    },
+    {
+      "type": "heading",
+      "en": "THE UNIQUENESS OF THE THEORIES OF PHYSICS",
+      "page": null,
+      "id": "H005",
+      "zh": "物理理论的唯一性"
+    },
+    {
+      "type": "paragraph",
+      "en": "The empirical nature of the preceding observation seems to me to be self-evident. It surely is not a \"necessity of thought\" and it should not be necessary, in order to prove this, to point to the fact that it applies only to a very small part of our knowledge of the inanimate world. It is absurd to believe that the existence of mathematically simple expressions for the second derivative of the position is self-evident, when no similar expressions for the position itself or for the velocity exist. It is therefore surprising how readily the wonderful gift contained in the empirical law of epistemology was taken for granted. The ability of the human mind to form a string of 1000 conclusions and still remain \"right,\" which was mentioned before, is a similar gift.",
+      "page": null,
+      "id": "S026",
+      "zh": "在我看来，前述观察的经验性质是不言自明的。它当然不是一种“思维的必然性”；为证明这一点，也不必指出，它仅适用于我们对无生命世界知识中的极小部分。当位置本身或速度都没有类似表达式时，却认为位置二阶导数存在数学上简单的表达式是理所当然的，这是荒谬的。因此，人们竟如此轻易地把认识论经验规律所包含的这份奇妙礼物视为理所当然，令人惊讶。前面提到的人类头脑能够形成一连串1000个结论而仍保持“正确”的能力，也是一份类似的礼物。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Every empirical law has the disquieting quality that one does not know its limitations. We have seen that there are regularities in the events in the world around us which can be formulated in terms of mathematical concepts with an uncanny accuracy. There are, on the other hand, aspects of the world concerning which we do not believe in the existence of any accurate regularities. We call these initial conditions. The question which presents itself is whether the different regularities, that is, the various laws of nature which will be discovered, will fuse into a single consistent unit, or at least asymptotically approach such a fusion. Alternatively, it is possible that there always will be some laws of nature which have nothing in common with each other. At present, this is true, for instance, of the laws of heredity and of physics. It is even possible that some of the laws of nature will be in conflict with each other in their implications, but each convincing enough in its own domain so that we may not be willing to abandon any of them. We may resign ourselves to such a state of affairs or our interest in clearing up the conflict between the various theories may fade out. We may lose interest in the \"ultimate truth,\" that is, in a picture which is a consistent fusion into a single unit of the little pictures, formed on the various aspects of nature.",
+      "page": null,
+      "id": "S027",
+      "zh": "每一条经验规律都有一个令人不安的特点：我们不知道它的界限。我们已经看到，周围世界的事件中存在一些规律性，可以用数学概念以不可思议的精度表述。另一方面，对世界的某些方面，我们并不相信存在精确的规律性。我们把它们称作初始条件。由此产生的问题是：不同的规律性，也就是将被发现的各种自然规律，会不会融为一个一致的整体，或至少渐近地接近这种融合？另一种可能是，总会有一些自然规律彼此毫无共同之处。目前，遗传规律与物理规律就是如此。甚至某些自然规律在其推论上可能互相冲突，但各自在自己的领域中都足够有说服力，使我们不愿放弃任何一条。我们可能接受这种局面，或者逐渐失去澄清各理论冲突的兴趣。我们可能失去对“终极真理”的兴趣，也就是失去对这样一幅图景的兴趣：将自然各方面形成的小图景一致地融为一个整体。"
+    },
+    {
+      "type": "paragraph",
+      "en": "It may be useful to illustrate the alternatives by an example. We now have, in physics, two theories of great power and interest: the theory of quantum phenomena and the theory of relativity. These two theories have their roots in mutually exclusive groups of phenomena. Relativity theory applies to macroscopic bodies, such as stars. The event of coincidence, that is, in ultimate analysis of collision, is the primitive event in the theory of relativity and defines a point in space-time, or at least would define a point if the colliding panicles were infinitely small. Quantum theory has its roots in the microscopic world and, from its point of view, the event of coincidence, or of collision, even if it takes place between particles of no spatial extent, is not primitive and not at all sharply isolated in space-time. The two theories operate with different mathematical concepts—the four dimensional Riemann space and the infinite dimensional Hilbert space, respectively. So far, the two theories could not be united, that is, no mathematical formulation exists to which both of these theories are approximations. All physicists believe that a union of the two theories is inherently possible and that we shall find it. Nevertheless, it is possible also to imagine that no union of the two theories can be found. This example illustrates the two possibilities, of union and of conflict, mentioned before, both of which are conceivable.",
+      "page": null,
+      "id": "S028",
+      "zh": "用一个例子来说明这些可能性，也许有益。目前物理学中有两个强大而重要的理论：量子现象理论与相对论。这两个理论根源于互相排斥的现象群。相对论适用于恒星等宏观物体。重合事件，也就是归根结底的碰撞事件，是相对论的基本事件，定义了时空中的一个点；至少，若碰撞的粒子无限小，它就会定义一个点。量子理论根源于微观世界；从其角度看，重合或碰撞事件，即使发生在没有空间广延的粒子之间，也并非基本事件，更绝不是在时空中界限分明、孤立的事件。这两个理论分别使用不同的数学概念——四维黎曼空间与无限维希尔伯特空间。迄今，它们尚未统一，也就是说，还没有一个数学表述能够让两者都成为其近似。所有物理学家都相信，两个理论的统一本来就是可能的，而且我们会找到它。不过，也可以设想无法找到两者的统一。这个例子说明了前述融合与冲突的两种可能性，而两者都是可以想象的。"
+    },
+    {
+      "type": "paragraph",
+      "en": "In order to obtain an indication as to which alternative to expect ultimately, we can pretend to be a little more ignorant than we are and place ourselves at a lower level of knowledge than we actually possess. If we can find a fusion of our theories on this lower level of intelligence, we can confidently expect that we will find a fusion of our theories also at our real level of intelligence. On the other hand, if we would arrive at mutually contradictory theories at a somewhat lower level of knowledge, the possibility of the permanence of conflicting theories cannot be excluded for ourselves either. The level of knowledge and ingenuity is a continuous variable and it is unlikely that a relatively small variation of this continuous variable changes the attainable picture of the world from inconsistent to consistent. [10 This passage was written after a great deal of hesitation. The writer is convinced that it is useful, in epistemological discussions, to abandon the idealization that the level of human intelligence has a singular position on an absolute scale. In some cases it may even be useful to consider the attainment which is possible at the level of the intelligence of some other species. However, the writer also realizes that his thinking along the lines indicated in the text was too brief and not subject to sufficient critical appraisal to be reliable.] Considered from this point of view, the fact that some of the theories which we know to be false give such amazingly accurate results is an adverse factor. Had we somewhat less knowledge, the group of phenomena which these \"false\" theories explain would appear to us to be large enough to \"prove\" these theories. However, these theories are considered to be \"false\" by us just for the reason that they are, in ultimate analysis, incompatible with more encompassing pictures and, if sufficiently many such false theories are discovered, they are bound to prove also to be in conflict with each other. Similarly, it is possible that the theories, which we consider to be \"proved\" by a number of numerical agreements which appears to be large enough for us, are false because they are in conflict with a possible more encompassing theory which is beyond our means of discovery. If this were true, we would have to expect conflicts between our theories as soon as their number grows beyond a certain point and as soon as they cover a sufficiently large number of groups of phenomena. In contrast to the article of faith of the theoretical physicist mentioned before, this is the nightmare of the theorist.",
+      "page": null,
+      "id": "S029",
+      "zh": "为判断最终应期待哪一种可能性，我们可以假装比实际更无知一些，把自己放在一个比实际所拥有的知识更低的水平上。如果在较低的智力水平上能找到理论的融合，我们就可以有信心期待在真实智力水平上也能找到融合。另一方面，如果在稍低的知识水平上，我们会得出相互矛盾的理论，那么对我们自己而言，也不能排除冲突理论永久存在的可能。知识与才智的水平是连续变量；这种连续变量的相对微小变化，不大可能把可达到的世界图景从不一致变成一致。[10 这段话是在反复犹豫之后写下的。我相信，在认识论讨论中，放弃“人类智力水平在绝对尺度上占据一个特殊位置”这种理想化，是有益的。有时，考虑其他物种智力水平上可能达到的成就，也可能有益。不过，我也意识到，按正文所示方向进行的思考过于简短，且未经过足够的批判性审视，因此不足以信赖。]从这个角度看，某些我们知道是错误的理论，却给出如此惊人而准确的结果，是一个不利因素。如果我们的知识稍少一些，那些“错误”理论所解释的现象群，在我们看来就会大得足以“证明”这些理论。然而，我们认为它们“错误”，恰恰是因为归根结底，它们与更全面的图景不相容；如果发现足够多这样的错误理论，它们也必然会互相冲突。同样，我们依据看起来足够多的数值吻合而认为已被“证明”的理论，也可能是错的，因为它们与某种我们没有能力发现的、更全面的理论相冲突。若果真如此，那么一旦我们的理论数量超过某个点，并且涵盖足够多的现象群，我们就应该预期它们之间发生冲突。与前面提到的理论物理学家信条相反，这是理论家的噩梦。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Let us consider a few examples of \"false\" theories which give, in view of their falseness, alarmingly accurate descriptions of groups of phenomena. With some goodwill, one can dismiss some of the evidence which these examples provide. The success of Bohr's early and pioneering ideas on the atom was always a rather narrow one and the same applies to Ptolemy's epicycles. Our present vantage point gives an accurate description of all phenomena which these more primitive theories can describe. The same is not true any longer of the so-called free-electron theory, which gives a marvelously accurate picture of many, if not most, properties of metals, semiconductors, and insulators. In particular, it explains the fact, never properly understood on the basis of the \"real theory,\" that insulators show a specific resistance to electricity which may be 10²⁶ times greater than that of metals. In fact, there is no experimental evidence to show that the resistance is not infinite under the conditions under which the free-electron theory would lead us to expect an infinite resistance. Nevertheless, we are convinced that the free-electron theory is a crude approximation which should be replaced, in the description of all phenomena concerning solids, by a more accurate picture.",
+      "page": null,
+      "id": "S030",
+      "zh": "让我们考虑几个“错误”理论的例子：鉴于它们是错误的，它们对现象群的描述却准确得令人不安。带着善意，人们可以忽略这些例子提供的某些证据。玻尔关于原子的早期先驱思想，其成功范围始终相当狭窄，托勒密的本轮说也是如此。从我们当前的立场，能够准确描述这些较原始理论能描述的一切现象。对于所谓自由电子理论，就不再如此：它极其准确地刻画了金属、半导体和绝缘体的许多、甚至多数性质。尤其是，它解释了这样一个事实：绝缘体的电阻率可能比金属大10²⁶倍，而依据“真正的理论”，人们从未恰当地理解这一点。事实上，在自由电子理论预期电阻无限大的条件下，没有实验证据表明电阻不是无限大。尽管如此，我们仍确信，自由电子理论只是一种粗略近似，在描述固体的一切现象时，应由更准确的图景替代。"
+    },
+    {
+      "type": "paragraph",
+      "en": "If viewed from our real vantage point, the situation presented by the free-electron theory is irritating but is not likely to forebode any inconsistencies which are unsurmountable for us. The free-electron theory raises doubts as to how much we should trust numerical agreement between theory and experiment as evidence for the correctness of the theory. We are used to such doubts.",
+      "page": null,
+      "id": "S031",
+      "zh": "从我们真实的立场看，自由电子理论呈现的局面虽令人烦恼，却不大可能预示我们无法克服的不一致。自由电子理论使人怀疑：把理论与实验的数值吻合视为理论正确的证据，我们究竟应信任到什么程度？我们已经习惯了这种怀疑。"
+    },
+    {
+      "type": "paragraph",
+      "en": "A much more difficult and confusing situation would arise if we could, some day, establish a theory of the phenomena of consciousness, or of biology, which would be as coherent and convincing as our present theories of the inanimate world. Mendel's laws of inheritance and the subsequent work on genes may well form the beginning of such a theory as far as biology is concerned. Furthermore, it is quite possible that an abstract argument can be found which shows that there is a conflict between such a theory and the accepted principles of physics. The argument could be of such abstract nature that it might not be possible to resolve the conflict, in favor of one or of the other theory, by an experiment. Such a situation would put a heavy strain on our faith in our theories and on our belief in the reality of the concepts which we form. It would give us a deep sense of frustration in our search for what I called \"the ultimate truth.\" The reason that such a situation is conceivable is that, fundamentally, we do not know why our theories work so well. Hence, their accuracy may not prove their truth and consistency. Indeed, it is this writer's belief that something rather akin to the situation which was described above exists if the present laws of heredity and of physics are confronted.",
+      "page": null,
+      "id": "S032",
+      "zh": "如果有一天，我们建立一种关于意识现象或生物现象的理论，像当前关于无生命世界的理论那样连贯而令人信服，局面将困难、混乱得多。就生物学而言，孟德尔遗传定律及其后关于基因的工作，很可能构成这种理论的开端。此外，很可能有人找到一种抽象论证，表明这类理论与公认的物理学原则存在冲突。论证可能抽象到无法通过实验来支持其中一个理论、反对另一个理论，从而解决冲突。这样的局面会严重考验我们对理论的信心，以及我们对自己形成的概念具有实在性的信念。它会在我们寻找所谓“终极真理”时，带来深深的挫败感。这种局面之所以可以设想，是因为我们根本不知道理论为何如此有效。因此，理论的准确性也许并不能证明它们的真理性与一致性。事实上，我相信，把当前的遗传规律与物理规律放在一起比较时，已经存在某种与上述局面相当接近的情况。"
+    },
+    {
+      "type": "paragraph",
+      "en": "Let me end on a more cheerful note. The miracle of the appropriateness of the language of mathematics for the formulation of the laws of physics is a wonderful gift which we neither understand nor deserve. We should be grateful for it and hope that it will remain valid in future research and that it will extend, for better or for worse, to our pleasure, even though perhaps also to our bafflement, to wide branches of learning.",
+      "page": null,
+      "id": "S033",
+      "zh": "让我用一个更愉快的音调结束。数学语言如此适于表述物理定律，这个奇迹是一份奇妙的礼物；我们既不理解它，也不配得到它。我们应当感激它，希望它在未来的研究中仍然有效，并希望它扩展到广泛的知识分支——无论这种扩展最终是好是坏，都使我们感到欣喜，尽管也可能更加困惑。"
     }
-  ]
+  ],
+  "extraction_notes": "User-pasted complete essay, original epigraph and embedded notes retained; trailing copied web navigation excluded."
 }

@@ -9,20 +9,275 @@
   css: ("/assets/custom.css", "/assets/essay.css"),
 )
 
+
 = Decoding the Language of the Bee / 蜜蜂语言的译码
 
-#html.p(id: "en-G001")[#text("Start with a practical puzzle: a bee finds food, returns to its colony, and other bees reach the same place. How can an experiment distinguish communication from merely following a scent?")]
+#html.p(id: "en-S001")[#text("Some 60 years ago, many biologists thought that bees and other insects were totally color-blind animals. I was unable to believe it. For the bright colors of flowers can be understood only as an adaptation to color-sensitive visitors. This was the beginning of experiments on the color sense of the bee (1). On a table outdoors I placed a colored paper between papers of different shades of gray and on it I laid a small glass dish filled with sugar syrup. Bees from a nearby hive could be trained to recognize this color and demonstrated their ability to distinguish it from shades of gray. To prevent too great a gathering of bees, I instituted breaks between feedings. After these breaks, only sporadic scout bees came to the empty bowl and flew back home; the feeding table remained deserted. If a scout bee, however, found the bowl filled and returned home successfully, within a few minutes the entire forager group was back. Had she reported her findings to the hive? This question subsequently became the starting point for further investigations.")]
 
-#zh(id: "G001")[#text("先从一个实际问题开始：一只蜜蜂找到食物，返回蜂群，其他蜜蜂随后也能到达那个地点。实验怎样才能区分信息交流与单纯追随气味？")]
+#zh(id: "S001")[#text("约六十年前，许多生物学家认为，蜜蜂和其他昆虫完全色盲。我无法相信这一点，因为花朵鲜艳的颜色，只能理解为对能辨别颜色的访客的适应。这成为蜜蜂色觉实验的开端（1）。我在户外桌子上，把一张彩色纸放在不同灰度的纸之间，上面放一个盛有糖浆的小玻璃碟。可以训练附近蜂巢的蜜蜂识别这种颜色，并证明它们能够将它与不同灰度区分开。为避免蜜蜂过度聚集，我在喂食之间安排间歇。间歇之后，只有零星侦察蜂来到空碟，再飞回巢中；喂食桌仍然空无一蜂。然而，如果一只侦察蜂发现碟子已装满，并成功返回蜂巢，几分钟内，整个采集蜂群就都回来了。它是否把发现报告给了蜂巢？这个问题后来成为进一步研究的起点。")]
 
-#html.p(id: "en-G002")[#text("Von Frisch connects features of the dance with the direction and distance of a food source. Watching the behavior matters, but changing the feeding conditions makes its meaning testable.")]
+#html.p(id: "en-S002")[#text("In order that the behavior of foragers could be seen after their return to the hive, a small colony was placed in an observation hive with glass windows, and a feeding bowl was placed next to it. The individual foragers were marked with colored dots, that is, numbered according to a certain system. Now an astonishing picture could be seen in the observation hive: Even before the returning bees turned over the contents of their honey sack to other bees, they ran over the comb in close circles, alternately to the right and the left. This round dance caused the numbered bees moving behind them to undertake a new excursion to the feeding place.")]
 
-#zh(id: "G002")[#text("冯·弗里施把舞蹈的特征与食物的方向、距离联系起来。观察行为很重要，而改变投喂条件，才能使对舞蹈含义的解释接受检验。")]
+#zh(id: "S002")[#text("为了观察采集蜂返回后的行为，我把一个小蜂群安置在带玻璃窗的观察蜂箱中，并在旁边放置喂食碗。用彩色小点标记各只采集蜂，也就是按某种系统给它们编号。此时，观察蜂箱里出现了一幅惊人的景象：归巢的蜜蜂还没把蜜囊里的内容交给其他蜜蜂，就在巢脾上交替向右、向左绕小圈奔跑。这种圆舞使那些跟在后面的编号蜜蜂，再次出发前往食源。")]
 
-#html.p(id: "en-G003")[#text("The interesting shift is methodological: an apparently strange movement becomes a system of signals. Read the lecture's figures alongside the experiments, rather than treating the dance as a human sentence.")]
+#html.p(id: "en-S003")[#text("But foragers from one hive do not always fly to the same feeding source. Foraging groups form: One may collect from dandelions, another from clover, and a third from forget-me-nots. Even in flowering plants the food supply often becomes scarce, and a “feeding break” ensues. Were the bees in the experiment able to alert those very same foragers who were at the bowl with them? Did they know each other individually?")]
 
-#zh(id: "G003")[#text("有意思的转变在于研究方法：看似奇怪的动作变成了一套信号系统。阅读时应把图示与实验放在一起看，不必把蜜蜂舞蹈理解成人类语言中的一句话。")]
+#zh(id: "S003")[#text("但同一蜂巢的采集蜂，并不总飞往同一食源。它们形成不同的采集群：一群可能采蒲公英，一群采三叶草，还有一群采勿忘我。即便开花植物的食物供应也常常不足，随之出现“喂食间歇”。实验中的蜜蜂，是否能专门召唤之前与它们一同在碗边采食的那批采集蜂？它们是否能逐个认识彼此？")]
 
-#html.p(id: "en-G004")[#text("Reading question: which observations reveal a pattern, and which interventions support the interpretation of that pattern? This distinction travels well beyond animal behavior.")]
+#html.p(id: "en-S004")[#text("To settle the question, I installed two feeding places at which two groups from the same observation hive collected separately. During a feeding break, both groups stayed on the honey-comb and mingled with each other. Then one of the bowls was refilled. The bees coming from the filled bowl alerted by their dances not only their own group but also bees of the second group, which responded by flying to their customary feeding place where they investigated the empty bowl.")]
 
-#zh(id: "G004")[#text("阅读时可以追问：哪些观察发现了规律，哪些干预支持了对规律的解释？这个区别同样适用于动物行为以外的研究。")]
+#zh(id: "S004")[#text("为了弄清问题，我设置两个喂食点，让同一观察蜂箱的两组蜜蜂分别采食。喂食间歇时，两组都停留在巢脾上，彼此混杂。然后给其中一个碗重新加食。来自装满糖浆的碗的蜜蜂，通过舞蹈，不仅召唤了本组，也召唤了另一组蜜蜂；后者飞往惯常的喂食点，并在那里查看空碗。")]
+
+#html.p(id: "en-S005")[#text("However, the natural stopping places of bees are not glass bowls but flowers. Therefore, the experiment was modified; one of two groups of bees collected food from linden blossoms, the other one from robinias. Now the picture changed. After the feeding break, the bees returning from the linden blossoms caused only the linden bees to fly out again; the robinia collectors paid no attention to their dances. On the other hand, when bees returned successfully from robinia blossoms, the linden bees showed no interest in their dances, while members of the robinia group immediately ran to a dancer in their vicinity, following along behind her and then flying out. Some clever bees also learned to use both sources of food, depending on the occasion. They would then send out the linden gatherers after returning from the linden source, and the robinia gatherers after visiting the robinias. Thus, the bees did not know each other individually. It appeared that the fragrance of the specific blossom attached to their bodies was decisive. This was confirmed when essential oils or synthetic scents at the feeding place produced the same effect.")]
+
+#zh(id: "S005")[#text("不过，蜜蜂在自然界停留的是花朵，而不是玻璃碗。因此，实验作了改变：两组蜜蜂中的一组从椴树花采食，另一组从刺槐花采食。情形这时改变了。喂食间歇之后，从椴树花回来的蜜蜂，只使采椴树的蜜蜂再次飞出；采刺槐的蜜蜂对其舞蹈毫不在意。反过来，蜜蜂从刺槐花成功返回时，采椴树的蜜蜂对舞蹈没有兴趣，而刺槐组成员立即跑到附近的舞者身边，跟随它，随后飞出。一些聪明的蜜蜂还学会视情况使用两个食源：从椴树返回后召唤采椴树的，从刺槐返回后召唤采刺槐的。因此，蜜蜂并非逐个认识彼此。附着在身体上的特定花香，看来才是决定因素。在喂食点使用精油或合成气味产生相同效果，证实了这一点。")]
+
+#html.p(id: "en-S006")[#text("When feeding was continuous, new recruits showed up at the food source next to the old foragers. They, too, were alerted by the dance. But how did they find their goal?")]
+
+#zh(id: "S006")[#text("连续喂食时，食源旁会出现新招募的蜜蜂，与老采集蜂一起采食。它们也是被舞蹈召唤来的。但它们怎样找到目标？")]
+
+#html.p(id: "en-S007")[#text("Peppermint oil was added to the feeding place next to the hive. In addition, bowls with sugar syrup were put on small cardboard sheets at various places in the nearby meadow; some of the sheets were scented with peppermint oil and the others with other essential oils. The result was unequivocal: A few minutes after the start of feeding, recruits from the observation hive appeared not only at the feeding place next to the foraging bees but also at the other peppermint bowls posted at some distance in the meadow. The other scented bowls, however, remained undisturbed. The smell of lavender, fennel, thyme oil, and so forth had no attraction. When the scent at the feeding place was replaced by a different one, the goal of the swarming recruits changed accordingly. They let themselves be guided by the scent on the dancers.")]
+
+#zh(id: "S007")[#text("我们在蜂巢旁的喂食点加入薄荷油。此外，在附近草地不同位置的小纸板上，放置盛有糖浆的碗；有些纸板带薄荷油气味，另一些带其他精油气味。结果十分明确：开始喂食几分钟后，观察蜂箱中新招募的蜜蜂，不仅来到采集蜂旁的喂食点，也来到草地上隔一定距离放置的其他薄荷碗。然而，其他带气味的碗仍无人问津。薰衣草、茴香、百里香油等气味没有吸引力。把喂食点的气味替换成另一种后，成群飞来的新招募蜜蜂，目标也相应改变。它们让舞者身上的气味引导自己。")]
+
+#html.p(id: "en-S008")[#text("Scent is a very simple but effective means of communication. It attains full significance, however, only in combination with another condition. If the sugar syrup becomes scarce or is offered in weaker concentrations, after a certain point the dancing becomes slower and finally stops even though the collecting may continue. On the other hand, the sweeter the sugar syrup, the more lively and lengthier the various dances. The effect of advertising is thereby enhanced, and it is increased further by the scent gland in the forager’s abdomen which is activated upon arrival at a good source of supply. Thus it signals “Come hither!” to recruits searching in the vicinity. Many female insects have scent glands to attract the male. In worker bees, which are mere workhorses devoid of any sexual interest, the scent organ is put to the service of the community.")]
+
+#zh(id: "S008")[#text("气味是一种非常简单却有效的通信方式。不过，只有结合另一种条件，才能充分发挥其意义。如果糖浆变少或浓度变低，到了某个程度，舞蹈就会变慢，最终停止，即使采集仍然继续。反之，糖浆越甜，各种舞蹈就越活跃、持续越久。这增强了宣传效果；而采集蜂腹部的气味腺，到达良好食源时会被激活，进一步加强效果，向在附近搜寻的新招募蜜蜂发出“到这里来！”的信号。许多雌性昆虫拥有吸引雄性的气味腺。工蜂只是没有任何性兴趣的劳动者，其气味器官则被用来服务群体。")]
+
+#html.p(id: "en-S009")[#text("Let us now imagine a meadow in the spring. Various types of plants blossom simultaneously, producing nectar of differing concentrations. The richer and sweeter its flow, the livelier the dance of the bees that discover and visit one type of flower. The flowers with the best nectar transmit a specific fragrance which ensures that they are most sought after. Thus, in this simple fashion, traffic is regulated according to the law of supply and demand not only to benefit the bees but also to promote pollination and seed yield of plant varieties rich in nectar. A new and hitherto unknown side of the biological significance of flower fragrance is thus revealed. Its great diversity and strict species specificity communicate a truly charming scent language.")]
+
+#zh(id: "S009")[#text("现在想象春天的一片草地。各种植物同时开花，产生浓度不同的花蜜。某种花的蜜流越丰富、越甜，发现并访问它的蜜蜂就舞得越活跃。花蜜最好的花朵散发特定香味，保证自己最受追寻。这样，以一种简单方式，供求规律就调节了采集活动；它不仅有利于蜜蜂，还促进了富含花蜜的植物种类授粉和结籽。因此，花香的生物学意义中，一个此前未知的新方面被揭示出来。花香高度多样而又严格具有物种特异性，传达出一种真正迷人的气味语言。")]
+
+#html.p(id: "en-S010")[#text("This was how things stood in 1923 (2), and I believed I knew the language of the bees. On resuming the experiments 20 years later, I noticed that the most beautiful aspect had escaped me. Then, for the first time, I installed the feeding place several hundred meters away instead of next to the hive, and saw to my astonishment that the recruits immediately started foraging at that great distance while paying hardly any attention to bowls near the hive. The opposite occurred when the foragers located the sugar syrup, as before, near the hive. Could they possess a signal for distance?")]
+
+#zh(id: "S010")[#text("1923年，认识就停留在这里（2），我也以为自己懂得了蜜蜂语言。二十年后恢复实验时，我发现最美妙的方面竟被我遗漏了。当时，我第一次把喂食点放在数百米外，而不是蜂巢旁，惊讶地看到新招募的蜜蜂立刻在远处开始采集，几乎不理会蜂巢附近的碗。采集蜂像从前一样，在蜂巢附近找到糖浆时，情形则相反。它们会不会拥有一种表示距离的信号？")]
+
+#html.p(id: "en-S011")[#text("Two foraging groups were formed from one observation hive. One feeding place was located 12 m from the hive, the other at a distance of 300 m. On opening the observation hive, I was astonished to see that all foragers from nearby performed round dances, while long-distance foragers did tail-wagging dances (Fig. 1). Moving the nearby feeding place step by step to greater distances resulted in the round dances changing to tail-wagging dances at a distance of about 50 m. The second feeding place was brought back step by step, past the first feeding place close to the hive. At the same critical distance of about 50 m, the tail-wagging dances became round dances (3,4). I had been aware of the tail-wagging dance for a long time, but considered it to be typical of pollen collectors. My mistake was due to the fact that, at that time, bees with pollen baskets always arrived from a greater distance than my sugar syrup collectors.")]
+
+#zh(id: "S011")[#text("我们从一个观察蜂箱中组成两个采集群。一个喂食点距蜂巢12米，另一个距蜂巢300米。打开观察蜂箱时，我惊讶地看到，所有来自近处的采集蜂都跳圆舞，而远距离采集蜂跳摆尾舞（图1）。把近处喂食点逐步移远，圆舞在约50米距离处变成摆尾舞。再把第二个喂食点逐步移回，越过第一个喂食点，靠近蜂巢。在同样约50米的临界距离，摆尾舞变成圆舞（3，4）。我早已知道摆尾舞，但曾把它视为采花粉蜜蜂的典型行为。我的错误源于当时带花粉篮的蜜蜂，总是从比采糖浆蜜蜂更远的地方归来。")]
+
+#html.figure(id: "F001", class: "essay-paper-figure")[
+#image("assets/figure-01.png")
+]
+
+#html.p(id: "en-C001", class: "essay-original-caption")[#text("Fig. 1. Running curve of the bee (a) during round dance and (b) during tail-wagging dance. Bees that follow the dancer take in information.")]
+
+#zh(id: "C001")[#text("图1. 蜜蜂在（a）圆舞和（b）摆尾舞中的运动轨迹。跟随舞者的蜜蜂接收信息。")]
+
+#html.p(id: "en-S012")[#text("Thus it became evident, and subsequent experiments confirmed (5), that the round dance is a signal that symbolically invites the hive members to search the immediate vicinity of the hive. The tail-wagging dance sends them to greater distances, not infrequently several kilometers. The signal “closer than 50 m” or “farther than 50 m” alone would not be of much help. In fact, however, the pace of the tail-wagging dance changes in a regular manner with increasing distance: its rhythm decreases. According to the present state of our knowledge, information on flight distance is given by the length of time required to go through the straight part of the figure - eight dance in each repeat. This straight stretch is sharply marked by tail-wagging dance movements and simultaneously toned (in the true meaning of the word) by a buzzing sound (6, 7). Longer distances are expressed symbolically by longer tailwagging times. For distances of 200 to 4500 m, they increase from about 0.5 second to about 4 seconds (6, 8) (Fig. 2).")]
+
+#zh(id: "S012")[#text("由此我们明白了，后续实验也证实（5），圆舞是一种符号性信号，邀请蜂巢成员搜索蜂巢紧邻的区域。摆尾舞则把它们引向更远处，往往远至数公里。单是“近于50米”或“远于50米”的信号，帮助不会很大。但事实上，摆尾舞的速度随距离增加而有规律地改变：节律变慢。按我们目前的认识，飞行距离的信息，通过每次重复八字形舞蹈时，走完其中直线部分所需的时间传递。这段直线运动，以明显的摆尾动作标识，同时伴随嗡鸣声——也确实发出了声音（6，7）。更远的距离，用更长的摆尾时间象征。距离从200米增加到4500米时，摆尾时间约从0.5秒增加到4秒（6，8）（图2）。")]
+
+#html.figure(id: "F002", class: "essay-paper-figure")[
+#image("assets/figure-02.png")
+]
+
+#html.p(id: "en-C002", class: "essay-original-caption")[#text("Fig. 2. Duration of the tail-wagging run for feeding places at various distances; based on film data.")]
+
+#zh(id: "C002")[#text("图2. 前往不同距离喂食点时，摆尾直线跑动的持续时间；依据影片数据。")]
+
+#html.p(id: "en-S013")[#text("The tail-wagging dance not only indicates distance but also gives the direction to the goal. In the observation hive, the bees that come from the same feeding place make their tail-wagging runs in the same direction, whereas these runs are oriented differently for bees coming from other directions. However, the direction of the tail-wagging runs of bees coming from one feeding place does not remain constant. As the day advances the direction changes by the same angle as that traversed by the sun in the meantime, but in the opposite rotation. Thus, the recruiting dancer shows the other bees the direction to the goal in relation to the position of the sun (5, 6). Those hours at the observation hive when the bees revealed this secret to me remain unforgettable. The fascinating thing is that the angle between the position of the sun and the dancer’s path to the goal is expressed by the dancer in the darkness of the hive, on the vertical surface of the comb, as an angular deflection from the vertical. The bee thus transposes the angle to a different area of sense perception. Figure 3 shows the key to the transposition. If the goal lies in the direction of the sun, the tail-wagging dance points upward. If the goal is located 40º to the left of the sun’s position, the dancer shifts the straight run 40º to the left of the vertical, and so forth (5,6). On the comb, members of the hive move after the dancer and maintain close contact with her, especially during the tail-wagging runs, and take in the information offered. Can they follow it and with what accuracy?")]
+
+#zh(id: "S013")[#text("摆尾舞不仅指示距离，也给出目标方向。在观察蜂箱中，来自同一喂食点的蜜蜂，其摆尾直线跑动方向相同；来自其他方向的蜜蜂，跑动方向则不同。然而，来自一个喂食点的蜜蜂，其摆尾方向并不保持不变。随着时间推移，方向改变的角度与太阳同时移动的角度相同，但旋转方向相反。因此，招募舞者向其他蜜蜂指示目标方向，是相对于太阳位置而言的（5，6）。蜜蜂在观察蜂箱中向我揭示这个秘密的那些时刻，令我终生难忘。迷人之处在于：太阳位置与舞者飞向目标的路径之间的夹角，在黑暗蜂巢中，竟被舞者表述为垂直巢脾表面上相对于竖直方向的角度偏转。蜜蜂把角度转移到了另一个感觉领域。图3说明这种转换的关键。如果目标位于太阳方向，摆尾舞就向上。如果目标在太阳位置左侧40°，舞者就把直线跑动移到竖直方向左侧40°，依此类推（5，6）。巢脾上，蜂巢成员跟随舞者，与它保持紧密接触，尤其在摆尾跑动期间，并接收所提供的信息。它们能依照信息行动吗？准确到什么程度？")]
+
+#html.figure(id: "F003", class: "essay-paper-figure")[
+#image("assets/figure-03.png")
+]
+
+#html.p(id: "en-C003", class: "essay-original-caption")[#text("Fig. 3. Indication of direction by tail-wagging dance. (Left), the goal is in the direction of the sun; (right), the goal is 40° to the left of the sun’s position. Dance figures, enlarged, are on the bottom left of the pictures.")]
+
+#zh(id: "C003")[#text("图3. 摆尾舞指示方向。左：目标在太阳方向；右：目标在太阳位置左侧40°。放大的舞蹈轨迹位于各图左下方。")]
+
+#html.p(id: "en-S014")[#text("The indication of direction was tested by us using the following method (9). At a certain distance from the hive, a feeding place was installed at which numbered bees were fed on an unscented platform with a sugar solution so dilute that they did not dance in the hive and therefore did not alert forager recruits. Only at the start of the experiment did they receive concentrated sugar solutions slightly scented with (for example) lavender oil. At 50 m closer to the hive, plates baited with the same scent but without food were placed in a fan-shaped arrangement. The number of forager recruits arriving at the plates was an indication of the intensity with which they searched in various directions. Figure 4 shows, as an example, the result of an experiment in which the feeding place was located 600 m from the hive.")]
+
+#zh(id: "S014")[#text("我们用以下方法检验方向指示（9）。在离蜂巢一定距离处设喂食点，让编号蜜蜂在无气味的平台上，采食很稀的糖液；稀到它们不在巢中跳舞，因此不会召唤新采集蜂。只有在实验开始时，才给予浓糖液，并加上少许气味，例如薰衣草油。在比喂食点靠近蜂巢50米的位置，以扇形排列放置气味相同、却没有食物的盘子。到达各盘的新招募采集蜂数量，表示它们在不同方向上的搜索强度。图4给出一个例子：喂食点距离蜂巢600米。")]
+
+#html.figure(id: "F004", class: "essay-paper-figure")[
+#image("assets/figure-04.png")
+]
+
+#html.p(id: "en-C004", class: "essay-original-caption")[#text("Fig. 4. Fan experiment. The feeding place (F) is 600 m from the observation hive. Scented plates without food are arranged in fan shape 550 m from the hive. The numbers indicate the number of forager recruits arriving during the first 50 minutes of the experiment; Sch, shed.")]
+
+#zh(id: "C004")[#text("图4. 扇形实验。喂食点F距观察蜂箱600米。无食物、带气味的盘子，在距蜂巢550米处呈扇形排列。数字表示实验最初50分钟到达的新招募采集蜂数量；Sch表示棚屋。")]
+
+#html.p(id: "en-S015")[#text("Since such fan experiments proved that indication of direction was successful, we made a step-by-step test of distance-indicating procedures. Here, all scented plates were located in the same direction as the feeding place, from the hive area to a distance well beyond the feeding place. Figure 5 gives an example of an experiment in which the feeding place was located 2 kilometers from the hive. Incoming flights of forager recruits to the feeding site itself were of course not evaluated because here an additional attractant was created by the food and the visiting bees (6).")]
+
+#zh(id: "S015")[#text("既然这种扇形实验证明了方向指示有效，我们就逐步检验距离指示。在这里，所有带气味的盘子，都放在蜂巢到喂食点的同一方向上，从蜂巢附近一直延伸到远超过喂食点的位置。图5给出喂食点距蜂巢2公里的一个实验例子。当然，不计入直接飞到喂食点的新招募采集蜂，因为食物和来访蜜蜂在这里产生了额外吸引力（6）。")]
+
+#html.p(id: "en-S016")[#text("To sum up, this and preceding experiments taught us that the information on the direction and distance of the goal was adhered to with astonishing accuracy - and not only in gathering nectar and pollen. The same dances are observed on a swarm. Here the scout bees indicate to the waiting bees the location of the domicile they have discovered. Of greatest interest here is that the intensity of the promotional message depends on the quality of the domicile discovered, that the various groups of scouting bees compete with each other, and that therefore the decision is finally made in favor of the best domicile (10).")]
+
+#zh(id: "S016")[#text("总之，这个实验与前面的实验告诉我们，蜜蜂会以惊人的准确性遵循目标方向和距离的信息——而且不只在采集花蜜和花粉时如此。蜂群分蜂时，也能观察到相同舞蹈。侦察蜂向等待的蜜蜂指示自己找到的新巢址。最有趣的是，宣传信息的强度取决于所发现巢址的质量，不同侦察蜂群彼此竞争，因而最后决定选择最佳巢址（10）。")]
+
+#html.figure(id: "F005", class: "essay-paper-figure")[
+#image("assets/figure-05.png")
+]
+
+#html.p(id: "en-C005", class: "essay-original-caption")[#text("Fig. 5. Step-by-step experiment. The feeding place (F) is 2000 m from the observation hive. The numbers indicate the number of forager recruits that settled on the scented plates (without food) during the 3-hour observation period.")]
+
+#zh(id: "C005")[#text("图5. 逐步实验。喂食点F距观察蜂箱2000米。数字表示三小时观察期间，落到无食物、带气味盘子上的新招募采集蜂数量。")]
+
+#html.p(id: "en-S017")[#text("While not doubting that direction and distance of the goal can be discerned from the tail-wagging dances, a group of American biologists led by A. M. Wenner does not agree that the forager recruits make use of this information. According to them, these bees find the goal by using their olfactory sense only (11). This view is incompatible with many of our results (6, 12). It is refuted by the following experiment, to cite only one.")]
+
+#zh(id: "S017")[#text("以A. M. Wenner为首的一组美国生物学家，并不怀疑可以从摆尾舞辨认出目标方向和距离，却不认同新招募的采集蜂会利用这些信息。他们认为，蜜蜂仅靠嗅觉找到目标（11）。这种观点与我们的许多结果不相容（6，12）。只举一个例子，下面的实验就反驳了它。")]
+
+#html.p(id: "en-S018")[#text("Numbered bees from an observation hive collected at a feeding place 230 m from the hive. The hive was turned on its side so that the comb surface was horizontal; the sky was screened. Under these conditions, the dancers could orient themselves neither by gravity nor by the sky, and danced confusedly in all directions. Plates with the same scent as that at the feeding place were located at various distances in the direction of the feeding place and in three other directions. They were visited in all directions and in great numbers by forager recruits (Fig. 6), with no preferences being given to the direction of the feeding place. The observation hive was now turned back 90º to its normal position so that the dancers could indicate the direction of the goal on the vertical comb surface. Within a few minutes, the stream of newly alerted bees flew out in the direction of the feeding place; the scented plates in this direction were increasingly frequented, and in a short time no forager recruits at all appeared at the scented plates in the three other directions (Fig. 7). No change had occurred at the sources of scent in the open field or in the other external conditions. The change in the behavior of the forager recruits could be attributed only to the directional dances.")]
+
+#zh(id: "S018")[#text("一个观察蜂箱中的编号蜜蜂，在距蜂巢230米的喂食点采集。把蜂箱侧放，使巢脾表面水平，并遮住天空。在这种条件下，舞者既不能靠重力，也不能靠天空定向，只能混乱地向各个方向跳舞。把与喂食点气味相同的盘子，在喂食点方向以及其他三个方向的不同距离处摆放。大量新招募的采集蜂访问了所有方向（图6），并不偏爱喂食点方向。随后，把观察蜂箱转回90°，恢复正常位置，使舞者能够在垂直巢脾表面上指示目标方向。几分钟内，新召唤的蜜蜂流便向喂食点方向飞出；这个方向的带气味盘子被越来越多地访问，很快，其他三个方向的盘子就完全没有新招募的采集蜂出现（图7）。野外气味源和其他外部条件都没有改变。新招募采集蜂行为的变化，只能归因于指示方向的舞蹈。")]
+
+#html.figure(id: "F006", class: "essay-paper-figure")[
+#image("assets/figure-06.png")
+]
+
+#html.p(id: "en-C006", class: "essay-original-caption")[#text("Fig. 6. Effect of placing observation hive horizontally. The dances are disoriented. Scented plates with the scent of the feeding place are visited by great numbers of forager recruits (small dots) in all four directions: F, feeding place.")]
+
+#zh(id: "C006")[#text("图6. 将观察蜂箱水平放置的效果。舞蹈失去方向。大量新招募的采集蜂（小点）访问四个方向上、带有喂食点气味的盘子；F为喂食点。")]
+
+#html.figure(id: "F007", class: "essay-paper-figure")[
+#image("assets/figure-07.png")
+]
+
+#html.p(id: "en-C007", class: "essay-original-caption")[#text("Fig. 7. Hive placed vertically after experiment in Fig. 6. The dances now indicate the direction of the feeding place. Within 10 minutes the stream of forager recruits turns in this direction. Flights no longer arrive in the three other directions.")]
+
+#zh(id: "C007")[#text("图7. 图6实验后，将蜂箱竖直放置。舞蹈现在指示喂食点方向。十分钟内，新招募的采集蜂流转向这个方向，另外三个方向不再有蜜蜂飞来。")]
+
+#html.p(id: "en-S019")[#text("It is conceivable that some people will not believe such a thing. Personally, I also harbored doubts in the beginning and desired to find out whether the intelligent bees of my observation hive had not perhaps manifested a special behavior. I opened an ordinary hive, lifted up one of the combs and watched the expected dances. Curious as to what would happen, I turned the comb in such a way that the dancing area became horizontal. Gravity as a means of orientation was thus eliminated. However, without any signs of perplexity, the bees continued to dance and by the direction of their tail-wagging runs pointed directly to the feeding place, just as we show the way by raising an arm. When the comb was turned like a record on a turntable, they continued to adjust themselves to their new direction, like the needle of a compass (13).")]
+
+#zh(id: "S019")[#text("可以想象，有些人不会相信这样的事情。我自己起初也有怀疑，想弄清观察蜂箱中这些聪明的蜜蜂，是否表现了某种特殊行为。我打开一个普通蜂巢，提起一块巢脾，看到预期中的舞蹈。出于好奇，我转动巢脾，让舞蹈区域变成水平。这样就排除了重力作为定向手段。然而，蜜蜂没有丝毫困惑，继续舞蹈，以摆尾跑动的方向直接指向喂食点，就像我们举起手臂指路。当巢脾像唱机上的唱片那样转动时，它们仍像指南针一样，不断调整到新的方向（13）。")]
+
+#html.p(id: "en-S020")[#text("This behavior can be studied at leisure at a horizontal observation hive. It is basically very easy if we recall that the direction of the tail-wagging run relates to the sun’s position. During the tail-wagging run on the comb, the bee has only to set itself at the same angle to the sun as it maintained during its flight to the feeding place (Fig. 8). Afterward, when the recruits set their line of flight at the same angle to the sun, they are flying in the direction of the goal.")]
+
+#zh(id: "S020")[#text("这种行为可以在水平观察蜂箱中从容研究。只要记住摆尾跑动的方向与太阳位置有关，基本上就很容易理解。蜜蜂在巢脾上摆尾跑动时，只须让自己与太阳保持之前飞往喂食点时的同一夹角（图8）。随后，新招募的蜜蜂若把飞行路线设定为与太阳同样的夹角，就会朝目标方向飞去。")]
+
+#html.figure(id: "F008", class: "essay-paper-figure")[
+#image("assets/figure-08.png")
+]
+
+#html.p(id: "en-C008", class: "essay-original-caption")[#text("Fig. 8. The principle of direction indication during the dance on a horizontal plane. The bee (right) during the tail-wagging run positions itself in such a way that it views the sun from the same angle as earlier during its flight to the feeding place (left).")]
+
+#zh(id: "C008")[#text("图8. 在水平面上跳舞时指示方向的原理。右侧蜜蜂摆尾跑动时，让自己看见太阳的角度，与此前飞往左侧喂食点时相同。")]
+
+#html.p(id: "en-S021")[#text("This type of discretional indication is nothing unusual. Incoming foragers not infrequently begin to dance facing the sun on the horizontal alighting board of the hive if they are met here by nonworking comrades. The transmission of information through horizontal dancing is easier to understand than that when the angle is transposed to the vertical comb surface. We also seem to have here the original, phylogenetically older type of directional indication. In India there still exist several strains of the species Apis. My student and co-worker, Martin Lindauer, went there to use them for “comparative language studies.“ The small honeybee, Apis florea, is on a more primitive level than our honeybee and other Indian strains. The colony builds a single comb out in the open on a branch; the comb has a horizontally extended top edge that serves exclusively as a dancing floor. When these bees are forced onto the vertical comb surface of the side, they cannot render the sun’s angle by dancing and their tail-wagging dances become disoriented (14).")]
+
+#zh(id: "S021")[#text("这种方向指示并不罕见。归来的采集蜂，如果在蜂箱水平的着陆板上遇到未工作的同伴，常会在那里面向太阳开始舞蹈。与把角度转换到垂直巢脾表面相比，水平舞蹈传递信息更容易理解。这里似乎也是原始的、系统发育上更古老的方向指示方式。印度仍存在几种蜜蜂属的类型。我的学生和合作者Martin Lindauer前往那里，用它们进行“比较语言研究”。小蜜蜂Apis florea，比我们的蜜蜂和印度其他类型处在更原始的水平。蜂群在树枝上露天造一块巢脾，巢脾水平伸展的上缘，专门充当舞场。把这些蜜蜂强迫到侧面的垂直巢脾上时，它们无法用舞蹈表达太阳角度，摆尾舞也就失去了方向（14）。")]
+
+#html.p(id: "en-S022")[#text("Let us now return to our own bees and the observation of dances on a horizontal hive. There can be no doubt that the sun’s position is decisive for the direction of their dancing. The sun may be replaced by a lamp in a dark tent. By changing its position, the bees are made to dance in any desired direction. But there was one big puzzle. To prevent excessive heating during most of the experiments, a protective roof was installed over the observation hive. The dancers were unable to see the sun. Nevertheless their dance was usually correct. Orientation by heat rays, by penetrating radiation, as well as other explanations seemed possible and had to be discarded - until I noticed that a view of the blue sky is the same as a view of the sun. When clouds passed over the section of the sky visible to the bees, disoriented dances immediately resulted. Therefore they must have been able to read the sun’s position from the blue sky. The direction of vibration of polarized blue light differs in relation to the sun’s position across the entire vault of the sky. Thus, to one that is able to perceive the direction of vibration, even a spot of blue sky can disclose the sun’s position by its polarization pattern. Are bees endowed with this capacity?")]
+
+#zh(id: "S022")[#text("现在回到我们自己的蜜蜂，以及对水平蜂箱中舞蹈的观察。太阳位置对舞蹈方向具有决定性作用，毫无疑问。在黑暗帐篷里，可以用灯代替太阳。改变灯的位置，就能让蜜蜂朝任何所需方向跳舞。但有一个很大的谜团。为避免过热，多数实验在观察蜂箱上方装了防护顶棚。舞者看不到太阳，却通常仍舞得正确。热射线、穿透性辐射等定向解释，看来都有可能，但都不得不被排除——直到我发现，看见蓝天就等于看见太阳。云飘过蜜蜂能看见的那片天空时，舞蹈立刻失去方向。因此，它们必定能从蓝天读出太阳位置。整个天穹中，偏振蓝光的振动方向，随相对于太阳位置的关系而不同。因此，能感知振动方向的动物，即使只见到一小片蓝天，也能从其偏振图样获知太阳位置。蜜蜂拥有这种能力吗？")]
+
+#html.p(id: "en-S023")[#text("The following test furnished an answer. The observation hive was set horizontally in a dark tent from which the dancers had a lateral view of a small area of blue sky. They danced correctly toward the west where their feeding place was located 200 m away. When a round, rotatable polarizing foil was placed over the comb in a way as not to change the direction of the vibration of the polarized light from that part of the sky, they continued to dance correctly. If, however, I turned the foil right or left, the direction of the bees’ dance changed to the right or the left by corresponding angle values.")]
+
+#zh(id: "S023")[#text("下面的检验提供了答案。把观察蜂箱水平放在黑暗帐篷里，舞者能从侧面看见一小片蓝天。它们正确地朝西舞蹈，喂食点就在西面200米处。在巢脾上方放一张可旋转的圆形偏振膜，如果不改变那片天空偏振光的振动方向，蜜蜂继续正确舞蹈。但如果我向右或向左转动膜，舞蹈方向便按相应角度向右或向左改变。")]
+
+#html.p(id: "en-S024")[#text("Thus, bees are able to perceive polarized light. The sky, which to our eyes is a uniform blue, is distinctly patterned to them (13, 15). They use this extensively and, in their orientation, guide themselves not only by the sun’s position but also by the resulting polarization patterns of the blue sky. They also continue to recognize the sun’s position after it has set or when it is obscured by a mountain. Once again the bees appear to us miraculous. But it is now clear that ants and other insects, crayfish, spiders, and even octopuses perceive polarized light and use it for orientation, and that among all these animals the human being is the unendowed one, together with many other vertebrates. In one respect, however, bees remain singular: Only they use polarized light not only for their own orientation but also to communicate to their colonies the direction to a distant goal (6).")]
+
+#zh(id: "S024")[#text("因此，蜜蜂能感知偏振光。在我们眼中均匀蔚蓝的天空，在它们看来有清晰的图样（13，15）。它们广泛利用这一点，定向时不仅依据太阳位置，也依据由此产生的蓝天偏振图样。太阳落山后，或被山遮住时，它们仍能辨认太阳位置。蜜蜂再一次显得不可思议。不过，现在已清楚，蚂蚁和其他昆虫、螯虾、蜘蛛，甚至章鱼，都能感知偏振光，并用它定向；在这些动物之中，人类与许多其他脊椎动物，才是缺乏这种能力的。但蜜蜂在一个方面仍然独特：只有它们不仅利用偏振光为自身定向，还用来向蜂群传达远处目标的方向（6）。")]
+
+#html.p(id: "en-S025")[#text("Thus the language of the bee, which was initially brought to our attention by the physiology of sense perception, has now led us back to it. It also had already led to general questions of orientation in time and space. When bees use the sun as a compass during their own flights as well as to inform their comrades, one difficulty arises: With the advancing hour of the day, the sun’s position changes, and one would imagine that it can serve as a geographic marker for a short time only.")]
+
+#zh(id: "S025")[#text("由感觉生理学最初引起我们注意的蜜蜂语言，如今又把我们带回了感觉生理学。它也早已引出了关于时间与空间定向的一般问题。蜜蜂自身飞行以及向同伴传递信息时，都把太阳当作指南针，这就产生一个困难：随着时刻推移，太阳位置会改变，人们会以为它只能短暂地充当地理标记。")]
+
+#html.p(id: "en-S026")[#text("I had long contemplated an experiment whose execution was postponed from one year to the next by the feeling that it would not amount to much. However, in the early morning of a fall day in 1949, we sealed the entrance of our observation hive standing in Brunnwinkl on the shore of the Wolfgangsee, transported it across the lake, and placed it 5 km away in a completely different area unknown to the bees (15). Numbered bees from this colony had visited a feeding place 200 m to the west on previous days (Fig. 9). From the familiar lakeshore and steep wooded hills they now found themselves in flat meadows; none of the known landmarks could be seen. Four feeding bowls with the same scent as at the former feeding place were placed 200 m from the hive toward the west, east, north, and south, and the entrance was then opened. Of the 29 marked bees that had visited in the west during the previous afternoon in Brunnwinkl, 27 found the bowls within 3 hours: 5 in the south, 1 each in the east and north, but 20 in the west (Fig. 10). Each was captured on arrival and was thus unable to send others out by dancing in the hive. Only the sun could have guided those who arrived. It, however, was southeast of the hive, while on the preceding day during the last foraging flights it had been close to the western horizon. Bees possess excellent timing, an inner clock, so to speak. During earlier experiments, by feeding at certain hours only they trained themselves to arrive promptly at the table at that time - even if the table was not set. The above trial, repeated in many modifications (6, 15, 16), has now taught us that they are also familiar with the sun’s daily movement and can, by calculating the hour of the day, use this star as a true compass. The same discovery was simultaneously and independently made by Gustav Kramer using birds (6).")]
+
+#zh(id: "S026")[#text("我早已考虑过一个实验，却因为觉得不会有什么结果，年复一年推迟执行。1949年秋天一个清晨，我们封住沃尔夫冈湖岸边Brunnwinkl的观察蜂箱入口，将它运过湖，放在5公里外一处完全不同、蜜蜂不认识的地方（15）。此前几天，这个蜂群中的编号蜜蜂一直访问西面200米处的喂食点（图9）。它们如今从熟悉的湖岸和陡峭林坡，来到平坦草地，任何熟悉地标都看不见。在蜂巢向西、东、北、南各200米处，放四个与原喂食点气味相同的碗，然后打开入口。前一天下午在Brunnwinkl向西采食的29只标记蜜蜂中，27只在三小时内找到了碗：南面5只，东面和北面各1只，西面却有20只（图10）。每只到达后立即被捕捉，因此不能回巢跳舞召唤其他蜜蜂。引导到达者的，只能是太阳。然而，此时太阳在蜂巢东南面，而前一天最后采集飞行时，它已接近西方地平线。蜜蜂拥有出色的计时能力，可以说有一只内在时钟。在此前实验中，只在特定时刻喂食，它们便学会准时到达桌边——即便桌上没有食物。上述实验经许多变式重复（6，15，16），如今告诉我们，它们也熟悉太阳每日的移动，并能依据一天中的时刻，把这颗恒星用作真正的指南针。Gustav Kramer同时独立地通过鸟类研究，作出了同一发现（6）。")]
+
+#html.figure(id: "F009", class: "essay-paper-figure")[
+#image("assets/figure-09.png")
+]
+
+#html.p(id: "en-C009", class: "essay-original-caption")[#text("Fig. 9. Observation hive in Brunnwinkl on the Wolfgangsee and line of flight of a group of numbered bees to feeding place 200 m west.")]
+
+#zh(id: "C009")[#text("图9. 沃尔夫冈湖畔Brunnwinkl的观察蜂箱，以及一组编号蜜蜂飞往西面200米喂食点的路线。")]
+
+#html.figure(id: "F010", class: "essay-paper-figure")[
+#image("assets/figure-10.png")
+]
+
+#html.p(id: "en-C010", class: "essay-original-caption")[#text("Fig. 10. The hive in Fig. 9 transported to a scene unfamiliar to the bees. Small feeding platforms with the familiar scent were placed 200 m from the hive in each of the four directions. The numbers indicate the numbers of arriving bees in the experimental group.")]
+
+#zh(id: "C010")[#text("图10. 将图9的蜂箱移到蜜蜂不熟悉的环境。在蜂巢四个方向、各距200米处，放置带熟悉气味的小喂食平台。数字表示实验组到达的蜜蜂数量。")]
+
+#html.p(id: "en-S027")[#text("During the past few years, an old and persistent question has opened a new field of work for bee researchers. In discussing the direction indication, I initially kept something from you. The dancers did not always point correctly to the food sources. At certain hours they were markedly off to the left or the right. However, no inaccuracies or accidental deviation were involved; the errors were consistent and, when recorded under the same conditions, time and again gave the same curves for a typical daily routine. Thus they could correct, for example, for a different spatial position of the comb. Errors arose only with transposition of the dancing angle; in horizontal dances there is no “incorrect indication of direction.” Observations over many years, made jointly with my co-worker Lindauer, finally led us to a conclusion which seemed acceptable (6). However, it was disproved by Lindauer, who persisted in his experiments together with his student H. Martin. They recognized the magnetic field of the earth as a cause for incorrect indication of direction. If this is artificially screened out, the error disappears; and by artificially altering the course of the lines of flux, the incorrect indication of direction was changed correspondingly (17). The idea that the magnetic field might play a role in the puzzling orientation performance of animals was rejected for a long time. During the past years it has been confirmed by new observations, especially in birds and insects (18). Nothing so far points to the possibility that bees, in their purposeful flights cross-country, are making use of the earth’s magnetic field. Unexpectedly, however, it proved equally significant biologically but in a different way. When a swarm of bees builds its combs in a hive furnished to them by the beekeeper, their position in space is prescribed by the small suspended wooden frames. In the natural habitat of the bee, perhaps in the hollow of a tree, there are no wooden frames present. Nevertheless, thousands of bees labor together and in the course of one night achieve an orderly structure of parallel combs; the individual animal works here and there without getting instructions from a superintendent. They orient themselves by the earth’s magnetic field and uniformly have in mind the comb position which they knew from the parent colony (20).")]
+
+#zh(id: "S027")[#text("近几年，一个古老而持续的问题，为蜜蜂研究者开辟了新领域。讨论方向指示时，我最初隐瞒了一点：舞者并不总能正确指向食源。在某些时刻，它们明显偏向左边或右边。但这并非不准确或偶然偏差；误差具有一致性，在相同条件下记录，总会反复得到相同的典型日变化曲线。因此，它们可以例如对巢脾不同的空间位置作出补偿。误差只发生在舞蹈角度转换时；水平舞蹈没有“错误的方向指示”。我与合作者Lindauer多年的共同观察，终于导出了一个似乎可接受的结论（6）。不过，Lindauer与其学生H. Martin继续实验，推翻了它。他们发现，地球磁场是错误方向指示的原因。人工屏蔽磁场，误差就消失；人工改变磁力线走向，错误方向指示也相应改变（17）。磁场可能影响动物令人困惑的定向能力，这个想法长期遭到否定。近些年，新的观察，尤其对鸟类和昆虫的观察，证实了它（18）。迄今没有证据表明，蜜蜂有目的地在野外飞行时利用地球磁场。不过，出人意料的是，磁场以另一种方式表现出同样重要的生物学意义。蜂群在养蜂人提供的蜂箱中造巢时，小木框架规定了巢脾的空间位置。在自然栖息地，比如树洞中，并没有木框。然而，数千只蜜蜂共同劳动，一夜之间就造出整齐的平行巢脾；个体四处工作，无须工头指导。它们依据地球磁场定向，并共同保持从母群熟悉的巢脾位置（20）。")]
+
+#html.p(id: "en-S028")[#text("However, these are problems whose solution is fully underway, and we may expect quite a few surprises. By this I do not mean that problems such as the perception of polarized light have been conclusively solved. On the contrary: A question answered usually raises new problems, and it would be presumptuous to assume that an end is ever achieved.")]
+
+#zh(id: "S028")[#text("不过，这些问题的求解仍在全面进行，我们可以期待不少惊喜。我并不是说，偏振光感知等问题已得到最终解决。恰恰相反，一个问题得到回答，通常又会引出新问题；以为研究总会达到终点，是自负的。")]
+
+#html.p(id: "en-S029")[#text("It was not possible to present more than just a sketchy illustration in this lecture and to point out a few important steps in the development of our knowledge. To corroborate and extend them requires more time and work than the outsider can imagine. The effort of one individual is not sufficient for this. Helpers presented themselves, and I must express my appreciation to them at this time. If one is fortunate in finding capable students of whom many become permanent co-workers and friends, this is one of the most beautiful fruits of scientific work.")]
+
+#zh(id: "S029")[#text("这次演讲只能作一个粗略介绍，指出知识发展中的几个重要步骤。要验证并扩展它们，所需时间与工作远超外行的想象。一个人的努力不足以完成这些。助手们来到身边，此时我必须向他们表达感谢。如果有幸找到能干的学生，其中许多人又成为长久的合作者和朋友，这就是科学工作最美好的成果之一。")]
+
+== References and Notes / 参考文献与注释
+
+#html.p(id: "en-R001")[#text("1. K. von Frisch, Zool. Jahrb. Abt. Allg. Zool. Physiol. Tiere 35, 1 (1914–1915).")]
+
+#zh(id: "R001")[#text("1. K. von Frisch，Zool. Jahrb. Abt. Allg. Zool. Physiol. Tiere，第35卷，第1页（1914—1915）。")]
+
+#html.p(id: "en-R002")[#text("2. K. von Frisch, ibid. 40, 1 (1923).")]
+
+#zh(id: "R002")[#text("2. K. von Frisch，同刊，第40卷，第1页（1923）。")]
+
+#html.p(id: "en-R003")[#text("3. K. von Frisch, Experientia 2 No. 10 (1946).")]
+
+#zh(id: "R003")[#text("3. K. von Frisch，Experientia，第2卷第10期（1946）。")]
+
+#html.p(id: "en-R004")[#text("4. The threshhold of transition from the round dance to the tail-wagging dance varies with each race of honeybees; according to R. Boch [Z. Vergl. Physiol. 40, 289 (1957)], it is about 50 m for Apis mellifica carnica, about 30 m for A. mellifica mellifica and A. mellifica intermissa, about 20 m for A. mellifica caucasia and A. mellifica ligustica, and 7 m for A. mellifica fasciata. The fact that the strain we used mostly in our experiments, the Carniolan bee, has the largest round dance circumference was of benefit in our experiments.")]
+
+#zh(id: "R004")[#text("4. 不同蜜蜂品种从圆舞转为摆尾舞的临界距离不同。据R. Boch〔Z. Vergl. Physiol.，40，289（1957）〕，Apis mellifica carnica约50米，A. mellifica mellifica和A. mellifica intermissa约30米，A. mellifica caucasia和A. mellifica ligustica约20米，A. mellifica fasciata则为7米。我们实验主要采用的卡尼鄂拉蜂，圆舞对应的范围最大，这有利于实验。")]
+
+#html.p(id: "en-R005")[#text("5. K. von Frisch, Österreich. Zool. Z. 1, 1 (1946).")]
+
+#zh(id: "R005")[#text("5. K. von Frisch，Österreich. Zool. Z.，第1卷，第1页（1946）。")]
+
+#html.p(id: "en-R006")[#text("6. K. von Frisch, Tanzsprache und Orientierung der Bienen (Springer-Verlag, Berlin, 1965) (English translation: The Dance Language and Orientation of Bees (Belknap, Cambridge, Mass., 1967)). Further references are found in this book.")]
+
+#zh(id: "R006")[#text("6. K. von Frisch，《蜜蜂的舞蹈语言与定向》（Springer-Verlag，柏林，1965）；英译本《蜜蜂的舞蹈语言与定向》（Belknap，马萨诸塞州剑桥，1967）。更多参考文献见该书。")]
+
+#html.p(id: "en-R007")[#text("7. H. Esch, Z. Vergl. Physiol. 45, 1 (1961); A. M. Wenner, Anim. Behav. 10, 79 (1962).")]
+
+#zh(id: "R007")[#text("7. H. Esch，Z. Vergl. Physiol.，45，1（1961）；A. M. Wenner，Anim. Behav.，10，79（1962）。")]
+
+#html.p(id: "en-R008")[#text("8. K. von Frisch and R. Jander, Z. Vergl. Physiol. 40, 239 (1957).")]
+
+#zh(id: "R008")[#text("8. K. von Frisch与R. Jander，Z. Vergl. Physiol.，40，239（1957）。")]
+
+#html.p(id: "en-R009")[#text("9. I use the word “us,” since the open-field experiments had assumed such proportions that they could no longer be carried out without trained assistants.")]
+
+#zh(id: "R009")[#text("9. 我使用“我们”一词，是因为野外实验的规模已如此之大，没有训练有素的助手就无法进行。")]
+
+#html.p(id: "en-R010")[#text("10. M. Lindauer, Z. Vergl. Physiol. 37, 263 (1955).")]
+
+#zh(id: "R010")[#text("10. M. Lindauer，Z. Vergl. Physiol.，37，263（1955）。")]
+
+#html.p(id: "en-R011")[#text("11. A. M. Wenner, The Bee Language Controversy: An Experience in Science (Educational Programs Improvement Corp., Boulder, Colo., 1971).")]
+
+#zh(id: "R011")[#text("11. A. M. Wenner，《蜜蜂语言之争：一次科学经历》（Educational Programs Improvement Corp.，科罗拉多州博尔德，1971）。")]
+
+#html.p(id: "en-R012")[#text("12. K. von Frisch, Anim. Behav. 21, 628 (1973).")]
+
+#zh(id: "R012")[#text("12. K. von Frisch，Anim. Behav.，21，628（1973）。")]
+
+#html.p(id: "en-R013")[#text("13. K. von Frisch, Naturwissenschaften 35, 12 (1948); ibid., p. 38.")]
+
+#zh(id: "R013")[#text("13. K. von Frisch，Naturwissenschaften，35，12（1948）；同刊，第38页。")]
+
+#html.p(id: "en-R014")[#text("14. M. Lindauer, Z. Vergl. Physiol. 38, 521 (1956).")]
+
+#zh(id: "R014")[#text("14. M. Lindauer，Z. Vergl. Physiol.，38，521（1956）。")]
+
+#html.p(id: "en-R015")[#text("15. K. von Frisch, Experientia 6, 210 (1950).")]
+
+#zh(id: "R015")[#text("15. K. von Frisch，Experientia，6，210（1950）。")]
+
+#html.p(id: "en-R016")[#text("16. M. Renner, Z. Vergl. Physiol. 40, 85 (1957); ibid. 42, 449 (1959).")]
+
+#zh(id: "R016")[#text("16. M. Renner，Z. Vergl. Physiol.，40，85（1957）；同刊，42，449（1959）。")]
+
+#html.p(id: "en-R017")[#text("17. M. Lindauer and H. Martin, ibid. 60, 219 (1968); M. Lindauer, Rhein. Westfäl. Akad. Wiss. Rep. No. 218 (1971).")]
+
+#zh(id: "R017")[#text("17. M. Lindauer与H. Martin，同刊，60，219（1968）；M. Lindauer，Rhein. Westfäl. Akad. Wiss.，第218号报告（1971）。")]
+
+#html.p(id: "en-R018")[#text("18. H. Martin and M. Lindauer, Fortschr. Zool. 21, Nos. 2 and 3 (1973).")]
+
+#zh(id: "R018")[#text("18. H. Martin与M. Lindauer，Fortschr. Zool.，第21卷第2、3期（1973）。")]
